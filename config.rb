@@ -46,6 +46,6 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
-  deploy.branch = 'static'
+  deploy.branch = 'master'
   deploy.build_before = true
 end
