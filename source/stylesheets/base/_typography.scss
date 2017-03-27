@@ -9,6 +9,7 @@ body {
   background:rgb(253, 253, 253);
   margin:auto;
   color:rgb(10, 10, 10);
+  border-top: 6px solid $secondary-color;
 } 
 
 a {outline:none !important; font-weight:bold; text-decoration:none;}
