@@ -1,0 +1,8 @@
+machine:
+  ruby:
+    version: 2.4.1
+deployment:
+  production:
+    branch: source
+    commands:
+      - bundle exec middleman deploy
