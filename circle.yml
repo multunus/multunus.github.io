@@ -5,4 +5,6 @@ deployment:
   production:
     branch: source
     commands:
+      - git config --global user.name "Raj Abishek"
+      - git config --global user.email "rajabishek@hotmail.com"
       - bundle exec middleman deploy
