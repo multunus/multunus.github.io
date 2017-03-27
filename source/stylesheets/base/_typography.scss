@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:500');
+@import url('https://fonts.googleapis.com/css?family=Poppins:500');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i');
 
 body {
   color:#000; 
-  font-family: 'Work Sans', serif; 
-  font-size:120%; 
-  line-height:1.6;
+  font-family: 'Fira Sans', serif;
   margin:0;
   padding:2em 2em 5em; 
   background:rgb(253, 253, 253);
@@ -19,6 +18,7 @@ a:hover {color:#606;}
 a:active {color:#900; outline:none;}
 
 h1 {
+  font-family: 'Poppins', serif; 
   font-size:320%;
   line-height:1.35;
   font-style:normal;
@@ -26,6 +26,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'Poppins', serif; 
   font-weight:bold;
   font-size:200%;
   margin:1em 0 0.8em;
@@ -63,10 +64,11 @@ h6 {
 p {
   font-size:100%;
   margin:1em 0 0;
+  line-height: 1.8;
 }
 
 p.lead {
-  font-size:150%;
+  font-size:120%;
   margin:1em 0;
 }
 
