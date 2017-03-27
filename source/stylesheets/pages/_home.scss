@@ -21,8 +21,12 @@
 	}
 }
 .brand-logo {
-	position: fixed;
+	position: absolute;
 	top: 30px;
 	left: 30px;
 	height: 50px;
+}
+.role-filter-pills {
+	padding-left: 15px;
+	margin-bottom: 30px;
 }
