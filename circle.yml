@@ -7,5 +7,4 @@ deployment:
     commands:
       - git config --global user.name "${GH_NAME}"
       - git config --global user.email "${GH_EMAIL}"
-      - sed -i'' "s~https://${GH_URL}~https://${GH_TOKEN}:x-oauth-basic@${GH_URL}~" config.rb
       - bundle exec middleman deploy
