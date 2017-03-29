@@ -2,91 +2,58 @@
 title: Multunus | Goodbye
 ---
 <section class="main-header">
-  <img src="/images/home/home-multunus-logo.svg" class="brand-logo">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <img class="bye-emoji" src="/images/home/bye.svg">
-        <h1><%= data.home.title %></h1>
-      </div>
+    <img src="/images/home/home-multunus-logo.svg" class="brand-logo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="bye-emoji" src="/images/home/bye.svg">
+                <h1><%= data.home.title %></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12">
+                <% data.home.description.each do |description| %>
+                <p class="lead-main"><%= description.para %></p>
+                <% end %>
+            </div>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-lg-10 col-offset-lg-1 col-md-10 col-offset-md-1">
-        <% data.home.description.each do |description| %>
-        <p class="lead-main"><%= description.para %></p>
-        <% end %>
-      </div>
-    </div>
-  </div>
 </section>
 <section class="our-team">
-  <div class="container">
-    <div class="row">
-      <div class="role-filter-pills">
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">All</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pointy</i> Haired</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Technology</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">People & Culture</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <% data.home.team.each do |member| %>
-        <div class="col-lg-3 col-md-6">
-          <div class="profile-pic-wrapper">
-            <%= image_tag member.image %>
-            <div class="profile-pic-overlay">
-              <div class="profile-name"><%= member.name %></div>  
-              <div class="profile-job-title"><%= member.role %></div>          
+    <div class="container">
+        <div class="row">
+            <div class="role-filter-pills">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pointy</i> Haired</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">People & Culture</a>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-      <% end %>
+        <div class="row">
+            <% data.home.team.each do |member| %>
+            <div class="col-lg-3 col-md-6">
+                <div class="profile-pic-wrapper">
+                    <%= image_tag member.image %>
+                    <div class="profile-pic-overlay">
+                        <div class="profile-name"><%= member.name %></div>
+                        <div class="profile-job-title"><%= member.role %></div>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
     </div>
-  </div>
-</section>
-
-<section>
-  
-<div class="container"><h1>Bootstrap  tab panel example (using nav-pills)  </h1></div>
-<div id="exTab1" class="container"> 
-<ul  class="nav nav-pills">
-      <li class="active">
-        <a  href="#1a" data-toggle="tab">Overview</a>
-      </li>
-      <li><a href="#2a" data-toggle="tab">Using nav-pills</a>
-      </li>
-      <li><a href="#3a" data-toggle="tab">Applying clearfix</a>
-      </li>
-      <li><a href="#4a" data-toggle="tab">Background color</a>
-      </li>
-    </ul>
-
-      <div class="tab-content clearfix">
-        <div class="tab-pane active" id="1a">
-          <h3>Content's background color is the same for the tab</h3>
-        </div>
-        <div class="tab-pane" id="2a">
-          <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
-        </div>
-        <div class="tab-pane" id="3a">
-          <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
-        </div>
-          <div class="tab-pane" id="4a">
-          <h3>We use css to change the background color of the content to be equal to the tab</h3>
-        </div>
-      </div>
-  </div>
 </section>

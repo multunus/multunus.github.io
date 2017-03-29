@@ -17,6 +17,6 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "bootstrap-sass": "^3.3.7",
-    "twemoji-awesome": "^1.0.4"
+    "twemoji-awesome": "git://github.com/ellekasai/twemoji-awesome#gh-pages"
   }
 }
