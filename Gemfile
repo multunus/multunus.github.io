@@ -12,7 +12,3 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'middleman', '~> 4.2'
 gem 'middleman-livereload', '~> 3.4'
 gem "middleman-deploy", "~> 2.0.0.pre.alpha"
-
-## Frontend gems
-gem "jquery-middleman"
-gem 'bootstrap', '~> 4.0.0.alpha6'
