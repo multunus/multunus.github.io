@@ -1,0 +1,21 @@
+{
+  "name": "multunus.github.io",
+  "homepage": "https://github.com/multunus/multunus.github.io",
+  "authors": [
+    "Raj Abishek <rajabishek@hotmail.com>"
+  ],
+  "description": "This is the goodbye website for Multunus",
+  "main": "source/index.html.erb",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+  }
+}
