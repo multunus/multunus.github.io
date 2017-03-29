@@ -24,27 +24,27 @@ title: Multunus | Goodbye
         <div class="row">
             <div class="role-filter-pills">
                 <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">All</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" data-toggle="portfilter" data-target="all">All</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pointy</i> Haired</a>
+                        <a class="nav-link" data-toggle="portfilter" data-target="pointy-haired">Pointy</i> Haired</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Technology</a>
+                        <a class="nav-link" data-toggle="portfilter" data-target="technology">Technology</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Product</a>
+                        <a class="nav-link" data-toggle="portfilter" data-target="product">Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">People & Culture</a>
+                        <a class="nav-link" data-toggle="portfilter" data-target="people-culture">People & Culture</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <% data.home.team.each do |member| %>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-tag="<%= member.tag %>">
                 <div class="profile-pic-wrapper">
                     <%= image_tag member.image %>
                     <div class="profile-pic-overlay">

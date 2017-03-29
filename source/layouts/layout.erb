@@ -7,13 +7,17 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <title><%= current_page.data.title || "Multunus" %></title>
     
     <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
   </head>
 
   <body class="<%= page_classes %>">
     <%= yield %>
+
+    <script src="../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../vendor/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="../vendor/portfilter/bootstrap-portfilter.min.js"></script>
+    <script src="../javascripts/pages/home.js"></script>
   </body>
 </html>

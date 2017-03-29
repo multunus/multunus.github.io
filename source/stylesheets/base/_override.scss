@@ -3,6 +3,12 @@
 		&:not(:first-child) {
 			padding-left: 15px;
 		}
+		&.active, &:hover {
+			.nav-link {
+				background-color: $primary-color;
+				color: white;
+			}
+		}
 		.nav-link {
 			border-radius: 2px;
 			font-weight: 300;
@@ -10,10 +16,8 @@
 			border: 1px solid $primary-color;
 			transition: background-color .25s ease-out, color .25s ease-out;
 			padding: 10px 25px;
-			&.active, &:hover {
-				background-color: $primary-color;
-				color: white;
-			}
+			cursor: pointer;
+			
 		}
 	}
 }
