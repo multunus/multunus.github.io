@@ -6,7 +6,7 @@ team:
   - name: Akshay
     role: Product Developer
     tag: technology
-    image: home/team/akshay.png
+    image: home/team/akshay.jpg
     description: Programmer, Software Design Enthusiast, Keen Observer of Software Development Processes, Freaking Blogger (Once Upon a Time), Food &amp; Sleep Lover
     social_media:
           twitter:
@@ -19,7 +19,7 @@ team:
   - name: Chala
     role: Executive Admin
     tag: people-culture
-    image: home/team/akshay.png
+    image: home/team/chala.jpg
     description: A Perfectionist, Organized, Disciplined, Multi-lingual Chap. Likes to be Photographed, Cricket &amp; Angry Birds Fan.
     social_media:
           twitter:
@@ -32,7 +32,7 @@ team:
   - name: Ernest
     role: Software Architect
     tag: technology
-    image: home/team/akshay.png
+    image: home/team/ernest.jpg
     description: A Passionate Programmer, Photography Enthusiast, Voracious Reader, Music Lover, Gadget Guru, Thinker
     social_media:
           twitter:
@@ -45,7 +45,7 @@ team:
   - name: Janaki
     role: Finance Manager
     tag: people-culture
-    image: home/team/akshay.png
+    image: home/team/janaki.jpg
     description: Second Director, Culinary Master, Loves Experimenting [Both Food &amp; Different Roles], Perfect Example of Extrovert.
     social_media:
           twitter:
@@ -58,7 +58,7 @@ team:
   - name: Jerry
     role: Product Developer
     tag: technology
-    image: home/team/akshay.png
+    image: home/team/jerry.jpg
     description: Smiling Villain, Big Time Foodie, Can-Write-But-Usually-Doesn't-Write Writer, Upcoming Designer, Athlete, Badminton, Programs for Passion...and a Living
     social_media:
           twitter:
@@ -71,7 +71,7 @@ team:
   - name: JK
     role: Product Developer
     tag: technology
-    image: home/team/akshay.png
+    image: home/team/jk.jpg
     description: Lazy Programmer, Football Fanatic, Loves Algorithms, Music, Philosophy, Deep Thinker, Wanderlust.
     social_media:
           twitter:
@@ -84,7 +84,7 @@ team:
   - name: Karthik
     role: Product Manager
     tag: product
-    image: home/team/akshay.png
+    image: home/team/karthik.jpg
     description: Traveller, Extrovert, Animal Lover (I Don't Love Eating Them), Crazy for Watches, International Business Dude
     social_media:
           twitter:
@@ -97,7 +97,7 @@ team:
   - name: KP
     role: Senior Software
     tag: technology
-    image: home/team/akshay.png
+    image: home/team/kp.jpg
     description: a.k.a. Krishnaprasad, Programmer, Emacs User, Metal Head, Wanderlust, The Server Guru
     social_media:
           twitter:
@@ -110,7 +110,7 @@ team:
   - name: Kuldip
     role: Sales Warrior
     tag: pointy-haired
-    image: home/team/akshay.png
+    image: home/team/kuldip.jpg
     description: His mantra for success - &amp;quotIf its not great, its not good enough!&amp;quot. Apple Fanboi, dog lover, loves taking calls, a foodie and loves testing Microbrewries. Loves bitter black French press coffee. He's our &amp;quotSallu Bhai&amp;quot!
     social_media:
           twitter:
@@ -123,7 +123,7 @@ team:
   - name: Leena
     role: Head of
     tag: technology
-    image: home/team/akshay.png
+    image: home/team/leena.jpg
     description: Pragmatic &amp; Passionate Programmer [Only RoR Gal here], Lean Thinker, XP Evangelist, Mother of 2 Lovely Angels, Hooked to Continuous Delivery
     social_media:
           twitter:
@@ -136,7 +136,7 @@ team:
   - name: Manish
     role: Design Warrior
     tag: product
-    image: home/team/akshay.png
+    image: home/team/manish.jpg
     description: Renaissance Man Who Loves Lime Tea, Eats-Sleeps-Drinks Technology, Hacker, UX Dude and Obsessed with StartUps
     social_media:
           twitter:
@@ -149,7 +149,7 @@ team:
   - name: Muralee
     role: Product Developer
     tag: technology
-    image: home/team/akshay.png
+    image: home/team/muralee.jpg
     description: Passionate programmer, Pro Singer, Instrumentalist, Photographer,Loves Embedded Systems, Science Fiction, Indian classical music and dance.Package Deal - Living, Talking and Walking Music Player.
     social_media:
           twitter:
@@ -162,7 +162,7 @@ team:
   - name: Peter
     role: Product Developer
     tag: technology
-    image: home/team/akshay.png
+    image: home/team/peter.jpg
     description: Linux Enthusiast, Continuous Learner, Avid Reader, Gadget Freak, Passionate Gamer, Technocrat, Alternative Instrumental Music Aficionado.
     social_media:
           twitter:
@@ -175,7 +175,7 @@ team:
   - name: Sreenath
     role: Product Developer
     tag: technology
-    image: home/team/akshay.png
+    image: home/team/sreenath.jpg
     description: FOSS Activist, Programmer, Passionate Photographer, Foodie, President of Ketchup Fan Club, Gadget Freak, Loves PJ, Ethical Hacker
     social_media:
           twitter:
@@ -188,7 +188,7 @@ team:
   - name: Vaidy
     role: CEO,
     tag: pointy-haired
-    image: home/team/akshay.png
+    image: home/team/vaidy.jpg
     description: King of Ideas, Loves Uncertainty, Lover of The Last of The Last Responsible Moment, The Biggest Challenge to the Multunians - his PJs (Poor and Pathetic Jokes!)
     social_media:
           twitter:
@@ -201,7 +201,7 @@ team:
   - name: Vimal
     role: Product Developer
     tag: technology
-    image: home/team/akshay.png
+    image: home/team/vimal.jpg
     description: Programmer, Physics Enthusiast, Math Lover, The Zombie, Philosopher, Wonders about Nature
     social_media:
           twitter:
@@ -214,7 +214,7 @@ team:
   - name: Yedhu
     role: Product Developer
     tag: technology
-    image: home/team/akshay.png
+    image: home/team/yedhu.jpg
     description: Programmer, Love fictions, Writer (and Blogger), Netizen, Photographer (Rookie!!), Music Lover, Chess Player
     social_media:
           twitter:
