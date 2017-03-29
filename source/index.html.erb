@@ -2,18 +2,19 @@
 title: Multunus | Goodbye
 ---
 <section class="main-header">
-  <img src="/images/home-multunus-logo.svg" class="brand-logo">
+  <img src="/images/home/home-multunus-logo.svg" class="brand-logo">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
+        <img src="/images/home/bye.svg">
         <h1><%= data.home.title %></h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-        <p class="lead">
-          <%= data.home.description %>
-        </p>
+      <div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1">
+        <% data.home.description.each do |description| %>
+        <p class="lead-main"><%= description.para %></p>
+        <% end %>
       </div>
     </div>
   </div>

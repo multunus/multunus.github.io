@@ -3,7 +3,7 @@
 
 body {
   color:#000;
-  font-size: 14px;
+  font-size:100%;
   font-family: 'Fira Sans', serif;
   margin:0;
   font-weight: 300;
@@ -25,7 +25,7 @@ h1 {
   font-size:320%;
   line-height:1.35;
   font-style:normal;
-  margin:1.5em 0 0.8em;
+  margin:0 0 0.3em;
 }
 
 h2 {
@@ -76,7 +76,7 @@ p.lead {
 }
 
 p + p {
-  margin:0;
+  margin: 2em;
   text-indent:1.5em;
 }
 
