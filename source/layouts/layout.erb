@@ -14,10 +14,6 @@
 
   <body class="<%= page_classes %>">
     <%= yield %>
-
-    <script src="../vendor/jquery/dist/jquery.min.js"></script>
-    <script src="../vendor/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
-    <script src="../vendor/portfilter/bootstrap-portfilter.min.js"></script>
-    <script src="../javascripts/pages/home.js"></script>
+    <%= javascript_include_tag "site.min" %>
   </body>
 </html>

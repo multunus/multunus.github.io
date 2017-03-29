@@ -19,3 +19,4 @@
 
 # Ignore the frontend dependencies
 /source/vendor
+/node_modules
