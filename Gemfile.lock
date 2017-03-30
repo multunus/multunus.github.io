@@ -6,13 +6,14 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.0)
+    addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     backports (3.7.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commonjs (0.2.7)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.5)
@@ -35,6 +36,9 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     kramdown (1.13.2)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    libv8 (3.16.14.19)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -99,8 +103,12 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    ref (2.0.0)
     sass (3.4.23)
     servolux (0.13.0)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
+      ref
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.7)
@@ -113,9 +121,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  less
   middleman (~> 4.2)
   middleman-deploy (~> 2.0.0.pre.alpha)
   middleman-livereload (~> 3.4)
+  therubyracer
+  tilt
   tzinfo-data
   wdm (~> 0.1.0)
 
