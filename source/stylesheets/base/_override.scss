@@ -1,8 +1,8 @@
 .nav-pills {
 	.nav-item {
-		&:not(:first-child) {
-			padding-left: 15px;
-		}
+		padding-right: 15px;
+		margin-bottom: 15px;
+		
 		&.active, &:hover {
 			.nav-link {
 				background-color: $primary-color;
