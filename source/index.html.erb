@@ -54,10 +54,42 @@ title: Multunus | Goodbye
                                     <%= image_tag member.image, class: "img-responsive" %>
                                     <figcaption>
                                         <p><%= member.description %></p>
-                                        <ul>
-                                            <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                            <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <ul class="social-links">
+                                            <% if defined?member.social_media.twitter %>
+                                                <li>
+                                                <a target="_blank" href="<%= member.social_media.twitter %>"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+                                                </li>
+                                            <% end %>
+                                            <% if defined?member.social_media.facebook %>
+                                                <li>
+                                                <a target="_blank" href="<%= member.social_media.facebook %>"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+                                                </li>
+                                            <% end %>
+                                            <% if defined?member.social_media.linkedin %>
+                                                <li>
+                                                <a target="_blank" href="<%= member.social_media.linkedin %>"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+                                                </li>
+                                            <% end %>
+                                            <% if defined?member.social_media.dribbble %>
+                                                <li>
+                                                <a target="_blank" href="<%= member.social_media.dribbble %>"><i class="fa fa-dribbble fa-lg" aria-hidden="true"></i></a>
+                                                </li>
+                                            <% end %>
+                                            <% if defined?member.social_media.github %>
+                                                <li>
+                                                <a target="_blank" href="<%= member.social_media.github %>"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+                                                </li>
+                                            <% end %>
+                                            <% if defined?member.social_media.behance %>
+                                                <li>
+                                                <a target="_blank" href="<%= member.social_media.behance %>"><i class="fa fa-behance fa-lg" aria-hidden="true"></i></a>
+                                                </li>
+                                            <% end %>
+                                            <% if defined?member.social_media.website %>
+                                                <li>
+                                                <a target="_blank" href="<%= member.social_media.website %>"><i class="fa fa-globe fa-lg" aria-hidden="true"></i></a>
+                                                </li>
+                                            <% end %>
                                         </ul>
                                     </figcaption>
                                 </figure>
