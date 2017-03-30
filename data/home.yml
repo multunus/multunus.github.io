@@ -9,90 +9,84 @@ team:
     image: home/team/akshay.jpg
     description: Programmer, Software Design Enthusiast, Keen Observer of Software Development Processes, Freaking Blogger (Once Upon a Time), Food &amp; Sleep Lover
     social_media:
-          facebook: https://rajabishek.com
-          behance: https://behance.net/rajabishek
-          dribbble: https://dribbble.com/rajabishek
+          github: https://github.com/akshaysmurthy
+          twitter: https://twitter.com/akshaykashain
+          linkedin: https://in.linkedin.com/in/akshaysmurthy
   - name: Chala
     role: Executive Admin
     tag: people-culture
     image: home/team/chala.jpg
     description: A Perfectionist, Organized, Disciplined, Multi-lingual Chap. Likes to be Photographed, Cricket &amp; Angry Birds Fan.
     social_media:
-          behance: https://behance.net/rajabishek
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          linkedin: https://www.linkedin.com/in/chalapathi-k-a4647913a
   - name: Ernest
     role: Software Architect
     tag: technology
     image: home/team/ernest.jpg
     description: A Passionate Programmer, Photography Enthusiast, Voracious Reader, Music Lover, Gadget Guru, Thinker
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          github: https://github.com/ernest-ns
+          twitter: https://twitter.com/ernest_ns
+          linkedin: https://in.linkedin.com/in/ernestsankeshwar
   - name: Janaki
     role: Finance Manager
     tag: people-culture
     image: home/team/janaki.jpg
     description: Second Director, Culinary Master, Loves Experimenting [Both Food &amp; Different Roles], Perfect Example of Extrovert.
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          twitter: https://twitter.com/janakig
+          linkedin: https://www.linkedin.com/in/janaki-gopalkrishnan-b617964
   - name: Jerry
     role: Product Developer
     tag: technology
     image: home/team/jerry.jpg
     description: Smiling Villain, Big Time Foodie, Can-Write-But-Usually-Doesn't-Write Writer, Upcoming Designer, Athlete, Badminton, Programs for Passion...and a Living
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          github: https://github.com/jerryjohnjacob
+          twitter: https://twitter.com/jerryberry92
+          linkedin: https://in.linkedin.com/in/jerryjohnjacob
   - name: JK
     role: Product Developer
     tag: technology
     image: home/team/jk.jpg
     description: Lazy Programmer, Football Fanatic, Loves Algorithms, Music, Philosophy, Deep Thinker, Wanderlust.
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          github: https://github.com/JAYKRISHNAN
+          linkedin: https://in.linkedin.com/in/jayakrishnanmk
   - name: Karthik
     role: Product Manager
     tag: product
     image: home/team/karthik.jpg
     description: Traveller, Extrovert, Animal Lover (I Don't Love Eating Them), Crazy for Watches, International Business Dude
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          twitter: https://twitter.com/karthikvgupta
+          linkedin: https://in.linkedin.com/in/karthikvgupta
   - name: KP
     role: Senior Software
     tag: technology
     image: home/team/kp.jpg
     description: a.k.a. Krishnaprasad, Programmer, Emacs User, Metal Head, Wanderlust, The Server Guru
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          github: https://github.com/kp2222
+          twitter: https://twitter.com/krikrn
+          linkedin: https://in.linkedin.com/in/krishnaprasadradhakrishnan
   - name: Kuldip
     role: Sales Warrior
     tag: pointy-haired
     image: home/team/kuldip.jpg
     description: His mantra for success - &amp;quotIf its not great, its not good enough!&amp;quot. Apple Fanboi, dog lover, loves taking calls, a foodie and loves testing Microbrewries. Loves bitter black French press coffee. He's our &amp;quotSallu Bhai&amp;quot!
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          twitter: https://twitter.com/cooldip
+          linkedin: https://in.linkedin.com/in/kuldipchakraborty
   - name: Leena
     role: Head of delivery
     tag: technology
     image: home/team/leena.jpg
     description: Pragmatic &amp; Passionate Programmer [Only RoR Gal here], Lean Thinker, XP Evangelist, Mother of 2 Lovely Angels, Hooked to Continuous Delivery
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          github: https://github.com/leenasn
+          twitter: https://twitter.com/leenasn
+          linkedin: https://in.linkedin.com/in/leenasn
   - name: Manish
     role: Design Warrior
     tag: product
