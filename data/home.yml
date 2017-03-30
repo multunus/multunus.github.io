@@ -99,26 +99,25 @@ team:
     image: home/team/manish.jpg
     description: Renaissance Man Who Loves Lime Tea, Eats-Sleeps-Drinks Technology, Hacker, UX Dude and Obsessed with StartUps
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          twitter: https://twitter.com/manishrc
+          github: https://github.com/manishrc
+          linkedin: http://in.linkedin.com/in/manishrc
   - name: Muralee
     role: Product Developer
     tag: technology
     image: home/team/muralee.jpg
     description: Passionate programmer, Pro Singer, Instrumentalist, Photographer,Loves Embedded Systems, Science Fiction, Indian classical music and dance.Package Deal - Living, Talking and Walking Music Player.
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          linkedin: https://www.linkedin.com/in/gmuraleekrishna/
+          github: https://github.com/gmuraleekrishna
   - name: Peter
     role: Product Developer
     tag: technology
     image: home/team/peter.jpg
     description: Linux Enthusiast, Continuous Learner, Avid Reader, Gadget Freak, Passionate Gamer, Technocrat, Alternative Instrumental Music Aficionado.
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
+          twitter: https://twitter.com/peterlazar1993
+          github: https://github.com/peterlazar1993
           linkedin: https://linkedin.com/akshaymurthy
   - name: Sreenath
     role: Product Developer
@@ -126,33 +125,32 @@ team:
     image: home/team/sreenath.jpg
     description: FOSS Activist, Programmer, Passionate Photographer, Foodie, President of Ketchup Fan Club, Gadget Freak, Loves PJ, Ethical Hacker
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          twitter: https://twitter.com/sreenathnannat
+          github: https://github.com/tacticiankerala
+          linkedin: http://in.linkedin.com/in/sreenathnannat
   - name: Vaidy
     role: CEO
     tag: pointy-haired
     image: home/team/vaidy.jpg
     description: King of Ideas, Loves Uncertainty, Lover of The Last of The Last Responsible Moment, The Biggest Challenge to the Multunians - his PJs (Poor and Pathetic Jokes!)
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          twitter: https://twitter.com/_vaidy
+          linkedin: http://in.linkedin.com/in/vaidyanathanb
   - name: Vimal
     role: Product Developer
     tag: technology
     image: home/team/vimal.jpg
     description: Programmer, Physics Enthusiast, Math Lover, The Zombie, Philosopher, Wonders about Nature
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          twitter: https://twitter.com/vimalvnair
+          github: https://github.com/vimalvnair
+          linkedin: http://in.linkedin.com/pub/vimal-nair/23/315/216
   - name: Yedhu
     role: Product Developer
     tag: technology
     image: home/team/yedhu.jpg
     description: Programmer, Love fictions, Writer (and Blogger), Netizen, Photographer (Rookie!!), Music Lover, Chess Player
     social_media:
-          twitter: https://twitter.com/akshaymurthy
-          github: https://github.com/akshaymurthy
-          linkedin: https://linkedin.com/akshaymurthy
+          twitter: https://twitter.com/yedhukrishnan
+          github: https://github.com/yedhukrishnan
+          linkedin: http://www.linkedin.com/in/yedhukrishnan
