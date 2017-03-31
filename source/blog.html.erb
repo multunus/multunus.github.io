@@ -8,11 +8,11 @@ title: Multunus | Blog
             <div class="col-xs-12">
                 <ul class="articles-list">
                     <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-                        <li>
+                        <li class="year-list">
                             <h5><%= year %></h5>
                             <ul>
                             <% articles.each do |article| %>
-                              <li><a href="<%= article.url %>"><%= article.title %></a></li>
+                              <li class="blog-article"><a href="<%= article.url %>"><%= article.title %></a></li>
                             <% end %>
                             </ul>
                         </li>

@@ -4,13 +4,17 @@
 		margin-bottom: 50px;
 	}
 	ul.articles-list {
-		li {
+		li.year-list {
 			list-style-type: none;
-			margin-bottom:0.5em;
-			font-size: 105%;
+			margin-bottom: 4em;
 			h5 {
 				color: $primary-color;
 			}
+		}
+		li.blog-article {
+			list-style-type: none;
+			margin-bottom: 1em;
+			font-size: 110%;
 			a {
 				color: $grey-text-color;
 				font-weight: 400;

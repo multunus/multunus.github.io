@@ -35,14 +35,15 @@
   .member-brief {
     padding: 15px;
     border-top: 3px solid $primary-color;
-    h4.name {
+    h5.name {
       margin-top: 0;
-      font-weight: 600;
+      margin-bottom: 5px;
     }
     p.role {
-      margin-top: 5px;
+      margin-top: 0;
       font-size: 110%;
       color: $grey-text-color;
+      font-weight: 600;
     }
   }
   
@@ -143,6 +144,3 @@
 	padding-left: 15px;
 	margin-bottom: 30px;
 }
-
-
-
