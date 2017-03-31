@@ -1,0 +1,120 @@
+---
+title: 'Anuroop: "We''re now confidently speaking of going to market"'
+date: '2012-07-30 09:14:33'
+tags:
+- cap-vaidy
+- business
+- business
+wp:post_id: '5142'
+link: http://www.multunus.com/blog/2012/07/anuroop/
+---
+
+CogKnit is a Semantic Web company based out of Bangalore. Their first product is in the education space and is called Nimit.
+
+Here's Anuroop [co-founder @ CogKnit] speaking about his vision at the Unreasonable Institute:
+
+
+<iframe src="//player.vimeo.com/video/13877812?title=0&amp;portrait=0" width="500" height="281" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+
+**Multunus was hired to build Nimit's front end - **
+to consume the web service API’s exposed by its back end.
+
+I had a chat with Anuroop to share his thoughts on their experience working with us. Here's a transcript of our chat.
+
+
+**Vaidy:**
+ 
+Hi Everyone, This is Anuroop. I'm Vaidy. I'm the founder of Multunus. Anuroop is one of our clients. We're geographically very close. Our offices are one floor apart :).  They're actually on the first floor and we're on the second.
+
+
+We've been working together for about 5 months. I asked Anuroop whether he could actually share his experience working with Multunus over the last 5 months.
+
+
+**Anuroop:**
+Lemme sum it up this way. If I were to just sum up in one line what has been the greatest value addition that Multunus has made to us:Given that our background - we're a product development company who've been in existence for the last 3 years. We started active product development in the last one and a half years. We're essentially back-end people with deep expertise in Web 3.0.
+
+
+We do not have front end expertise. Given our experiments that we did, we evaluated a few vendors. And we went with Multunus.###**[Business Value
+]**
+
+
+
+The greatest value add that this team has done for the product and us is that they've brought us to a point where 
+**we're now confidently speaking of going to market**
+. So, 
+**for a product company - that is very very big milestone. **I think that's really where the greatest achievement - you guys have helped us to a stage where we can now speak about "going to market".
+
+
+**Anuroop Iyengar: "We're now confidently speaking of going to market"**
+
+
+<iframe src="//www.youtube.com/embed/NAMGHISmWH8?rel=0" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+
+###**[Architecture]**
+
+
+
+The technology components, the features of the product and what it is supposed to do has been fairly complex. So the requirement was that we have a codebase which can work seamlessly across multiple platforms. Given mobile computing, how much mind space it has taken in the space of end consumers - we wanted a codebase and a platform which can be technology agnostic - which can work on Windows, which can work on Android, which can work on iOS. 
+
+
+In terms of 
+**the choice of the technology solution that your architects have made - that's been phenomenal.**
+
+
+What is has done is that we were able to make the right technology choices for some pretty critical issues. So now we're looking at a codebase - though HTML5 is still evolving - I think it still has a maturity curve - we're looking at a situation wherein we have a codebase which can work across these platforms.
+
+
+###**[Continuous Delivery]**
+
+
+
+**Once certain thing that stands out which was**
+ 
+**not really a part of the contract :)**
+ - is the addition that your architect has made in setting up the 
+**CD [Continuous Delivery] pipeline**
+.
+
+
+We're a platform as a service company. So we will keep improving features, adding new features - so it becomes imperative that such a kind of infrastructure exists.
+
+
+Given the nature of a startup where things are chaotic - it helped that today we have a fairly functional Continuous Delivery pipeline. Thank you for that.
+
+
+It took lot of work between the two teams to get this up - and we're there.
+
+
+###**[Design Thinking]**
+
+
+
+Commenting on your team's ability, I think the team has capability for design thinking. And the ability to convert some of those - being the product owner, I was the guy who was giving the design thoughts. They were able to convert those design thoughts into actual specifications and implement them. Which was I would say, pretty good.
+
+
+###**[Quality]**
+
+
+
+And robust delivery. Whatever is promised, will work at the end of the week - it works.
+
+
+So, I think that's what a customer needs.
+
+
+**Vaidy**
+: 
+Thank you Anuroop. I think that was very useful. And we've been working with Cogknit - Anuroop is one of the founders at CogKnit. We've been working with CogKnit in the Extreme Programming mode for about 5 months now.
+
+
+Its been a fantastic experience for us as well - to try and get the maximum value out of the process. We've learnt a lot as well in terms of how to improve.
+
+
+Hopefully we're gonna be working together in the future as well. Thank you.
+
+
+**Anuroop**
+: 
+Yup. Thanks.

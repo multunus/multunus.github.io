@@ -1,0 +1,101 @@
+---
+title: How MFIs Work
+date: '2015-11-06 20:58:04'
+tags:
+- cap-janaki
+- business
+- business
+- community
+- mfi
+link: http://www.multunus.com/blog/2015/11/mfis-work/
+---
+
+> * People.. were poor not because they were stupid or lazy. They worked all day long, doing complex physical tasks. They were poor because the financial institution in the country did not help them widen their economic base.” ― Muhammad Yunus, Banker to the Poor: Micro-Lending and the Battle Against World Poverty* 
+
+Historically, micro lending has been prevalent in the world. We would call them Sharks. These people would lend money at a very high rate of interest as high as 400%. In case the borrower did not pay up, the collectors would snatch away every single belonging they had and at times resort to violence as well. To avoid being in such a situation, the borrowers would again borrow from some other source to pay these Sharks. Thus this would result in an endless debt trap and borrowers would ultimately lose out on everything they have.
+
+
+MFIs have changed the scenario now. They have used the interest factor responsibly to create a social impact. To understand how they do this, we need to first understand how they work.
+
+
+**MFI Workflow**
+
+
+An Individual applies to an MFI for a loan, say a business loan of Rs 5,000. A Field Officer from the MFI who is assigned to that area visits the “would-be” borrower personally. The Field Officer then collects the required documents including business plans, evaluates and processes them along with his colleagues in the office. Once they are convinced that the intent of the loan is to actually grow the business and that he will repay, the MFIs will approve the loan. On approval, they will immediately sign the agreement and disburse the loan to the Borrower. For individuals who do not have access to banks, these Field Officers will again personally go over to collect the repayment amount periodically.
+
+
+We have often wondered - with Field Officers, people at the back end who actually process the loans and people who see that the entire system is smooth for the loan disbursement and repayment - how are these MFIs able to cover the costs?
+
+
+These are the operating costs of MFIs. The MFIs are generally created as a Non Profit Organizations initially. They would try to use the interest amount that they receive to cover the costs. Hence interest costs are higher than in banks. When the operation costs are higher than the interest received, they would try to seek donations as they cannot increase the interest rates. This is because as and when they start increasing the rates, social impact will come down. To reduce the risk of delinquency, the Field Officers or the personnel from the MFI would conduct financial training sessions for the borrowers.
+
+
+“.. but Banks also give loans”. Yes, Banks do give loans but are different from MFIs.
+
+
+**MFIs and Banks**
+
+
+Prof Yunus quotes”  These MFIs work on the principle of keeping the interest low and funds available when required. Let’s see how these MFIs work vis a vis the Banks.
+
+
+![parameters](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/parameters.png)
+
+
+We now have understood how the MFIs work. But this was in general. Each MFI works differently and hence have been broadly classified into different models.
+
+
+**Models of Micro lending**
+
+
+**Model 1: Individuals getting micro loans from Banks directly**
+
+
+In this model the Banks provide micro loans to people, giving them the collaterals for the loan in terms of whatever little the borrowers’ own. Though the rate of interest will be less than in the other models, the process (includes a Guarantor) and the documentation required itself makes it difficult for the individuals to get loans from the bank.
+
+
+**Model 2: Individuals getting loans from Organizations like MFIs with or without collateral**
+
+
+This is the model usually followed in developed countries like USA. Intersect Fund is one such example who follows this model. In this model, individuals with no or very low credit rating can get loans for business or any other expenses. The individual themselves take responsibility for paying up the loan in small installments. As these are only individual loans and not dependent on any other external person, these loans can be negotiated in terms of the interest rates and the flexibility in repayment.
+
+
+Example: If the income of the individual is seasonal, he will repay more amount of loan during that time and less the other times. Another instance of the flexibility is that if the borrower is not able to repay the loan because of lower income than expected, then either the installment amount is changed or the loan itself is restructured so that he can make the payment.
+
+
+**Model 3: Individuals getting loans from MFIs where they are part of a Joint Liability Group [JLG]**
+
+
+![JLGs](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/JLGs.png)
+
+
+This model is usually followed in developing and underdeveloped countries. In this model the borrower must belong to a group. This group can be as small as five. The group need not stand as guarantee for a loan for its members. Repayment responsibility is solely on the individual borrower. The Group itself oversees that everyone behaves responsibly and none gets into a repayment issue. No formal joint liability exists, i.e. there is no obligation that the Group pays on behalf of a defaulting borrower. However, they may often contribute the defaulted loan amount as this may jeopardise the credit standing of the entire group. Eg. Grameen Bank follows this model of lending.
+
+
+**Model 4: Individuals getting loans in form of crowdsourcing of lenders [Peer to Peer lending (P2P)]**
+
+![p2p](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/p2p.png)
+
+
+In this model, technology is used as a platform to bring in together the lenders and borrowers. It is based on a form of crowdsourcing. When an individual needs the loan, he will put his requirement in this platform. The organization partners with MFIs and NGOs to validate the loan requirements. If it is genuine they would put the details of the borrowers in their web site. People who have small amounts to lend would then transfer this amount to the account created for the borrower. Once the full loan amount is reached, it is then transferred to the borrower. The Borrower would then make the monthly repayments which in turn would be credited to the lenders’ accounts. The risk is shared among many lenders who lent this loan. Example:[KIVA](http://www.kiva.org/)is a platform that allows Peer to Peer lending. Kiva itself is a non profit organization and hence is able to keep their interest rates low.
+
+
+**Model 5: Individuals getting loans through MFIs where they are part of a Self Help Group [SHG]**
+
+
+[![SHG](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/SHG.png)](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/SHG.png)
+
+
+In this model, individuals are part of a group of 10 to 20 members. They start saving regularly among themselves. These savings are pooled in and deposited in a bank until the group begins lending. This account is operated by the chosen representative for these groups. These SHGs lend to the members from the pooled-in savings. Whatever interest is being collected will be again put back into the group’s account. These excess funds are used for either lending or creating [financial inclusions](http://www.multunus.com/blog/2015/10/multunus-and-mfi/) for the members in this group. The disbursement of the loan to its members will be at the discretion of the group. External loans will be provided to the group itself and not to any individual member of the group. To reduce the risk of non-repayment, the group meets very often, perhaps once a week, to help each other and to grow. One such SHG is [Annapurna Pariwar](http://www.annapurnapariwar.org/) that started as a small group but now has greatly impacted the slums of the Indian cities of Pune and Mumbai.
+
+
+As and when new models emerge, the impact they have on the lives of people continue to increase.
+
+
+To conclude this post, I would like to quote Prof Mohammad Yunus again:
+
+
+> * “By simply capitalizing on core strengths and knowledge, companies and entrepreneurs can engage in an emerging business model that will enable them to create - and demonstrate - real, sustainable social impact in society”* .
+
+
+Hence, my next post will be “Tech in MFIs”. This will also give insights on how Multunus is adding value to the MFI industry.
