@@ -12,7 +12,7 @@
 				color: $primary-color;
 			}
 			a {
-				color: #505050;
+				color: $grey-text-color;
 				font-weight: 400;
 				text-decoration: underline;
 				&:visited {
