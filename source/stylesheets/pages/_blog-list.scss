@@ -1,9 +1,30 @@
 .articles-list-section {
+	.heading {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
 	ul.articles-list {
 		li {
 			list-style-type: none;
-			margin-bottom: 0.5em;
-			color: #222;
+			margin-bottom:0.5em;
+			font-size: 105%;
+			h5 {
+				color: $primary-color;
+			}
+			a {
+				color: #505050;
+				font-weight: 400;
+				text-decoration: underline;
+				&:visited {
+					color: black;
+				}
+				&:hover { 
+					color: black;
+				}
+				&:active {
+					color: black;
+				}
+			}
 		}
 	}
 }
