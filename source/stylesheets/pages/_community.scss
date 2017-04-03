@@ -1,4 +1,3 @@
-
 .community-section{
   .container, .open-source-section, .blog-section, .talks-section {
     margin-top: 50px;
@@ -46,6 +45,134 @@
           text-decoration:none;
         }
       }
+    }
+  }
+  .repo-card {
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    -webkit-box-shadow: 0 2px 64px 0 rgba(208,208,208,0.5);
+    -moz-box-shadow: 0 2px 64px 0 rgba(208,208,208,0.5);
+    box-shadow: 0 2px 64px 0 rgba(208,208,208,0.5);
+    border-radius: 2px;
+    &:hover {
+      -webkit-box-shadow: 0 2px 64px 0 rgba(208,208,208,0.9);
+      -moz-box-shadow: 0 2px 64px 0 rgba(208,208,208,0.9);
+      box-shadow: 0 2px 64px 0 rgba(208,208,208,0.9);
+    }
+    img {
+      width: 40px;
+      margin: auto 20px;
+    }
+  }
+
+  .repo-info {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    color: #656565;
+    p.repo-description {
+      margin-top: 0;
+    }
+  }
+
+  .repo-title {
+    display: inline-block;
+    color: black;
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
+
+  .repo-stats-group {
+    padding: 8px;
+    text-align: center;
+    &:last-of-type {
+      border-top: 1px solid #d8d8d8;
+    }
+  }
+
+  .repo-stats {
+    border-left: 1px solid #d8d8d8;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .repo-stats-title {
+    color: #656565;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+
+  .repo-stat {
+    color: black;
+    margin-bottom: 0;
+    margin-top: 0;
+    &:hover {
+      color: #232323;
+      text-decoration: none;
+    }
+  }
+
+  .media-card {
+    background-color: white;
+    display: block;
+    margin: 0 0 25px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 0 2px 64px 0 rgba(208,208,208,0.5);
+    -moz-box-shadow: 0 2px 64px 0 rgba(208,208,208,0.5);
+    box-shadow: 0 2px 64px 0 rgba(208,208,208,0.5);
+    border-radius: 2px;
+    background-clip: padding-box;
+    
+    .meta {
+      p.heading {
+        padding: 0 20px;
+        margin-bottom: 0px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        color: #656565;
+      }
+      p.description {
+        padding: 0 20px;
+        margin-top: 5px;
+      }
+    }
+
+    &:hover {
+      background-color: #2A2A2A;
+      color: white;
+      transition: all 0.2s ease-in;
+      a, p.heading {
+        color: white;
+      }
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: #2A2A2A;
+    }
+    .media span {
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 170px;
+      display: block;
     }
   }
 }

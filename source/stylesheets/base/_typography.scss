@@ -4,7 +4,7 @@
 body {
   color:#000;
   font-family: 'Lato', serif;
-  font-size: 15px;
+  font-size: 16px;
   margin:0;
   padding:2em 2em 5em; 
   background:rgb(253, 253, 253);
@@ -46,7 +46,7 @@ h4 {
 
 h5 {
   font-family: 'Poppins', serif;
-  font-size:150%;
+  font-size:130%;
 }
 
 h6 {
@@ -62,14 +62,9 @@ p {
 }
 
 p.lead-main {
-  font-size:120%;
+  font-size:110%;
   margin:1em 0;
   color: $grey-text-color;
-}
-
-p + p {
-  margin: 2em;
-  text-indent:1.5em;
 }
 
 p + ul, p + ol, p + dl {margin-bottom:1.5em;}
