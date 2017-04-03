@@ -1,0 +1,51 @@
+
+.community-section{
+  .container, .open-source-section, .blog-section, .talks-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .talks-section {
+    .talks {
+      margin-top: 30px;
+    }
+  }
+  .heart {
+    width: 30px;
+  }
+  .resource-links {
+    list-style-type: none;
+    .resource-link {
+      margin-top: 10px;
+      h4 {
+        margin: 10px 0px 0px 20px;
+      }
+      p {
+        margin-left: 20px;
+        color: #656565;
+      }
+      position: relative;
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 2px;
+      background-clip: padding-box;
+      cursor: pointer;
+      -webkit-box-shadow: 0 2px 64px 0 rgba(208,208,208,0.5);
+      -moz-box-shadow: 0 2px 64px 0 rgba(208,208,208,0.5);
+      box-shadow: 0 2px 64px 0 rgba(208,208,208,0.5);
+      &:hover {
+        -webkit-box-shadow: 0 2px 64px 0 rgba(208,208,208,0.9);
+        -moz-box-shadow: 0 2px 64px 0 rgba(208,208,208,0.9);
+        box-shadow: 0 2px 64px 0 rgba(208,208,208,0.9);
+      }
+      a {
+        text-decoration:none;
+        color: #333;
+        &:hover, &:active, &:visited {
+          color: #333;
+          text-decoration:none;
+        }
+      }
+    }
+  }
+}
