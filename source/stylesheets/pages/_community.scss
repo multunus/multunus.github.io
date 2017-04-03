@@ -13,8 +13,9 @@
   }
   .resource-links {
     list-style-type: none;
+    padding-left: 0;
     .resource-link {
-      margin-top: 10px;
+      margin-top: 20px;
       h4 {
         margin: 10px 0px 0px 20px;
       }
@@ -138,7 +139,7 @@
     box-shadow: 0 2px 64px 0 rgba(208,208,208,0.5);
     border-radius: 2px;
     background-clip: padding-box;
-    
+
     .meta {
       p.heading {
         padding: 0 20px;
