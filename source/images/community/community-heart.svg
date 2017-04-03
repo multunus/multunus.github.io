@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="60px" viewBox="0 0 62 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Heart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" fill-rule="nonzero" fill="#E40046">
+            <g id="Heart">
+                <g id="Layer_1">
+                    <path d="M44.5080967,0.0471472527 C39.2301934,0.0471472527 34.2895429,2.4368044 31,6.44064176 C27.7104571,2.4368044 22.7698066,0.0471472527 17.4919033,0.0471472527 C7.84688352,0.0471472527 0,7.89389451 0,17.5390505 C0,25.0916044 4.50338022,33.8273363 13.3851868,43.5035604 C20.2204484,50.9502374 27.6559516,56.7156923 29.7718549,58.3053451 L30.9995912,59.2277143 L32.2271912,58.3054813 C34.343367,56.7156923 41.7791429,50.9501011 48.6142681,43.503833 C57.4964835,33.8276088 62,25.0917407 62,17.5390505 C62,7.89389451 54.1531165,0.0471472527 44.5080967,0.0471472527 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
