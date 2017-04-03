@@ -18,7 +18,30 @@
 			transition: background-color .25s ease-out, color .25s ease-out;
 			padding: 10px 25px;
 			cursor: pointer;
-			
 		}
+	}
+}
+
+.navigation-bar {
+	.navbar-default {
+		border: none;
+		background-color: transparent;
+	}
+	.navbar-brand {
+		height: 80px;
+		img {
+			height: 100%;
+		}
+	}
+
+	.nav >li >a {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		cursor: pointer;
+	}
+
+	.navbar-toggle {
+		padding: 10px;
+		margin: 25px 15px 25px 0;
 	}
 }
