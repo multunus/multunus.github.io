@@ -10,12 +10,10 @@ wp:post_id: '4139'
 link: http://www.multunus.com/blog/2013/07/pleasure-and-peril-of-being-a-polyglot-programmer-a-summary/
 ---
 
-Recently, we happened to watch a couple of videos from this year’s 
-[Agile India Conference](http://http://2013.agileindia.org/). The 
+Recently, we happened to watch a couple of videos from this year’s [Agile India Conference](http://http://2013.agileindia.org/). The 
 [Agile India Conference](http://http://2013.agileindia.org/) is presenting 50GB of HD quality video recordings of all 95 Sessions packed in 13 DVDs. That’s a lot of great content waiting to be consumed!!
-So we decided to write a series of blog posts covering some select topics, where we will be giving the summary of the video/talk. This is the first of those. Below is the summary of the talk given by 
-[Dr.Venkat Subramaniam](http://www.nofluffjuststuff.com/conference/speaker/venkat_subramaniam) founder of 
-[Agile Developer Inc.](http://www.agiledeveloper.com/) and the one who has trained and mentored thousands of software developers around the world.
+
+So we decided to write a series of blog posts covering some select topics, where we will be giving the summary of the video/talk. This is the first of those. Below is the summary of the talk given by [Dr.Venkat Subramaniam](http://www.nofluffjuststuff.com/conference/speaker/venkat_subramaniam) founder of [Agile Developer Inc.](http://www.agiledeveloper.com/) and the one who has trained and mentored thousands of software developers around the world.
 
 One of the best ways to write better code is to read better code, not just the code but also books, articles, blogs and even hanging out with like-minded geeks. All these would influence our minds. So what we read is really something to think about.
 
@@ -25,13 +23,11 @@ But as it turns out languages are deeply tied to cultures and cultures lead to i
 
 Programming languages are not general-purpose anymore. We need to use different languages to solve different problems.
 
-For example:* files => use xml
+For example:
 
-    
-* data => use big data
-
-    
-* concurrency => many languages support
+- files => use xml
+- data => use big data
+- concurrency => many languages support
 
 Nowadays, all the machines come with multi-cores. So in order to fully utilize these, the programming languages should support concurrency.
 
@@ -48,13 +44,10 @@ But why we want to use different tools is better explained by Ola Bini. He says 
 Below are a few examples that illustrate the Productivity Gain in different languages:
 
 
-**1. Delegation**
+## Delegation
+### Java
 
-
-
-Java
-
-
+```
 public class Manager {
     private Worker worker = new Worker();
     public void work() {
@@ -64,26 +57,23 @@ worker.work();
 worker.document();
     }       
 }
+```
 
+### Groovy
 
-Groovy
-
-
+```
 class Manager {
     @Delegate Worker worker = new Worker()  
 }
 def bob = new Manager()
 bob.work()
 bob.document()
+```
 
+## Reading a File
+### Java
 
-**2. Reading a File**
-
-
-
-Java
-
-
+```
 private static String readFromFile(String filePath) {
     StringBuilder  builder = new  StringBuilder();
     try {
@@ -102,33 +92,27 @@ e.printStackTrace();
     }   
     return builder.toString();
 }
+```
 
+### Ruby
 
-Ruby
-
-
+```
 File.open(file_path).read
+```
 
+## Running a System Process
 
-**3. Running a System Process**
+### Groovy
 
-
-
-Groovy
-
-
+```
 println “svn help”.execute().text
+```
 
-
-**4. Working with Lists**
-
-
+## Working with Lists
 Suppose you have a list of names and you want to print them with comma separated, this is how it can be done in
+### Java
 
-
-Java
-
-
+```
 var names = [“John”, “Smith”, “Michael”];
 for(int i =0; i < names.size; i++) {
     var lastElement = names.size;
@@ -136,19 +120,16 @@ for(int i =0; i < names.size; i++) {
 System.out.print(names[i] + “, ”);
     }   
 }
+```
 
-
-Ruby
-
+### Ruby
 This is as easy as
 
-
+```
 names.join(“, ”)
+```
 
-
-**CONCLUSION**
-
-
+## CONCLUSION
 But it could turn into hell as well. Why would this be so, even though these languages support lots of cool stuff? Well, now comes the reality of the world we live in. Content with their present organisation, most programmers never feel the need to learn new languages.
 
 Even if they do learn, they fail to convince their boss. Here, the problem is we programmers need to get convinced by the language first. The solution is to build lots of prototypes which will show the business value we derive by using these new languages. One should follow this disciplined approach of learning.
