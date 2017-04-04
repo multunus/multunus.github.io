@@ -8,8 +8,7 @@ wp:post_id: '4178'
 link: http://www.multunus.com/blog/2011/03/using-etudes-to-continually-improve-our-development-process/
 ---
 
-Agile development is an art. Unless each member on the team has the a-ha moment and actually ‘gets’ the 
-[core values of the process](http://agilemanifesto.org/) - the end result is nothing but a hodge-podge of buggy code delivered after a lot of unnecessary stress.
+Agile development is an art. Unless each member on the team has the a-ha moment and actually ‘gets’ the [core values of the process](http://agilemanifesto.org/) - the end result is nothing but a hodge-podge of buggy code delivered after a lot of unnecessary stress.
 
 So how do we tranform into an agile team and then continually propagate the core values of the process - so that it becomes the culture of the organization?
 

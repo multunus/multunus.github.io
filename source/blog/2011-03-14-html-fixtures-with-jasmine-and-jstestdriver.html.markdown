@@ -8,21 +8,18 @@ wp:post_id: '4179'
 link: http://www.multunus.com/blog/2011/03/html-fixtures-with-jasmine-and-jstestdriver/
 ---
 
-Unit Testing Javascript is great using JSTestDriver and Jasmine, but maintaining HTML fixtures for the same is a pain. One of the approaches for fixing the same issue is by creating the HTML from the controller specs and loading the HTML using AJAX. This approach is mentioned 
-[here](http://pivotallabs.com/users/jb/blog/articles/1152).
+Unit Testing Javascript is great using JSTestDriver and Jasmine, but maintaining HTML fixtures for the same is a pain. One of the approaches for fixing the same issue is by creating the HTML from the controller specs and loading the HTML using AJAX. This approach is mentioned [here](http://pivotallabs.com/users/jb/blog/articles/1152).
 
 But I could not make it work with JSTestDriver as the server was not able to find the path for HTML fixtures. So I modified the above approach.
 
-
-**Update:**
- I’ve created a gem using which you can achieve the same. Click 
-[here](https://github.com/multunus/js_fixtures) for the same.
+**Update:** I’ve created a gem using which you can achieve the same. Click [here](https://github.com/multunus/js_fixtures) for the same.
 
 
-**Generate the fixtures**
+## Generate the fixtures
+Create a file fixture_generator.rb and save it in spec/support directory. The contents of the file is as follows:
 
-
-Create a file fixture_generator.rb and save it in spec/support directory. The contents of the file is as follows:RSpec::Rails::ControllerExampleGroup.class_eval do
+```
+RSpec::Rails::ControllerExampleGroup.class_eval do
   # Saves the markup to a fixture file using the given name
   def save_fixture(markup, name)
     fixture_path = File.join(Rails.root.to_s, 'spec/javascripts/helpers')
@@ -62,10 +59,11 @@ Create a file fixture_generator.rb and save it in spec/support directory. The co
     markup.gsub('<body', '<div').gsub('</body>', '</div>')
   end
 end
+```
 
 Call the save_fixture within the controller spec as follows:
 
-
+```
 describe 'Sign up' do
   it "should show the signup form" do
   get :new
@@ -73,20 +71,15 @@ describe 'Sign up' do
   save_fixture(html_for('body'), 'Signup')
   end
 end
+```
 
-The above will create a file Signup.js in the path 
-spec/javascripts/helpers
+The above will create a file Signup.js in the path spec/javascripts/helpers
 
-
-**Load the fixtures in JS tests**
-
-
+## Load the fixtures in JS tests
 For this the spec/javascripts/helpers should be added to the load path for JSTD in jsTestDriver.conf.
-
 Then call the method within the test.
 
-
-
+```
 describe('Validate registration form', function () {
   beforeEach(function () {
     $(this).ready(function () {
@@ -101,5 +94,6 @@ describe('Validate registration form', function () {
       expect($('.status').first().text()).toMatch('Please enter your name')
   });
 });
+```
 
 Thats all. In this way it is assured that the HTML is consistent with the actual view. The only thing that needs to be taken care is to make sure that the controller spec should be run whenever there is a change in the DOM, so that it is available to JS unit tests.

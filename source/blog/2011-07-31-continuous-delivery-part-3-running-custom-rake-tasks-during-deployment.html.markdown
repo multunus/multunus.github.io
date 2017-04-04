@@ -10,11 +10,10 @@ wp:post_id: '4164'
 link: http://www.multunus.com/blog/2011/07/continuous-delivery-part-3-running-custom-rake-tasks-during-deployment/
 ---
 
-One problem we faced with the pipeline setup what I had mentioned in my 
-[first post](http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/) was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:* Reindex the solr/lucene indexes if any new field has been added to the index
+One problem we faced with the pipeline setup what I had mentioned in my [first post](http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/) was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:
 
-    
-* Some custom rake tasks , say for eg: task to update values in the DB, which you don’t want to add to migrations
+- Reindex the solr/lucene indexes if any new field has been added to the index
+- Some custom rake tasks , say for eg: task to update values in the DB, which you don’t want to add to migrations
 
 We do have Cap tasks for running the required rake tasks, but again it was done manually. So we’ve to remember to run them after deploying to production.  And also there is no way to track what steps were followed for a certain deployment.
 
@@ -24,11 +23,6 @@ The only difference in this case is that - sometimes the parameter can be empty.
 
 Continued..
 
-
-* [Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup](http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/)
-
-    
-* [Continuous Delivery – Part 2: Code metrics with metrical](http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/)
-
-    
-* [Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback](http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/)
+- [Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup](http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/)
+- [Continuous Delivery – Part 2: Code metrics with metrical](http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/)
+- [Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback](http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/)
