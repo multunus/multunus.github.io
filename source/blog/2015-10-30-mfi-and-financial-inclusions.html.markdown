@@ -21,7 +21,7 @@ This was for their impact on the economy by providing Micro credit to millions o
 One such person who was inspired by Prof Muhammad Yunus was[Rohan Mathew](https://www.linkedin.com/pub/rohan-mathew/36/140/7b6).
 
 
-Rohan Mathew conceived[The Intersect Fund](http://www.intersectfund.org/), a Micro Credit Institutionin a dorm room in 2009 with just $1,000 seed capital and has provided more than 900 loans totaling upwards of $3M toa lot of low-income people struggling to make ends meet.
+Rohan Mathew conceived[The Intersect Fund](http://www.intersectfund.org/), a Micro Credit Institutionin a dorm room in 2009 with just 1,000USD  seed capital and has provided more than 900 loans totaling upwards of $3M total of low-income people struggling to make ends meet.
 
 
 As the borrowers began to grow, Rohan saw that a lot of time was being spent on huge spreadsheets that were manually maintained which restrained them from expanding. That was when Rohan approached Multunus to build a Loan Management System so that they could focus on impacting more people.
@@ -65,7 +65,7 @@ Financial inclusions are basic financial services available at affordable costs 
 
 ![Financial Inclusions](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/10/2015-10-30_0955-300x253.png)
 
- 
+
 
 
 Financial Inclusions include the following:

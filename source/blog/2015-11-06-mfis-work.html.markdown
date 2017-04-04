@@ -10,7 +10,7 @@ tags:
 link: http://www.multunus.com/blog/2015/11/mfis-work/
 ---
 
-> * People.. were poor not because they were stupid or lazy. They worked all day long, doing complex physical tasks. They were poor because the financial institution in the country did not help them widen their economic base.” ― Muhammad Yunus, Banker to the Poor: Micro-Lending and the Battle Against World Poverty* 
+> * People.. were poor not because they were stupid or lazy. They worked all day long, doing complex physical tasks. They were poor because the financial institution in the country did not help them widen their economic base.” ― Muhammad Yunus, Banker to the Poor: Micro-Lending and the Battle Against World Poverty*
 
 Historically, micro lending has been prevalent in the world. We would call them Sharks. These people would lend money at a very high rate of interest as high as 400%. In case the borrower did not pay up, the collectors would snatch away every single belonging they had and at times resort to violence as well. To avoid being in such a situation, the borrowers would again borrow from some other source to pay these Sharks. Thus this would result in an endless debt trap and borrowers would ultimately lose out on everything they have.
 
@@ -36,7 +36,7 @@ These are the operating costs of MFIs. The MFIs are generally created as a Non P
 **MFIs and Banks**
 
 
-Prof Yunus quotes”  These MFIs work on the principle of keeping the interest low and funds available when required. Let’s see how these MFIs work vis a vis the Banks.
+Prof Yunus quotes”  These MFIs work on the principle of keeping the interest low and funds available when required. Let’s see how these MFIs work vis a vis the Banks.
 
 
 ![parameters](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/parameters.png)

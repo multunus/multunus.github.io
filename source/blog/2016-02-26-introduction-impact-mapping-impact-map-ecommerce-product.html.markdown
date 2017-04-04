@@ -5,14 +5,14 @@ tags:
 - cap-leena
 - business
 ---
-* The single biggest problem in communication is the illusion that it has taken place - Bernard Shaw* 
+* The single biggest problem in communication is the illusion that it has taken place - Bernard Shaw*
 
 According to the [Standish CHAOS report](http://www.infoq.com/articles/standish-chaos-2015), only ~30% of software projects succeed. Others end up either being in a “challenged” state or fail altogether because of various reasons such as over budget, over time or lack of alignment. Let us look at some of the case studies.
 
 ![Standish Chaos 2015](http://cdn.infoq.com/statics_s1_20160217-0123u3/resource/articles/standish-chaos-2015/en/resources/Modern%20Resolution.jpg)
 
 [The modern resolution (OnTime, OnBudget, with a satisfactory result) of all software projects from FY2011-2015 within the new CHAOS database.] 
- 
+
 [Credit: http://www.infoq.com/articles/standish-chaos-2015](http://www.infoq.com/articles/standish-chaos-2015)
 
 
@@ -25,26 +25,26 @@ According to the [Standish CHAOS report](http://www.infoq.com/articles/standish-
 
 
 
-#Strategic Alignment
+##Strategic Alignment
 
 
 ![Water Scrum Fall](http://image.slidesharecdn.com/21centurysoftware-130830104432-phpapp02/95/21-century-software-6-638.jpg?cb=1423023399).
 
-[Credit: http://image.slidesharecdn.com/21centurysoftware-130830104432-phpapp02/95/21-century-software-6-638.jpg?cb=1423023399]. 
+[Credit: http://image.slidesharecdn.com/21centurysoftware-130830104432-phpapp02/95/21-century-software-6-638.jpg?cb=1423023399].
 
 It is common to see this model called the [Water-Scrum-Fall](http://whatis.techtarget.com/definition/WaterScrumFall-water-Scrum-fall) model, where:
 
 
 *  [HIPPO](http://www.askahippo.com/) [the Highest Paid Person in the room] decides the backlog
 
-    
+
 *  The dev team work towards the same in the so-called "iterative" way
 
-    
+
 *  The OPs fire starts because the products aligns with the market
 
-Some teams try to solve this problem of  with the 
-[project charter](https://en.wikipedia.org/wiki/Project_charter) or 
+Some teams try to solve this problem of  with the
+[project charter](https://en.wikipedia.org/wiki/Project_charter) or
 [vision document](https://en.wikipedia.org/wiki/Vision_document) but visibility becomes a struggle as these documents exists in some repository, hardly known to anyone or updated by anyone.
 
 Ask your team members: “What is the goal of your project?”. You may be surprised to know how many actually know about it.
@@ -57,10 +57,10 @@ The planning meetings [iteration or release planning] are supposed to be taking 
 
 *  Ad-hoc planning
 
-    
+
 *  Wrong Assumptions
 
-    
+
 *  Pet features
 
 
@@ -84,10 +84,10 @@ So what is required, is a “technique” which:
 
 *  Focuses on collaboration among all the stakeholders
 
-    
+
 *  Visualises and communicates the assumptions clearly
 
-    
+
 *  Is fast and iterative so that changes can be adapted without delay
 
 
@@ -95,7 +95,7 @@ An “Impact Map” is a “mindmap”, derived from the discussion where all th
 
 
 1. Why?
-  
+
 2. Who?
 
 3. What?
@@ -130,39 +130,39 @@ Let us do that for an eCommerce project. Assume the roadmap contains **Introduce
 
 Q: “Why Social Sharing?”
 
- 
+
 
 A: “So that they can share their transactions with their friends in Twitter or Facebook”
 
-  
+
 
 Q: “Why Should they share with friends?”
 
-   
+
 
 A: “So that more people visit  the site”
 
-    
+
 
 Q: “Why more people should come to the site?”
 
-     
+
 
 A: “To buy more products”
 
-      
+
 
 Q: “Why?”
 
-       
+
 
 A: “To increase the transaction volume”
 
-        
+
 
 Q: “Oh ok, so the goal is to increase the transaction volume. What should be the next immediate target? “
 
-         
+
 
 A: “Immediate target should be to reach out to 1 M transaction within the next 3 months.”
 
@@ -198,13 +198,13 @@ You should ask the below questions to identify the actors:
 
 *  Who can produce the desired effect?
 
-    
+
 *  Who can obstruct it?
 
-    
+
 *  Who are consumers of the product?
 
-    
+
 *  Who will be impacted with it?
 
 
@@ -217,16 +217,16 @@ Let’s look at it from the perspective of our product i.e. eCommerce product:
 
 *  **Shoppers** who buy products
 
-    
+
 *  **Product Vendors** whose products get sold
 
-    
+
 *  **Payment Gateway Provider(s)** whose services will be used for the payment
 
-    
+
 *  **Support Personnel** who handle the shoppers’ queries
 
-    
+
 *  **Admin Personnel**, who manages the catalogue
 
  
@@ -252,10 +252,10 @@ Some of the questions that need to be answered to understand the impact are:
 
 1. How should the goal change the actors’ behavior?
 
-    
+
 2. How can actors’ help us in achieving the goal?
 
-    
+
 3. How can actors’ prevent us from achieving the goal?
 
 
@@ -267,16 +267,16 @@ What kind of impact should be provided to achieve the goal 1 M transactions? How
 
 *  Improved product discovery
 
-    
+
 *  Allow the Vendors to add the products without help from Admin Staff
 
-    
+
 *  Inviting Friends
 
-    
+
 *  90% of payments being successful
 
-    
+
 *  All support tickets closed in 24 hours
 
 
@@ -310,22 +310,22 @@ This section concentrates on the deliverables or features which will create the 
 
 *  Improve the search algorithm
 
-    
+
 *  Simple and intuitive search UI
 
-    
+
 *  Provide options for Social sharing
 
-    
+
 *  Admin Console for Vendors to manage products
 
-    
+
 *  Move to a reliable Payment Gateway, to improve the user experience
 
-    
+
 *  Facebook Ads or Google Ads for branding
 
-    
+
 *  Better alerting mechanisms for failed payments
 
  
