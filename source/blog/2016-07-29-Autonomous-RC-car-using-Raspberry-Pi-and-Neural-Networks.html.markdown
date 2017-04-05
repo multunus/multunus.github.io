@@ -10,8 +10,7 @@ link: http://www.multunus.com/blog/2016/07/autonomous-rc-car-using-raspberry-pi-
 
 In this project, we will be building an autonomous rc car using [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning) of a [neural network](https://en.wikipedia.org/wiki/Artificial_neural_network) with a single hidden layer. We will use a remote-controlled car with a [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) and a [Raspberry Pi camera module](https://www.raspberrypi.org/products/camera-module/) mounted on top. In the training mode, the camera module would provide images needed to train the neural network and in the autonomous mode; would provide the images to the trained model to predict the movements and direction of the car. You can find the Github repository for this project [here](https://github.com/multunus/autonomous-rc-car). Here's a video of the car in action.
 
-https://www.youtube.com/watch?v=dCyBvLjW6X0&feature=youtu.be&rel=0&vq=hd1080
-
+<iframe class="frame-container" width="100%" height="315" src="https://www.youtube.com/embed/dCyBvLjW6X0" frameborder="0" allowfullscreen></iframe>
 
 ## Setup
 We will need a remote controlled car, a Raspberry Pi, a power bank, an L293D Motor Driver IC and some jumper wires to connect the circuits. We glued a cardboard to the top of the RC car and fixed the Raspberry Pi and the power bank to it.

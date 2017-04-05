@@ -7,8 +7,11 @@
   font-weight: 300;
   color: rgba(0,0,0,0.8);
   .post-title {
-    margin-bottom: 1.3em;
     font-weight: bold;
+  }
+  .post-description {
+    color: #777;
+    margin-bottom: 60px;
   }
   h2 {
     margin-top: 60px;
@@ -30,5 +33,8 @@
   img {
     display: block;
     width: 100%;
+  }
+  .frame-container {
+  margin-top: 30px;
   }
 }
