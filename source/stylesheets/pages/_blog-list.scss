@@ -32,3 +32,69 @@
 		}
 	}
 }
+
+section.blog-subscription {
+  padding: 10px 0;
+  text-align: center;
+
+  select.frecuency {
+	  border: none;
+	  font-style: italic;
+	  background-color: transparent;
+	  cursor: pointer;
+	  -webkit-transform: translateY(0);
+	  transform: translateY(0);
+	  -webkit-transition: -webkit-transform .35s ease-in;
+	  transition: -webkit-transform .35s ease-in;
+	  border-bottom: none;
+	  &:focus {
+	    outline: none;
+	    border-bottom: 5px solid #39b3d7;
+	    -webkit-transform: translateY(-5px);
+	    transform: translateY(-5px);
+	    -webkit-transition: -webkit-transform .35s ease-in;
+	    transition: -webkit-transform .35s ease-in;
+	  }
+	}
+
+	.free {
+	  text-transform: uppercase;
+	}
+
+	.input-group {
+	  margin: 20px auto;
+	  width: 100%;
+	}
+
+	.well {
+		background-color: #F4F4F4;
+		border-radius: 2px;
+	}
+
+	input.btn.btn-lg {
+	  outline: none;
+	  width: 60%;
+	  height: 50px;
+	  border-radius: 2px 0 0 2px;
+	  border: 0px;
+	  box-shadow: none;
+	  &:focus {
+	    outline: none;
+	    width: 60%;
+	    height: 50px;
+	    border-radius: 2px 0 0 2px;
+	  }
+	}
+
+	button.btn, .submit-button {
+	  width: 40%;
+	  height: 50px;
+	  border-radius: 0 2px 2px 0;
+	  background-color: $primary-color;
+	  border-color: transparent;
+	}
+
+	.promise {
+	  color: #999;
+	}
+}
