@@ -29,6 +29,7 @@
                 <div id="navbar2" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/">Home</a></li>
+                        <li><a href="/story">Our Story</a></li>
                         <li><a href="/community">Community Work</a></li>
                         <li><a href="/blog">Blog</a></li>
                     </ul>
@@ -38,7 +39,10 @@
             <!--/.container-fluid -->
         </nav>
     </div>
-    <%= yield %>
+    <article class="blog-post">
+      <h1 class="post-title"><%= current_page.data.title %></h1>
+      <%= yield %>
+    </article>
     <%= javascript_include_tag "site.min" %>
   </body>
 </html>

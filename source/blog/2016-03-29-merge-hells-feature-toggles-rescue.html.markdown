@@ -28,9 +28,7 @@ Familiar with the above story? Has it ever happened to you? Then read on, these 
 Before jumping on to the solution, let’s first correct some misunderstandings/misconceptions about Continuous Integration.
 
 
-#Continuous Integration
-
-
+## Continuous Integration
 "[Continuous Integration(CI)](https://en.wikipedia.org/wiki/Continuous_integration) is the practice, in software engineering, of **merging all developer working copies to a shared mainline several times a day.”**
 
 
@@ -40,8 +38,7 @@ Let's go back to the practices the Team X were following. They had CI setup for 
 Both **Continuous** and **Integration** are important in CI and it means continuously integrating the code in one branch, not in multiple branches. Let us see why this is important.
 
 
-##Mainline Development
-
+## Mainline Development
 [Mainline Development](http://paulhammant.com/2013/04/05/what-is-trunk-based-development/), also known as Trunk based development, is where everyone in the team commits to a single branch. Continuous Integration on the mainline branch guarantees that the branch is ready for deployment at any given point of time.
 
 
