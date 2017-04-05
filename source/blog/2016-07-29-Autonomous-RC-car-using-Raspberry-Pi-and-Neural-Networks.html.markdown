@@ -8,7 +8,7 @@ tags:
 link: http://www.multunus.com/blog/2016/07/autonomous-rc-car-using-raspberry-pi-and-neural-networks/
 ---
 
-In this project, we will be building an autonomous rc car using [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning) of a [neural network(https://en.wikipedia.org/wiki/Artificial_neural_network) with a single hidden layer. We will use a remote-controlled car with a [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) and a [Raspberry Pi camera module](https://www.raspberrypi.org/products/camera-module/) mounted on top. In the training mode, the camera module would provide images needed to train the neural network and in the autonomous mode; would provide the images to the trained model to predict the movements and direction of the car. You can find the Github repository for this project [here](https://github.com/multunus/autonomous-rc-car). Here's a video of the car in action.
+In this project, we will be building an autonomous rc car using [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning) of a [neural network](https://en.wikipedia.org/wiki/Artificial_neural_network) with a single hidden layer. We will use a remote-controlled car with a [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) and a [Raspberry Pi camera module](https://www.raspberrypi.org/products/camera-module/) mounted on top. In the training mode, the camera module would provide images needed to train the neural network and in the autonomous mode; would provide the images to the trained model to predict the movements and direction of the car. You can find the Github repository for this project [here](https://github.com/multunus/autonomous-rc-car). Here's a video of the car in action.
 
 https://www.youtube.com/watch?v=dCyBvLjW6X0&feature=youtu.be&rel=0&vq=hd1080
 
@@ -43,7 +43,7 @@ After stabilising the camera, the trained models would give excellent results on
 
 
 ##Training with Neural Networks
-The images required for training the neural network can be captured using 
+The images required for training the neural network can be captured using
 interactive_control_train.py. At the command prompt, run the following command:
 ```
 python interactive_control_train.py
@@ -52,18 +52,17 @@ The command opens a [Pygame](http://www.pygame.org/) screen where the movements 
 
 [![Image captured with the still port (top) and video port (bottom)](http://www.multunus.com/wp-content/uploads/2016/07/image02-300x300.png)](http://www.multunus.com/wp-content/uploads/2016/07/image02.png) Image captured with the still port (top) and video port (bottom)[/caption]
 
-With the images in their respective class folder, we can start training the neural network. We split the image horizontally and convert the lower half into a[numpy](http://www.numpy.org/) 
-[ndarray](http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html)where the colour layers flatten into a single gray-scale layer. The colour information does not provide additional information to identify features and hence the images are gray-scaled. We resize the ndarray according to the dimensions specified in the configuration file and flatten it. The flattened ndarray for each image serves as input to the neural network, and its corresponding class label value is the expected output. We can provide the regularisation parameter(
+With the images in their respective class folder, we can start training the neural network. We split the image horizontally and convert the lower half into a [numpy](http://www.numpy.org/) [ndarray](http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html) where the colour layers flatten into a single gray-scale layer. The colour information does not provide additional information to identify features and hence the images are gray-scaled. We resize the ndarray according to the dimensions specified in the configuration file and flatten it. The flattened ndarray for each image serves as input to the neural network, and its corresponding class label value is the expected output. We can provide the regularisation parameter(
 lambda) and the number of hidden layer nodes(hidden layer size) while training the neural network; default values would be those specified in the configuration file. At the command prompt, run the following command:
 ```
 python train.py 0.1 60
 ```
-The values of lambda and the hidden layer size should be chosen carefully to prevent the network from overfitting/underfitting the data. The network will underfit for large values of lambda and small values of the 
+The values of lambda and the hidden layer size should be chosen carefully to prevent the network from overfitting/underfitting the data. The network will underfit for large values of lambda and small values of the
 hidden layer size. Similarly, lower values of lambda and large values of the hidden layer size cause the network to overfit the data and will start incorporating noise into the model. We have experimented with various values of lambda and found that values between 0 and 0.1 are adequate in most cases. The rule of the thumb for the number of nodes in the hidden layer is that they are usually between the size of the input layer and the size of the output layer. We collected around 2000 images and used a lambda value of 0.1 and a hidden layer size of 110. The cost function is minimised using the L-BFGS-B algorithm. We'll store the trained model as a pickle file in the optimized-thetas folder.
 
 ##Give that car some autonomy
-Once we have the trained model, we can run the RC car autonomously using 
-autonomous.py. It accepts an optional argument for the trained model; default will use the latest model in the 
+Once we have the trained model, we can run the RC car autonomously using
+autonomous.py. It accepts an optional argument for the trained model; default will use the latest model in the
 optimized_thetas folder. At the command prompt, run the following command:
 ```
 python autonomous.py

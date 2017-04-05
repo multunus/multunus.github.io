@@ -20,29 +20,29 @@ Read on to understand more.##What is CodeRetreat?
 
 *  It is a day-long event.
 
-    
+
 *  The problem is the same : Conway’s Game of Life.
 
-    
+
 *  5 or 6 programming sessions : 45 minutes each, followed by retrospections on each session.
 
-    
+
 *  Pair-programming is necessary.
 
-    
+
 *  After each session, pairs should be swapped.
 
-    
+
 *  After each session, code must be deleted, not put in a branch, not stashed, just deleted with no trace left.
 
-    
+
 *  It is preferred to use Test-Driven Development (TDD)
 
 
 ##What is the Problem?
 
 
-In 1970, mathematician Rob Conway came up with a few rules called the 
+In 1970, mathematician Rob Conway came up with a few rules called the
 [Conway’s game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). The universe of the Game of Life is an infinite two-dimensional orthogonal grid of square cells. Each cell is either alive or dead. Every cell interacts with its neighbours to determine its state at the next tick.
 
 
@@ -84,10 +84,10 @@ In some sessions, the constraint was to use Test Driven Development (TDD). For s
 
 *  Focus on one rule at a time.
 
-    
+
 *  More confidence in the validity and correctness of code.
 
-    
+
 *  Continuously changing, restructuring and [refactoring](https://en.wikipedia.org/wiki/Code_refactoring) code all the time.
 
 
@@ -100,7 +100,7 @@ Curious about a different language or paradigm(i.e. functional programming or lo
 
 You have to be intentional about learning. The more you are open to experimentation, the more rewarding the experience from a CodeRetreat.
 
-If you are excited about CodeRetreat, you can come and participate next time. We organize one every now and then. To know about the next, please follow us on 
+If you are excited about CodeRetreat, you can come and participate next time. We organize one every now and then. To know about the next, please follow us on
 [Facebook](https://www.facebook.com/multunus) or [Twitter](https://twitter.com/multunus).
 
 
@@ -112,8 +112,8 @@ Go here
 
 *  [CodeRetreat](http://coderetreat.org/)
 
-    
+
 *  [Structure of a CodeRetreat](http://coderetreat.org/facilitating/structure-of-a-coderetreat)
 
-    
+
 *  [What I learnt from a CodeRetreat](http://johnpwood.net/2011/07/29/what-i-learned-by-attending-a-code-retreat/)

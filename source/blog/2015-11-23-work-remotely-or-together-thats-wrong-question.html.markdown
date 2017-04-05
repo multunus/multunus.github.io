@@ -17,13 +17,11 @@ At the office of Automattic - the company that makes and ships Wordpress and emp
 
 Is this because Automattic has a global workforce? And it’s just logistically easier (cheaper?) to have them work remotely rather than setup office spaces everywhere? Or is there more to it?
 
-Automattic is what you’d call a [ROWE](https://en.wikipedia.org/wiki/ROWE) - a “Results Only Working Environment”. It doesn’t matter when or where you work - as long as you’re producing “Results”.#Which option or 
+Automattic is what you’d call a [ROWE](https://en.wikipedia.org/wiki/ROWE) - a “Results Only Working Environment”. It doesn’t matter when or where you work - as long as you’re producing “Results”.#Which option or
 whose option? That is the question
 
 
-# Which option or ***whose*** option?
-
-# That is the question
+## Which option or ***whose*** option? That is the question
 
 
 At Multunus however, we’ve been averse to remote work. We’ve believed that co-located teams end up being more close knit, have fewer communication gaps and are more productive. We were a strictly “no remote work” company until about 6 months ago.
@@ -39,10 +37,10 @@ Some of the reasons for remote work:
 
 *  Freedom to run errands near their home
 
-    
+
 *  Avoid traffic at least a couple of times a week
 
-    
+
 *  Just work alone and get stuff done without getting pulled into meetings
 
 And for co-location:
@@ -50,19 +48,19 @@ And for co-location:
 
 *  Attend meetings face to face
 
-    
+
 *  Collaborate more closely with the team on tougher challenges
 
-    
+
 *  Bond better with teammates
 
-    
+
 *  Engage with the business better
 
 The impact? We don’t have a full office everyday because people come in when it works for them. That’s it. Nothing more. Nothing less.
 
 
-#Control
+##Control
 
 
 So what did we learn? That it’s okay to let everyone just be.
@@ -73,13 +71,13 @@ But very few of us would attend and adhere to these meetings on time. Most of us
 
 We also spent precious time and energy in stressful conversations around why people were coming in late. And this would get in the way of actually making progress on other important tasks.
 
-It was clear that people had the 
+It was clear that people had the
 intention to come in on time - but the work timings were not synced with their biological clock and productivity cycles.
 
 The more painful thing to admit was that the meetings were actually not very useful either. There was no agenda, no one was ever really prepared. [Ad hoc meetings. The worst kind.](https://www.gv.com/lib/meetings-that-dont-suck)
 
 
-#What matters most
+##What matters most
 
 
 We’d totally missed the forest for the trees. The intent of the morning meeting was to get everyone engaged with our business and to get that sense of teamwork going. But it had the opposite effect - one where people felt more disconnected with the company.
@@ -90,15 +88,15 @@ Yes, some teams needed to collaborate in person - so they would need more overla
 
 It can be scary to just let go and give space to the team to make their own decisions. To allow them to experiment. To make mistakes.
 
-But in return, you get a greater sense of ownership, significantly higher levels of trust and in most cases - actually 
-better decisions being made. It makes sense when you think about it. You know more about 
+But in return, you get a greater sense of ownership, significantly higher levels of trust and in most cases - actually
+better decisions being made. It makes sense when you think about it. You know more about
 your situation than anyone else - so, you end up making better choices as well.
 
-In the end it’s not about what the “remote working policy” of the company should be. 
+In the end it’s not about what the “remote working policy” of the company should be.
 It’s about treating your team as adults and making the workplace more autonomous.
 
 
-#Caveats
+##Caveats
 
 
 We’ve now made a bunch of changes: No more morning stand-ups, totally flexible hours and work from home for anyone at anytime - based totally on their convenience.
@@ -112,17 +110,17 @@ Remember:
 
 *  They’ve got to be very good communicators - they should be able to write and speak very good English (or whichever language suits your team the best).
 
-    
+
 *  They’ve also got to be energetic, honest and self-confident.
 
-    
+
 *  Folks who know how to work in teams very well. Look for great listening skills. Equally importantly, look for folks who have high expectations from their teammates.
 
-    
+
 *  Finally, have small teams and provide them with great tools to help them collaborate well. None of our teams are larger than 3-4 people and we use Slack, Trello and Skype heavily.
 
 
-#Conclusion
+##Conclusion
 
 
 At the end of day, most day-to-day operational decisions are largely cultural decisions. Every “policy” that you create (or better yet, choose not to create :) ) affects the overall engagement of the team.

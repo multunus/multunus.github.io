@@ -27,7 +27,6 @@ Familiar with the above story? Has it ever happened to you? Then read on, these 
 
 Before jumping on to the solution, let’s first correct some misunderstandings/misconceptions about Continuous Integration.
 
-
 ## Continuous Integration
 "[Continuous Integration(CI)](https://en.wikipedia.org/wiki/Continuous_integration) is the practice, in software engineering, of **merging all developer working copies to a shared mainline several times a day.”**
 
@@ -50,20 +49,20 @@ Wondering how will you handle the situations such as following?
 
 *  Features under development
 
-    
+
 *  Features waiting for Acceptance from business stakeholders
 
-    
+
 *  Pushing quick fixes or patches to production
 
 
 Read on.
 
 
-#Feature Toggles
+##Feature Toggles
 
 
-![Feature Toggles](https://pixabay.com/static/uploads/photo/2013/07/13/13/47/button-161555_960_720.png) 
+![Feature Toggles](https://pixabay.com/static/uploads/photo/2013/07/13/13/47/button-161555_960_720.png)
 
 
 [Credit: https://pixabay.com/static/uploads/photo/2013/07/13/13/47/button-161555_960_720.png](https://pixabay.com/static/uploads/photo/2013/07/13/13/47/button-161555_960_720.png)
@@ -107,10 +106,10 @@ Another type of toggle is **Experimental Toggles**, where the feature is exposed
 
 *  [A/B testing](https://en.wikipedia.org/wiki/A/B_testing) or [Multivariate testing](https://en.wikipedia.org/wiki/Multivariate_testing)- to test multiple parallel experiments
 
-    
+
 *  [Canary Release](http://martinfowler.com/bliki/CanaryRelease.html) or [Blue Green Deployments](http://martinfowler.com/bliki/BlueGreenDeployment.html)-  - to incrementally launch the feature to batches of users
 
-    
+
 *  [Dark Launching](https://www.facebook.com/notes/facebook-engineering/hammering-usernames/96390263919/)- Launch the feature to soak test even before releasing it to the users
 
 
@@ -178,18 +177,18 @@ The solution is not to blame the tool or person who used it wrong. Instead, fix 
 This requires a systematic way of conductingpostmortems. This is known as  [Blameless Postmortems](https://codeascraft.com/2012/05/22/blameless-postmortems/), as referred by [John Allspaw](https://twitter.com/allspaw), where the effort is to balance safety and accountability.
 
 
-#Further Readings
+##Further Readings
 
 Both Mainline Development and Feature Toggles are practices followed by many high performing organizations since their very early days. You can go through the below posts which refer to some of those:
 
 *  [10+ deployments a day @ Flickr](http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr/47-1_RespectIf_there_is_only)
-    
+
 *  [50+ deployments a day @ Etsy](http://www.infoq.com/news/2014/03/etsy-deploy-50-times-a-day)
-    
+
 *  [Amazon does deployments every 11.6 seconds](http://joshuaseiden.com/blog/2013/12/amazon-deploys-to-production-every-11-6-seconds/)
-    
+
 *  [Google - commit to production is 8 minutes](https://air.mozilla.org/continuous-delivery-at-google/)
 
 *  [Dark Launching @ Facebook](https://www.facebook.com/notes/facebook-engineering/hammering-usernames/96390263919/)
-    
+
 *  [Netflix - Lessons learned during AWS Outage](http://techblog.netflix.com/2011/04/lessons-netflix-learned-from-aws-outage.html)
