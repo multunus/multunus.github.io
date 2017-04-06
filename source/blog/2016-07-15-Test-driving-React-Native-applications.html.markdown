@@ -48,7 +48,15 @@ Rename `config.example.json` to `config.json` and modify it as required. The app
 *   A view of all of the comments
 *   A form to submit a comment
 
-We will have the following component hierarchy- `CommentBox`: The root component    - `CommentList` : To display a list of all components       - `Comment` : To display a single comment    - `CommentForm` : A form for user to write a comment**Our first test** Okay, now it’s time for coding. Let us write our first test. The components for the app are written in `src/components` directory and the corresponding  tests for components are written in `src/components/__specs__` directory. Open a new file `src/components/__specs__/Comment.spec.js` and write the following code.
+We will have the following component hierarchy
+
+* `CommentBox`: The root component    
+  * `CommentList` : To display a list of all components     
+    * `Comment` : To display a single comment    
+  * `CommentForm` : A form for user to write a comment
+
+ **Our first test**
+ Okay, now it’s time for coding. Let us write our first test. The components for the app are written in `src/components` directory and the corresponding  tests for components are written in `src/components/__specs__` directory. Open a new file `src/components/__specs__/Comment.spec.js` and write the following code.
 
     import React, { View } from 'react-native';
     import { shallow } from 'enzyme';
@@ -64,8 +72,9 @@ We will have the following component hierarchy- `CommentBox`: The root componen
       });
     });
 
-That is a simple test to begin with. Let’s checkout what is going on here. We are using[shallow rendering API](http://airbnb.io/enzyme/docs/api/shallow.html) of enzyme here. It is useful to constrain yourself to testing a component as a unit, and to ensure that your tests aren't indirectly asserting on behaviour of child components. `shallow()` method returns a shallow wrapper object around the component that is to be tested. Enzyme provides a rich set of methods that can be called on the wrapper instance, for testing various aspects of a component. Check out the[docs](http://airbnb.io/enzyme/docs/api/shallow.html) . In this spec we are just checking the type of the component.We must appreciate the work of Leland Richardson for building[Enzyme](https://github.com/airbnb/enzyme) ( JS testing utility which helps us write tests for react “web” components) and[React Native Mock](https://github.com/lelandrichardson/react-native-mock) ( fully mocked and test-friendly version of react native, which makes enzyme compatible with react native). The result of this effort is painless testing of react native components.Now save the file and run `npm test` from console and watch your tests fail. Now we build the `Comment` component. Open `src/components/Comment.js` and write the following code.
+That is a simple test to begin with. Let’s checkout what is going on here. We are using [shallow rendering API](http://airbnb.io/enzyme/docs/api/shallow.html) of enzyme here. It is useful to constrain yourself to testing a component as a unit, and to ensure that your tests aren't indirectly asserting on behaviour of child components. `shallow()` method returns a shallow wrapper object around the component that is to be tested. Enzyme provides a rich set of methods that can be called on the wrapper instance, for testing various aspects of a component. Check out the[docs](http://airbnb.io/enzyme/docs/api/shallow.html) . In this spec we are just checking the type of the component.We must appreciate the work of Leland Richardson for building[Enzyme](https://github.com/airbnb/enzyme) ( JS testing utility which helps us write tests for react “web” components) and[React Native Mock](https://github.com/lelandrichardson/react-native-mock) ( fully mocked and test-friendly version of react native, which makes enzyme compatible with react native). The result of this effort is painless testing of react native components.Now save the file and run `npm test` from console and watch your tests fail. Now we build the `Comment` component. Open `src/components/Comment.js` and write the following code.
 
+~~~ javascript
     import React, {Component, View } from 'react-native';
 
     export default class Comment extends React.Component {
@@ -76,9 +85,11 @@ That is a simple test to begin with. Let’s checkout what is going on here. We 
         );
       }
     }
+~~~
 
 Now run `npm test` from console and see your tests pass. Bingo! Now we will be progressively writing tests and code to build the complete app. We’ll be following the same procedure for the rest of our tutorial. Write tests, watch it fail, write code, see it passing, refactor if necessary. You can read more about[Red Green Refactor here](http://www.jamesshore.com/Blog/Red-Green-Refactor.html) .Now that we're all good to go, let's start with the topmost component in the component structure.`src/components/__specs__/CommentBox.spec.js`
 
+~~~ javascript
     import React, { View, Text } from 'react-native';
     import { shallow } from 'enzyme';
     import { expect } from 'chai';
@@ -96,9 +107,11 @@ Now run `npm test` from console and see your tests pass. Bingo! Now we will be p
 
       it('should have a title Comment It', () => {
         expect(wrapper.contains(<Text>Comment It</Text>)).to.equal(true);
+~~~     
 
 These tests describe CommentBox to be a View component and have a Text component inside it. We’ll write minimal amount of code to make this test pass. and a Text component with the text “Comment It” in it. Now the actual code.`src/components/CommentBox.js`
 
+~~~ javascript
     import React, {Component, Text, View } from 'react-native';
 
     export default class CommentBox extends React.Component {
@@ -110,9 +123,11 @@ These tests describe CommentBox to be a View component and have a Text component
         );
       }
     }
+~~~
 
 We need a CommentList and CommentForm component inside our CommentBox.We’ll just define these components without working logic just for now, and come back to these components and complete them later.`src/components/__specs__/CommentForm.spec.js`
 
+~~~ javascript
     import React, { View } from 'react-native';
     import { shallow } from 'enzyme';
     import { expect } from 'chai';
@@ -126,9 +141,11 @@ We need a CommentList and CommentForm component inside our CommentBox.We’ll ju
         expect(wrapper.type()).to.equal(View);
       });  
     });
+~~~
 
 `src/components/CommentForm.js`
 
+~~~ javascript
     import React, {Component, View } from 'react-native';
 
     export default class CommentForm extends React.Component {
@@ -139,9 +156,11 @@ We need a CommentList and CommentForm component inside our CommentBox.We’ll ju
         );
       }
     }
+~~~
 
 `src/components/__specs__/CommentList.spec.js`
 
+~~~ javascript
     import React, { ListView } from 'react-native';
 
     import { shallow } from 'enzyme';
@@ -156,9 +175,10 @@ We need a CommentList and CommentForm component inside our CommentBox.We’ll ju
         expect(wrapper.type()).to.equal(ListView);
       });
     });
-
+~~~
 `src/components/CommentList.js`
 
+~~~ javascript
     import React, {Component, ListView} from 'react-native';
 
     export default class CommentList extends React.Component {
@@ -168,8 +188,11 @@ We need a CommentList and CommentForm component inside our CommentBox.We’ll ju
         );
       }
     }
+~~~
 
-Let's add them to CommentBox component. Add a couple of specs to CommentBox.spec.js as follows`src/components/__specs__/CommentBox.spec.js`
+Let s add them to CommentBox component. Add a couple of specs to `CommentBox.spec.js` as follows`src/components/__specs__/CommentBox.spec.js`
+
+~~~ javascript
 
     import React, { View, Text } from 'react-native';
     import { shallow } from 'enzyme';
@@ -200,9 +223,11 @@ Let's add them to CommentBox component. Add a couple of specs to CommentBox.spec
         expect(wrapper.find(CommentForm)).to.have.length(1);
       });
     });
+~~~
 
 `src/components/CommentBox.js`
 
+~~~ javascript
     import React, {Component,Text, View} from 'react-native';
 
     import CommentList from './CommentList.js';
@@ -219,8 +244,11 @@ Let's add them to CommentBox component. Add a couple of specs to CommentBox.spec
         );
       }
     }
+~~~    
 
 Now that we have the whole structure in place, we’ll implement with the functionality starting with Comment component.For each comment we’ll pass author name of the comment and the actual comment as props. Comment component should take these props and render both the author name and actual comment.`src/components/__specs__/Comment.spec.js`
+
+~~~ javascript
 
     import React, { View, Text } from 'react-native';
     import { shallow } from 'enzyme';
@@ -253,6 +281,8 @@ Now that we have the whole structure in place, we’ll implement with the functi
         expect(wrapper.contains(<Text>Author</Text>)).to.equal(true);
       });
     });
+~~~    
+
 
 `src/components/Comment.js`
 
@@ -310,6 +340,7 @@ Aha! We have successfully test-driven our first React Native component.  Since 
 
 `src/components/CommentList.js`
 
+~~~ javascript
     import React, {Component, View, ListView} from 'react-native';
     import Comment from './Comment.js';
 

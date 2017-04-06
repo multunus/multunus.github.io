@@ -15,10 +15,12 @@ At Multunus, we started researching and using React Native about 6 months ago. O
 This post is going to walk you through a solution to this problem on iOS and probably also introduce some idioms of iOS development (assuming you are new to iOS development).
 
 To start with, let us try and break this problem down a little further. What we need is
+
 1. Be able to build different versions of the app for each environment.
 2. Identify which version the app is built and use the appropriate config (on the JS side)
 
 One strategy for this would be
+
 1. Store the config of all environments in a JSON file
 2. On the native side, use different XCode configurations to build different versions of the app
 3. Expose a configuration specific environment name (Eg., staging) to the JS side using native modules
@@ -32,7 +34,7 @@ Let’s look at step one.
 
 Let’s start by creating a `config.json` in the root directory of the project. This will store our config for all the environments.
 
-```
+~~~ json
 // config.json
 {
   "development": {
@@ -48,7 +50,7 @@ Let’s start by creating a `config.json` in the root directory of the project. 
     "appServerRootURL": "PRODUCTION ROOT URL"
   }
 }
-```
+~~~
 Note that the top level keys contain the different environment names and all we need is to figure out which of these keys to access the config from.
 
 
@@ -59,14 +61,14 @@ Let us say, we need development, staging and production versions of the app. Now
 react-native-cli to generate the app for the first time, you would have two configurations set up in your XCode project -
 **Debug** and **Release**.
 
-[![xcode_configurations_1](http://www.multunus.com/wp-content/uploads/2016/06/xcode_configurations_1-300x144.png)](http://www.multunus.com/wp-content/uploads/2016/06/xcode_configurations_1.png)
+![xcode_configurations_1](http://i0.wp.com/www.multunus.com/wp-content/uploads/2016/06/xcode_configurations_1.png?w=1024)
 
 Going forward we shall use
 **Debug** for our development app and **Release**
  for our production app. That means we’ll need one more for our staging app. So, let’s create a duplicate of the **Release**
  configuration and name it  **Staging**.
 
-[![xcode_configurations_2](http://www.multunus.com/wp-content/uploads/2016/06/xcode_configurations_2-300x116.png)](http://www.multunus.com/wp-content/uploads/2016/06/xcode_configurations_2.png)
+![xcode_configurations_2](http://i0.wp.com/www.multunus.com/wp-content/uploads/2016/06/xcode_configurations_2.png)
 
 Why not rename those configurations to
 **Development** and **Production**
@@ -77,10 +79,10 @@ XCode schemes are a convenient way to use different configurations while buildin
 To start with, let us create a scheme for development builds. Duplicate the existing scheme (the name is usually the same as that of the project) and give it an appropriate name.
 
 
-[![xcode_schemes_1](http://www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_1-300x130.png)](http://www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_1.png)
+![xcode_schemes_1](http://i2.wp.com/www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_1.png)
 
 
-[![xcode_schemes_2](http://www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_2-300x139.png)](http://www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_2.png)
+![xcode_schemes_2](http://i1.wp.com/www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_2.png?w=1024)
 
 Choose
 **Debug**as the build configuration for the **Run** and **Archive**
@@ -88,10 +90,10 @@ Choose
  actions. Now you can choose the new schemes from the top left corner while running / archiving the app from the XCode GUI or while archiving it from the command line.
 
 
-[![xcode_schemes_3](http://www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_3-300x144.png)](http://www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_3.png)
+![xcode_schemes_3](http://i0.wp.com/www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_3.png?w=1024)
 
 
-[![xcode_schemes_4](http://www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_4-300x141.png)](http://www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_4.png)
+![xcode_schemes_4](http://i0.wp.com/www.multunus.com/wp-content/uploads/2016/06/xcode_schemes_4.png)
 
 
 
@@ -103,22 +105,22 @@ We are now able to build different versions of the app. What we need next is a w
 **Development**, **Staging** and **Production** for **Debug**,**Staging** and **Release** respectively.
 
 
-[![user_defined_setting_1](http://www.multunus.com/wp-content/uploads/2016/06/user_defined_setting_1-300x70.png)](http://www.multunus.com/wp-content/uploads/2016/06/user_defined_setting_1.png)
+![user_defined_setting_1](http://i2.wp.com/www.multunus.com/wp-content/uploads/2016/06/user_defined_setting_1.png?w=1024)
 
 
 
 
-[![user_defined_setting_2](http://www.multunus.com/wp-content/uploads/2016/06/user_defined_setting_2-300x101.png)](http://www.multunus.com/wp-content/uploads/2016/06/user_defined_setting_2.png)
+![user_defined_setting_2](http://i0.wp.com/www.multunus.com/wp-content/uploads/2016/06/Screen-Shot-2016-11-03-at-7.54.03-AM.png?w=1024)
 
 User-Defined settings are not accessible from the code directly. Instead they have to be stored in the `Info.plist` to be accessed from the application code. So we now add a new property key-value to the `Info.plist` file. Let’s call the key `BuildEnvironment` and set the value to `$(BUILD_ENV)`. This will set the value from the user defined setting.
 
 
-[![user_defined_setting_3](http://www.multunus.com/wp-content/uploads/2016/06/user_defined_setting_3-300x102.png)](http://www.multunus.com/wp-content/uploads/2016/06/user_defined_setting_3.png)
+![user_defined_setting_3]http://i0.wp.com/www.multunus.com/wp-content/uploads/2016/06/Screen-Shot-2016-11-03-at-7.54.03-AM.png?w=1024)
 
 Now that `buildEnvironment` is accessible, let’s create our native module! We’ll call this `RNConfig.` Let’s create a header file `RNConfig.h` and an Objective-C class file `RNConfig.m`
 
 
-[![native_module_1](http://www.multunus.com/wp-content/uploads/2016/06/native_module_1-300x199.png)](http://www.multunus.com/wp-content/uploads/2016/06/native_module_1.png)
+![native_module_1](http://i1.wp.com/www.multunus.com/wp-content/uploads/2016/06/native_module_1.png?w=1454)
 
 As mentioned in the docs for native modules, our class should implement the
 RCTBridgeModule protocol.

@@ -104,20 +104,15 @@ You should have space to fail as the founder. And you should be comfortable in y
 
 *  **Integrity**: This is important at two levels:
 
-  *  **Honesty with others (the team and with customers):**
- This should be non-negotiable. And should be emphasized very strongly, IMO.
-
-    *  We’ve let people go at Multunus when we sensed a lack of this.
-
-
-    *  Focusing on [safety](http://personalmba.com/safety/) will help make it easier for people to be honest with you
+*  **Honesty with others (the team and with customers):** This should be non-negotiable. And should be emphasized very strongly, IMO.
+* We’ve let people go at Multunus when we sensed a lack of this.
+* Focusing on [safety](http://personalmba.com/safety/) will help make it easier for people to be honest with you
 
 
-  *  **Honesty with oneself :**
- You will know that you’re making progress on this front when people start challenging the status quo. When they politely but firmly question decisions you’re making as the founder, you know that your people are trying to be consistent with their own beliefs and being courageous enough to follow through with what they believe in. That they actually care for themselves and for the company.
+* **Honesty with oneself :** You will know that you’re making progress on this front when people start challenging the status quo. When they politely but firmly question decisions you’re making as the founder, you know that your people are trying to be consistent with their own beliefs and being courageous enough to follow through with what they believe in. That they actually care for themselves and for the company.
 
-    *  This is admittedly quite hard. And it takes time. But be persistent, and you will eventually start seeing results.
-You will be able to make it easier for people to be honest (in both of the above ways) if you focus on the Autonomy and the Embracing Failure points above.
+* This is admittedly quite hard. And it takes time. But be persistent, and you will eventually start seeing results.You will be able to make it easier for people to be honest (in both of the above ways) if you focus on the Autonomy and the Embracing Failure points above.
+
 
 
 **Vision**

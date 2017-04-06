@@ -49,7 +49,7 @@ When a new, multi-platform project is incubated, the tendency is to dive right i
 The designs may tend to overlook or deviate from general practices and guidelines specified for the platforms in order to make things work as fast as they can and to avoid rework.
 
 
-####Why may this seem like a good idea?
+###Why may this seem like a good idea?
 
 
 
@@ -68,7 +68,7 @@ The designs may tend to overlook or deviate from general practices and guideline
 *  Retention of users who switch platform
 
 
-####Why is this a bad idea?
+###Why is this a bad idea?
 
 
 A single design for all platforms has deeper repercussions. What needs to be understood is that having great UX can make a difference between hitting top charts and remaining as yet another application in a long list of similar me-too applications. Tradeoffs being made in initial phases for capturing market or to improve time efficiency are acceptable to a certain limit. A concept of ‘UI/UX design debt’ similar to that of ‘[technical debt](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor)’ should be introduced, and made sure that the backlog in this area is cleared by think-make-check improvement cycles. Deprioritizing UI/UX impacts not only the app development but also on user engagement, retention, reviews, referrals, etc. The perceived benefits of the common design approach start waning away.
@@ -80,7 +80,7 @@ Let’s analyze this problem from different viewpoints:
 
 
 
-####How it happens
+###How it happens
 
 
 Businesses work under constraints of limited time and budget (Development, Design, Marketing), while trying to amplify brand value and targeting an early launch.
@@ -91,7 +91,7 @@ They consider that a product should have consistency across platforms and to rea
 Yes, this is how most businesses have come to think of app usability and branding. Instead of leaving this task to the UI/UX designers, businesses go to designers with the task of creating an app for a single platform. The designers do their jobs well at designing an app for the said platform, say iOS. But the designs are distributed to Android as well as iOS developers.
 
 
-####How it should be
+###How it should be
 
 
 The focus of design (as well as business) should be on creating value and delivering an experience that impacts the user. The real value of your product lies not in visuals but what you offer the end user - be it a social platform, a service or simply an aggregator.
@@ -118,7 +118,7 @@ Vastly differing UI, tailored UX and top of charts on all mobile platform stores
 
 
 
-####How it happens
+###How it happens
 
 
 If the decision has already been made at the Business level, there’s not much a designer can do. If not, then things could go pretty wrong here too.
@@ -128,7 +128,7 @@ The aim of designs should be to keep in mind the brand and focus on crafting del
 Also, sometimes new ideas or design experiments may overlook all rational argument.
 
 
-####How it should be
+###How it should be
 
 
 At times, the choices are unconscious choices. But a designer **should know** about the different UI patterns, guidelines and possibilities on several platforms (otherwise you might need to look into your choice of designer :P). Consciously steering away from known baselines does not always signify innovation, it may also be a sign of lousiness. While experimenting with new patterns, the risk involved should be taken into account and communicated to the concerned business team. There is a very thin line between trying to stand out and aiming too high. When you start compromising on other aspects like usability and complicating a simple navigation experience, stop and take a moment to think whether it’s worth the risk.
@@ -152,7 +152,7 @@ Zomato app, for instance, used * similar*  but more of a platform oriented UI an
 
 
 
-####How it happens
+###How it happens
 
 
 The previous decisions might have been made under pressure but technicians are generally not even allowed an opinion in such matters. Generally, a design change in standard components translates to a different technical implementation too. This could be a good chance for developers to learn something new, but we should consider whether the learning would be worth the risk associated with the limited resources (time, the number of developers, etc.) at hand. In the end, will the learnings benefit the project and/or the executor(s) with the existing constraints already in place?
@@ -160,7 +160,7 @@ The previous decisions might have been made under pressure but technicians are g
 Limited platforms, like a mobile OS, do not allow much deviation. Deviating from guidelines specified for such platforms require a lot of extra effort and knowledge about combinations of feasible options. For people who are relatively new or uncomfortable with it, one of the possible (and more likely than other) outcomes is bad code. Tradeoffs will have to take place - a big one being making a choice among speed, quality and cost - even when using Lean methods from Agile model. What started out as a bad business decision or an overlooked design aspect, ultimately results in a product with bad code practices or smelly code base behind it. The technical debts of this design approach could be huge. The developers might lose interest in creating the beautiful, user-oriented application it was supposed to be and shift their focus towards just getting it done anyway. Is that how you want your business to be shaped?
 
 
-####How it should be
+###How it should be
 
 
 Involving them in the process since the beginning and letting them weigh your decisions against the technical aspects might not seem like a popular or mainstream idea, but it works the best considering the situations above. Also, it lets you have a better control on the time and cost of the technical implementation.

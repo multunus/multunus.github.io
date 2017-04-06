@@ -62,10 +62,8 @@ Read on.
 ##Feature Toggles
 
 
-![Feature Toggles](https://pixabay.com/static/uploads/photo/2013/07/13/13/47/button-161555_960_720.png)
+![Feature Toggles](http://i2.wp.com/www.multunus.com/wp-content/uploads/2016/03/button-161555_1280.png)
 
-
-[Credit: https://pixabay.com/static/uploads/photo/2013/07/13/13/47/button-161555_960_720.png](https://pixabay.com/static/uploads/photo/2013/07/13/13/47/button-161555_960_720.png)
 
 
 This is where Feature Toggles come to the rescue.
