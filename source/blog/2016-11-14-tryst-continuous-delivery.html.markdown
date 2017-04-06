@@ -1,6 +1,6 @@
 ---
 title: Tryst With Continuous Delivery
-date: '2016-11-14 11:54:19'
+date: '2016-11-14 11:52:19'
 tags:
 - cap-leena
 - technology

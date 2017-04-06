@@ -32,7 +32,7 @@ At this stage, you should be looking for a combination of **Qualitative ** and 
 ###In-depth User Interviews
 
 
-In Early stages of your product, there is no substitute for talking to users directly. * Is the problem you are trying to solve even a real problem? 
+In Early stages of your product, there is no substitute for talking to users directly. * Is the problem you are trying to solve even a real problem?
 Who are the people facing the problem?*  Nailing these down are keystones for your project.
 
 Start with [Proto-Personas](http://uxmag.com/articles/using-proto-personas-for-executive-alignment) and recruit users who match the personas. As you talk to more users, keep refining the persona.
@@ -46,23 +46,23 @@ I would highly recommend a **[Jobs To Be Done](www.youtube.com/watch?v=f84LymEs6
 
 1. Remote Calls: [GoogleHangout (Free)](https://plus.google.com/hangouts), [Skype (Free)](http://www.skype.com/)
 
-    
-2.Recording: [Audacity - Audio only (Free)](http://audacity.sourceforge.net/), [Camtasia - Audio/Video (Paid)](http://www.techsmith.com/camtasia.html), [Jing](http://www.techsmith.com/jing.html)
 
-    
-3.Scheduling: [AssistantTo](http://www.trybetty.com/assistantto/)
+2. Recording: [Audacity - Audio only (Free)](http://audacity.sourceforge.net/), [Camtasia - Audio/Video (Paid)](http://www.techsmith.com/camtasia.html), [Jing](http://www.techsmith.com/jing.html)
 
 
-* Tip: Use [SoundFlower (Free)](http://cycling74.com/products/soundflower/) to be able to record both sides of the call.* 
+3. Scheduling: [AssistantTo](http://www.trybetty.com/assistantto/)
 
-Update: We tried Google Hangout on Air for the interviews and found it to work quite well for remote interviews. You can do away recording mess too. 
+
+* Tip: Use [SoundFlower (Free)](http://cycling74.com/products/soundflower/) to be able to record both sides of the call.*
+
+Update: We tried Google Hangout on Air for the interviews and found it to work quite well for remote interviews. You can do away recording mess too.
 [Read more here](www.multunus.com/blog/2014/09/using-google-hangouts-air-remote-usability-testing/).
 
 
 ###Contextual Inquiry
 
 
-When you ask people about something that's not straight out of past experience - that requires analysis and imagination - you'll find that 
+When you ask people about something that's not straight out of past experience - that requires analysis and imagination - you'll find that
 **what they say is different from what they would actually do.** They don't want to lie to you. They just aren't in the context.
 
 Contextual Inquiry often involves stalking the user (legally, of course) and collecting notes throughout the day. If your product is targeting a team and not a single user, you could be part of the team and get a clearer picture.
@@ -86,7 +86,7 @@ Watch how Google used this method to improve their search experience in [Don't L
 **Tools:**[PACo (Private Beta)](https://quantifiedself.appspot.com/main.jsp), [MetricWire (Paid)](https://metricwire.com/), [mEMA (Paid)](https://itunes.apple.com/us/app/mema/id593566606?ls=1&mt=8), [More Tools...](http://www.otago.ac.nz/psychology/otago047475.pdf)
 
 
-* Tip: If you are relying on questionnaire, remember to keep it short. The more time the participant has to invest, the less participation you'll have.* 
+* Tip: If you are relying on questionnaire, remember to keep it short. The more time the participant has to invest, the less participation you'll have.*
 
 
 ###Surveys
@@ -99,13 +99,13 @@ The success of the survey depends largely on how you sample your users and the f
 
 *  Keep it short.
 
-    
+
 *  Use multiple choice questions. Aim for accuracy not precision.
 
-    
+
 *  Keep questions granular and try not to combine measures.
 
-    
+
 *  If you end up with more questions, cycle questions with different users.
 
 
@@ -150,7 +150,7 @@ You quickly sketch screens of the product on paper and conduct usability testin
 
 *  [Printable Templates](http://www.smashingmagazine.com/2010/03/29/free-printable-sketching-wireframing-and-note-taking-pdf-templates/) you can use for faster prototyping.
 
-    
+
 *  Easily make the paper prototypes interactive using [MarvelApp](https://marvelapp.com/) or [InvisionApp](http://invisionapp.com/) or [Flinto](https://www.flinto.com/)
 
 
@@ -183,7 +183,7 @@ Most often you'll find your most important usability issues by testing on just 3
 ###Heuristic Evaluation
 
 
-Heuristic Evaluation differs from Usability Testing in that, the test is done by an usability 
+Heuristic Evaluation differs from Usability Testing in that, the test is done by an usability
 expert instead of a user.
 
 
@@ -222,7 +222,7 @@ Given a certain task, will the user know where to click without having to probe 
 
 *  [The vital importance of the first click](http://www.gerrymcgovern.com/new-thinking/vital-importance-first-click)
 
-    
+
 *  [First Click Testing](http://www.measuringusability.com/blog/first-click.php)
 
  

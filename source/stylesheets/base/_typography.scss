@@ -70,6 +70,10 @@ p + ul, p + ol, p + dl {margin-bottom:1.5em;}
 p.lead + p {
   text-indent:0;
 }
+li{
+  font-size:110%;
+  margin:1em 0 0;
+}
 
 blockquote {border-left:5px solid #eee; padding-left:1.5em; margin:1em 0;}
 blockquote small {display:block; line-height:1.7em;}

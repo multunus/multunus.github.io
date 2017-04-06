@@ -1,5 +1,5 @@
 ---
-title: Tryst With Continuous Delivery
+title: Polymorphism - Ruby vs Clojure
 date: '2016-11-16	 11:54:19'
 tags:
 - cap-kp
