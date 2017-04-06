@@ -86,7 +86,7 @@ Going back to the definition of Technical Debt by Wikipedia, it is considered as
 
 Martin Fowler uses quadrant to explain similar concept where he points out that it is not useful to discuss whether something is a debt or not, better ask whether it is **reckless** or **prudent**. The more the issues/flows are in the Prudent section, better it is.
 
-![image alt text](https://s3.amazonaws.com/multunus-website/uploads/2017/03/technical-debt-quadrant.png)
+![image alt text](https://s3.amazonaws.com/multunus-website/uploads/2017/04/technical-debt-quadrant.png)
 
 # Paying down Technical Debt
 
