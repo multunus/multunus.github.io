@@ -17,11 +17,11 @@ Have you ever run across a situation where you download a new app from the store
 
 Consider the Instagram app.
 
-![Instagram Android](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/01/image04_1.png "Instagram Android")
+![Instagram Android](https://s3.amazonaws.com/multunus-website/uploads/2016/01/image04_1.png "Instagram Android")
 
 Instagram Android
 
-![Instagram iOS](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/01/image07.jpg "Instagram iOS")
+![Instagram iOS](https://s3.amazonaws.com/multunus-website/uploads/2016/01/image07.jpg "Instagram iOS")
 
 Instagram iOS
 
@@ -30,11 +30,11 @@ These images clearly show the lack of differentiation in the navigation pattern 
 Another example could be the Gmail app: both the platforms use side menu for navigation.
 
 
-![Gmail Android](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/01/image00_1.png)
+![Gmail Android](https://s3.amazonaws.com/multunus-website/uploads/2016/01/image00_1.png)
 
 Gmail Android
 
-![Gmail iOS](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/01/image03.jpg)
+![Gmail iOS](https://s3.amazonaws.com/multunus-website/uploads/2016/01/image03.jpg)
 
 Gmail iOS
 
@@ -99,15 +99,15 @@ The focus of design (as well as business) should be on creating value and delive
 A very good example I would like to refer here is WhatsApp.
 
 
-![WhatsApp Android](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/01/image06_1.png)
+![WhatsApp Android](https://s3.amazonaws.com/multunus-website/uploads/2016/01/image06_1.png)
 
 WhatsApp Android
 
-![WhatsApp iOS](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/01/image01_1.jpg)
+![WhatsApp iOS](https://s3.amazonaws.com/multunus-website/uploads/2016/01/image01_1.jpg)
 
 WhatsApp iOS
 
-![WhatsApp Windows](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/01/image05.jpg)
+![WhatsApp Windows](https://s3.amazonaws.com/multunus-website/uploads/2016/01/image05.jpg)
 
 WhatsApp Windows
 
@@ -134,11 +134,11 @@ Also, sometimes new ideas or design experiments may overlook all rational argume
 At times, the choices are unconscious choices. But a designer **should know** about the different UI patterns, guidelines and possibilities on several platforms (otherwise you might need to look into your choice of designer :P). Consciously steering away from known baselines does not always signify innovation, it may also be a sign of lousiness. While experimenting with new patterns, the risk involved should be taken into account and communicated to the concerned business team. There is a very thin line between trying to stand out and aiming too high. When you start compromising on other aspects like usability and complicating a simple navigation experience, stop and take a moment to think whether it’s worth the risk.
 
 
-![Zomato Android](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/01/image02_1.png)
+![Zomato Android](https://s3.amazonaws.com/multunus-website/uploads/2016/01/image02_1.png)
 
 Zomato Android
 
-![Zomato iOS](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/01/image10.jpg)
+![Zomato iOS](https://s3.amazonaws.com/multunus-website/uploads/2016/01/image10.jpg)
 
 Zomato iOS
 
@@ -187,11 +187,11 @@ The same user who loves your app otherwise may get irritated on a bad day, fumbl
 *  **Ask yourself - why do I need an app with same designs all across?** You may come up with various answers related to your app’s workflow and the real life problem you are trying to solve. These could be genuine reasons. Consider this screen from Flipboard. It presents a simple article.
 
 
-![Flipboard Android](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/01/image08_1.png)
+![Flipboard Android](https://s3.amazonaws.com/multunus-website/uploads/2016/01/image08_1.png)
 
 Flipboard Android
 
-![Flipboard iOS](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/01/image09.jpg)
+![Flipboard iOS](https://s3.amazonaws.com/multunus-website/uploads/2016/01/image09.jpg)
 
 Flipboard iOS
 

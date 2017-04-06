@@ -7,7 +7,7 @@ tags:
 link: http://www.multunus.com/blog/2015/11/6-tips-give-website-instant-facelift/
 ---
 
-![paint](http://www.multunus.com/wp-content/uploads/2015/11/paint.jpg)
+![paint](https://s3.amazonaws.com/multunus-website/uploads/2015/11/paint.jpg)
 
 If your website or application hasn’t had a touch of a professional designer yet, try the follow tips to give it an instant facelift. These are my compilations from the most common mistakes I’ve seen and will work in most cases.
 

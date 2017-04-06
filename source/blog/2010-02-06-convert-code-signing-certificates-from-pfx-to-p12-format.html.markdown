@@ -16,8 +16,8 @@ When you download the certificate from their site, it automatically gets install
 
 1. Export the certificate from IE by following the instructions given here: 
 	[http://www.tech-pro.net/export-to-pfx.html](http://www.tech-pro.net/export-to-pfx.html)
-	
-1. The certificate with Private key will be exported as PFX format in the above step - but this 
+
+2. The certificate with Private key will be exported as PFX format in the above step - but this 
 **cannot** be used by the jarsigner. So you need to convert it into “p12 format” which the jarsigner can understand. For that you need to use Mozilla. First import the certificate  saved in step 1 into Mozilla as follows:
 	- From the “Edit” menu select “Preferences” and open the “Privacy & Security” category and click on the “Certificates” item.
 	- In the “Manage Certificates” section, click on the “Manage Certificates” button.
@@ -28,7 +28,7 @@ When you download the certificate from their site, it automatically gets install
 	- It prompts you to provide the password used to encrypt the certificate backup; enter it.
 	- It should say “Successfully restored your certificate(s) and private key(s).” Click OK.
 
-1. Then export the certificate as p12 format:
+3. Then export the certificate as p12 format:
 	- From the “Edit” menu select “Preferences” and open the “Privacy & Security” category and click on the “Certificates” item
 	- In the “Manage Certificates” section, click on the “Manage Certificates” button.
 	- In the “Certificate Manager” window, the “Your Certificates” tab should automatically open. (If not, select it.)
@@ -40,12 +40,12 @@ When you download the certificate from their site, it automatically gets install
 	**Remember this password!**
 	- Once the system says it’s successfully backed up your certificate and private key, click OK.
 
-1. We also need to know the alias of the “.p12” file so run:
-	
+4. We also need to know the alias of the “.p12” file so run:
+
 	```
 	keytool -list -storetype pkcs12 -keystore <path to the cert file
 	```
-	
+
 	Then you will see output like this:
 
 	```
@@ -56,7 +56,7 @@ When you download the certificate from their site, it automatically gets install
 	The xxxx-xxx… number is the alias for the key
 	```
 
-1. Change your ant script as follows to sign the certificate:
+5. Change your ant script as follows to sign the certificate:
 
 	```
 	[xml]<target name=”signjar” depends=”jar”> <signjar jar=”yourJar.jar” storetype=”pkcs12″ keystore=”yourkey.p12″ alias=”Your Alias” storepass=”your password”/></target>[/xml]

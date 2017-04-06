@@ -24,9 +24,9 @@ Skype initially started as an instant messaging and a voice chat service. Later 
 [Comcast](https://en.wikipedia.org/wiki/Comcast). Skype user base grew significantly after the introduction of video calling. As on January 2016, there are 300 million active users.
 
 
-![Interesting Facts about Skype](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/03/Interesting-Facts-about-Skype.jpg)
+![Interesting Facts about Skype](https://s3.amazonaws.com/multunus-website/uploads/2016/03/Interesting-Facts-about-Skype.jpg)
 
-![ Images from beta version of Skype (Apr 2004)](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/03/Skype-beta-version.jpg)
+![ Images from beta version of Skype (Apr 2004)](https://s3.amazonaws.com/multunus-website/uploads/2016/03/Skype-beta-version.jpg)
 
 
 ##Lean Canvas for Skype:
@@ -42,7 +42,7 @@ Below is a Lean Canvas that I have come up for Skype.
  
 
 
-![Skype - Lean Canvas](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/03/Skype-Lean-Canvas.jpg)
+![Skype - Lean Canvas](https://s3.amazonaws.com/multunus-website/uploads/2016/03/Skype-Lean-Canvas.jpg)
 
 The highlighted blocks in the Lean Canvas are the ones which in my opinion helped Skype to win over their competition and go ahead to revolutionize the communication industry. Though Skype didn’t have the first mover advantage, they did certain things differently.
 
@@ -161,7 +161,7 @@ Apart from the partner program, Skype increased its user base by word of mouth m
 The unique value proposition of Skype and growing user base got them on all the leading business magazines. They got featured in Forbes Magazine in Feb 2004 edition.
 
 
-![Testimonial for Skype](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/03/Screen-Shot-2016-03-09-at-9.14.24-AM.png)
+![Testimonial for Skype](https://s3.amazonaws.com/multunus-website/uploads/2016/03/Screen-Shot-2016-03-09-at-9.14.24-AM.png)
 
 
 ##Revenues:

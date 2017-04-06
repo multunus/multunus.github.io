@@ -12,7 +12,7 @@ Have you ever wondered on how to get better as a Programmer?
 
 CodeRetreat is a day long event to challenge yourself to grow. It stretches your skills and understanding of writing and designing elegant code.
 
-![CodeRetreat](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/03/CodeRetreat-300x200.jpg)
+![CodeRetreat](https://s3.amazonaws.com/multunus-website/uploads/2015/03/CodeRetreat-300x200.jpg)
 
 Read on to understand more.##What is CodeRetreat?
 

@@ -36,7 +36,7 @@ But later it became a constraint as the reliability of the software affected the
 
 We invested on porting it to own custom solution over a period of time through continuous delivery and got rid of the commercial software once we got enough confidence on our own solution.
 
-[![if-stats](http://i2.wp.com/www.multunus.com/wp-content/uploads/2016/11/if-stats.jpg?resize=638%2C359)](http://i2.wp.com/www.multunus.com/wp-content/uploads/2016/11/if-stats.jpg)
+[![if-stats](https://s3.amazonaws.com/multunus-website/uploads/2016/11/if-stats.jpg)](https://s3.amazonaws.com/multunus-website/uploads/2016/11/if-stats.jpg)
 
 *"**Without the speed of the **Multunus** team and the ability to show real live tablets, we **would** not be in the position. So, thank you and congrats."*
 
@@ -74,7 +74,7 @@ When the number of manual steps  became a bottleneck for scaling to more users,
 Weakest link in the chain
 -------------------------
 
-[![closer](http://i2.wp.com/www.multunus.com/wp-content/uploads/2016/12/closer.png?resize=638%2C359)](http://www.multunus.com/portfolio/micro-loan-processing-platform/)
+[![closer](https://s3.amazonaws.com/multunus-website/uploads/2016/12/closer.png)](http://www.multunus.com/portfolio/micro-loan-processing-platform/)
 
 The weakest link was the loan closing module. The loans are requested for different reasons or purposes  - an individual to start a business, a group of people starting a business as partners, a small business taking a loan to expand their business - as examples.
 
@@ -91,14 +91,14 @@ Our customer was a programmer too, and the build pipeline gave him the confidenc
 
 All these were possible because of the investment we'd put in for a build pipeline to make the codebase ready to deploy anytime.
 
-[![](http://i0.wp.com/www.multunus.com/wp-content/uploads/2016/12/Continuous-Delivery-Case-Studies-Part-1.png?resize=720%2C540)](http://i0.wp.com/www.multunus.com/wp-content/uploads/2016/12/Continuous-Delivery-Case-Studies-Part-1.png)
+[![](https://s3.amazonaws.com/multunus-website/uploads/2016/12/Continuous-Delivery-Case-Studies-Part-1.png)](https://s3.amazonaws.com/multunus-website/uploads/2016/12/Continuous-Delivery-Case-Studies-Part-1.png)
 
 Iterative and Incremental
 =========================
 
 The above case studies show how Continuous Delivery can result in positive business outcomes. The focus is on the discipline of delivery, to become predictable and sustainable through iterative and incremental development.
 
-[![iterative-development](http://i1.wp.com/www.multunus.com/wp-content/uploads/2016/12/iterative-development.png?resize=828%2C618)](http://i1.wp.com/www.multunus.com/wp-content/uploads/2016/12/iterative-development.png)
+[![iterative-development](https://s3.amazonaws.com/multunus-website/uploads/2016/12/iterative-development.png)](https://s3.amazonaws.com/multunus-website/uploads/2016/12/iterative-development.png)
 
 I can write a set of tools we used for Test Driven Development, Continuous Integration, Configuration Management etc. Those are important, but the easier bit too. The tools will help you be efficient, the process of iterations is what helps in being predictable.
 

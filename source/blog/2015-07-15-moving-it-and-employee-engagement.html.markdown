@@ -10,7 +10,7 @@ tags:
 link: http://www.multunus.com/blog/2015/07/moving-it-and-employee-engagement/
 ---
 
-![Engaged employee](http://www.multunus.com/wp-content/uploads/2015/07/EE-Blog-Posg1.jpg)
+![Engaged employee](https://s3.amazonaws.com/multunus-website/uploads/2015/07/EE-Blog-Posg1.jpg)
 
 Let’s begin with the story of * Moving It...*
 
@@ -32,13 +32,13 @@ Initial thought would be, having fancy parties, unlimited junk food to snack on 
 After a lot of reading, we discovered that each organization had its own definition for Employee Engagement. But, this is what it means to us:
 
 
-> * Employee engagement is what happens when an employee’s objectives are in resonance with the organization’s objectives.*
+*Employee engagement is what happens when an employee’s objectives are in resonance with the organization’s objectives.*
 
 This happens because the organization gives her a feeling that she is part of something that is bigger than her. As an effect, she is in a **state of flow**
  in all the activities she performs.
 
 
-> * [State of Flow](http://www.ted.com/talks/mihaly_csikszentmihalyi_on_flow?language=en) is the state of mind when a person is completely immersed in the activity she is performing. She feels that her body and mind are working in such symphony that she needn’t put in any kind of effort. She is energized, rather than being drained.*
+*[State of Flow](http://www.ted.com/talks/mihaly_csikszentmihalyi_on_flow?language=en) is the state of mind when a person is completely immersed in the activity she is performing. She feels that her body and mind are working in such symphony that she needn’t put in any kind of effort. She is energized, rather than being drained.*
 
 
 ###Why is Engagement Important?

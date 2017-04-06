@@ -11,8 +11,8 @@ The first time I heard about Continuous Delivery was @ [Ruby Conf India '11,](h
 
 My research led me to the [Continuous Delivery](https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/ref=sr_1_1?ie=UTF8&qid=1478767846&sr=8-1&keywords=continuous+delivery) book. I also found Jenkin's [Build Pipeline Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin), implemented as prescribed in the book.
 
-[![cd-pipeline](http://www.multunus.com/wp-content/uploads/2016/11/cd-pipeline.png)](http://www.multunus.com/wp-content/uploads/2016/11/cd-pipeline.png)[\
-](http://www.multunus.com/wp-content/uploads/2016/11/cd-pipeline.jpg)Further research on this topic showed me that the concept is not new and many companies are doing it already.
+[![cd-pipeline](https://s3.amazonaws.com/multunus-website/uploads/2016/11/cd-pipeline.png)](https://s3.amazonaws.com/multunus-website/uploads/2016/11/cd-pipeline.png)[\
+](https://s3.amazonaws.com/multunus-website/uploads/2016/11/cd-pipeline.jpg)Further research on this topic showed me that the concept is not new and many companies are doing it already.
 
 [10+ Deploys Per Day: Dev and Ops Cooperation at Flickr](https://www.youtube.com/watch?v=LdOe18KhtT4)
 
@@ -35,7 +35,7 @@ We built both the kiosk-mode application and also the application that the suppo
 
 This client leveraged Continuous Delivery to their business growth. The following graph shows the growth of devices during the engagement.
 
-[![](http://www.multunus.com/wp-content/uploads/2016/11/if-stats.jpg)](http://www.multunus.com/portfolio/end-end-mobile-device-management-solution-health-media-enterprise/)
+[![](https://s3.amazonaws.com/multunus-website/uploads/2016/11/if-stats.jpg)](http://www.multunus.com/portfolio/end-end-mobile-device-management-solution-health-media-enterprise/)
 
 [The journey through the Continuous Delivery](http://www.slideshare.net/leenasn/continuous-delivery-from-the-trenches-67506790) helped me to understand [lean thinking](https://en.wikipedia.org/wiki/Lean_thinking) better, got more clarity by reading more books in this area, especially:
 
@@ -91,7 +91,7 @@ Following is our proposed framework. These 4 steps which will help the teams to 
 -   **Deliver** - The next step which will move us towards the destination
 -   **Improve** - Reflect consistently to analyse both the short term and long term goals
 
-![CD Implementation Process](http://www.multunus.com/wp-content/uploads/2016/11/CD-Implementation-Process-1.png)
+![CD Implementation Process](https://s3.amazonaws.com/multunus-website/uploads/2016/11/CD-Implementation-Process-1.png)
 
 This framework is  based on the below mentioned books and concepts:
 
@@ -108,20 +108,20 @@ So you are convinced to improve your software delivery process.  Do a test d
 
 -   Draw the entire set of actions that happens from the point of identifying what needs to be delivered to the point of deploying it to production. 
 
-[![value_stream_1](http://www.multunus.com/wp-content/uploads/2016/11/value_stream_1-8.png)](http://www.multunus.com/wp-content/uploads/2016/11/value_stream_1-8.png)[\
-](http://www.multunus.com/wp-content/uploads/2016/11/value-stream-1.png)
+[![value_stream_1](https://s3.amazonaws.com/multunus-website/uploads/2016/11/value_stream_1-8.png)](https://s3.amazonaws.com/multunus-website/uploads/2016/11/value_stream_1-8.png)[\
+](https://s3.amazonaws.com/multunus-website/uploads/2016/11/value-stream-1.png)
 
 -   Below each step, note  the time it stays at each stage, including the waiting time
 
-[![Value Stream ](http://www.multunus.com/wp-content/uploads/2016/11/value_stream_1-1-1-1024x143.png)](http://www.multunus.com/wp-content/uploads/2016/11/value_stream_1-1-1.png)
+[![Value Stream ](https://s3.amazonaws.com/multunus-website/uploads/2016/11/value_stream_1-1-1-1024x143.png)](https://s3.amazonaws.com/multunus-website/uploads/2016/11/value_stream_1-1-1.png)
 
 -   Identify 2-3 burning problems which slow down the delivery flow. Prioritise them. Identify the root cause using [5 ](https://en.wikipedia.org/wiki/5_Whys)[Whys](https://en.wikipedia.org/wiki/5_Whys).
 
-[![Value Stream ](http://www.multunus.com/wp-content/uploads/2016/11/value_stream_1-2-1-1024x233.png)](http://www.multunus.com/wp-content/uploads/2016/11/value_stream_1-2-1.png)
+[![Value Stream ](https://s3.amazonaws.com/multunus-website/uploads/2016/11/value_stream_1-2-1-1024x233.png)](https://s3.amazonaws.com/multunus-website/uploads/2016/11/value_stream_1-2-1.png)
 
 -   Brainstorm and write 3-4 action items, prioritise and pick up one. Apply the [Diverge-Converge approach of Design Thinking](https://en.wikipedia.org/wiki/Design_thinking#Divergent_thinking_versus_convergent_thinking), to arrive at creative ways to solve the problem.
 
-[![Action Items](http://www.multunus.com/wp-content/uploads/2016/11/value_stream_1-7.png)](http://www.multunus.com/wp-content/uploads/2016/11/value_stream_1-7.png)
+[![Action Items](https://s3.amazonaws.com/multunus-website/uploads/2016/11/value_stream_1-7.png)](https://s3.amazonaws.com/multunus-website/uploads/2016/11/value_stream_1-7.png)
 
 -   Implement it, do frequent reviews and repeat the process
 

@@ -26,7 +26,7 @@ Rohan Mathew founded the IntersectFund, a microfinance institution in 2009. Chec
 [Click image below to see Rohan’s 9min TedX talk]
 
 
-[![Rohan_Mathew_TedX_Talk](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/maxresdefault-1024x576.jpg)](http://tedxtalks.ted.com/video/Investing-with-love-Rohan-Mathe)
+[![Rohan_Mathew_TedX_Talk](https://s3.amazonaws.com/multunus-website/uploads/2015/11/maxresdefault-1024x576.jpg)](http://tedxtalks.ted.com/video/Investing-with-love-Rohan-Mathe)
 
 
 He separately told me when I met him later that a key career choice he had to make was to let go of a lucrative Wall Street investment bank opportunity, to allow him to focus full-time on helping people like Jorge build better lives for themselves.
@@ -52,7 +52,7 @@ So, how do you get started setting up a micro-credit non-profit institution from
 [Click on the following diagram for more detail]
 
 
-![micro-lending-processing-system](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/06/Intersect-Fund-Landscape.001.jpg)
+![micro-lending-processing-system](https://s3.amazonaws.com/multunus-website/uploads/2015/06/Intersect-Fund-Landscape.001.jpg)
 Once you’ve figured out all of the above, you’d also have all those other things too:
 
 
@@ -244,7 +244,7 @@ Fast forward another 12 months. Here’s the progress since then:
 *  Last, but not the least, the growth in the number of loans has been almost dramatic. The projected disbursement for this year is upwards of $5 million.
 
 
-![success_intersect_fund](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/unnamed-11.png)
+![success_intersect_fund](https://s3.amazonaws.com/multunus-website/uploads/2015/11/unnamed-11.png)
 
 **“Overnight” Success**
 
@@ -258,6 +258,6 @@ Of course, the journey is usually much longer, arduous and fraught with unexpect
 What keeps the best entrepreneurs and teams moving forward during those times is a of a better future. To make the world a better place. For people like [Michelle, Kim and Rita](http://intersectfund.org/content/entrepreneur-directory/).
 
 
-![Entreprenuers](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/unnamed-1-959x1024.jpg)
+![Entreprenuers](https://s3.amazonaws.com/multunus-website/uploads/2015/11/unnamed-1-959x1024.jpg)
 It’s been 7 years since Rohan started IntersectFund. And by the looks of how they’re doing today, they’re not stopping any time soon. They’re a team that clearly sees everyday as a learning experience. They’ve learned how to enjoy their 
 journey.

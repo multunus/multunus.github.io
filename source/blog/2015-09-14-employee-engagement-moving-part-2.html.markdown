@@ -8,7 +8,7 @@ tags:
 link: http://www.multunus.com/blog/2015/09/employee-engagement-moving-part-2/
 ---
 
-![Measuring Employee Engagement](http://www.multunus.com/wp-content/uploads/2015/08/Employee-Engagement-Part-2.jpg)
+![Measuring Employee Engagement](https://s3.amazonaws.com/multunus-website/uploads/2015/08/Employee-Engagement-Part-2.jpg)
 
 This is the part 2 of the blog post series on Employee Engagement [[find part 1 here](http://www.multunus.com/blog/2015/07/moving-it-and-employee-engagement/)].
 
@@ -33,7 +33,7 @@ All you will end up with will be a set of confused and frustrated employees and 
 Every employee has a **need** to feel engaged with the organization. This need to feel engaged can be visualized in the form of a pyramid called the Hierarchy Pyramid [Fig below].
 
 
-![Hierarchy Pyramid](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/08/Hierarchy-Pyramid.png)
+![Hierarchy Pyramid](https://s3.amazonaws.com/multunus-website/uploads/2015/08/Hierarchy-Pyramid.png)
 
 One has to focus on engaging the employee at each and every level and in the same order of the a pyramid. The engagement has to start with the lowest level of basic needs and go all the way up to growth.
 
@@ -88,7 +88,7 @@ GALLUP Q12
 These questions belong to hierarchy pyramid. At each level of this pyramid, the employee needs to feel engaged. The figure below shows what the mindset of the employee at each level of the engagement [left of the pyramid]. 
 
 
-[Hierarchy Pyramid levels explained](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/08/Hierarchy-Pyramid-with-explaination.png)
+[Hierarchy Pyramid levels explained](https://s3.amazonaws.com/multunus-website/uploads/2015/08/Hierarchy-Pyramid-with-explaination.png)
 
 Here’s how the 12 questions and the employee mindset match up to the levels of the pyramid ["I" stands for the employees]:
 
@@ -96,7 +96,7 @@ Here’s how the 12 questions and the employee mindset match up to the levels of
 **Base Camp: What do I get?**
 
 
-![Hierarchy Pyramid-Basic Needs](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/08/Hierarchy-Pyramid-Basic-Needs.jpg)
+![Hierarchy Pyramid-Basic Needs](https://s3.amazonaws.com/multunus-website/uploads/2015/08/Hierarchy-Pyramid-Basic-Needs.jpg)
 
 At this stage the employee is concerned about what he is getting. The questions that he needs to be answered are:
 
@@ -121,7 +121,7 @@ To measure how well their **basic needs** have been met with, we can use these t
 **Camp 1: What do I give?**
 
 
-![Hierarchy Pyramid-Individual](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/08/Hierarchy-Pyramid-Individual1.jpg)
+![Hierarchy Pyramid-Individual](https://s3.amazonaws.com/multunus-website/uploads/2015/08/Hierarchy-Pyramid-Individual1.jpg)
 
 Here, their basic needs are already met, their perspective evolves to seeing what their contribution as an individual is and other people’s perception of it.
 
@@ -144,7 +144,7 @@ individual level:
 **Camp 2: Do I belong here?**
 
 
-![Hierarchy Pyramid-Team](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/08/Hierarchy-Pyramid-Team.jpg)
+![Hierarchy Pyramid-Team](https://s3.amazonaws.com/multunus-website/uploads/2015/08/Hierarchy-Pyramid-Team.jpg)
 
 The employee’s perspective has widened and they have asked some difficult questions about themselves and others by this tim**e like if they want to belong to a place where others also respect and have high standards of quality and expectations from themselves.
 
@@ -169,7 +169,7 @@ To measure the engagement of the employee at the **team** level, we need to ask 
 **Camp 3: How do we all grow?**
 
 
-![Hierarchy Pyramid-Growth](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/08/Hierarchy-Pyramid-Growth.jpg)
+![Hierarchy Pyramid-Growth](https://s3.amazonaws.com/multunus-website/uploads/2015/08/Hierarchy-Pyramid-Growth.jpg)
 
 This stage is pretty advanced where the employee is impatient for everyone to grow. They want to make things better and to innovate. They can be here only if they are engaged in each of the levels below. They can apply their ideas only if they know what is expected of them at work, how well their idea is going to be accepted or rejected by others.
 

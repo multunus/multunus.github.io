@@ -8,7 +8,7 @@ wp:post_id: '4175'
 link: http://www.multunus.com/blog/2011/04/planning-an-informative-workspace-at-our-new-office/
 ---
 
-![informativeworkspace](http://www.multunus.com/wp-content/uploads/2011/04/informativeworkspace.jpg)
+![informativeworkspace](https://s3.amazonaws.com/multunus-website/uploads/2011/04/informativeworkspace.jpg)
 
 We’re moving! We’ve been at the current premises for 2+ years now - and the time has come to move out of here - into an office that is a little more **formal**.
 

@@ -170,7 +170,7 @@ A: “Immediate target should be to reach out to 1 M transaction within the next
 Once you find out the goal [Increase the transaction volume], we need to identify the milestone [ 1M transactions within next 3 months]  and that becomes the center of the Impact map.
 
 
-![ImpactMap1](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/02/ImpactMap12.png)
+![ImpactMap1](https://s3.amazonaws.com/multunus-website/uploads/2016/02/ImpactMap12.png)
 
 
 ###Getting it Right
@@ -232,7 +232,7 @@ Let’s look at it from the perspective of our product i.e. eCommerce product:
  
 
 
-![Impact Map 2](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/02/ImpactMap22.png)
+![Impact Map 2](https://s3.amazonaws.com/multunus-website/uploads/2016/02/ImpactMap22.png)
 
 
 ###Getting it Right
@@ -280,7 +280,7 @@ What kind of impact should be provided to achieve the goal 1 M transactions? How
 *  All support tickets closed in 24 hours
 
 
-![Impact Map 3](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/02/ImpactMap32-1024x493.png)
+![Impact Map 3](https://s3.amazonaws.com/multunus-website/uploads/2016/02/ImpactMap32-1024x493.png)
 
 
 
@@ -331,7 +331,7 @@ This section concentrates on the deliverables or features which will create the 
  
 
 
-![ImpactMap4](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/02/ImpactMap42-1024x431.png)
+![ImpactMap4](https://s3.amazonaws.com/multunus-website/uploads/2016/02/ImpactMap42-1024x431.png)
 
 
 ###Getting it Right

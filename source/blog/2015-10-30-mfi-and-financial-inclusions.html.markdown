@@ -10,7 +10,7 @@ tags:
 link: http://www.multunus.com/blog/2015/10/mfi-and-financial-inclusions/
 ---
 
-![A_business_in_South_Sudan_benefiting_from_microfinance_(6189731244)](http://www.multunus.com/wp-content/uploads/2015/10/A_business_in_South_Sudan_benefiting_from_microfinance_6189731244.jpg)
+![A_business_in_South_Sudan_benefiting_from_microfinance_(6189731244)](https://s3.amazonaws.com/multunus-website/uploads/2015/10/A_business_in_South_Sudan_benefiting_from_microfinance_6189731244.jpg)
 
 Announcement was …. “The Nobel Peace Prize 2006 is divided into two equal parts to Muhammad Yunus and Grameen Bank..”
 
@@ -63,7 +63,7 @@ To make these poor people self sufficient and to discourage them getting into th
 Financial inclusions are basic financial services available at affordable costs to the disadvantaged or the poor section of the society. These are in terms of access to smaller amount of loans with flexibility in the repayment schedules, encouraging deposits of smaller value, access to the basic insurances without paying hefty premiums and addressing the inaccessibility to banking services outside banking locations. To motivate people to utilise the financial inclusions available in India, the current Indian Prime Minister Modi introduced the[Pradhan Mantri Jan Dhan Yojana](http://pmjdy.gov.in/ ).
 
 
-![Financial Inclusions](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/10/2015-10-30_0955-300x253.png)
+![Financial Inclusions](https://s3.amazonaws.com/multunus-website/uploads/2015/10/2015-10-30_0955-300x253.png)
 
 
 

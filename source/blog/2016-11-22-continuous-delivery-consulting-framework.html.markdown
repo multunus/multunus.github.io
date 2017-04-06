@@ -27,7 +27,7 @@ Here is our framework you could apply to implement Continuous Delivery in your 
 
 The framework, extracted from the book [Toyota Kata](https://www.amazon.com/Toyota-Kata-Managing-Improvement-Adaptiveness/dp/0071635238), focusses on problems, solutions and feedback.
 
-[![CD Implementation Process](http://www.multunus.com/wp-content/uploads/2016/11/CD-Implementation-Process-1.png)](http://www.multunus.com/wp-content/uploads/2016/11/CD-Implementation-Process-1.png)
+[![CD Implementation Process](https://s3.amazonaws.com/multunus-website/uploads/2016/11/CD-Implementation-Process-1.png)](https://s3.amazonaws.com/multunus-website/uploads/2016/11/CD-Implementation-Process-1.png)
 
 Phase 1: Plan
 =============

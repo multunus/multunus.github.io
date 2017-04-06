@@ -7,7 +7,7 @@ tags:
 link: http://www.multunus.com/blog/2015/11/dark-cloud-silver-lining/
 ---
 
-![unnamed](http://www.multunus.com/wp-content/uploads/2015/11/unnamed.jpg)
+![unnamed](https://s3.amazonaws.com/multunus-website/uploads/2015/11/unnamed.jpg)
 
 [Photo credits: haRee](https://www.flickr.com/people/hb2/)
 
@@ -21,7 +21,7 @@ We built the software that allowed anyone to control these devices remotely. It 
 [Click the image below to watch the video.]
 
 
-[![MDM](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/MDM.png)](https://www.youtube.com/watch?v=xfpxOCI8dlc)
+[![MDM](https://s3.amazonaws.com/multunus-website/uploads/2015/11/MDM.png)](https://www.youtube.com/watch?v=xfpxOCI8dlc)
 
 **A suspicious “Virus”**
 
@@ -57,7 +57,7 @@ This is not a great story. It didn’t end well. We worked round the clock that 
 That was not a fun week. None of the usual banter and humor that you’d otherwise see. But there was also no finger pointing. No arguments. No grumbling. Just silent work.
 
 
-![Serenity](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/9711009229_52ec1ef0c0_b-1024x674.jpg)
+![Serenity](https://s3.amazonaws.com/multunus-website/uploads/2015/11/9711009229_52ec1ef0c0_b-1024x674.jpg)
 
 [Photo Credits: David Yu](https://www.flickr.com/photos/davidyuweb/)
 

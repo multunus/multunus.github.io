@@ -25,6 +25,6 @@ seemed really happy to have us there. We ate and had a jolly good time.
 We'd also written up a * certificate*  for her ;)
 
 
-![Leena's Certificate](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/07/LeenasCertificate-723x1024.jpg)
+![Leena's Certificate](https://s3.amazonaws.com/multunus-website/uploads/2014/07/LeenasCertificate.jpg)
 
 At around 1:00 pm we said our goodbyes only to meet each other on Monday :-)

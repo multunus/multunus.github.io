@@ -39,7 +39,7 @@ These are the operating costs of MFIs. The MFIs are generally created as a Non P
 Prof Yunus quotes”  These MFIs work on the principle of keeping the interest low and funds available when required. Let’s see how these MFIs work vis a vis the Banks.
 
 
-![parameters](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/parameters.png)
+![parameters](https://s3.amazonaws.com/multunus-website/uploads/2015/11/parameters.png)
 
 
 We now have understood how the MFIs work. But this was in general. Each MFI works differently and hence have been broadly classified into different models.
@@ -66,7 +66,7 @@ Example: If the income of the individual is seasonal, he will repay more amount 
 **Model 3: Individuals getting loans from MFIs where they are part of a Joint Liability Group [JLG]**
 
 
-![JLGs](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/JLGs.png)
+![JLGs](https://s3.amazonaws.com/multunus-website/uploads/2015/11/JLGs.png)
 
 
 This model is usually followed in developing and underdeveloped countries. In this model the borrower must belong to a group. This group can be as small as five. The group need not stand as guarantee for a loan for its members. Repayment responsibility is solely on the individual borrower. The Group itself oversees that everyone behaves responsibly and none gets into a repayment issue. No formal joint liability exists, i.e. there is no obligation that the Group pays on behalf of a defaulting borrower. However, they may often contribute the defaulted loan amount as this may jeopardise the credit standing of the entire group. Eg. Grameen Bank follows this model of lending.
@@ -74,7 +74,7 @@ This model is usually followed in developing and underdeveloped countries. In th
 
 **Model 4: Individuals getting loans in form of crowdsourcing of lenders [Peer to Peer lending (P2P)]**
 
-![p2p](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/p2p.png)
+![p2p](https://s3.amazonaws.com/multunus-website/uploads/2015/11/p2p.png)
 
 
 In this model, technology is used as a platform to bring in together the lenders and borrowers. It is based on a form of crowdsourcing. When an individual needs the loan, he will put his requirement in this platform. The organization partners with MFIs and NGOs to validate the loan requirements. If it is genuine they would put the details of the borrowers in their web site. People who have small amounts to lend would then transfer this amount to the account created for the borrower. Once the full loan amount is reached, it is then transferred to the borrower. The Borrower would then make the monthly repayments which in turn would be credited to the lenders’ accounts. The risk is shared among many lenders who lent this loan. Example:[KIVA](http://www.kiva.org/)is a platform that allows Peer to Peer lending. Kiva itself is a non profit organization and hence is able to keep their interest rates low.
@@ -83,7 +83,7 @@ In this model, technology is used as a platform to bring in together the lenders
 **Model 5: Individuals getting loans through MFIs where they are part of a Self Help Group [SHG]**
 
 
-[![SHG](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/SHG.png)](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/SHG.png)
+[![SHG](https://s3.amazonaws.com/multunus-website/uploads/2015/11/SHG.png)](https://s3.amazonaws.com/multunus-website/uploads/2015/11/SHG.png)
 
 
 In this model, individuals are part of a group of 10 to 20 members. They start saving regularly among themselves. These savings are pooled in and deposited in a bank until the group begins lending. This account is operated by the chosen representative for these groups. These SHGs lend to the members from the pooled-in savings. Whatever interest is being collected will be again put back into the group’s account. These excess funds are used for either lending or creating [financial inclusions](http://www.multunus.com/blog/2015/10/multunus-and-mfi/) for the members in this group. The disbursement of the loan to its members will be at the discretion of the group. External loans will be provided to the group itself and not to any individual member of the group. To reduce the risk of non-repayment, the group meets very often, perhaps once a week, to help each other and to grow. One such SHG is [Annapurna Pariwar](http://www.annapurnapariwar.org/) that started as a small group but now has greatly impacted the slums of the Indian cities of Pune and Mumbai.

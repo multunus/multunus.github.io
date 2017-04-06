@@ -11,7 +11,7 @@ tags:
 link: http://www.multunus.com/blog/2014/03/experience-rubyconf-india-2014/
 ---
 
-![Jerry During Lightning Talk](http://www.multunus.com/wp-content/uploads/2014/03/ii_14507c4d213f194a.jpeg)
+![Jerry During Lightning Talk](https://s3.amazonaws.com/multunus-website/uploads/2014/03/ii_14507c4d213f194a.jpeg)
 
 A congregation of Rubyists would be a great place for any Ruby programmer to be. Have the same by the beach, and it becomes a dream. It was like a dream come true when it was announced that [RubyConf India of 2014](http://rubyconfindia.org/2014/) would be held in beach resort town of [Goa](http://en.wikipedia.org/wiki/Goa). Before we move on, please allow me to apologize for the poor image quality of some of the images.
 
@@ -27,7 +27,7 @@ The registration was uneventful except that we got not one, not two, but three d
 The event kicked off with a welcome note from the organizing committee followed by the keynote. There were speakers from all over the world who had come together to share their knowledge on different aspects of Ruby.
 
 
-![A moment of silence for Jim Weirich](http://www.multunus.com/wp-content/uploads/2014/03/@headius.jpg)
+![A moment of silence for Jim Weirich](https://s3.amazonaws.com/multunus-website/uploads/2014/03/@headius.jpg)
 
 * A moment of silence for Jim Weirich* 
 
@@ -39,14 +39,14 @@ Several other talks followed and at the end of the day came the lightning talks.
 
 The lightning talks were followed by the most interesting part of the day - the beach party. There was great food and great beverages. The beach, the party and a congregation of geeks made it an awesome evening.
 
-![The Hotel](http://www.multunus.com/wp-content/uploads/2014/03/@mariovisic_2.jpg) 
+![The Hotel](https://s3.amazonaws.com/multunus-website/uploads/2014/03/@mariovisic_2.jpg) 
 
 * The Hotel* 
 
 Most of the participants turned up late the next morning due to obvious reasons. But once again, seemingly miraculously, someone had predicted the scenario and the day was set to begin only at 10.00 AM.
 
 
-![RubyConf India 2014](http://www.multunus.com/wp-content/uploads/2014/03/@mariovisic_1.jpg)
+![RubyConf India 2014](https://s3.amazonaws.com/multunus-website/uploads/2014/03/@mariovisic_1.jpg)
 
 Except the keynote, the day was uneventful. The crowd started to thin out as the day progressed since people had to catch flights, trains and buses. By evening, we had less than half the population in the auditorium.
 

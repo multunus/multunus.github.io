@@ -52,7 +52,7 @@ Here’s a component that displays the venerable “Hello, World!”
      
 
 
-![Text Component - Output](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/text-1024x522.gif)
+![Text Component - Output](https://s3.amazonaws.com/multunus-website/uploads/2015/11/text-1024x522.gif)
 
 In line 1, we are defining a class called `Text` which extends the component class of React. Text has a `render` method which returns a React element, in this case, a div tag with the text “Hello, World!”. Remember that only a single React element should be returned by the render method. However, there may be nested elements within that element.
 The last line is telling React to render the `Text` React Element as a child of the DOM node with the id `container`.
@@ -83,7 +83,7 @@ This component will display a spinner. I will not go into the implementation of 
  
 
 
-![Spinner Component](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/spinner-1024x553.gif)
+![Spinner Component](https://s3.amazonaws.com/multunus-website/uploads/2015/11/spinner-1024x553.gif)
 The only thing this component does new, as far as React is concerned, is to apply css class names to HTML tags. JSX requires you to use the keyword `className` for applying css classes, since `class` is a JavaScript keyword.
 
 
@@ -111,7 +111,7 @@ We will now define a `App` component which will behave as the parent component.
  
 
 
-![App Component](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/App-1024x553.gif)
+![App Component](https://s3.amazonaws.com/multunus-website/uploads/2015/11/App-1024x553.gif)
 
 I will include only the relevant portion of the code for the sake of brevity, you can follow the [JS Bin]((http://jsbin.com/vusuje/7/edit)) link to see the whole code.
 
@@ -159,7 +159,7 @@ Therefore, a component is not supposed to change its props, in other words **nev
  
 
 
-![Props Example](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/Prop-1024x553.gif)
+![Props Example](https://s3.amazonaws.com/multunus-website/uploads/2015/11/Prop-1024x553.gif)
 
 No points for guessing what the above code snippet does! It’s mostly the same code as before, but with a slight modification. The `Text` component inside `App` takes an attribute called `content` with the value “I am React”. This is how we transfer data into a component:
 
@@ -226,7 +226,7 @@ React components can hold state information within them. Each instance of a comp
  
 
 
-![State Example](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/state-1024x553.gif)
+![State Example](https://s3.amazonaws.com/multunus-website/uploads/2015/11/state-1024x553.gif)
 We have modified Spinner component to be able to use the `show` prop. Spinner will now return an empty `div` tag if the value of `show` is false.
 
 Let's see what changes we have made to `App` component.
@@ -293,7 +293,7 @@ Alright, state is no fun if we can’t mutate it. Let’s see a small example of
  
 
 
-![Dynamic UI Example](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/dynamic-ui-1024x522.gif)
+![Dynamic UI Example](https://s3.amazonaws.com/multunus-website/uploads/2015/11/dynamic-ui-1024x522.gif)
 The code above looks slightly more complicated, but it’s a no-brainer.
 
 We have created an HTML `button` and passed in an `onClick` event handler as a prop. The strange looking 

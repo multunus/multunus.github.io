@@ -23,7 +23,7 @@ One of the things that most first-time entrepreneurs struggle with is thinking a
 Here are 9 things you need to think about straight off the bat, if you’re serious about building a sustainable business with your product idea:
 
 
-[![Lean canvas template](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/03/Lean-canvas-template-1.png)](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/03/Lean-canvas-template-1.png)
+[![Lean canvas template](https://s3.amazonaws.com/multunus-website/uploads/2016/03/Lean-canvas-template-1.png)](https://s3.amazonaws.com/multunus-website/uploads/2016/03/Lean-canvas-template-1.png)
 
 Most of us have a tendency of focusing only on the “solution” block above and forgetting about the remaining 8 blocks. That is a recipe for failure and will almost certainly crater your business even before it gets off the ground.
 
@@ -41,7 +41,7 @@ Navigating the whole process of systematically de-risking your business model is
 
 The first thing to realize is that every startup has the following stages of growth:
 
-![Lean Startup stages](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/03/Lean-analytics-stages.jpg)
+![Lean Startup stages](https://s3.amazonaws.com/multunus-website/uploads/2016/03/Lean-analytics-stages.jpg)
 
 Source :[Slideshare on Understanding lean Analytics by Ben Yoskovitz](http://www.slideshare.net/Leananalytics/understanding-lean-analytics-and-how-analytics-helps-businesses-win-17324564)
 
@@ -101,7 +101,7 @@ When we’re building a product, there’s usually multiple things we could meas
 
 But here’s the thing: If what you’re doing is backing up your car, the only thing that matters at that time is the distance of the wall behind you.
 
-![Car backing up](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/03/backingup.jpg)
+![Car backing up](https://s3.amazonaws.com/multunus-website/uploads/2016/03/backingup.jpg)
 
 Source :[Daily Remarks](http://dailyremarks.com/tag/car-backing-up/)
 
@@ -116,7 +116,7 @@ The idea is that once we know the stage of your startup and the type of product 
 
 The Lean Analytics book has a nice matrix of which metrics to measure in what situations. From what I know, this is based on significant research and experience. So, if I were you, I would go with what is suggested there - at least for starters. It’s better than any gut feels or guesses that you or I could make.
 
-![Lean Analytics Stages](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/03/Lean-Analytics-Stages.png)
+![Lean Analytics Stages](https://s3.amazonaws.com/multunus-website/uploads/2016/03/Lean-Analytics-Stages.png)
 
 Source : [Lean Analytics Workshop on Udemy - Alistair Croll and Ben Yoskovitz](https://www.udemy.com/lean-analytics-workshop-alistair-croll-and-ben-yoskovitz/?siteID=TnL5HPStwNw-N1qdLwJbe7s9cC7sovBIeA&LSNPUBID=TnL5HPStwNw)
 

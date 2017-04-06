@@ -7,7 +7,7 @@ tags:
 - business
 ---
  
-![Alt texat](http://www.multunus.com/wp-content/uploads/2016/01/Training-a-fish-to-climb-a-tree-e1454337520508.jpg)
+![Alt texat](https://s3.amazonaws.com/multunus-website/uploads/2016/01/Training-a-fish-to-climb-a-tree-e1454337520508.jpg)
 
 * Grow upwards, sideways...anyways you want* 
 

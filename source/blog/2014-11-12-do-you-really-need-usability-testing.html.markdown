@@ -11,12 +11,12 @@ tags:
 link: http://www.multunus.com/blog/2014/11/do-you-really-need-usability-testing/
 ---
 
-![Should you do usability testing on a perfect design?](http://www.multunus.com/wp-content/uploads/2014/11/1.jpg)
+![Should you do usability testing on a perfect design?](https://s3.amazonaws.com/multunus-website/uploads/2014/11/1.jpg)
 
 One of our customers is the [IntersectFund](http://intersectfund.org). They are a nonprofit microlender who have trained, coached and financed hundreds of New Jersey's emerging entrepreneurs from lower income groups.
 
 
-![The Intersect Fund Logo](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/11/IF_logo_small.jpg)
+![The Intersect Fund Logo](https://s3.amazonaws.com/multunus-website/uploads/2014/11/IF_logo_small.jpg)
 
 Given that they’ve been doing it for 7 years, our customer was already very comfortable with the needs and the workflow of the the Loan Officers - who are the primary users of the system.
 
@@ -30,13 +30,13 @@ The first product we’re building for the IntersectFund is called Closer. The g
 
 *  Reduce Communication Overhead
 
-    
+
 *  Reduce Manual Errors
 
-    
+
 *  Reduce Dependency on Single Person
 
-    
+
 *  Build a system that can scale.
 
 
@@ -44,7 +44,7 @@ The first product we’re building for the IntersectFund is called Closer. The g
 
 The Loan Officer is the primary user of Closer. Her role involves meeting Loan Applicants, understand their needs, and help get their loan approved.
 
-![Jane Doe - Example Image](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/11/1984_Davie_JaneDoe_Reconstruction_004b-150x150.jpg){: style="float:left"}
+![Jane Doe - Example Image](https://s3.amazonaws.com/multunus-website/uploads/2014/11/1984_Davie_JaneDoe_Reconstruction_004b-150x150.jpg){: style="float:left"}
 
 Jane Johnsons
 
@@ -58,54 +58,54 @@ Behaviour
 
 *  Works out of Intersect office. But spend about 90% time on the go.
 
-    
+
 *  Loan Officer meets with the Borrower to discuss about the loans.
 
-    
+
 *  Work Long hours - mostly in the evening as that's when borrowers are available.
 
-    
+
 *  Fairly tech savvy. Troubleshooting is difficult, though.
 
-    
+
 *  Carries iPhone, MacBook Air & a Portable Scanner.
 
-    
+
 *  Access to Internet is through the iPhone.
 
 Problems
 
 *  Having to drive long distances to do small tasks is painful.
 
-    
+
 *  Lot of Phone calls. (Phone call every 5 minutes)
 
-    
+
 *  Has to deal with complaints from the applicants.
 
-    
+
 *  Not having access to all information is a problem. (Ex. not having balances on active loans.)
 
-    
+
 *  Waiting for approval of loan applications.
 
-    
+
 *  Declining to people is difficult. Has to figure how to translate what document are needed to what the borrower can provide.
 
-    
+
 *  Has to deal with borrowers lacking documents.
 
 Goals
 
 *  Reduce communication overhead times.
 
-    
+
 *  Get loan approved and disbursed as soon as possible.
 
-    
+
 *  Spend time talking to more Borrowers.
 
-    
+
 *  Be able to answer queries from borrowers quickly - without relying on other people from Intersect.
 
 
@@ -118,7 +118,7 @@ Since the IntersectFund Team is based out of NJ, we decided to do remote usabili
 ##Here’s What We Found
 
 
-    
+
 *  **Merge before Uploading**
 
 Closer required them to upload single bank statements for 3 months. What we found though was that each month was stored in a separate scanned document. That meant they had to combine them before uploading.
@@ -142,7 +142,7 @@ During the process of closing a loan, there’s a step when the Loan Officer exp
 
 The browser vendors aren’t doing a great job with making the Webcam Permissions apparent. In this case, they Loan Officers were using chrome. It’s the same color as the address/bookmarks bar and the buttons aren’t highlighted either. Complete amiss.
 
-![webcam permission - chrome browser](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/11/Screen_Shot_2014-10-20_at_12_02_43_PM.jpg)
+![webcam permission - chrome browser](https://s3.amazonaws.com/multunus-website/uploads/2014/11/Screen_Shot_2014-10-20_at_12_02_43_PM.jpg)
 
 
 *  **Help-Text-Don’t-Read [HTDR]**
@@ -174,23 +174,23 @@ We also found that there wasn’t any place where IntersectFund logo was display
 ##How We Prioritized
 
 
-With all these insights from the usability test at hand and the constraints of time we decided to prioritize 
+With all these insights from the usability test at hand and the constraints of time we decided to prioritize
  related issues over first time user experience issues for the following reasons:
 
 
-    
+
 *  It’s the same persons using the app everyday.
 
 
 *  The risk of the users abandoning doesn’t exist.
 
-* All this just goes to say that, even if you are very confident about your designs, there will always be a few things Usability Testing will uncover. Plan to spend a few hours every month and make your design better.* 
+* All this just goes to say that, even if you are very confident about your designs, there will always be a few things Usability Testing will uncover. Plan to spend a few hours every month and make your design better.*
 
 
-**If you are facing difficulty getting insights to make your products better, feel free to reach out to me on 
+**If you are facing difficulty getting insights to make your products better, feel free to reach out to me on
 [SoHelpful.me/manishrc](http://sohelpful.me/manishrc)**
 
 
 
-Photo Credit: 
+Photo Credit:
 [http://startupstockphotos.com/post/78227111700/download](http://startupstockphotos.com/post/78227111700/download)

@@ -8,7 +8,7 @@ wp:post_id: '4145'
 link: http://www.multunus.com/blog/2013/03/agileindia-2013-summary/
 ---
 
-![agileindia2013](http://www.multunus.com/wp-content/uploads/2014/01/agileindia20131.jpg)
+![agileindia2013](https://s3.amazonaws.com/multunus-website/uploads/2014/01/agileindia20131.jpg)
 
 This is the summary about the recently concluded [Agile India Conference 2013](http://2013.agileindia.org/).
 This gave me a chance to interact with great legends and leaders of software industry such as Linda Rising, Mary Poppendieck, Henrik Kniberg, Jez Humble, Jeff Patton, Fred George, Craig Larman, Neil Ford, Venkat Subramaniam, Aslam Khan, Karl Scotland, Kenji Hiranabe, Laurent Bossavit, Rebecca Parsons etc. and listen to them multiple times in the span of 4 days. Amazing.

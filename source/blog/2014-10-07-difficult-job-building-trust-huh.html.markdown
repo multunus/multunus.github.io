@@ -8,8 +8,8 @@ tags:
 link: http://www.multunus.com/blog/2014/10/difficult-job-building-trust-huh/
 ---
 
-![3-JSFoo MLR Entrance](http://www.multunus.com/wp-content/uploads/2014/09/3-JSFoo-MLR-Entrance.jpg)
-![3-JSFoo MLR Entrance](http://www.multunus.com/wp-content/uploads/2014/09/3-JSFoo-MLR-Entrance.jpg)
+![3-JSFoo MLR Entrance](http://s3.amazonaws.com/multunus-website/uploads/2014/09/3-JSFoo-MLR-Entrance.jpg)
+![3-JSFoo MLR Entrance](http://s3.amazonaws.com/multunus-website/uploads/2014/09/3-JSFoo-MLR-Entrance.jpg)
 
 We all know building trust is very difficult. Now what’s more difficult than that? Take a minute to silently wonder. Now that you have an answer in your mind, read on to know what we think -
 
@@ -17,13 +17,13 @@ We have existed for a little more than 6 years now. During this time, we have do
 
 Hence, I decided to volunteer with [Hasgeek](https://hasgeek.com/) for [JSFoo 2014](https://jsfoo.in/). Once I decided to volunteer, the next steps were quite simple - I had to just drop an email to [Zainab](https://twitter.com/zainabbawa) enquiring her about the same. The conversations happened in frequent cycles and before I  knew I was one of the volunteers.
 
-![](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/10/logo-300x292.png)
+![](https://s3.amazonaws.com/multunus-website/uploads/2014/10/logo-300x292.png)
 
-Initially, I thought I would just make this post about my experience volunteering at JSFoo 2014, but then I realized it won’t add any value to anyone, including me if I wouldn’t put down some learning. Simply put, the learnings can be categorized under - 
+Initially, I thought I would just make this post about my experience volunteering at JSFoo 2014, but then I realized it won’t add any value to anyone, including me if I wouldn’t put down some learning. Simply put, the learnings can be categorized under -
 **Craft, The Golden Trifecta and Values**.
 
 
-FYI, * I'll come to the "toughest job" part soon after I finish describing the above categories.* 
+FYI, * I'll come to the "toughest job" part soon after I finish describing the above categories.*
 
 
 **Craft**
@@ -34,10 +34,10 @@ Doing our job well brings us success. Here, “well” is a subjective term.
 * Making it objective*  - If a speaker is knowledgeable in the field he is speaking about and also has a great way to keep the audience interested in the talk till the end by really empathizing with them, then he is a craftsperson.
 
 
-![](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/10/1-Speaker-2-300x199.jpg)
+![](https://s3.amazonaws.com/multunus-website/uploads/2014/10/1-Speaker-2-300x199.jpg)
 
 
-![](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/10/2-Speaker-300x199.jpg)
+![](https://s3.amazonaws.com/multunus-website/uploads/2014/10/2-Speaker-300x199.jpg)
 
 Same goes with everyone else. Its about striving towards the outcome of the event - creating the best user experience for the community.
 
@@ -63,7 +63,7 @@ The intent behind volunteering at JSFoo was to learn how to make an event succes
 The formula is to strive towards craft, using the golden trifecta with a strong belief in our values - developing a mindset of craftsmanship. JSFoo is a commitment made to hundreds of Javascript enthusiasts - to create value in the world of a Javascript programmer and we as a team did it.
 
 
-![Group Discussion](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/09/2-Group-Discussion-300x199.jpg)
+![Group Discussion](https://s3.amazonaws.com/multunus-website/uploads/2014/09/2-Group-Discussion-300x199.jpg)
 
 
 **Coming to The Toughest Job**

@@ -89,7 +89,7 @@ The following aspects of trust are very key to focus on, right from the start:
 *  **Embracing Failure:** I love this image:
 
 
-*  ![embrace-failure](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/4cd7af25c08a9c243dd175386cf6966f.jpg)
+*  ![embrace-failure](https://s3.amazonaws.com/multunus-website/uploads/2015/11/4cd7af25c08a9c243dd175386cf6966f.jpg)
 
 You should have space to fail as the founder. And you should be comfortable in your skin failing in front of your people. You should also give everyone on your team space to fail. So, this goes hand in hand with Autonomy.
 

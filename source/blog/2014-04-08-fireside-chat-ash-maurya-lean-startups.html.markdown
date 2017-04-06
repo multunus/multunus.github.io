@@ -9,7 +9,7 @@ tags:
 link: http://www.multunus.com/blog/2014/04/fireside-chat-ash-maurya-lean-startups/
 ---
 
-![Ash's Autograph](http://www.multunus.com/wp-content/uploads/2014/04/DSC_0107.jpg)
+![Ash's Autograph](https://s3.amazonaws.com/multunus-website/uploads/2014/04/DSC_0107.jpg)
 
 We had a very special [date](http://www.multunus.com/ajde_events/fireside-chat-ash-maurya/) with Ash Maurya on February 26, 2014 to understand more about lean startups. Ash was in Bangalore for the Agile India Conference 2014 and had accepted [Vaidy's](https://twitter.com/_vaidy) invitation for a fireside chat with the Multunus team at our office in JP Nagar.
 

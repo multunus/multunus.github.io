@@ -7,7 +7,7 @@ tags:
 link: http://www.multunus.com/blog/2015/11/losing-master-craftsman/
 ---
 
-![losing-a-master-craftsman](http://www.multunus.com/wp-content/uploads/2015/11/4385681932_5c5c9a578b_o.jpg)
+![losing-a-master-craftsman](https://s3.amazonaws.com/multunus-website/uploads/2015/11/4385681932_5c5c9a578b_o.jpg)
 
 [Photo Credits: Abhishek Sarda](https://www.flickr.com/photos/reallynuts/)
 

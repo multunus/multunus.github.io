@@ -8,7 +8,7 @@ wp:post_id: '4144'
 link: http://www.multunus.com/blog/2013/03/how-we-chose-our-kanban-tool/
 ---
 
-![kanbanpng](http://www.multunus.com/wp-content/uploads/2014/01/kanbanpng.png)
+![kanbanpng](https://s3.amazonaws.com/multunus-website/uploads/2014/01/kanbanpng.png)
 
 ## Update: We moved to Trello
 We looked at [Trello](https://trello.com) also initially, but didn't consider as it does not provide features such as WIP limit, cycle and lead time reporting etc. There are extensions available for the same such as 

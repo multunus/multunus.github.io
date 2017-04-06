@@ -44,9 +44,9 @@ Again with the book example, I did a bunch of tests. I announced the book at my 
 So that's where the 10X model also comes in. I would like to say, take your final goal and break it down in orders of magnitude and start demonstrating it and start battling up. The first goal is to get 10 customers and then get a 100 and then get a 1000. And each of those battles is not going to be linear, and it's going to bring in some non-linear challenges and you're going to be casting different risks along the way. That's the way that I see you can work top down and bottoms up to get there.
 
 
-![](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/08/unnamed-21-300x199.jpg)
+![](https://s3.amazonaws.com/multunus-website/uploads/2014/08/unnamed-21-300x199.jpg)
 
-![](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/08/10270395_839061899444121_6843612531726639725_n-300x199.jpg)
+![](https://s3.amazonaws.com/multunus-website/uploads/2014/08/10270395_839061899444121_6843612531726639725_n-300x199.jpg)
 
 
 **Vaidy:** Its not sexy to think of billions anymore, right? You have to think in terms of trillions. Instagram selling for a Billion is not newsworthy today. What with WhatsApp going for so much more. And now every startup out there seems to be aiming for a Billion. My question is, shouldn’t there be some measure of the quality of the goal? Some kind of a general guideline?

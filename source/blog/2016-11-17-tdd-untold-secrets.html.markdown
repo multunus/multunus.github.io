@@ -9,7 +9,7 @@ link: http://www.multunus.com/blog/2016/11/tdd-untold-secrets
 ---
 Other than the usual procedure and perks of following TDD, there are a few things that you come to realize about TDD once you really get down to practising it for a while. Some of these aspects might be rather subtle while others are theoretically obvious but practically a little harder to observe when starting out with TDD. Let's go through some of them. The ideas mentioned below are most applicable for unit/functional tests.
 
-[![tdd-quote-bill-hetzel](http://i0.wp.com/www.multunus.com/wp-content/uploads/2016/11/tdd-quote-bill-hetzel.png?resize=305%2C360)](http://i0.wp.com/www.multunus.com/wp-content/uploads/2016/11/tdd-quote-bill-hetzel.png)
+[![tdd-quote-bill-hetzel](https://s3.amazonaws.com/multunus-website/uploads/2016/11/tdd-quote-bill-hetzel.png)](https://s3.amazonaws.com/multunus-website/uploads/2016/11/tdd-quote-bill-hetzel.png)
 
 Executing TDD The Right Way
 ---------------------------
@@ -45,7 +45,7 @@ This is probably going to be counter-intuitive, but following TDD is actually go
 
 In a nutshell, here's what happens. TDD forces you to write functionality, one logical increment (does that even make sense?!) at a time. So you are indirectly spiraled into a continuous cycle of creating small tests and writing just enough code to make them pass. Since these activities are sufficiently small, they can be accomplished fast and result in both higher satisfaction and better focus. In geek terminology, this is a recursive loop!
 
-#### The Ping Pong Pattern
+### The Ping Pong Pattern
 
 In addition to following TDD, if you're practising pair programming, there's an interesting pattern that the pair can follow. It's called the [Ping Pong pattern](http://c2.com/cgi/wiki?PairProgrammingPingPongPattern). The idea is simple - the pair comprises two programmers, Frank and Lois. Frank writes a new failing test. Lois implements the code to get the test passing then writes the next failing test. Now Frank writes code to make the test pass. And the cycle repeats. This greatly improves focus, flow and hence productivity.
 

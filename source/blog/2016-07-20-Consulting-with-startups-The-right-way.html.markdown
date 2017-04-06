@@ -202,7 +202,7 @@ Here’s why:
 
 - We know that the
 [Lean Startup is a “mindset shift](http://www.hult.edu/news/the-lean-mindset-and-what-it-takes-to-measure-innovation/)” - that does not come easily. But it can be accelerated when you have a coach who can both:
-![http---www.pixteller.com-pdata-t-l-462187](http://www.multunus.com/wp-content/uploads/2016/07/http-www.pixteller.com-pdata-t-l-462187.jpg)
+![http---www.pixteller.com-pdata-t-l-462187](https://s3.amazonaws.com/multunus-website/uploads/2016/07/http-www.pixteller.com-pdata-t-l-462187.jpg)
 
 	- Empathize with customers struggling with the shift in mindset, and also
 

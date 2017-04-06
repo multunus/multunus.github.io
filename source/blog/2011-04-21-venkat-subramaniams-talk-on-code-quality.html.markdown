@@ -8,7 +8,7 @@ wp:post_id: '4176'
 link: http://www.multunus.com/blog/2011/04/venkat-subramaniams-talk-on-code-quality/
 ---
 
-![Venkat_at_yahoo-300x224](http://www.multunus.com/wp-content/uploads/2011/04/Venkat_at_yahoo-300x224.jpg)
+![Venkat_at_yahoo-300x224](https://s3.amazonaws.com/multunus-website/uploads/2011/04/Venkat_at_yahoo-300x224.jpg)
 
 We attended [Venkat Subramaniam’s talk on Code Quality](http://http//www.agiledeveloper.com/presentations/caring_about_code_quality.pdf) at Yahoo India a couple of days back.
 

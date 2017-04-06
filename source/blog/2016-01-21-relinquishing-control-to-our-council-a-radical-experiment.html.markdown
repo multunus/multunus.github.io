@@ -107,7 +107,7 @@ Aat the other end of the spectrum seems, on the surface, like an ideal solution 
 What if we could meet somewhere in the middle? Here’s the structure that we currently have at Multunus:
 
 
-![Heads Council Everyone Circles](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/09/heads_council_everyone_circles-300x212.jpg)
+![Heads Council Everyone Circles](https://s3.amazonaws.com/multunus-website/uploads/2015/09/heads_council_everyone_circles-300x212.jpg)
 
 
 *  **Heads**: This is the founders of the company along with the Business Unit heads. These folks have the most amount of business experience - and act as mentors for the Council.

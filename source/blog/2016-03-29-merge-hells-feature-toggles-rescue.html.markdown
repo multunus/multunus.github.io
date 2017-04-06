@@ -62,7 +62,7 @@ Read on.
 ##Feature Toggles
 
 
-![Feature Toggles](http://i2.wp.com/www.multunus.com/wp-content/uploads/2016/03/button-161555_1280.png)
+![Feature Toggles](https://s3.amazonaws.com/multunus-website/uploads/2016/03/button-161555_1280.png)
 
 
 
@@ -148,7 +148,7 @@ Please read [my earlier post](http://www.multunus.com/blog/2013/06/github-workfl
 As we discussed above, Feature Toggles introduces, which can add to the Code Complexity. Ideally, the toggles should exist for a short duration until the experiment is done or until the feature reaches to all the users. But ideal, at times, may be far from reality, which can create issues as shown below.
 
 
-![Dark side of Feature Toggles](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/03/Screen-Shot-2016-03-29-at-3.33.29-PM-1024x589.png)
+![Dark side of Feature Toggles](https://s3.amazonaws.com/multunus-website/uploads/2016/03/Screen-Shot-2016-03-29-at-3.33.29-PM-1024x589.png)
 
 
 Case in point: Knight Capital Group’s [$460 million dollar mistake](http://dougseven.com/2014/04/17/knightmare-a-devops-cautionary-tale/), where a wrong use of the Feature Flag and Manual deployment caused the company many $$ in just 45 minutes.

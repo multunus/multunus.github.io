@@ -9,7 +9,7 @@ wp:post_id: '4157'
 link: http://www.multunus.com/blog/2011/10/simple-image-filter-using-opengl-es-in-android/
 ---
 
-![Opengl](http://www.multunus.com/wp-content/uploads/2014/01/Opengl.png)
+![Opengl](https://s3.amazonaws.com/multunus-website/uploads/2014/01/Opengl.png)
 
 **Note**: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found
 
@@ -27,7 +27,7 @@ But before drawing to the screen, there are many intermediate operations that ar
 
 ## Vertex shader
 
-```
+~~~
 uniform mat4 uMVPMatrix;
 attribute vec4 aPosition;
 attribute vec2 aTextureCoord;
@@ -36,7 +36,7 @@ void main() {
   gl_Position = uMVPMatrix *  aPosition
   vTextureCoord = aTextureCoord
 }
-```
+~~~
 
 The Vertex shader is executed for each vertex that is to be drawn. Here, we are drawing a square and mapping the texture on to that.
 
@@ -44,7 +44,7 @@ This calculates the transformed coordinates of the square by multiplying the giv
 
 ## Fragment Shader
 
-```
+~~~
 precision mediump float;
 varying vec2 vTextureCoord;
 uniform sampler2D sTexture;
@@ -53,7 +53,7 @@ void main() {
    vec2 mcen = -0.07* log(length(cen))* normalize(cen);
    gl_FragColor = texture2D(sTexture, vTextureCoord.xy-mcen);
 }
-```
+~~~
 
 Fragment shaders are executed to calculate the color of individual pixels. This is where the actual image transformation happens. Instead of mapping the corresponding texture coordinates to corresponding pixels, we can map different coordinates of the texture to different pixels which will distort the image in some way. In the above example the texture co-ordinate to fill each pixel is chosen based on the calculation in line no 6. The actual movement depends on the distance of the texture coordinate from the center. This creates an effect which is similar to what is shown in the below picture.
 

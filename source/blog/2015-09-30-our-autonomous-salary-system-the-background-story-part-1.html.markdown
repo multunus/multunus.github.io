@@ -16,7 +16,7 @@ A few of us (read * founders* ) in the company had the ominous responsibility ca
 We dreaded it. Every year.
 
 
-![scared](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/09/1992019542_86f31eab77_o-1024x683.jpg)
+![scared](https://s3.amazonaws.com/multunus-website/uploads/2015/09/1992019542_86f31eab77_o-1024x683.jpg)
 
 
 [Image Credit](https://www.flickr.com/photos/paolomargari/)
@@ -221,7 +221,7 @@ We added a fourth component:
 *  **Flexibility Factor** and the corresponding multiplier factor. We added this to suit the needs of some of our employees - who preferred to work lesser hours.
 
 
-![image02](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/09/image02-1024x592.png)
+![image02](https://s3.amazonaws.com/multunus-website/uploads/2015/09/image02-1024x592.png)
 
 
 [More details on each of these components are available in our[Open Playbook](http://github.com/multunus/open-playbook)]
@@ -261,7 +261,7 @@ As mentioned earlier, we also had two additional goals:
 To achieve both of those goals, we created a 3 Circle Org Structure:
 
 
-![Heads Council Everyone Circles](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/09/heads_council_everyone_circles.jpg)
+![Heads Council Everyone Circles](https://s3.amazonaws.com/multunus-website/uploads/2015/09/heads_council_everyone_circles.jpg)
 
 
 
@@ -326,10 +326,10 @@ We made the following changes, to implement the above learnings:
 2. Added a few simple tools to make it possible for everyone to efficiently coordinate and make decisions collectively
 
 
-![image03](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/09/image03.png)
+![image03](https://s3.amazonaws.com/multunus-website/uploads/2015/09/image03.png)
 
 
-![image04](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/09/image04-1024x396.png)
+![image04](https://s3.amazonaws.com/multunus-website/uploads/2015/09/image04-1024x396.png)
 
 
 The heads got together the next morning and came up with the following changes to separate the Company and Individual level numbers - albeit at the expense of significantly reducing transparency and autonomy:

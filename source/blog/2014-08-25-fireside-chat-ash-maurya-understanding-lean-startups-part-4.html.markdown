@@ -9,7 +9,7 @@ tags:
 link: http://www.multunus.com/blog/2014/08/fireside-chat-ash-maurya-understanding-lean-startups-part-4/
 ---
 
-![1461590_839062349444076_7781934098228004960_n](http://www.multunus.com/wp-content/uploads/2014/08/1461590_839062349444076_7781934098228004960_n.jpg)
+![1461590_839062349444076_7781934098228004960_n](https://s3.amazonaws.com/multunus-website/uploads/2014/08/1461590_839062349444076_7781934098228004960_n.jpg)
 
 This is the fourth part the multipart series: “Fireside Chat With Ash Maurya” ([Read part 3 here](http://www.multunus.com/blog/2014/08/fireside-chat-ash-maurya-lean-startups-part-3/)).
 

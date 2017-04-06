@@ -113,4 +113,4 @@ It is in its early stages,  and we will be adding more features in the coming w
 
 The below video talks about [The](http://www.multunus.com/portfolio/end-end-mobile-device-management-solution-health-media-enterprise/)[Custom MDM solution for Android Tablets and Linux Media Players](http://www.multunus.com/portfolio/end-end-mobile-device-management-solution-health-media-enterprise/) that we built for one of our customers. These devices are deployed in clinics across US delivering educational content to the patients.
 
-<iframe width="1280" height="720" src="http://www.multunus.com/wp-content/uploads/2014/01/Enterprise-Mobile-and-MDM-Health-and-Media-space.mp4"></iframe>
+<iframe width="1280" height="720" src="https://s3.amazonaws.com/multunus-website/uploads/2014/01/Enterprise-Mobile-and-MDM-Health-and-Media-space.mp4"></iframe>

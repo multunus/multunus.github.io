@@ -17,7 +17,7 @@ This is the second post in our “[MVP’s](https://en.wikipedia.org/wiki/Minimu
 Here’s a screenshot of the “app” we created:
 
 
-![MVP with Google Docs - Part 2](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/MVP-with-Google-Docs-Part-2.png)
+![MVP with Google Docs - Part 2](https://s3.amazonaws.com/multunus-website/uploads/2015/11/MVP-with-Google-Docs-Part-2.png)
 
 
 I’m not gonna blame you, if you wanna stop reading now. Yes, it’s a timesheet. That bane of a consultant’s existence.
@@ -162,7 +162,7 @@ So, what we now needed was to build an online database backed web application. E
 Here’s what we came up with:
 
 
-![TimeIt Demo - Animated GIF](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/timeit_optim.gif)
+![TimeIt Demo - Animated GIF](https://s3.amazonaws.com/multunus-website/uploads/2015/11/timeit_optim.gif)
 
 
 

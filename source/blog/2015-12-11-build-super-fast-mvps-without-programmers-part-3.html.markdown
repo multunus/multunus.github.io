@@ -143,7 +143,7 @@ Probably not. We could perhaps tweak the system to make it usableand still valid
 Here’s a diagram that shows how the whole system works together:
 
 
-![BuyIt_workflow](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/BuyIt_workflow.png)
+![BuyIt_workflow](https://s3.amazonaws.com/multunus-website/uploads/2015/12/BuyIt_workflow.png)
 
 
 1. The requester fills up the purchase request using a Google Form. We use the Google Spreadsheet API to fetch the remaining budgets across all categories. This shows up in the Google Form - and allows the requester to ensure that their purchase (if approved), will not go over budget.
@@ -166,12 +166,12 @@ The approver then opens up the Trello card (which contains the purchase request)
 Screenshot of the form
 
 
-![Approver_Form_censored](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/Approver_Form_censored.jpg)
+![Approver_Form_censored](https://s3.amazonaws.com/multunus-website/uploads/2015/12/Approver_Form_censored.jpg)
 
 Screenshot of the trello board
 
 
-![Trello_board_censored](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/Trello_board_censored.jpg)
+![Trello_board_censored](https://s3.amazonaws.com/multunus-website/uploads/2015/12/Trello_board_censored.jpg)
 
 
 ###Iterations - doing ’em right!
@@ -184,7 +184,7 @@ As you’d expect it took multiple iterations and incremental improvements to ge
 And that was fantastic because from that point on, after the first release - we were following the classical Lean Startup cycle:
 
 
-![buildmeasurelearn](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/buildmeasurelearn.jpg)
+![buildmeasurelearn](https://s3.amazonaws.com/multunus-website/uploads/2015/12/buildmeasurelearn.jpg)
 
 
 Credit: LeanStack.com

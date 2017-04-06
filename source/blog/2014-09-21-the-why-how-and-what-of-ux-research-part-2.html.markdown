@@ -16,7 +16,7 @@ This is the Part II in the series [The Why, How and What of UX Research](www.mul
 This post will help you get acquainted with the popular UX research methods. Knowing about them will help you choose the right method for the job and make your research more effective.
 
 
-![User Research Methods](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/09/user-research-methods-2dandqs-1.png)
+![User Research Methods](https://s3.amazonaws.com/multunus-website/uploads/2014/09/user-research-methods-2dandqs-1.png)
  
 
 The User Experience Research Methods can be broadly classified based on the [stage of product development](http://www.nngroup.com/articles/which-ux-research-methods/):

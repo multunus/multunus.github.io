@@ -14,7 +14,7 @@ This is the second part the multipart series: "Fireside Chat With Ash Maurya" (
 
 
 **Vaidy: **
-So I have one question. I know that you're building your own product 
+So I have one question. I know that you're building your own product
 [User Cycle](http://usercycle.com/)and it's quite obvious from the flow, even though I haven't actually signed up for it myself, I do keep seeing the 3 or 4 levels of "Are you sure you want to buy this?", you know. You're kind of trying to push customers away rather than actually making it easier for them to come in. You also have the multiple levels of customers, the 10x model that you were talking about. So it is obvious that, you were kind of eating your own dog-food, that you were testing your own principles on products.
 
 My question is with respect to the customers that you have been working with and the other startups that you've been working with. I've found it extremely difficult to even discipline myself to go through this. How often do you find companies that are willing to cross the bridge and work with you? How often do you see with the folks that you interact with who actually take your idea or have taken your idea so far and who've been like gone, not all the way, but really crossed significant milestones?
@@ -25,7 +25,7 @@ My question is with respect to the customers that you have been working with and
 
 People start asking me, at a very high level, what I'm doing and offer to be a beta user. We don't want * beta users* . We want just * customers*  and that * changes the conversation* . So I think that's just something to throw out there.
 
-But, I would say that as far as adoption goes, yes this is definitely at the infancy stage which is why I engage people at many different levels. There are people who just read the book and read the blog and they take what they want out from it and there's a process. So, a lot of stuff sounds very simple and some of the things 
+But, I would say that as far as adoption goes, yes this is definitely at the infancy stage which is why I engage people at many different levels. There are people who just read the book and read the blog and they take what they want out from it and there's a process. So, a lot of stuff sounds very simple and some of the things
 are simple, like if you have an idea, instead of spending six months writing an iPhone app, you can actually just build the demo, put up a landing page - see if anyone will even say they're interested.
 
 So people get very excited when they go through those kind of things. But at some point when you have customers and you think things should get easier when you have customers. But I found out it is the exact opposite because customers start pulling you in different directions and start asking for things. Now if you listen to everyone, you get lost even more. So that's when people usually come back and ask us for something like a framework [to make it easier].
@@ -33,9 +33,9 @@ So people get very excited when they go through those kind of things. But at som
 So I find that there are levels where people come and practise a lot of these things and they'll try different tactics but it's still at that jolting phase. Now there are workshops and camps where the idea is to have a more deliberate process so it's common to understand the concepts, take your startup idea or growth product and have you apply it in every week, design experiments, come back with a learning and if you get stuck talk about how we can get it restarted. So I think that has had a much bigger impact just from the people I work with.
 
 
-![DSC_0085](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/04/DSC_0085-300x209.jpg)
+![DSC_0085](https://s3.amazonaws.com/multunus-website/uploads/2014/04/DSC_0085.jpg)
 
-![DSC_0095](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/04/DSC_0095-300x197.jpg)]
+![DSC_0095](https://s3.amazonaws.com/multunus-website/uploads/2014/04/DSC_0095.jpg)]
 
 
 **Vaidy:**

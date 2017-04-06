@@ -11,7 +11,7 @@ wp:post_id: '4152'
 link: http://www.multunus.com/blog/2012/02/a-round-up-of-our-presentations-and-writings/
 ---
 
-![agile india 2012](http://www.multunus.com/wp-content/uploads/2012/02/agile-india-2012.jpg)
+![agile india 2012](https://s3.amazonaws.com/multunus-website/uploads/2012/02/agile-india-2012.jpg)
 We started speaking at conferences last year. We’ve also been doing a fair bit of writing. This post rounds up what we’ve up to - along with links to our presentations and some of what we’ve written.
 
 ## Presentations [in Chronological Order]

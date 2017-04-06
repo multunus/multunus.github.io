@@ -33,4 +33,4 @@ What it takes to build such software:
 - **Knowledgeable, Skilled and Motivated Team** : Important roles include Managers, Programmers, Testers, Analysts, Leads, Architects and Designers
 
 Our version of the software life-“cycle” :-) :
-[![softwaredev](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/01/softwaredev-300x271.png)](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2014/01/softwaredev.png)
+[![softwaredev](https://s3.amazonaws.com/multunus-website/uploads/2014/01/softwaredev-300x271.png)](https://s3.amazonaws.com/multunus-website/uploads/2014/01/softwaredev.png)

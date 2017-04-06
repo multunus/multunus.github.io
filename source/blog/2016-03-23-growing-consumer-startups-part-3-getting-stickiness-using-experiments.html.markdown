@@ -36,7 +36,7 @@ Here’s how you execute those steps for a Consumer Startup:
  Here’s some examples of metrics that you could track at this stage:
 
 
-![Lean-Analytics-Stages highlighted](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2016/03/Lean-Analytics-Stages1.png)
+![Lean-Analytics-Stages highlighted](https://s3.amazonaws.com/multunus-website/uploads/2016/03/Lean-Analytics-Stages1.png)
 
 I realize that the above image could be a bit overwhelming. Beyond the empathy stage, the metrics that you need to keep track of depends on two factors:
 

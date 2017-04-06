@@ -159,7 +159,7 @@ Fast forward to today. It’s been 6 months since that hacknight.
 The app now has a decent bunch of features. Here’s some of the features it has: 
 
 
-![MoveIt_Animated_Gif](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/11/MoveIt_Animated_Gif.gif)
+![MoveIt_Animated_Gif](https://s3.amazonaws.com/multunus-website/uploads/2015/11/MoveIt_Animated_Gif.gif)
 
 
 Beyond the obvious benefit of being able to track and compete on our exercise minutes in a much easier way, we’ve now got a tool that allows us to “silently” communicate with each other - about how each of us is investing in our health. And how much we care about each other’s health.

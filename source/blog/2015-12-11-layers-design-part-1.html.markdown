@@ -7,7 +7,7 @@ tags:
 link: http://www.multunus.com/blog/2015/12/layers-design-part-1/
 ---
 
-![tumblr_nbw8zmDkfj1tlwzgvo1_1280](http://www.multunus.com/wp-content/uploads/2015/12/tumblr_nbw8zmDkfj1tlwzgvo1_1280.jpg)
+![tumblr_nbw8zmDkfj1tlwzgvo1_1280](https://s3.amazonaws.com/multunus-website/uploads/2015/12/tumblr_nbw8zmDkfj1tlwzgvo1_1280.jpg)
 
 ###What is Design?
 
@@ -15,7 +15,7 @@ link: http://www.multunus.com/blog/2015/12/layers-design-part-1/
 When we hear the term Design, what comes to our mind is perhaps images of beautiful apps, elegant animations and Flat UI trends like the one below:
 
 
-![flat_ui_design](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/flat_ui_design.png)
+![flat_ui_design](https://s3.amazonaws.com/multunus-website/uploads/2015/12/flat_ui_design.png)
 
 When people say they need a designer on the team, most often they are referring to a Visual Designer. The expectation is that the designer will make the application beautiful and intuitive to use.
 
@@ -24,29 +24,29 @@ When people say they need a designer on the team, most often they are referring 
 
 Consider this IKEA table for instance.
 
-![ikea_side_table_design](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/ikea_side_table_design-1024x768.jpg)
+![ikea_side_table_design](https://s3.amazonaws.com/multunus-website/uploads/2015/12/ikea_side_table_design-1024x768.jpg)
 
 It’s a pretty simple table. It has a nice color and suits the surrounding. Seems sturdy, looks like it’s been put together neatly and is well polished. One can appreciate that. But, there is more to it that might not be apparent by looking at a table in isolation.
 
  
 
-![ikea_side_table_join](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/ikea_side_table_join.jpg)
+![ikea_side_table_join](https://s3.amazonaws.com/multunus-website/uploads/2015/12/ikea_side_table_join.jpg)
 
 Since it’s flat on the sides, you can easily join multiple tables to make a larger one.
 
 
-![ikea_side_table_stack](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/ikea_side_table_stack.jpg)
+![ikea_side_table_stack](https://s3.amazonaws.com/multunus-website/uploads/2015/12/ikea_side_table_stack.jpg)
 
 If you have multiple sizes, you can stack them inside one another and save space when not in use.
 
  
 
-![ikea_flat_packaging](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/ikea_flat_packaging.jpg)
+![ikea_flat_packaging](https://s3.amazonaws.com/multunus-website/uploads/2015/12/ikea_flat_packaging.jpg)
 
 The furnitures are packed in flat packs which allows them to save space during transport and storage. This lets IKEA cut down on a lot fuel and real estate needed.
 
 
-![ikea_effect](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/ikea_effect.jpg)
+![ikea_effect](https://s3.amazonaws.com/multunus-website/uploads/2015/12/ikea_effect.jpg)
 
 This one is interesting. Studies show that “consumers place a disproportionately high value on products they partially created.” That means, by offloading the work of putting together the table to the end customer, IKEA actually made it more loveable! It’s called the 
 [IKEA effect](https://en.wikipedia.org/wiki/IKEA_effect).
@@ -113,11 +113,11 @@ I can take decent photos on Instagram. But that does not mean you would hire me 
 Take these two plants for instance:
 
 
-![desert_cactus](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/desert_cactus1-225x300.jpg)
+![desert_cactus](https://s3.amazonaws.com/multunus-website/uploads/2015/12/desert_cactus1-225x300.jpg)
 
 Desert Cactus
 
-![brazil_nut_tree](https://s3.amazonaws.com/next.multunus.com/wp-content/uploads/2015/12/brazil_nut_tree-225x300.jpg)
+![brazil_nut_tree](https://s3.amazonaws.com/multunus-website/uploads/2015/12/brazil_nut_tree-225x300.jpg)
 
 
 Brazil Nut Tree
