@@ -3,12 +3,11 @@
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Multunus" %></title>
-    
+
     <%= stylesheet_link_tag "site" %>
   </head>
 
@@ -39,8 +38,15 @@
         </nav>
     </div>
     <article class="blog-post">
+      <% authors =  current_page.data.tags.map do |text|
+          text[4,text.length] if text.include? "cap-"
+      end %>
+
       <h1 class="post-title"><%= current_page.data.title %></h1>
+      <p class="blog-author"><%= authors.compact.join(", ") %></p>
       <p class="post-description"><%= current_page.date.strftime('%B %e, %Y') %></p>
+
+
       <%= yield %>
     </article>
     <%= javascript_include_tag "site.min" %>

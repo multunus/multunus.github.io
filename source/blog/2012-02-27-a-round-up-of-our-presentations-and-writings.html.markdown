@@ -26,12 +26,12 @@ We gave two talks at this conference:
 - Tamil and KP gave an intro to OpenGL on Android. Here’s the [original proposal](http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android) and here’s the [link to the presentation](http://www.slideshare.net/tamillarasan/introduction-to-openglinandroid?from=ss_embed).
 
 ### Agile India 2012
-: Leena and I spoke there on “Continuous Delivery for a Song”. Here’s the link to the 
-[original proposal](http://submit2012india.agilealliance.org/node/8894). And here’s the 
+: Leena and I spoke there on “Continuous Delivery for a Song”. Here’s the link to the
+[original proposal](http://submit2012india.agilealliance.org/node/8894). And here’s the
 [link to the presentation](https://docs.google.com/a/multunus.com/present/view?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw). It was a live demo - and by the comments we got from our audience, we think it went off fairly well.
 
 ### Recent Writing
-An article I wrote for YourStory.in was published late last year. It was titled ”](about:blank)[Mobile App Opportunities in 2012](http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/)”.
+An article I wrote for YourStory.in was published late last year. It was titled [Mobile App Opportunities in 2012](http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/)”.
 
 ### Blogging
 Leena has written a lot of articles on Continuous Delivery [on this blog itself](http://www.multunus.com/blog/categories/continuous-delivery/). And Akshay [has been writing regularly](http://akshayatmultunus.wordpress.com/) since he joined us last year.

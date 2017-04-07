@@ -68,7 +68,7 @@ Although you get used to this after a while, this is one of the most annoying th
 If reading this has made you curious, here are some materials that you might want to check out:
 
 * [Clojure tutorial for beginners ]( http://www.braveclojure.come/)
-* [The Joy of Clojure](the-joy-of-Clojure-second-edition)
+* [The Joy of Clojure](http://www.joyofclojure.com/)
 * You should probably watch these irrespective of whether you intend to use Clojure or not
  -  [Rich Hickeys greatest hits](https://changelog.com/posts/rich-hickeys-greatest-hits)
  -  A meta talk about the joy of working with [simple tools](https://www.youtube.com/watch?v=ShEez0JkOFw)
