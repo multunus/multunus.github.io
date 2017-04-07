@@ -15,4 +15,4 @@ deployment:
       - bundle exec middleman deploy
 test:
   override:
-    - "true"
+    - echo "test"
