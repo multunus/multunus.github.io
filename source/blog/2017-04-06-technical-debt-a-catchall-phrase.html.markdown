@@ -16,12 +16,9 @@ This is similar to the excuse we&#39;ve for Technical Debt. The code is anyways 
 And this thought process ends up creating the Vicious cycle as follows:
 
 
-
 ![image alt text](https://s3.amazonaws.com/multunus-website/uploads/2017/04/vicious-circle-code.png)
 
 And this is the beginning of the so-called Technical Debt.
-
-
 
 ![image alt text](https://s3.amazonaws.com/multunus-website/uploads/2017/04/technical-debt-a-mess.png)
 
@@ -51,7 +48,7 @@ And other common examples which I&#39;ve not covered are:
 - Mismatching names
 - Longer methods and/or classes
 
-I am sure all of us seen versions of the situations of all these.
+I am sure all of us seen variations of all these.
 
 # What is Technical Debt
 
@@ -82,9 +79,9 @@ And this includes the following:
 
 # Technical Debt Quadrant
 
-Going back to the definition of Technical Debt by Wikipedia, it is considered as more conscious, thoughtful and prudent than an unconscious activity.
+Going back to the definition of Technical Debt by Wikipedia, it should be a result of a  conscious, thoughtful and prudent decision than that of an unconscious one. 
 
-Martin Fowler uses quadrant to explain similar concept where he points out that it is not useful to discuss whether something is a debt or not, better ask whether it is **reckless** or **prudent**. The more the issues/flows are in the Prudent section, better it is.
+Martin Fowler uses a quadrant to explain similar concepts where he points out that it is not useful to discuss whether something is a debt or not, better ask whether it is reckless or prudent. The more the issues/flows are in the Prudent section, better it is. 
 
 ![image alt text](https://s3.amazonaws.com/multunus-website/uploads/2017/04/technical-debt-quadrant.png)
 
