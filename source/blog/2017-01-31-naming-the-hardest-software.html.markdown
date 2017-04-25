@@ -51,7 +51,7 @@ After having conversations such as these, we convert them into story maps or flo
 
 Domain-Driven Design
 
-Ubiquitous Language is one of the key parts of Domain-Driven Design, where the premise is **_initiating a creative collaboration between technical and _**_[domain expert_**s](https://en.wikipedia.org/wiki/Domain_expert)**_ to iteratively refine a conceptual model that addresses particular domain problems._**
+Ubiquitous Language is one of the key parts of Domain-Driven Design, where the premise is **_initiating a creative collaboration between technical and [domain experts](https://en.wikipedia.org/wiki/Domain_expert)_** to iteratively refine a conceptual model that addresses particular domain problems.
 
 It is much deeper, the following mindmap should give you a quick overview and depth of this.
 
