@@ -109,7 +109,7 @@ team:
           linkedin: https://in.linkedin.com/in/leenasn
   - name: Manish
     role: Product Manager
-    tag: product
+    tag: product,design
     image: home/team/manish.jpg
     description: Renaissance Man Who Loves Lime Tea, Eats-Sleeps-Drinks Technology, Hacker, UX Dude and Obsessed with StartUps
     social_media:
