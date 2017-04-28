@@ -12,6 +12,16 @@ team:
           github: https://github.com/akshaysmurthy
           twitter: https://twitter.com/akshaykashain
           linkedin: https://in.linkedin.com/in/akshaysmurthy
+  - name: Aravind
+    role: Product Developer
+    tag: technology
+    image: home/team/aravind.jpg
+    description: Counter Strike Punching Bag, True Product Guy, Gets Stuff Done... No Questions Asked, The Legal Expert
+    social_media:
+          github: https://github.com/m-aravind
+          linkedin: https://www.linkedin.com/in/aravind-murali-a9605891/
+          steam: http://steamcommunity.com/id/punching_bag
+
   - name: Chala
     role: Executive Admin
     tag: people-culture
@@ -53,6 +63,16 @@ team:
     social_media:
           github: https://github.com/JAYKRISHNAN
           linkedin: https://in.linkedin.com/in/jayakrishnanmk
+  - name: John
+    role: Designer
+    tag: design
+    image: home/team/john.jpg
+    description: Fastidious Designer, empathetic UX guy and a wannabe Otaku.
+    social_media:
+          github: https://github.com/johnthachil
+          linkedin: https://in.linkedin.com/in/johnthachil
+          behance: https://www.behance.net/johnthachil
+          website: https://johnthachil.com/
   - name: Karthik
     role: Product Manager
     tag: product
@@ -88,7 +108,7 @@ team:
           twitter: https://twitter.com/leenasn
           linkedin: https://in.linkedin.com/in/leenasn
   - name: Manish
-    role: Design Warrior
+    role: Product Manager
     tag: product
     image: home/team/manish.jpg
     description: Renaissance Man Who Loves Lime Tea, Eats-Sleeps-Drinks Technology, Hacker, UX Dude and Obsessed with StartUps
@@ -113,6 +133,18 @@ team:
           twitter: https://twitter.com/peterlazar1993
           github: https://github.com/peterlazar1993
           linkedin: https://www.linkedin.com/in/peterlazar1993
+  - name: Rajabishek
+    role: Designer
+    tag: design
+    image: home/team/rajabishek.jpg
+    description: Design Warrior who organises sketch files by OCD principles, Prodigy, Speed Reader.
+    social_media:
+          twitter: https://twitter.com/TheRajAbishek
+          github: https://github.com/rajabishek
+          linkedin: https://www.linkedin.com/in/rajabishek/
+          dribbble: https://dribbble.com/rajabishek
+          website: https://rajabishek.com/
+
   - name: Sreenath
     role: Product Developer
     tag: technology
@@ -130,6 +162,15 @@ team:
     social_media:
           twitter: https://twitter.com/_vaidy
           linkedin: http://in.linkedin.com/in/vaidyanathanb
+  - name: Vignesh
+    role: Product Developer
+    tag: technology
+    image: home/team/vignesh.jpg
+    description: Future Indian Army Colonel, Dota 2 Geek, Disciplinarian, Avid Reader, Machine Learning Enthusiast
+    social_media:
+          github: https://github.com/Vignesh1115
+          linkedin: https://www.linkedin.com/in/vigneshkp15/
+          steam: http://steamcommunity.com/id/vector1511
   - name: Vimal
     role: Product Developer
     tag: technology
