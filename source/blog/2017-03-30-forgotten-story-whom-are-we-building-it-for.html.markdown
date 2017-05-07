@@ -3,7 +3,7 @@ title: Forgotten Story - Whom are we building it for
 date: '2017-03-30	 22:32:19'
 tags:
 - cap-leena
-- technology
+- process
 link: http://www.multunus.com/blog/2017/03/forgotten-story-whom-are-we-buildint-it-for/
 ---
 

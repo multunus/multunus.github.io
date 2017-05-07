@@ -4,6 +4,7 @@ date: '2017-04-06	 22:50:19'
 tags:
 - cap-leena
 - technology
+- process
 link: http://www.multunus.com/blog/2017/04/technical-debt-a-catchall-phrase/
 ---
 

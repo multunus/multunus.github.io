@@ -3,7 +3,7 @@ title: 'Business Model Case Study: Skype'
 date: '2016-03-15 18:44:24'
 tags:
 - cap-karthik
-- business
+- process
 ---
 
 Have you ever used Skype? or do you use it daily or at least once every week?.

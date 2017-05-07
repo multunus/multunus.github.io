@@ -3,7 +3,7 @@ title: Introduction to Impact Mapping – Impact Map for an eCommerce Product
 date: '2016-02-26 23:21:31'
 tags:
 - cap-leena
-- business
+- process
 ---
 * The single biggest problem in communication is the illusion that it has taken place - Bernard Shaw*
 

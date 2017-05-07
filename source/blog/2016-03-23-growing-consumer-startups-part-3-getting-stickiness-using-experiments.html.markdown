@@ -5,7 +5,6 @@ synopsis: stickiness using experiments
 tags:
 - cap-karthik
 - process
-- featured
 ---
 
 In this third and final part of the series, we dive into the details of performing experiments to cross the Stickiness stage in a Consumer Startup.

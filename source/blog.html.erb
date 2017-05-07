@@ -2,47 +2,26 @@
 title: Multunus | Blog
 ---
 <section class="articles-list-section">
-    <h1 class="text-center heading">Blog</h1>
+  <h1 class="text-center heading">Blog</h1>
 
-    <section class="blog-subscription">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                <hgroup>
-                    <h2>Subscribe for our newsletter </h2>
-                </hgroup>
-                 <div class="well">
-                     <form action="https://www.getdrip.com/forms/15355060/submissions" method="post" data-drip-embedded-form="15355060">
-                      <!-- <h3 data&#45;drip&#45;attribute="headline"></h3> -->
-                      <!-- <div data&#45;drip&#45;attribute="description"></div> -->
-                      <div class="input-group">
-                         <input class="btn btn-lg" name="fields[email]" value="" id="email" type="email" placeholder="Your Email" required>
-                         <input class="btn btn-info btn-lg submit-button" type="submit" name="submit" value="Sign Up" data-drip-attribute="sign-up-button" />
-                      </div>
-                     </form>
-                 </div>
-                 <small class="promise"><em>We promise. We won't spam you.</em></small>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <ul class="articles-list">
-                    <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-                        <li class="year-list">
-                            <h5><%= year %></h5>
-                            <ul>
-                            <% articles.each do |article| %>
-                              <li class="blog-article"><a href="<%= article.url %>"><%= article.title %></a></li>
-                            <% end %>
-                            </ul>
-                        </li>
-                    <% end %>
-                </ul>
-            </div>
-        </div>
+  <%= partial(:subscribe) %>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="articles-list">
+          <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+            <li class="year-list">
+              <h5><%= year %></h5>
+              <ul>
+                <% articles.each do |article| %>
+                  <li class="blog-article"><a href="<%= article.url %>"><%= article.title %></a></li>
+                <% end %>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
- </section>
+  </div>
+</section>

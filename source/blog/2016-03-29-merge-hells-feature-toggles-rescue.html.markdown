@@ -3,7 +3,8 @@ title: Merge Hells? Feature Toggles to the rescue!
 date: '2016-03-29 15:48:08'
 tags:
 - cap-leena
-- business
+- process
+- technology
 ---
 
 ![Merge Conflicts](http://images.memes.com/meme/369621)

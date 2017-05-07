@@ -5,7 +5,6 @@ synopsis: 'early stage startup'
 tags:
 - cap-vaidy
 - process
-- featured
 ---
 
 In this post, we dive into the gory details of performing experiments to cross the Pre-Empathy stage in a Consumer Startup.

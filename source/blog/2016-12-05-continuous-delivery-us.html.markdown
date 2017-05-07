@@ -4,6 +4,7 @@ date: '2016-12-05	 11:54:19'
 tags:
 - cap-leena
 - technology
+- process
 link: http://www.multunus.com/blog/2016/12/continuous-delivery-us/
 ---
 During the meetups or conferences related to Continuous Delivery, I've seen many raising the below concerns about Continuous Delivery:

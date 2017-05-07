@@ -4,6 +4,7 @@ date: '2017-03-14	 13:32:19'
 tags:
 - cap-leena
 - technology
+- process
 link: http://www.multunus.com/blog/2017/03/long-living-feature-branches-an-anti-pattern/
 ---
 A few years back, we were working on a Javascript heavy web application which had built using [backbone.js](http://backbonejs.org/). We found that we were loading all the Javascripts at once than applying lazy loading. This affected the user experience because of the high page load time and wanted to fix that.

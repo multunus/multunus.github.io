@@ -6,7 +6,6 @@ synopsis: 'early stage startups'
 tags:
 - cap-vaidy
 - process
-- featured
 ---
 
 You’ve got an idea for a consumer product. And you’re raring to go build it.
