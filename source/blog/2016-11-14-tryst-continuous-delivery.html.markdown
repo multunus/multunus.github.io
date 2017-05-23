@@ -73,10 +73,10 @@ The problems are:
 -   Manual testing, because of lack of confidence in the test suite
 -   Deployments being Coupled with releases
 
-Our Framework
+<a name="get-started">How do I get started?</a>
 -------------
 
-The usual question that comes up during the conversation about Continuous Delivery, A*ll these makes sense, but how do I get started?*
+The usual question that comes up during the conversation about Continuous Delivery, *All these makes sense, but how do I get started?*
 
 Most of the times, the changes required to be implemented are across the organisation and needs to be planned in such a way that:
 
@@ -84,16 +84,7 @@ Most of the times, the changes required to be implemented are across the or
 -   Have small, but visible wins at the early stage itself
 -   The team that is involved are the early adopters of the change
 
-Following is our proposed framework. These 4 steps which will help the teams to take steps based on available data rather than just moving forward with practices:
-
--   **Understand** - to understand the current situation, where are we now
--   **Define** - Define the destination, where we want to be
--   **Deliver** - The next step which will move us towards the destination
--   **Improve** - Reflect consistently to analyse both the short term and long term goals
-
-![CD Implementation Process](https://s3.amazonaws.com/multunus-website/uploads/2016/11/CD-Implementation-Process-1.png)
-
-This framework is  based on the below mentioned books and concepts:
+This is  based on the below mentioned books and concepts:
 
 -   [DevOps Handbook](https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002/ref=sr_1_1?ie=UTF8&qid=1478769340&sr=8-1&keywords=devops+handbook)
 -   [Toyota Kata](https://www.amazon.com/Toyota-Kata-Managing-Improvement-Adaptiveness/dp/0071635238/ref=sr_1_1?ie=UTF8&qid=1478769361&sr=8-1&keywords=Toyota+Kata)
@@ -131,4 +122,4 @@ Want to know more about the framework? Read our [next post](http://www.multunus
 
 If you've read this far, only makes sense for you to try this out in your organisation.
 
-We'd love to hear your experiences. Please add them as comments.
+Please share your feedback. We'd love to hear your experiences.
