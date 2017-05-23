@@ -1,5 +1,5 @@
 ---
-title: Conitnuous delivery - Raspberry Pi as Media Players
+title: Continuous delivery - Raspberry Pi as Media Players
 date: '2017-05-21	 4:00:20'
 tags: 
 - cap-leena
