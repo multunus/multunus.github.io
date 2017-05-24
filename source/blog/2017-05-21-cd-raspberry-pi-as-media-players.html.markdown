@@ -18,7 +18,7 @@ In this post, he is sharing his experience while working with one of the custome
 
 This is an outdoor advertising company which uses Raspberry Pi & Linux to power their outdoor TV units which stream advertisements in highly-trafficked public places like railway stations and airports.
 
-The main problem they had was that any changes to the software which runs the media controllers (Linux boxes) running the TV were cumbersome. They were contemplating shifting to the cheaper Raspberry Pi platform to power their media controllers instead of earlier Fedora running on regular PC units. There was practically no release management too.
+The main problem they had was that any changes to the software which runs the media controllers (Linux boxes) running the TV were cumbersome. They were contemplating shifting to the cheaper Raspberry Pi platform to power their media controllers instead of earlier Fedora running on regular PC units. There was practically no release management either.
 
 Since there was already a Proof of Concept for Raspberry Pi ready and it needed to be operationalized on the field, I started on that. We made the software field-ready, ran several tests across multiple railway stations, and rolled out to outstation locations.  I also upgraded the existing Linux boxes to Debian installation and brought them up to speed with the software running on the [Raspbian](https://www.raspbian.org/) platform.
 
