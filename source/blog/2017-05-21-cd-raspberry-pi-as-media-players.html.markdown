@@ -23,6 +23,7 @@ The main problem they had was that any changes to the software which runs the me
 Since there was already a Proof of Concept for Raspberry Pi ready and it needed to be operationalized on the field, I started on that. We made the software field-ready, ran several tests across multiple railway stations, and rolled out to outstation locations.  I also upgraded the existing Linux boxes to Debian installation and brought them up to speed with the software running on the [Raspbian](https://www.raspbian.org/) platform.
 
 ***
+![Raspberry Pi](https://s3.amazonaws.com/multunus-images/raspberry-pi-2.jpeg)
 
 The Raspberry Pi release of the media controller, after about 6 months of initial development and intensive testing on the field, turned out to be stable and the client started rolling out the new platform across all the stations across Karnataka, eventually Tamil Nadu, AP, Maharashtra and Delhi NCR over the next couple of years. Last I heard, they’re crossing 2K units of Raspberry Pi installations across India. Also, we added the capability to roll out releases on the fly after the initial installation, so rolling out releases also became very simple (OTA - over the air) rather than the earlier method of manually replacing all the USB drives attached to each PC unit. 
 
