@@ -7,6 +7,7 @@ tags:
 - culture
 link: http://www.multunus.com/blog/2017/05/ci-theatre/
 ---
+![How to do Code Review](https://s3.amazonaws.com/multunus-cdimages/theatre.jpg)
 
 There are many Continuous Integrations tools available - Jenkins (the most popular one), and other hosted tools such as Circle CI, Wercker, Codeship, Bitrise to name a few. Does it mean that if we are using any of the tools, we are "*doing CI*?" 
 
