@@ -50,7 +50,7 @@ All of us know that rollback of database migrations is hard when it comes to del
 
 This means we need to have both the earlier and current implementation running in parallel for some time. And that is what is called the expand-contract pattern.
 
-!["DB - Expand Collapse Pattern"](https://s3.amazonaws.com/multunus-cdimages/db-cd.png)
+!["DB - Expand Contract Pattern"](https://s3.amazonaws.com/multunus-cdimages/db-cd.png)
 
 This is also known as [Parallel Change](https://martinfowler.com/bliki/ParallelChange.html), which can be applied for other refactorings which require backward compatibility [eg: API changes]. Branch by Abstraction also follows parallel change to support long-term refactoring.
 
