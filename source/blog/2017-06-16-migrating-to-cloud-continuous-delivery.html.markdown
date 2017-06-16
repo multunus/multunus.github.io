@@ -1,6 +1,6 @@
 ---
 title: Migrating to Cloud - In a Continuous Delivery manner
-date: '2017-06-16	07:25:29'
+date: '2017-06-16	04:00:29'
 tags: 
 - cap-leena
 - process
