@@ -57,6 +57,7 @@ activate :blog do |blog|
   # blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = "page/{num}"
+  blog.publish_future_dated = true
 end
 
 activate :directory_indexes
