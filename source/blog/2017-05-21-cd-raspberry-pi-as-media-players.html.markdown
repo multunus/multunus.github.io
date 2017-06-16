@@ -10,7 +10,7 @@ link: http://www.multunus.com/blog/2017/05/cd-raspberry-pi-as-media-players/
 
 <img src="https://s3.amazonaws.com/multunus-images/vamsee.jpg" alt="Vamsee" style="width:200px;float: left;padding-right:10px;"/>
 
-This is a continuation of the previous post, in which [Vamsee Kanakala](https://twitter.com/vamsee) shared his journey and thoughts about Continuous Delivery. 
+This is a continuation of the [previous post](http://www.multunus.com/blog/2017/05/cd-raspberry-pi-as-media-players/), in which [Vamsee Kanakala](https://twitter.com/vamsee) shared his journey and thoughts about Continuous Delivery. 
 
 In this post, he is sharing his experience while working with one of the customers. 
 
