@@ -7,7 +7,6 @@ machine:
     version: 2.4.1
 test:
   override:
-    branch: source
     commands:
       - npm install -g bower
       - bower install
