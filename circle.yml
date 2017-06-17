@@ -5,8 +5,8 @@ general:
 machine:
   ruby:
     version: 2.4.1
-test:
-  override:
+deployment:
+  production:
     commands:
       - npm install -g bower
       - bower install
@@ -16,3 +16,6 @@ test:
       - git config --global user.name "${GH_NAME}"
       - git config --global user.email "${GH_EMAIL}"
       - bundle exec middleman deploy
+test:
+  override:
+    - echo "done"
