@@ -2,7 +2,7 @@
 title: Production Outages - Part 1
 date: '2014-07-01 22:23:27'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - culture
 link: http://www.multunus.com/blog/2014/07/production-outages-part1/

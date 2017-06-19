@@ -2,7 +2,7 @@
 title: Our new reading list
 date: '2010-02-09 11:39:55'
 tags:
-- cap-vaidy
+- vaidy
 - business
 - process
 wp:post_id: '4186'

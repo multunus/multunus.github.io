@@ -2,7 +2,7 @@
 title: Abstractions in Ruby and Clojure
 date: '2016-12-22	 11:52:19'
 tags:
-- cap-kp
+- kp
 - technology
 link: http://www.multunus.com/blog/2016/12/abstractions-ruby-clojure/
 ---

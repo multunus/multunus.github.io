@@ -2,7 +2,7 @@
 title: What is Agile Design
 date: '2013-09-15 20:33:00'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - process
 - technology

@@ -2,7 +2,7 @@
 title: A dark cloud. And its silver lining.
 date: '2015-11-23 16:05:50'
 tags:
-- cap-vaidy
+- vaidy
 - culture
 link: http://www.multunus.com/blog/2015/11/dark-cloud-silver-lining/
 ---

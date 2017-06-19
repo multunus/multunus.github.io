@@ -2,7 +2,7 @@
 title: Running tests in parallel using parallel_tests
 date: '2011-06-27 10:48:01'
 tags:
-- cap-leena
+- leena
 - rails
 - technology
 wp:post_id: '4171'

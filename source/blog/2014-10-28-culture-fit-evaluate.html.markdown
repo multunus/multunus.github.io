@@ -2,10 +2,9 @@
 title: 'Culture Fit: How to evaluate it?'
 date: '2014-10-28 15:54:05'
 tags:
-- cap-admin
+- vaishnavik
 - business
 - community
-- culture
 - culture
 - hiring
 link: http://www.multunus.com/blog/2014/10/culture-fit-evaluate/

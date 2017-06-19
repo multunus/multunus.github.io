@@ -2,7 +2,7 @@
 title: Takeaways from Ruby Conf India 2011
 date: '2011-06-14 13:58:56'
 tags:
-- cap-leena
+- leena
 - process
 - rails
 - technology

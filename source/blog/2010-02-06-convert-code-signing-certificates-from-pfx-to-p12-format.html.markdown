@@ -2,7 +2,7 @@
 title: Convert code signing certificates from "pfx" to "p12" format
 date: '2010-02-06 05:13:34'
 tags:
-- cap-leena
+- leena
 - technology
 wp:post_id: '4187'
 link: http://www.multunus.com/blog/2010/02/convert-code-signing-certificates-from-pfx-to-p12-format/

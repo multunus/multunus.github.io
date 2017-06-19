@@ -2,7 +2,7 @@
 title: Configuring Hudson CI server behind firewall
 date: '2010-09-02 14:44:17'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - process
 - technology

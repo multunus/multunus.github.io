@@ -2,7 +2,7 @@
 title: Rebuilding in Jenkins
 date: '2011-09-22 14:32:49'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - technology
 wp:post_id: '4162'

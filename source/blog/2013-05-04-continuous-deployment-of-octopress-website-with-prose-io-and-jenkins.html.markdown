@@ -2,7 +2,7 @@
 title: Continuous Deployment of Octopress Website with Prose.io and Jenkins
 date: '2013-05-04 18:33:00'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - process
 - technology

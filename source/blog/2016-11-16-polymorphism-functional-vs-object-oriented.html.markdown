@@ -2,7 +2,7 @@
 title: Polymorphism - Ruby vs Clojure
 date: '2016-11-16	 11:54:19'
 tags:
-- cap-kp
+- kp
 - technology
 link: http://www.multunus.com/blog/2016/11/polymorphism-functional-vs-object-oriented/
 ---

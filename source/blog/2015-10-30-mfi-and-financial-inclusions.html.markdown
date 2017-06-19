@@ -2,7 +2,7 @@
 title: MFIs and Financial Inclusions
 date: '2015-10-30 17:47:30'
 tags:
-- cap-janaki
+- janaki
 - business
 - business
 - community

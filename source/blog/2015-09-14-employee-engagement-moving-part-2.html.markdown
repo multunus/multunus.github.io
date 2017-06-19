@@ -2,7 +2,7 @@
 title: Mountain sickness and Employee Engagement
 date: '2015-09-14 11:35:05'
 tags:
-- cap-vaishnavik
+- vaishnavik
 - culture
 - employee-engagement
 link: http://www.multunus.com/blog/2015/09/employee-engagement-moving-part-2/

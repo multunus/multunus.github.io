@@ -2,7 +2,7 @@
 title: Learnings from 2009
 date: '2010-01-29 10:55:05'
 tags:
-- cap-vaidy
+- vaidy
 - business
 - business
 wp:post_id: '4191'

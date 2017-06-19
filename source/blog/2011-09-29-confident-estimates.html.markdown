@@ -2,7 +2,7 @@
 title: Confident Estimates
 date: '2011-09-29 08:58:51'
 tags:
-- cap-manoj
+- manoj
 - process
 wp:post_id: '4159'
 link: http://www.multunus.com/blog/2011/09/confident-estimates/

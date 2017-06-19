@@ -2,8 +2,8 @@
 title: Training a fish to climb a tree
 date: '2016-01-21 17:41:25'
 tags:
-- cap-ramyasree
-- cap-vaidy
+- ramyasree
+- vaidy
 - business
 ---
  

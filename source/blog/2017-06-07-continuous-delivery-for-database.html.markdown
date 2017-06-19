@@ -2,7 +2,7 @@
 title: Continuous Delivery for Database
 date: '2017-06-07	 9:10:20'
 tags: 
-- cap-leena
+- leena
 - process
 - culture
 link: http://www.multunus.com/blog/2017/06/continuous-delivery-for-database/

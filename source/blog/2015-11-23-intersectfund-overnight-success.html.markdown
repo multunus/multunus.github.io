@@ -2,7 +2,7 @@
 title: Rohan's "Overnight" Success
 date: '2015-11-23 17:31:21'
 tags:
-- cap-vaidy
+- vaidy
 - culture
 link: http://www.multunus.com/blog/2015/11/intersectfund-overnight-success/
 ---

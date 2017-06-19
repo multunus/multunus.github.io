@@ -2,7 +2,7 @@
 title: CoffeeScript and Rails 3.0 - Quick setup
 date: '2011-06-23 14:10:58'
 tags:
-- cap-manoj
+- manoj
 - rails
 - technology
 wp:post_id: '4172'

@@ -2,7 +2,7 @@
 title: A sneak peek into Mobile App Opportunities in 2012
 date: '2012-01-27 16:45:13'
 tags:
-- cap-vaidy
+- vaidy
 - android
 - technology
 wp:post_id: '4153'

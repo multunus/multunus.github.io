@@ -3,7 +3,7 @@ title: The Why, How and What of UX Research - Part 1
 date: '2014-09-17 12:29:05'
 synopsis: ' why and how of UX'
 tags:
-- cap-manishrc
+- manishrc
 - design
 - lean-ux
 link: http://www.multunus.com/blog/2014/09/why-how-and-what-of-ux-research-part-1/

@@ -2,7 +2,7 @@
 title: Continuous Delivery of iOS apps using Jenkins and TestFlightApp
 date: '2012-05-21 11:03:21'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - process
 wp:post_id: '4150'

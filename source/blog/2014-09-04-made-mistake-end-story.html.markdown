@@ -2,7 +2,7 @@
 title: We made a mistake - end of the story?
 date: '2014-09-04 20:31:22'
 tags:
-- cap-vaishnavik
+- vaishnavik
 - community
 - culture
 link: http://www.multunus.com/blog/2014/09/made-mistake-end-story/

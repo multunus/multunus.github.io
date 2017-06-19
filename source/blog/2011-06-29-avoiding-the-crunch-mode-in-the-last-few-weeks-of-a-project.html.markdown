@@ -2,7 +2,7 @@
 title: Avoiding the "crunch mode" in the last few weeks of a project
 date: '2011-06-29 11:19:52'
 tags:
-- cap-anitha
+- anitha
 - process
 wp:post_id: '4170'
 link: http://www.multunus.com/blog/2011/06/avoiding-the-crunch-mode-in-the-last-few-weeks-of-a-project/

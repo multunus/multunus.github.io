@@ -2,7 +2,7 @@
 title: Disabling callbacks in Rails 3
 date: '2011-05-01 02:10:17'
 tags:
-- cap-leena
+- leena
 - rails
 - technology
 wp:post_id: '4174'

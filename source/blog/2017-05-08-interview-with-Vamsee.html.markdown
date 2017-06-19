@@ -2,7 +2,7 @@
 title: Interview with Vamsee
 date: '2017-05-08	 10:50:19'
 tags: 
-- cap-leena
+- leena
 - process
 - culture
 link: http://www.multunus.com/blog/2017/05/interview-with-vamsee/

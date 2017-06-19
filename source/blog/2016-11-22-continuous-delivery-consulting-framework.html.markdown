@@ -2,8 +2,8 @@
 title: Continuous Delivery - An overview of our consulting framework
 date: '2016-11-22	 11:54:19'
 tags:
-- cap-kuldip
-- cap-leena
+- kuldip
+- leena
 - technology
 - process
 link: http://www.multunus.com/blog/2016/11/continuous-delivery-consulting-framework

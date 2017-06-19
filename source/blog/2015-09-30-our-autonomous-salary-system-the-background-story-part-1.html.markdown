@@ -3,7 +3,7 @@ title: Our Open (& Autonomous) Salary System - The Background Story [Part 1]
 date: '2015-09-30 18:35:48'
 synopsis: 'Did you know this was once featured on news.ycombinator?'
 tags:
-- cap-vaidy
+- vaidy
 - business
 - culture
 - featured

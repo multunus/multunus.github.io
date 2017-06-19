@@ -2,7 +2,7 @@
 title: RIP Jim Werich
 date: '2014-02-21 14:48:04'
 tags:
-- cap-sandeep
+- sandeep
 - community
 - technology
 wp:post_id: '4596'

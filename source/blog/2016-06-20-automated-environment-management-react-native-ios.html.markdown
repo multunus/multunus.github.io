@@ -2,7 +2,7 @@
 title: Automated environment management in React Native - iOS
 date: '2016-06-20 22:54:07'
 tags:
-- cap-akshay
+- akshay
 - technology
 link: http://www.multunus.com/blog/2016/06/automated-environment-management-react-native-ios/
 ---

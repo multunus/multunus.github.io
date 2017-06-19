@@ -2,7 +2,7 @@
 title: Build super fast MVP's without programmers - Part 1
 date: '2015-11-17 10:00:16'
 tags:
-- cap-vaidy
+- vaidy
 - lean-startup
 - process
 link: http://www.multunus.com/blog/2015/11/super-fast-mvps-using-just-google-docs-part-1/

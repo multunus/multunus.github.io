@@ -3,7 +3,7 @@ title: The Why, How and What of UX Research - Part 2
 date: '2014-09-21 23:12:31'
 synopsis: 'Design is undoubtedly a vital part of your product development'
 tags:
-- cap-manishrc
+- manishrc
 - design
 - lean-ux
 - ux

@@ -2,8 +2,8 @@
 title: Building an SQL like DSL in Clojure – Part 1
 date: '2016-11-29	 11:54:19'
 tags:
-- cap-Kp
-- cap-leena
+- kp
+- leena
 - technology
 link: http://www.multunus.com/blog/2016/11/continuous-delivery-consulting-framework
 ---

@@ -2,7 +2,7 @@
 title: Lessons from interview with Joel Spolsky
 date: '2011-10-17 00:30:36'
 tags:
-- cap-anitha
+- anitha
 - continuous-delivery
 - process
 wp:post_id: '4156'

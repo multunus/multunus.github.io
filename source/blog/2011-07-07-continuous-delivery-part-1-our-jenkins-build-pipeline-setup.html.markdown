@@ -2,7 +2,7 @@
 title: 'Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup'
 date: '2011-07-07 14:28:55'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - process
 - technology

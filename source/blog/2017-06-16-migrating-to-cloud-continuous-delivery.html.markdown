@@ -2,7 +2,7 @@
 title: Migrating to Cloud - In a Continuous Delivery manner
 date: '2017-06-16	04:00:29'
 tags: 
-- cap-leena
+- leena
 - process
 - culture
 link: http://www.multunus.com/blog/2017/06/migrating-to-cloud-continuous-delivery/

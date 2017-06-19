@@ -2,7 +2,7 @@
 title: Introduction to Continuous Delivery
 date: '2012-05-15 14:49:16'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - process
 - technology

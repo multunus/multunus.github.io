@@ -2,7 +2,7 @@
 title: Our Pragmatic Processes
 date: '2010-01-29 12:02:22'
 tags:
-- cap-vaidy
+- vaidy
 - process
 wp:post_id: '4190'
 link: http://www.multunus.com/blog/2010/01/our-pragmatic-processes/

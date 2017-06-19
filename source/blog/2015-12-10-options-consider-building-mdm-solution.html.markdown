@@ -2,7 +2,7 @@
 title: Options to consider while building an MDM Solution
 date: '2015-12-10 07:56:25'
 tags:
-- cap-leena
+- leena
 - android
 - mobile-device-management
 - onemdm

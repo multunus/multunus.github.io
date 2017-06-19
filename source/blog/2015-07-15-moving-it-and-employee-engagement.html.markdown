@@ -2,9 +2,9 @@
 title: Moving It and Employee Engagement
 date: '2015-07-15 17:05:50'
 tags:
-- cap-vaishnavik
-- cap-manoj
-- cap-manishrc
+- vaishnavik
+- manoj
+- manishrc
 - culture
 - employee-engagement
 link: http://www.multunus.com/blog/2015/07/moving-it-and-employee-engagement/

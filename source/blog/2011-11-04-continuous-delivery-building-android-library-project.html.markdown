@@ -2,7 +2,7 @@
 title: 'Continuous Delivery: Building Android Library project'
 date: '2011-11-04 14:55:20'
 tags:
-- cap-leena
+- leena
 - android
 - continuous-delivery
 - process

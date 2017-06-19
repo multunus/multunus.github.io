@@ -2,7 +2,7 @@
 title: Why Clojure?
 date: '2016-11-11 11:54:19'
 tags:
-- cap-Kp
+- kp
 - technology
 link: http://www.multunus.com/blog/2016/11/clojure-matters/
 ---

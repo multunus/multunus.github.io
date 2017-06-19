@@ -2,7 +2,7 @@
 title: Our experience with Comatose - the MicroCMS
 date: '2010-02-23 13:46:44'
 tags:
-- cap-vaidy
+- vaidy
 - rails
 - technology
 wp:post_id: '4184'

@@ -2,7 +2,7 @@
 title: 'Business Model Case Study: Skype'
 date: '2016-03-15 18:44:24'
 tags:
-- cap-karthik
+- karthik
 - process
 ---
 

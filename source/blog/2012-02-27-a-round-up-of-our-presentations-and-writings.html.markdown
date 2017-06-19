@@ -2,7 +2,7 @@
 title: A round up of our presentations and writings
 date: '2012-02-27 23:59:30'
 tags:
-- cap-vaidy
+- vaidy
 - android
 - continuous-delivery
 - process

@@ -2,7 +2,7 @@
 title: 'Continuous Delivery - Part 2: Code metrics with metrical'
 date: '2011-07-31 15:44:40'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - process
 - technology

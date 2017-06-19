@@ -2,7 +2,7 @@
 title: How we chose our Kanban Tool
 date: '2013-03-09 22:39:00'
 tags:
-- cap-leena
+- leena
 - process
 wp:post_id: '4144'
 link: http://www.multunus.com/blog/2013/03/how-we-chose-our-kanban-tool/

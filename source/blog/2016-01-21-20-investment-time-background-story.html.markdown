@@ -2,7 +2,7 @@
 title: Our 20% investment time - the background story
 date: '2016-01-21 19:00:52'
 tags:
-- cap-vaidy
+- vaidy
 - business
 ---
 

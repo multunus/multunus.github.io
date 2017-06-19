@@ -2,7 +2,7 @@
 title: Toyota Kata for improving Continuous Delivery Maturity
 date: '2014-01-24 12:28:20'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - process
 wp:post_id: '4513'

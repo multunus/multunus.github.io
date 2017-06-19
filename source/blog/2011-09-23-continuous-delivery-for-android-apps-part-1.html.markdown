@@ -2,7 +2,7 @@
 title: Continuous Delivery for Android Apps - Part 1
 date: '2011-09-23 11:15:50'
 tags:
-- cap-leena
+- leena
 - android
 - continuous-delivery
 - onemdm

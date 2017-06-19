@@ -2,7 +2,7 @@
 title: Do you really need Usability Testing?
 date: '2014-11-12 11:26:45'
 tags:
-- cap-manishrc
+- manishrc
 - design
 - lean-startup
 - lean-ux

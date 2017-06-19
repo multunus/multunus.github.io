@@ -2,7 +2,7 @@
 title: 'JQuery Tools: Smooth JS widgets'
 date: '2010-02-01 05:50:24'
 tags:
-- cap-manoj
+- manoj
 - technology
 wp:post_id: '4188'
 link: http://www.multunus.com/blog/2010/02/jquery-tools-smooth-js-widgets/

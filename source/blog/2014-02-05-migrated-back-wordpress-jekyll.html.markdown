@@ -2,7 +2,7 @@
 title: Moving back from to Jekyll to Wordpress
 date: '2014-02-05 19:47:20'
 tags:
-- cap-sandeep
+- sandeep
 - technology
 wp:post_id: '4550'
 link: http://www.multunus.com/blog/2014/02/migrated-back-wordpress-jekyll/

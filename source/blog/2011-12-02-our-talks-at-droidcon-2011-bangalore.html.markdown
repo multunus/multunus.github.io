@@ -2,7 +2,7 @@
 title: Our talks at Droidcon 2011, Bangalore
 date: '2011-12-02 15:37:00'
 tags:
-- cap-manoj
+- manoj
 - android
 - technology
 wp:post_id: '4154'

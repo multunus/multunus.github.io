@@ -4,7 +4,7 @@ title: Growing an early stage Consumer Startup with Experiments [Part 1] - Navig
 date: '2016-03-23 17:17:02'
 synopsis: 'early stage startups'
 tags:
-- cap-vaidy
+- vaidy
 - process
 ---
 

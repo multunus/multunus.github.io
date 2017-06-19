@@ -3,7 +3,7 @@ title: React Essentials for JavaScript Beginners
 date: '2015-11-25 16:27:05'
 synopsis: React is awesome is the only thing I wanna say
 tags:
-- cap-peter-l
+- peter-l
 - javascript
 - react
 - technology

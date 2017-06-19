@@ -2,7 +2,7 @@
 title: Script to merge two identical MySQL Databases
 date: '2011-03-21 07:43:51'
 tags:
-- cap-leena
+- leena
 - technology
 wp:post_id: '4177'
 link: http://www.multunus.com/blog/2011/03/script-to-merge-two-identical-mysql-databases/

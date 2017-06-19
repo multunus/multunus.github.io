@@ -2,8 +2,8 @@
 title: Refactoring to design patterns- The template pattern
 date: '2016-12-22	 11:54:19'
 tags:
-- cap-jerry
-- cap-yedhu
+- jerry
+- yedhu
 - technology
 link: http://www.multunus.com/blog/2016/12/refactoring-template-method-pattern/
 ---

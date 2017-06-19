@@ -2,7 +2,7 @@
 title: 6 Tips to Give Your Website an Instant Facelift
 date: '2015-11-17 18:59:15'
 tags:
-- cap-manishrc
+- manishrc
 - design
 link: http://www.multunus.com/blog/2015/11/6-tips-give-website-instant-facelift/
 ---

@@ -2,7 +2,7 @@
 title: A Macro Level Perspective of Software Development
 date: '2011-02-09 00:17:24'
 tags:
-- cap-vaidy
+- vaidy
 - process
 wp:post_id: '4181'
 link: http://www.multunus.com/blog/2011/02/a-macro-level-perspective-of-software-development/

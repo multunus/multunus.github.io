@@ -2,7 +2,7 @@
 title: Working with DLLs, the Java way
 date: '2010-01-29 12:20:51'
 tags:
-- cap-jeevan
+- jeevan
 - technology
 wp:post_id: '4189'
 link: http://www.multunus.com/blog/2010/01/working-with-dlls-the-java-way/

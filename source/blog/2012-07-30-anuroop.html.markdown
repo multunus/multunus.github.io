@@ -2,7 +2,7 @@
 title: 'Anuroop: "We''re now confidently speaking of going to market"'
 date: '2012-07-30 09:14:33'
 tags:
-- cap-vaidy
+- vaidy
 - business
 - business
 wp:post_id: '5142'

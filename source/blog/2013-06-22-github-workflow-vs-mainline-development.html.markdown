@@ -3,8 +3,8 @@ title: GitHub Workflow vs Mainline Development
 date: '2013-06-22 13:30:00'
 synopsis: 'Git is awesome'
 tags:
-- cap-leena
-- cap-vaidy
+- leena
+- vaidy
 - continuous-delivery
 - process
 - technology

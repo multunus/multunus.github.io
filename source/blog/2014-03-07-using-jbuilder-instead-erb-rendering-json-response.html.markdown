@@ -2,7 +2,7 @@
 title: Rendering JSON responses using Jbuilder
 date: '2014-03-07 14:26:15'
 tags:
-- cap-sandeep
+- sandeep
 - rails
 - technology
 wp:post_id: '4635'

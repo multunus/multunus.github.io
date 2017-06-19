@@ -2,7 +2,7 @@
 title: Blueprint - reverse engineering your server configuration
 date: '2011-07-31 15:35:16'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - process
 wp:post_id: '4166'

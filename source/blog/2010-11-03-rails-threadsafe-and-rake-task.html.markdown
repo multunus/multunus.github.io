@@ -2,7 +2,7 @@
 title: Rails threadsafe and rake task
 date: '2010-11-03 15:22:08'
 tags:
-- cap-leena
+- leena
 - rails
 - technology
 wp:post_id: '4182'

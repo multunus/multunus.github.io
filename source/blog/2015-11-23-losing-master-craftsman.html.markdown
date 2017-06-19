@@ -2,7 +2,7 @@
 title: Losing a Master Craftsman
 date: '2015-11-23 16:07:45'
 tags:
-- cap-vaidy
+- vaidy
 - culture
 link: http://www.multunus.com/blog/2015/11/losing-master-craftsman/
 ---

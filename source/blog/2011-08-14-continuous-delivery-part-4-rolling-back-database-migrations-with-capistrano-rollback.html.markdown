@@ -3,7 +3,7 @@ title: 'Continuous Delivery - Part 4: Rolling back database migrations with Capi
   rollback'
 date: '2011-08-14 08:22:40'
 tags:
-- cap-leena
+- leena
 - continuous-delivery
 - process
 - technology
