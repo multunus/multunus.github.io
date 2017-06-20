@@ -68,7 +68,7 @@ Let the abstraction layer redirect to newer implementation as an when it is read
 
 ![image alt text](https://s3.amazonaws.com/multunus-website/uploads/2017/03/branch_by_abstraction2.png)
 
-You can visualise Branch by Abstraction with the following example given by Paul Hammant i.e consider it as changing the wheels of a car with the conditions:
+You can visualise Branch by Abstraction with the [following example given by Paul Hammant](https://trunkbaseddevelopment.com/branch-by-abstraction/) i.e consider it as changing the wheels of a car with the conditions:
 
 * Mechanics must be able to simultaneously work on the upholstery, engine, etc. 
 
