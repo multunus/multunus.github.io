@@ -3,8 +3,8 @@ title: Continuous Delivery for Tablet app
 date: '2016-12-05	 11:54:19'
 tags:
 - leena
-- technology
-- process
+- continuous-delivery
+- newsletter
 link: http://www.multunus.com/blog/2016/12/continuous-delivery-for-tablet-app/
 ---
 

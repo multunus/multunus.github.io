@@ -3,8 +3,8 @@ title: Continuous Delivery – Is it for everyone?
 date: '2016-12-05	 11:54:19'
 tags:
 - leena
-- technology
-- process
+- continuous-delivery
+- newsletter
 link: http://www.multunus.com/blog/2016/12/continuous-delivery-us/
 ---
 During the meetups or conferences related to Continuous Delivery, I've seen many raising the below concerns about Continuous Delivery:

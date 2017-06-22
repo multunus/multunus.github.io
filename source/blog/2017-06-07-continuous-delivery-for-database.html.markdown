@@ -3,8 +3,8 @@ title: Continuous Delivery for Database
 date: '2017-06-07	 9:10:20'
 tags: 
 - leena
-- process
-- culture
+- continuous-delivery
+- newsletter
 link: http://www.multunus.com/blog/2017/06/continuous-delivery-for-database/
 ---
 

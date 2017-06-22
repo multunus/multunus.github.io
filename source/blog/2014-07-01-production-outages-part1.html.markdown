@@ -4,7 +4,7 @@ date: '2014-07-01 22:23:27'
 tags:
 - leena
 - continuous-delivery
-- culture
+- newsletter
 link: http://www.multunus.com/blog/2014/07/production-outages-part1/
 ---
 

@@ -5,7 +5,7 @@ tags:
 - leena
 - vaidy
 - continuous-delivery
-- culture
+- newsletter
 link: http://www.multunus.com/blog/2014/08/production-outages-part-2/
 ---
 

@@ -3,8 +3,8 @@ title: Are you doing CI or CI Theatre ?
 date: '2017-05-27	 9:10:20'
 tags: 
 - leena
-- process
-- culture
+- continuous-delivery
+- newsletter
 link: http://www.multunus.com/blog/2017/05/ci-theatre/
 ---
 ![How to do Code Review](https://s3.amazonaws.com/multunus-cdimages/theatre.jpg)

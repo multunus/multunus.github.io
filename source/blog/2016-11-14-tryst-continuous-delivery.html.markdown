@@ -3,7 +3,8 @@ title: Tryst With Continuous Delivery
 date: '2016-11-14 11:52:19'
 tags:
 - leena
-- technology
+- continuous-delivery
+- newsletter
 link: http://www.multunus.com/blog/2016/11/tryst-continuous-delivery/
 ---
 

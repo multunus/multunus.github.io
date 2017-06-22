@@ -3,7 +3,8 @@ title: Naming - The hardest thing in Software
 date: '2017-01-31	 17:20:19'
 tags:
 - leena
-- process
+- continuous-delivery
+- newsletter
 link: http://www.multunus.com/blog/2017/01/naming-the-hardest-software/
 ---
 

@@ -5,7 +5,7 @@ tags:
 - leena
 - vaidy
 - continuous-delivery
-- process
+- newsletter
 wp:post_id: '4143'
 link: http://www.multunus.com/blog/2013/04/estimating-to-timeboxing-our-journey/
 ---

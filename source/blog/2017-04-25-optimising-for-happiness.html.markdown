@@ -3,7 +3,8 @@ title: Optimising for Happiness
 date: '2017-04-25	 09:50:19'
 tags:
 - leena
-- process
+- continuous-delivery
+- newsletter
 link: http://www.multunus.com/blog/2017/04/optimising-for-happiness/
 ---
 

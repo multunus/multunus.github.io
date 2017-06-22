@@ -3,8 +3,8 @@ title: TDD, Some Untold Secrets
 date: '2016-11-17	 11:54:19'
 tags:
 - jerry
-- technology
-- process
+- continuous-delivery
+- newsletter
 link: http://www.multunus.com/blog/2016/11/tdd-untold-secrets
 ---
 Other than the usual procedure and perks of following TDD, there are a few things that you come to realize about TDD once you really get down to practising it for a while. Some of these aspects might be rather subtle while others are theoretically obvious but practically a little harder to observe when starting out with TDD. Let's go through some of them. The ideas mentioned below are most applicable for unit/functional tests.
