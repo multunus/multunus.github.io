@@ -21,9 +21,10 @@ So how do you measure Operability? How do you need to know what needs to be impr
 
 ## State of DevOps Report ‘17
 
-For the last six years, Puppet along with few other supporters have been publishing State of DevOps reports by through a survey and analysing its results. It is published by [Nicole Forsgren](https://devops-research.com/about.html), [Jez Humble](https://continuousdelivery.com/), [Gene Kim](http://www.realgenekim.me/), [Nigel Kersten](https://puppet.com/company/leadership/nigel-kersten) - none of them requires any introduction in the Continuous Delivery/DevOps world.
+Every year, Puppet along with [Nicole Forsgren](https://devops-research.com/about.html), [Jez Humble](https://continuousdelivery.com/), [Gene Kim](http://www.realgenekim.me/), [Nigel Kersten](https://puppet.com/company/leadership/nigel-kersten) publishes this report by analysing the results of a survey that they conduct. 
+They have received more than 27,000 responses over the last six years and found clear evidence that DevOps practices yield remarkable results for IT teams and organisations.
 
-The report measures the performance of various teams across four different metrics and categorises the teams as __High__, __Medium__ and __Low__ performers:
+The report measures the performance of various teams using the following four metrics and categorises them as **High**, **Medium** and **Low** performers.
 
 * Deployment Frequency
 
@@ -35,7 +36,7 @@ The report measures the performance of various teams across four different metri
 
 The analysis shows that the high performing teams always outplay the rest on all the above metrics by:
 
-* **_On Demand deployment_** than once per week or month
+* **_On Demand deployment_** over deployments once per week or month
 
 * **_Less than an hour of Lead time_** than once in a week to a month
 
