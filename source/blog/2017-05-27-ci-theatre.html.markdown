@@ -2,7 +2,7 @@
 title: Are you doing CI or CI Theatre ?
 date: '2017-05-27	 9:10:20'
 tags: 
-- leena
+- cap-leena
 - continuous-delivery
 - newsletter
 link: http://www.multunus.com/blog/2017/05/ci-theatre/

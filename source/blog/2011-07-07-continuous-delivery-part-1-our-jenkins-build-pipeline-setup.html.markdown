@@ -2,11 +2,10 @@
 title: 'Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup'
 date: '2011-07-07 14:28:55'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - process
 - technology
-wp:post_id: '4169'
 link: http://www.multunus.com/blog/2011/07/continuous-delivery-part-1-our-jenkins-build-pipeline-setup/
 ---
 

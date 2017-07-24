@@ -2,10 +2,9 @@
 title: CoffeeScript and Rails 3.0 - Quick setup
 date: '2011-06-23 14:10:58'
 tags:
-- manoj
+- cap-manoj
 - rails
 - technology
-wp:post_id: '4172'
 link: http://www.multunus.com/blog/2011/06/coffeescript-and-rails-3-0-quick-setup/
 ---
 

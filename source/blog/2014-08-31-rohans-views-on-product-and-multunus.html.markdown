@@ -2,7 +2,7 @@
 title: 'Rohan: "Do something well or not at all"'
 date: '2014-08-31 07:41:39'
 tags:
-- vaishnavik
+- cap-vaishnavi
 - business
 - community
 - lean-startup

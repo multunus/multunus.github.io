@@ -2,7 +2,7 @@
 title: Consulting with startups. The “right” way.
 date: '2016-07-20 08:13:54'
 tags:
-- vaidy
+- cap-vaidy
 - business
 - culture
 - process

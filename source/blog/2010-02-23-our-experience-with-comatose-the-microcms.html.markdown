@@ -2,10 +2,9 @@
 title: Our experience with Comatose - the MicroCMS
 date: '2010-02-23 13:46:44'
 tags:
-- vaidy
+- cap-vaidy
 - rails
 - technology
-wp:post_id: '4184'
 link: http://www.multunus.com/blog/2010/02/our-experience-with-comatose-the-microcms/
 ---
 In one of our projects which is primarily a web application, the client had asked that we go ahead and make as much of the copy available across the site, editable. This included not just copy in static pages such as “About Us”, but also copy in dynamic pages. I mean things like tooltips for fields in forms, for example.

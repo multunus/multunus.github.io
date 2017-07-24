@@ -2,10 +2,9 @@
 title: Lessons from interview with Joel Spolsky
 date: '2011-10-17 00:30:36'
 tags:
-- anitha
+- cap-anitha
 - continuous-delivery
 - process
-wp:post_id: '4156'
 link: http://www.multunus.com/blog/2011/10/lessons-from-interview-with-joel-spolsky/
 ---
 

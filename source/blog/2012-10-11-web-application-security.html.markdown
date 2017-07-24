@@ -2,8 +2,8 @@
 title: Web Application Security
 date: '2012-10-11 09:55:05'
 tags:
-- sreenath
-- leena
+- cap-sreenath
+- cap-leena
 - technology
 wp:post_id: '4147'
 link: http://www.multunus.com/blog/2012/10/web-application-security/

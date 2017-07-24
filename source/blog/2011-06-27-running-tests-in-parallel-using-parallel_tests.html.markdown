@@ -2,10 +2,9 @@
 title: Running tests in parallel using parallel_tests
 date: '2011-06-27 10:48:01'
 tags:
-- leena
+- cap-leena
 - rails
 - technology
-wp:post_id: '4171'
 link: http://www.multunus.com/blog/2011/06/running-tests-in-parallel-using-parallel_tests/
 ---
 

@@ -2,10 +2,9 @@
 title: A sneak peek into Mobile App Opportunities in 2012
 date: '2012-01-27 16:45:13'
 tags:
-- vaidy
+- cap-vaidy
 - android
 - technology
-wp:post_id: '4153'
 link: http://www.multunus.com/blog/2012/01/a-sneak-peek-into-mobile-app-opportunities-in-2012/
 ---
 

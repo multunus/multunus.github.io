@@ -2,7 +2,7 @@
 title: When to hire?
 date: '2015-11-23 16:52:45'
 tags:
-- vaidy
+- cap-vaidy
 - culture
 link: http://www.multunus.com/blog/2015/11/when-to-hire/
 ---

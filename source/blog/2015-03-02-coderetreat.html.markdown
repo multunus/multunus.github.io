@@ -2,7 +2,7 @@
 title: CodeRetreat - Honing your Craft as a Programmer
 date: '2015-03-02 10:31:28'
 tags:
-- vaishnavik
+- cap-vaishnavi
 - community
 - technology
 link: http://www.multunus.com/blog/2015/03/coderetreat/

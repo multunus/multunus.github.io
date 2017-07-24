@@ -2,11 +2,10 @@
 title: Configuring Hudson CI server behind firewall
 date: '2010-09-02 14:44:17'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - process
 - technology
-wp:post_id: '4183'
 link: http://www.multunus.com/blog/2010/09/configuring-hudson-ci-server-behind-firewall/
 ---
 

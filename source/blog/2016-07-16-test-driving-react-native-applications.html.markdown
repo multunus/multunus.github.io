@@ -2,8 +2,8 @@
 title: Test driving React Native applications
 date: '2016-07-16 12:13:48'
 tags:
-- jayakrishnan
-- roshanjossey
+- cap-jayakrishnan
+- cap-roshanjossey
 - enzyme
 - mocha
 - react

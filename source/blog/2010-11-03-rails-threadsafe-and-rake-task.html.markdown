@@ -2,10 +2,9 @@
 title: Rails threadsafe and rake task
 date: '2010-11-03 15:22:08'
 tags:
-- leena
+- cap-leena
 - rails
 - technology
-wp:post_id: '4182'
 link: http://www.multunus.com/blog/2010/11/rails-threadsafe-and-rake-task/
 ---
 

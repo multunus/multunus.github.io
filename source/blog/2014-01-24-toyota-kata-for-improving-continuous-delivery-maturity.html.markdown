@@ -2,7 +2,7 @@
 title: Toyota Kata for improving Continuous Delivery Maturity
 date: '2014-01-24 12:28:20'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - process
 wp:post_id: '4513'
@@ -24,15 +24,7 @@ Recently I stumbled upon 
 * Coaching Kata –  coach by asking 5 questions
 
     
-* Improvement Kata – The scientific PDCA cycle [
-**P**
-lan, 
-**D**
-o, 
-**C**
-heck, 
-**A**
-ct cycle] for making measurable progress
+* Improvement Kata – The scientific PDCA cycle [**Plan, **Do, **Check, **Act cycle**] for making measurable progress
 
 
 **Coaching Kata**

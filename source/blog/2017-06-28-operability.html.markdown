@@ -2,7 +2,7 @@
 title: Operability
 date: '2017-06-28	04:00:29'
 tags: 
-- leena
+- cap-leena
 - continuous-delivery
 - newsletter
 link: http://www.multunus.com/blog/2017/06/migrating-to-cloud-continuous-delivery/

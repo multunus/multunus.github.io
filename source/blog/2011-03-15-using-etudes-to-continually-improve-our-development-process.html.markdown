@@ -2,9 +2,8 @@
 title: Using études to continually improve our development process
 date: '2011-03-15 10:12:59'
 tags:
-- vaidy
+- cap-vaidy
 - process
-wp:post_id: '4178'
 link: http://www.multunus.com/blog/2011/03/using-etudes-to-continually-improve-our-development-process/
 ---
 

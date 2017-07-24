@@ -2,8 +2,8 @@
 title: CSS3 animations versus Javascript animations
 date: '2012-09-27 10:55:05'
 tags:
-- manoj
-- midhun
+- cap-manoj
+- cap-midhun
 - technology
 wp:post_id: '4149'
 link: http://www.multunus.com/blog/2012/09/css3-animations-versus-javascript-animations/

@@ -2,7 +2,7 @@
 title: Relinquishing control to our Council - A radical experiment
 date: '2016-01-21 18:54:19'
 tags:
-- vaidy
+- cap-vaidy
 - business
 ---
 

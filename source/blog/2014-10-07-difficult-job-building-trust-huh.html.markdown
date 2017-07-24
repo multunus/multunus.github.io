@@ -2,7 +2,7 @@
 title: The Most Difficult Job - Building Trust, Huh?
 date: '2014-10-07 16:02:12'
 tags:
-- vaishnavik
+- cap-vaishnavi
 - community
 - culture
 link: http://www.multunus.com/blog/2014/10/difficult-job-building-trust-huh/

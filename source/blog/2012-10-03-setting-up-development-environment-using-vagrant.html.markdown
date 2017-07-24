@@ -2,8 +2,8 @@
 title: Setting up Development Environment using Vagrant
 date: '2012-10-03 10:55:05'
 tags:
-- abhilash
-- vimal
+- cap-abhilash
+- cap-vimal
 - technology
 wp:post_id: '4148'
 link: http://www.multunus.com/blog/2012/10/setting-up-development-environment-using-vagrant/

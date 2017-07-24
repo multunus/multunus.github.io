@@ -2,9 +2,8 @@
 title: Our Pragmatic Processes
 date: '2010-01-29 12:02:22'
 tags:
-- vaidy
+- cap-vaidy
 - process
-wp:post_id: '4190'
 link: http://www.multunus.com/blog/2010/01/our-pragmatic-processes/
 ---
 One of the things we do is to create a culture of continuous improvement. To help ourselves stay on track and not lose sight of the forest for the trees, we do the following:

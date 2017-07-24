@@ -2,9 +2,8 @@
 title: Lessons learned from Agile Bengaluru 2010
 date: '2010-02-14 09:55:48'
 tags:
-- leena
+- cap-leena
 - process
-wp:post_id: '4185'
 link: http://www.multunus.com/blog/2010/02/lessons-learned-from-agile-bengaluru-2010/
 ---
 

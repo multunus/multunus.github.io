@@ -2,7 +2,7 @@
 title: Our experience with Jekyll and Octopress
 date: '2012-10-25 08:30:05'
 tags:
-- leena
+- cap-leena
 - technology
 wp:post_id: '4146'
 link: http://www.multunus.com/blog/2012/10/our-experience-with-jekyll-and-octopress/

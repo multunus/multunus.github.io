@@ -2,11 +2,10 @@
 title: Introduction to Continuous Delivery
 date: '2012-05-15 14:49:16'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - process
 - technology
-wp:post_id: '4151'
 link: http://www.multunus.com/blog/2012/05/introduction-to-continuous-delivery/
 ---
 

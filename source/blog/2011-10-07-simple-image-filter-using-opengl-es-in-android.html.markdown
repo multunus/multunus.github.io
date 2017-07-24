@@ -2,11 +2,10 @@
 title: Simple Image Filter using OpenGL ES in Android
 date: '2011-10-07 15:35:45'
 tags:
-- kp
-- tamillharasan
+- cap-kp
+- cap-tamillharasan
 - android
 - technology
-wp:post_id: '4157'
 link: http://www.multunus.com/blog/2011/10/simple-image-filter-using-opengl-es-in-android/
 ---
 

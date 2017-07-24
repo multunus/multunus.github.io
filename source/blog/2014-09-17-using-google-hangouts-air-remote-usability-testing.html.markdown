@@ -2,7 +2,7 @@
 title: Using Google Hangouts on Air for Remote Usability Testing
 date: '2014-09-17 11:47:18'
 tags:
-- manishrc
+- cap-manish
 - design
 - lean-ux
 - usability

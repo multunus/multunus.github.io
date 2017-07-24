@@ -2,8 +2,8 @@
 title: Production Outages - Part 2
 date: '2014-08-12 11:14:23'
 tags:
-- leena
-- vaidy
+- cap-leena
+- cap-vaidy
 - continuous-delivery
 - newsletter
 link: http://www.multunus.com/blog/2014/08/production-outages-part-2/

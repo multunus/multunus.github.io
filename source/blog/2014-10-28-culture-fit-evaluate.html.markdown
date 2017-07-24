@@ -2,7 +2,7 @@
 title: 'Culture Fit: How to evaluate it?'
 date: '2014-10-28 15:54:05'
 tags:
-- vaishnavik
+- cap-vaishnavi
 - business
 - community
 - culture

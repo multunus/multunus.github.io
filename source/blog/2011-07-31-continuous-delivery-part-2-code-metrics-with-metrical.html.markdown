@@ -2,11 +2,10 @@
 title: 'Continuous Delivery - Part 2: Code metrics with metrical'
 date: '2011-07-31 15:44:40'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - process
 - technology
-wp:post_id: '4165'
 link: http://www.multunus.com/blog/2011/07/continuous-delivery-part-2-code-metrics-with-metrical/
 ---
 

@@ -2,11 +2,10 @@
 title: Takeaways from Ruby Conf India 2011
 date: '2011-06-14 13:58:56'
 tags:
-- leena
+- cap-leena
 - process
 - rails
 - technology
-wp:post_id: '4173'
 link: http://www.multunus.com/blog/2011/06/takeaways-from-ruby-conf-india-2011/
 ---
 

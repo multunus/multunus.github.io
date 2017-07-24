@@ -2,9 +2,8 @@
 title: Venkat Subramaniam's talk on Code Quality
 date: '2011-04-21 09:47:11'
 tags:
-- shakeeb
+- cap-shakeeb
 - process
-wp:post_id: '4176'
 link: http://www.multunus.com/blog/2011/04/venkat-subramaniams-talk-on-code-quality/
 ---
 

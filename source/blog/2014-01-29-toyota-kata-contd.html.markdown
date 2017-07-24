@@ -2,7 +2,7 @@
 title: Toyota Kata Contd..
 date: '2014-01-29 19:57:15'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - process
 wp:post_id: '4548'

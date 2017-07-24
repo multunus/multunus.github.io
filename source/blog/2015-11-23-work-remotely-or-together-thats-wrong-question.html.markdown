@@ -2,7 +2,7 @@
 title: Work Remotely or Together? That's the wrong question.
 date: '2015-11-23 16:26:57'
 tags:
-- vaidy
+- cap-vaidy
 - culture
 link: http://www.multunus.com/blog/2015/11/work-remotely-or-together-thats-wrong-question/
 ---

@@ -2,7 +2,7 @@
 title: Fireside Chat With Ash Maurya – Understanding Lean Startups – Part 2
 date: '2014-06-06 22:03:02'
 tags:
-- kuldip
+- cap-kuldip
 - community
 - lean-startup
 - process

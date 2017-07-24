@@ -2,9 +2,8 @@
 title: HTML Fixtures with Jasmine and JSTestdriver
 date: '2011-03-14 15:03:07'
 tags:
-- leena
+- cap-leena
 - technology
-wp:post_id: '4179'
 link: http://www.multunus.com/blog/2011/03/html-fixtures-with-jasmine-and-jstestdriver/
 ---
 

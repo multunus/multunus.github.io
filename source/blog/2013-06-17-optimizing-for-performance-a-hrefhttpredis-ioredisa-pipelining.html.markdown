@@ -2,7 +2,7 @@
 title: Optimizing for performance Pipelining
 date: '2013-06-17 10:55:05'
 tags:
-- tamillharasan
+- cap-tamillharasan
 - technology
 wp:post_id: '4141'
 link: http://www.multunus.com/blog/2013/06/optimizing-for-performance-a-hrefhttpredis-ioredisa-pipelining/

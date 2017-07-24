@@ -2,7 +2,8 @@
 title: Beyond Unit Tests
 date: '2017-07-24	08:30:29'
 tags: 
-- leena
+- cap-leena
+- cap-sreenath
 - continuous-delivery
 - newsletter
 link: http://www.multunus.com/blog/2017/07/beyond-unit-tests/

@@ -2,12 +2,11 @@
 title: 'Continuous Delivery: Building Android Library project'
 date: '2011-11-04 14:55:20'
 tags:
-- leena
+- cap-leena
 - android
 - continuous-delivery
 - process
 - technology
-wp:post_id: '4155'
 link: http://www.multunus.com/blog/2011/11/continuous-delivery-building-android-library-project/
 ---
 

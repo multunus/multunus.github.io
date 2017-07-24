@@ -2,7 +2,7 @@
 title: AgileIndia 2013 Summary
 date: '2013-03-08 17:07:00'
 tags:
-- leena
+- cap-leena
 - process
 wp:post_id: '4145'
 link: http://www.multunus.com/blog/2013/03/agileindia-2013-summary/

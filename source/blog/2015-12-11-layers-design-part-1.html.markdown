@@ -2,7 +2,7 @@
 title: Layers of Design - Part 1
 date: '2015-12-11 21:10:20'
 tags:
-- manishrc
+- cap-manish
 - design
 link: http://www.multunus.com/blog/2015/12/layers-design-part-1/
 ---

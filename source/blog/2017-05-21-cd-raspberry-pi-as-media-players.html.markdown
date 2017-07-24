@@ -2,7 +2,7 @@
 title: Continuous delivery - Raspberry Pi as Media Players
 date: '2017-05-21	 4:00:20'
 tags: 
-- leena
+- cap-leena
 - newsletter
 link: http://www.multunus.com/blog/2017/05/cd-raspberry-pi-as-media-players/
 ---

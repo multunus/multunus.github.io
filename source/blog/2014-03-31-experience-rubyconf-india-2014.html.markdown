@@ -2,7 +2,7 @@
 title: My Experience at RubyConf India 2014
 date: '2014-03-31 10:00:18'
 tags:
-- jerry
+- cap-jerry
 - ios
 - opensource
 - rubymation

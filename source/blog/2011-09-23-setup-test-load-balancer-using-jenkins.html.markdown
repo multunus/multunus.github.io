@@ -2,10 +2,9 @@
 title: Setup Test Load Balancer using Jenkins
 date: '2011-09-23 09:40:07'
 tags:
-- kp
+- cap-kp
 - continuous-delivery
 - technology
-wp:post_id: '4161'
 link: http://www.multunus.com/blog/2011/09/setup-test-load-balancer-using-jenkins/
 ---
 

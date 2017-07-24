@@ -2,7 +2,7 @@
 title: Continuous Delivery – Is it for everyone?
 date: '2016-12-05	 11:54:19'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - newsletter
 link: http://www.multunus.com/blog/2016/12/continuous-delivery-us/

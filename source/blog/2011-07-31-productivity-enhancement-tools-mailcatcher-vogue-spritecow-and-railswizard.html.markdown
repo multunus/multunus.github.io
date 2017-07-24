@@ -2,10 +2,9 @@
 title: Productivity Enhancement Tools - MailCatcher, Vogue, SpriteCow and RailsWizard
 date: '2011-07-31 15:03:40'
 tags:
-- kp
+- cap-kp
 - rails
 - technology
-wp:post_id: '4167'
 link: http://www.multunus.com/blog/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/
 ---
 

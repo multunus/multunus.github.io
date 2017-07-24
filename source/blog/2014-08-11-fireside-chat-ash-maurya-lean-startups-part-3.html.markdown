@@ -2,7 +2,7 @@
 title: Fireside Chat with Ash Maurya - Understanding Lean Startups - Part 3
 date: '2014-08-11 11:09:42'
 tags:
-- vaishnavik
+- cap-vaishnavi
 - community
 - lean-startup
 - process

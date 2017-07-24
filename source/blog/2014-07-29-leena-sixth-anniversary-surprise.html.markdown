@@ -2,7 +2,7 @@
 title: Leena's 6th Year Anniversary - Surprise Surprise!
 date: '2014-07-29 17:06:50'
 tags:
-- vaishnavik
+- cap-vaishnavi
 - anniversary
 - culture
 - fun

@@ -2,7 +2,7 @@
 title: Build super fast MVP's without programmers - Part 2
 date: '2015-12-01 10:07:05'
 tags:
-- vaidy
+- cap-vaidy
 - google-docs
 - lean-startup
 - mvp

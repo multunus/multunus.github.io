@@ -2,7 +2,7 @@
 title: Pair Programming
 date: '2017-03-10	04:00:29'
 tags: 
-- akshay
+- cap-akshay
 - continuous-delivery
 - newsletter
 link: http://www.multunus.com/blog/2017/03/pair-programming/

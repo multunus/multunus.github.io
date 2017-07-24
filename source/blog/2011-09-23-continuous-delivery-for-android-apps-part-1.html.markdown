@@ -2,13 +2,12 @@
 title: Continuous Delivery for Android Apps - Part 1
 date: '2011-09-23 11:15:50'
 tags:
-- leena
+- cap-leena
 - android
 - continuous-delivery
 - onemdm
 - process
 - technology
-wp:post_id: '4160'
 link: http://www.multunus.com/blog/2011/09/continuous-delivery-for-android-apps-part-1/
 ---
 

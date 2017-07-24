@@ -2,7 +2,7 @@
 title: TDD, Some Untold Secrets
 date: '2016-11-17	 11:54:19'
 tags:
-- jerry
+- cap-jerry
 - continuous-delivery
 - newsletter
 link: http://www.multunus.com/blog/2016/11/tdd-untold-secrets

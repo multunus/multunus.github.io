@@ -2,8 +2,8 @@
 title: Estimating to Timeboxing - Our Journey
 date: '2013-04-11 02:33:00'
 tags:
-- leena
-- vaidy
+- cap-leena
+- cap-vaidy
 - continuous-delivery
 - newsletter
 wp:post_id: '4143'

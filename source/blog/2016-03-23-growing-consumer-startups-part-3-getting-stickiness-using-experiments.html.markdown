@@ -3,7 +3,7 @@ title: 'Growing Consumer startups [Part 3]: Getting to Stickiness Using Experime
 date: '2016-03-23 17:15:44'
 synopsis: stickiness using experiments
 tags:
-- karthik
+- cap-vaidy
 - process
 ---
 

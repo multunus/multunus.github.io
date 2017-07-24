@@ -2,7 +2,7 @@
 title: The Art of Execution
 date: '2015-11-23 10:08:50'
 tags:
-- anitha
+- cap-anitha
 - business
 - continuous-delivery
 - lean-startup

@@ -2,7 +2,7 @@
 title: Long living feature branches - An Anti Pattern
 date: '2017-03-14	 13:32:19'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - newsletter
 link: http://www.multunus.com/blog/2017/03/long-living-feature-branches-an-anti-pattern/

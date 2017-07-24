@@ -2,11 +2,10 @@
 title: 'Continuous Delivery - Part 3: Running custom rake tasks during deployment'
 date: '2011-07-31 15:50:54'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - process
 - technology
-wp:post_id: '4164'
 link: http://www.multunus.com/blog/2011/07/continuous-delivery-part-3-running-custom-rake-tasks-during-deployment/
 ---
 

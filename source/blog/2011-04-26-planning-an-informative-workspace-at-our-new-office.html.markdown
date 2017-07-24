@@ -2,9 +2,8 @@
 title: Planning an Informative Workspace at our New Office
 date: '2011-04-26 15:08:43'
 tags:
-- shakeeb
+- cap-shakeeb
 - process
-wp:post_id: '4175'
 link: http://www.multunus.com/blog/2011/04/planning-an-informative-workspace-at-our-new-office/
 ---
 

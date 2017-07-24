@@ -1,13 +1,11 @@
 ---
-title: 'Continuous Delivery - Part 4: Rolling back database migrations with Capistrano
-  rollback'
+title: 'Continuous Delivery - Part 4: Rolling back database migrations with Capistrano rollback'
 date: '2011-08-14 08:22:40'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - process
 - technology
-wp:post_id: '4163'
 link: http://www.multunus.com/blog/2011/08/continuous-delivery-part-4-rolling-back-database-migrations-with-capistrano-rollback/
 ---
 

@@ -2,10 +2,9 @@
 title: Our talks at Droidcon 2011, Bangalore
 date: '2011-12-02 15:37:00'
 tags:
-- manoj
+- cap-manoj
 - android
 - technology
-wp:post_id: '4154'
 link: http://www.multunus.com/blog/2011/12/our-talks-at-droidcon-2011-bangalore/
 ---
 

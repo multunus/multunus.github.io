@@ -2,7 +2,7 @@
 title: How MFIs Work
 date: '2015-11-06 20:58:04'
 tags:
-- janaki
+- cap-janaki
 - business
 - business
 - community

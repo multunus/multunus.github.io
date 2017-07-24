@@ -2,7 +2,7 @@
 title: API Versioning using Versionist
 date: '2014-04-15 00:21:10'
 tags:
-- sandeep
+- cap-sandeep
 - rails
 - technology
 link: http://www.multunus.com/blog/2014/04/api-versioning-using-versionist/

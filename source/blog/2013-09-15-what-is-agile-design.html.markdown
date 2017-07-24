@@ -2,7 +2,7 @@
 title: What is Agile Design
 date: '2013-09-15 20:33:00'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - newsletter
 wp:post_id: '4138'

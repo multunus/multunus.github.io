@@ -2,7 +2,7 @@
 title: Fixed Requirements - An Oxymoron?
 date: '2017-07-18	08:30:29'
 tags: 
-- leena
+- cap-leena
 - continuous-delivery
 - newsletter
 link: http://www.multunus.com/blog/2017/07/requirements-an-oxymoron/

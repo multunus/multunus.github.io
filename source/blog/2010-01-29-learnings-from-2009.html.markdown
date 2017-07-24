@@ -2,10 +2,8 @@
 title: Learnings from 2009
 date: '2010-01-29 10:55:05'
 tags:
-- vaidy
+- cap-vaidy
 - business
-- business
-wp:post_id: '4191'
 link: http://www.multunus.com/blog/2010/01/learnings-from-2009/
 ---
 2009 was a year of many special events. We completed 2 years of operations last year. We moved to a new more spacious office. We created our first product. We discovered our niche [more on this in the coming weeks].

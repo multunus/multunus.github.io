@@ -2,10 +2,9 @@
 title: Our new reading list
 date: '2010-02-09 11:39:55'
 tags:
-- vaidy
+- cap-vaidy
 - business
 - process
-wp:post_id: '4186'
 link: http://www.multunus.com/blog/2010/02/our-new-reading-list/
 ---
 

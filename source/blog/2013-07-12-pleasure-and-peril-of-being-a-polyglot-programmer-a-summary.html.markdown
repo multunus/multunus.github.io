@@ -2,8 +2,8 @@
 title: Pleasure And Peril Of Being A Polyglot Programmer - A Summary
 date: '2013-07-12 02:33:00'
 tags:
-- sandeep
-- manoj
+- cap-sandeep
+- cap-manoj
 - process
 - technology
 wp:post_id: '4139'

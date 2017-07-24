@@ -2,8 +2,8 @@
 title: Autonomous RC car using Raspberry Pi and Neural Networks
 date: '2016-07-29 19:24:19'
 tags:
-- vignesh
-- vimal
+- cap-vignesh
+- cap-vimal
 - technology
 link: http://www.multunus.com/blog/2016/07/autonomous-rc-car-using-raspberry-pi-and-neural-networks/
 ---

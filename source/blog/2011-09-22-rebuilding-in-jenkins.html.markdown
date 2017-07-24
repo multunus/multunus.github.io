@@ -2,10 +2,9 @@
 title: Rebuilding in Jenkins
 date: '2011-09-22 14:32:49'
 tags:
-- leena
+- cap-leena
 - continuous-delivery
 - technology
-wp:post_id: '4162'
 link: http://www.multunus.com/blog/2011/09/rebuilding-in-jenkins/
 ---
 

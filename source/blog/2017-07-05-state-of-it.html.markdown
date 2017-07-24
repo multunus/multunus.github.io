@@ -2,7 +2,7 @@
 title: State of IT
 date: '2017-07-05	08:30:29'
 tags: 
-- leena
+- cap-leena
 - continuous-delivery
 - newsletter
 link: http://www.multunus.com/blog/2017/07/state-of-it/

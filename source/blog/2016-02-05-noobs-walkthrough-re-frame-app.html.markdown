@@ -2,7 +2,7 @@
 title: A Noob's Walkthrough of a re-frame Application
 date: '2016-02-05 12:13:06'
 tags:
-- jerry
+- cap-jerry
 - clojurescript
 - re-frame
 - react

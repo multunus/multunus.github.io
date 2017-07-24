@@ -2,7 +2,7 @@
 title: Sponsoring a Tech Conference - Our Experiments
 date: '2014-02-25 15:22:52'
 tags:
-- kuldip
+- cap-kuldip
 - community
 - culture
 wp:post_id: '4606'

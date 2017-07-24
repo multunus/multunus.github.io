@@ -2,7 +2,7 @@
 title: An overview of the MDM landscape
 date: '2015-11-25 08:15:29'
 tags:
-- leena
+- cap-leena
 - android
 - continuous-delivery
 - mobile-device-management
