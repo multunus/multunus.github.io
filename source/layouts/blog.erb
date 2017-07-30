@@ -38,15 +38,22 @@
         </nav>
     </div>
     <article class="blog-post">
-      <% authors =  current_page.data.tags.map do |text|
-          text[4,text.length] if text.include? "cap-"
-      end %>
-
       <h1 class="post-title"><%= current_page.data.title %></h1>
-      <p class="blog-author"><%= authors.compact.join(", ") %></p>
+      <%
+        authors_count = 0
+        current_page.data.tags.map do |text|
+          if text.include? "cap-"
+            authors_count += 1
+            author = text[4,text.length].strip
+            separator = ""
+            if authors_count > 1
+              separator = ", "
+            end %>
+            <%=separator%><a href="/blog/tags/<%=text%>" class="blog-author"><%=author%></a>
+         <% end
+        end 
+      %>
       <p class="post-description"><%= current_page.date.strftime('%B %e, %Y') %></p>
-
-
       <%= yield %>
     </article>
     <%= javascript_include_tag "site.min" %>
