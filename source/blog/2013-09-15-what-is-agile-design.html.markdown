@@ -4,8 +4,6 @@ date: '2013-09-15 20:33:00'
 tags:
 - cap-leena
 - continuous-delivery
-- newsletter
-wp:post_id: '4138'
 link: http://www.multunus.com/blog/2013/09/what-is-agile-design/
 ---
 
