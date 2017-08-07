@@ -18,7 +18,7 @@ I’ve reminded this many times to *myself*, the team including the non-software
 
 I was working with a customer to deliver a product to migrate documents from one system to another. Our customer has a workflow management system targeting specific domains. They needed a tool to migrate documents from different document management systems [like Sharepoint, Documentum etc.] to acquire customers who were already using these tools. This would help make their onboarding process to our system much faster.
 
-The tool description is simple, **_copy documents from one _****_system_****_ to another_**. Yes, the document has metadata such as who created it, how many versions exist, when those versions got created and by whom, a unique ref that each of the tools maintains to identify the document, etc. These metadata needs to be mapped to different fields using a mapping file provided to the tool.
+The tool description is simple, **_copy documents from one system to another_**. Yes, the document has metadata such as who created it, how many versions exist, when those versions got created and by whom, a unique ref that each of the tools maintains to identify the document, etc. These metadata needs to be mapped to different fields using a mapping file provided to the tool.
 
 We built a prototype to help the sales team demo the idea to their customers and it worked. Customers got the idea quickly enough. 
 
@@ -56,7 +56,7 @@ Related to above, the conversations should help us in arriving at [Ubiquitous](h
 
 ## Respecting the logs
 
-As Dan North mentioned in his talk [Ops and ](https://vimeo.com/209681251)[Operability](https://vimeo.com/209681251), *A log is an append-**only**, read-**only**, user **interface*. It should allow one to answer the below:
+As Dan North mentioned in his talk [Ops and ](https://vimeo.com/209681251)[Operability](https://vimeo.com/209681251), _A log is an **append-only, read-only, user interface**_. It should allow one to answer the below:
 
 * What happened?
 
