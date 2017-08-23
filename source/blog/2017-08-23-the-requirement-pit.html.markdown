@@ -28,7 +28,7 @@ The book describes the experience Brian Eno [the famous producer and musician] h
 
 >*This example also illustrates our belief that successful tools adapt to the hands that use them. In this case, it is the tools that you build for others that must be adaptable.*
 
-Refer to the original wired magazine article - [The revenge of the intuitive](https://www.wired.com/1999/01/eno/)
+Refer to the original Wired magazine article - [The revenge of the intuitive](https://www.wired.com/1999/01/eno/)
 
 So the summary is ***Work with a User to Think Like a User.***
 
