@@ -16,5 +16,6 @@ gem 'middleman', '~> 4.2'
 gem "middleman-blog", "~> 4.0"
 gem 'middleman-livereload', '~> 3.4'
 gem "middleman-deploy", "~> 2.0.0.pre.alpha"
+gem 'opal'
 
 gem "builder", "~> 3.0"
