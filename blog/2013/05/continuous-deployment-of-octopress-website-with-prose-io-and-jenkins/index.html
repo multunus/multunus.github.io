@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Continuous Deployment of Octopress Website with Prose.io and Jenkins</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2013 blog_2013_05 blog_2013_05_continuous-deployment-of-octopress-website-with-prose-io-and-jenkins blog_2013_05_continuous-deployment-of-octopress-website-with-prose-io-and-jenkins_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Continuous Deployment of Octopress Website with Prose.io and Jenkins</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">May  4, 2013</p>
+      <p>As mentioned <a href="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress/">in this blog post</a>, we were looking for a simple solution for Live Editing the website created using Octopress and deploy it to Heroku. This post is about how to edit Website using Prose.io and deploy it using Jenkins.</p>
+
+<p>With <a href="http://prose.io/about.html">Prose.io</a>, you can edit any Github files, but you need to run 
+<code>rake generate</code> command for generating the HTML files before deploying them. So you will need the setup to deploy, even if the editing can be done online.</p>
+
+<p>Follow the following steps to setup <a href="http://jenkins-ci.org/">Jenkins</a> or any <a href="http://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration</a> server for deployment:</p>
+
+<ol>
+  <li>Add the following in _config.yml
+ ```
+ #prose.io settings
+ prose:
+ rooturl: "source"
+ metadata:
+     "source/_posts": |
+ layout: post
+ title: "Change Title"
+ date: 2013-04-11 02:33
+ comments: true
+ author:
+    <ul>
+      <li>author
+ categories:</li>
+      <li>All Posts<code>
+ </code>``</li>
+    </ul>
+  </li>
+  <li>
+    <p>Setup Prose.io - just login with your Github Handle</p>
+  </li>
+  <li>
+    <p>Create a script with as follows:</p>
+
+    <p><code>
+ bundle install
+ bundle exec rake generate
+ git add public/
+ git commit -m "Deploying Generated files"
+</code></p>
+  </li>
+  <li>Install the Heroku gem and setup the git remote and keys for deployment as mentioned <a href="https://devcenter.heroku.com/articles/git">here</a></li>
+  <li>Setup Git Publisher to push the generated files to heroku as shown below.</li>
+</ol>
+
+<p><img src="https://s3.amazonaws.com/multunus-images/Git+Publisher.png" alt="Git Publisher" /></p>
+
+<p>Thats it. You are done. Just by clicking of a button, the changes gets deployed. With this setup anyone who has access to the Github Repo can make changes and deploy.</p>
+
+<p>This post is written using Prose.io and deployed through Jenkins.</p>
+
+<p>Yes, the setup was not as easy I had written above. I got stuck mainly with the following.</p>
+
+<ul>
+  <li>I got stuck as the command <code>rake generate</code> was watching the file changes. It was not getting stopped. The culprit was <code>auto: true</code> in _config.yml file.</li>
+  <li>If the file extension is .html, Prose.io will not show preview or metadata information. The markdown or md extension would work.</li>
+  <li>Thought of using Travis.io as mentioned <a href="http://www.harimenon.com/blog/2013/01/27/auto-deploying-to-my-octopress-blog/">here</a> for the deployment. But had issues with setting up Heroku setup with the same. Didn’t continue on that as we’ve been using Jenkins as our CI server for long.</li>
+</ul>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

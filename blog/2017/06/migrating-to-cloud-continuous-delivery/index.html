@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Migrating to Cloud - In a Continuous Delivery manner</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_06 blog_2017_06_migrating-to-cloud-continuous-delivery blog_2017_06_migrating-to-cloud-continuous-delivery_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Migrating to Cloud - In a Continuous Delivery manner</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">June 16, 2017</p>
+      <p><img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/074/19e/017c499.jpg" alt="Akshay Surve" style="width:250px;float: left;padding-right:10px;" />
+Recently during <a href="https://www.meetup.com/SoftwareArchitectsBangalore/events/237117024/">a meetup</a>, I got a chance to listen to <a href="https://www.linkedin.com/in/akshaysurve/">Akshay Surve</a>, co-founder of DeltaX.</p>
+
+<p><a href="http://www.deltax.com/">DeltaX</a> is a platform which provides analytics around Social Media Marketing.</p>
+
+<p>Akshay shared an interesting story about how DeltaX moved to cloud over a period of six months in a continuous delivery manner.</p>
+
+<p>Quoting Akshay, as he wrote in <a href="https://dxrecursion.aerobatic.io/articles/2017-04/migration-to-azure">his blog</a>:</p>
+
+<blockquote>
+  <p><em>In the second half of 2016 - we decided to migrate our multi-tenant app from bare-metal servers to Azure. While you can find numerous benchmarks for various cloud platforms - there are very few relatable drill downs on the thought process as part of such migrations to the cloud as is. More importantly, this was not just a migration - it was literally a war with all hands on the deck; keeping the existing usage, client data and growth intact we were able to migration over 1.4TB data and existing clients to the cloud successfully.</em></p>
+</blockquote>
+
+<p>They had a multi-tenant database, so they moved tenant by tenant to the cloud instead of the entire migration. It took them around six months for the same, but taking it slowly helped them to plan better.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/deltaX-migration.png" alt="Migration Timeline" /></p>
+
+<p>The most interesting part for me in the talk is the way they sliced the huge mountain to small batches rather than doing it in a single big-batch. The small batch allowed them to observe, and optimise further and also allowed them to switch back as they had both the systems running parallel. I know small is relative here, but you get the point :)</p>
+
+<p>Continuous Delivery is about delivering small batches of changes in a repeatable and sustainable manner. It is less risky because it will mostly be automated and mostly it will be reversible steps.</p>
+
+<p>Database is one place where usually Continuous Delivery is considered to be difficult. In my previous post, I wrote about how to approach database refactoring using <a href="http://www.multunus.com/blog/2017/06/continuous-delivery-for-database/">Expand and Contract Pattern</a>. And Akshay and team have shown an example of how it can be done for migrating to cloud too. They analysed, developed and deployed in small chunks which gave them confidence about the system over time.</p>
+
+<p>You can watch the video of his talk in the below link:</p>
+
+<p><a href="https://www.youtube.com/watch?v=niwLpGuaAiU">https://www.youtube.com/watch?v=niwLpGuaAiU</a></p>
+
+<p>Recently I read about how Capital One, one of the leading banks of US, <a href="https://medium.com/capital-one-developers/moving-one-of-capital-ones-largest-customer-facing-apps-to-aws-668d797af6fc?imm_mid=0f2918&amp;cmp=em-webops-na-na-newsltr_20170609">moved their customer facing app to AWS</a>, which has an active user base of tens of millions of customers.</p>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

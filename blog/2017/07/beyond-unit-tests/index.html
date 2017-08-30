@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Beyond Unit Tests</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_07 blog_2017_07_beyond-unit-tests blog_2017_07_beyond-unit-tests_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Beyond Unit Tests</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+            , <a href="/blog/tags/cap-sreenath" class="blog-author">sreenath</a>
+      <p class="post-description">July 24, 2017</p>
+      <p>For <a href="https://gk-landingpage.firebaseapp.com/">our product</a>, we use SMS as the notification mechanism as we felt it is the most reliable mechanism in our context. We use <a href="https://www.textlocal.in/">TextLocal</a> to send out these SMSs.</p>
+
+<p>For each of the SMS that goes out of the system, we need to add a template. These templates are approved after verifying that there is no promotional content in the message. The promotional SMS, as the name suggests, is used for promoting a product a service and has to follow guidelines such as <a href="https://support.exotel.in/support/solutions/articles/38688-what-is-the-difference-between-a-transactional-sms-and-a-promotional-sms">DND policy</a>.</p>
+
+<p>The message template can have placeholders which are replaced with actual content while sending out the SMS. For example, we've an automated booking module through IVR i.e. the customer can book a trial class in Yoga Studios through the IVR system. The system sends a reminder message to the customer 90 minutes before the class along with address, time etc. The template for the message is as follows:</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/sms-template.png" alt="SMS template" /></p>
+
+<p>You can see certain parts embedded in %%, which is used as variables and gets replaced with the provided data while sending out the SMS. The section defines two things: <em>the type of the data and the maximum length of the data.</em></p>
+
+<h2 id="testing">Testing</h2>
+
+<p>A slight change in the message resulted in failures because of template mismatch. And we faced issues with the data length too. For eg: In the above case the length of Studio name is given as 20 and there can be cases where it can be longer than 20. The message gets rejected and it results in the SMS not getting delivered to the user. And we needed to update the template when we face such issues.</p>
+
+<p>We followed TDD and even then we couldn’t capture the above cases with the same. As Michael Nygard <a href="http://thinkrelevance.com/blog/2013/11/26/better-than-unit-tests">quoted in his post</a>:</p>
+
+<blockquote>
+  <p><em>The key problem with testing is that a test (of any kind) that uses one particular set of inputs tells you nothing at all about the behaviour of the system or component when it is given a different set of inputs. The huge number of different possible inputs usually rules out the possibility of testing them all, hence the unavoidable concern with testing will always be, "have you performed the right tests?" The only certain answer you will ever get to this question is an answer in the negative — when the system breaks.</em></p>
+</blockquote>
+
+<p>We usually write few input criteria for Unit tests good enough number to cover the edge cases. Too many will make the unit tests unmaintainable or unreadable. So how do we test these kinds of scenarios?</p>
+
+<h2 id="property-based-testing">Property based testing</h2>
+
+<p>Property based testing takes a different approach. It enables us to test our code against all possible inputs(or at least large enough inputs). It randomly generates a vast number of test cases to exercise the system.</p>
+
+<p>Instead of looking for success, property-based testing looks for failures. The failures are those input values which couldn't match the expected output or states. And in this way, property based testing complements the unit tests by generating a good enough number for edge cases.</p>
+
+<p><img src="http://thinkrelevance.com/media/BAhbBlsHOgZmSSIrMjAxMy8xMS8yNi8yMC8xNy80OS82OTAvcXVpY2tjaGVjay5wbmcGOgZFVA/quickcheck.png?sha=7c512d79" alt="Property based testing" /></p>
+
+<p><a href="https://hackage.haskell.org/package/QuickCheck">Qucikcheck</a>, referred above, is a testing tool for Haskell which generates a lot of cases against the specification that was provided to it. Later it was adopted by Zach Tellman in <a href="http://yellerapp.com/posts/2015-04-13-effective-test-check.html">Test.Check</a> a similar tool written in Clojure.</p>
+
+<p>There are <a href="https://gist.github.com/npryce/4147916">tools available</a> in almost all the languages for writing Property based testing.</p>
+
+<p>In the upcoming post(s), I will explain how to write property based tests.</p>
+
+<h2 id="further-readings">Further Readings</h2>
+
+<ul>
+  <li>
+    <p><a href="https://www.youtube.com/watch?v=lKXe3HUG2l4">"The Mess We're In" by Joe Armstrong</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.youtube.com/watch?v=f84n5oFoZBc">Hammock Driven Development by Rich Hickey</a></p>
+  </li>
+  <li>
+    <p><a href="https://vimeo.com/130847897">Property-Based Testing by Rob Howard (Railscamp, 2015)</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.infoq.com/presentations/property-based-testing">Property-based Testing for Better Code by Jessica Kerr</a></p>
+  </li>
+</ul>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Introduction to Continuous Delivery</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2012 blog_2012_05 blog_2012_05_introduction-to-continuous-delivery blog_2012_05_introduction-to-continuous-delivery_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Introduction to Continuous Delivery</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">May 15, 2012</p>
+      <p>We’ve been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
+
+<h2 id="what-is-continuous-delivery">What is Continuous Delivery</h2>
+<p>Continuous Delivery is the process of being able to continuously deliver new versions of a software product to create a tight feedback loop between users and the project team—including the customer or product owner.</p>
+
+<p>This helps to test new ideas and changes in the product and also measure the effect of changes in the revenue. Continuous Delivery means releasing software very frequently, i.e. multiple times a day, rather than once in months.</p>
+
+<h2 id="bottlenecks-for-continuous-delivery">Bottlenecks for Continuous Delivery</h2>
+<p>Lets see the usual challenges for releases. The following are the challenges that we faced before moving to Continuous Delivery. Let me put it in this way i.e. the following are the challenges which got us thinking on how to make releases more predictable and pain free. We already had a Continuous Integration setup at our end, but that was not enough to ease the process.</p>
+
+<ul>
+  <li>No tracking on which version was deployed, when and to which environment</li>
+  <li>Different people working on different branches, code merge hell when its ready for deployment.</li>
+  <li>When an urgent bug needs to be fixed, the fix need to be replicated in multiple branches along with the mainline branch</li>
+  <li>No easy way to revert back to the previous stable version</li>
+</ul>
+
+<p>We’ve seen even more challenges in teams which do not have a Continuous Integration setup yet. They are:</p>
+
+<ul>
+  <li>Adhoc build processes</li>
+  <li>Too much time spent on manual testing</li>
+  <li>Integration of code happens only during deployment</li>
+  <li>Complexity of build and deployment increases, depending on the complexity of the app.</li>
+  <li>For clustered environments, the deployment needs to be updated to all slaves</li>
+</ul>
+
+<p>Thats when we stumbled upon ”<a href="http://www.informit.com/store/product.aspx?isbn=0321601912&amp;WT.DCSext.w_ptgrevartcl=Continuous+Delivery%3a+Reliable+Software+Releases+through+Build%2c+Test%2c+and+Deployment+Automation_1641923_ISBNTopCover">Continuous Delivery</a>” book by Jez Humble and Dave Farley and extended our Continuous Integration setup to Continuous Delivery.</p>
+
+<h2 id="continuous-delivery-to-the-rescue">Continuous Delivery to the rescue</h2>
+
+<p>One of the key principle of Continuous Delivery is <strong>To create a repeatable and reliable process for releasing software.</strong>. It solves problems by providing fast automated feedback on the <strong>production readiness</strong> of the application - every time there is a change to the code, infrastructure or the configuration. So in Continuous Delivery, <strong>Done means Released.</strong></p>
+
+<p>A central pattern of Continuous Delivery is called the <strong>Deployment pipeline - </strong>an automated implementation of the application’s build, deploy, test and release process. The following shows a sample deployment pipeline:</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/pipeline.png" alt="Deployment Pipeline" /></p>
+
+<p>The deployment pipeline includes the following build and deployment process:</p>
+
+<ul>
+  <li>Creates executable code to verify that the syntax of the source code is valid.</li>
+  <li>Runs the unit tests to check that the code behaves as expected.</li>
+  <li>Runs the acceptance tests to check that the application conforms to its business acceptance criteria—that it delivers the business value that was intended.</li>
+  <li>Run nonfunctional tests which checks that the application performs sufficiently well in terms of capacity, availability, security, and so on to meet its users’ needs.</li>
+  <li>Runs tools which check that the expected code quality criteria such as test coverage and other technology-specific metrics are met.</li>
+  <li>Then in the manual testing environment, exploratory testing is done. In parallel a demonstration to the customer and a selection of users can also be done. This helps the product owner to decide whether there are missing features, or find bugs that require fixing.</li>
+  <li>If any of the above fails, the deployment should be stopped because it is a clear indication that the application is not production ready.</li>
+</ul>
+
+<p>I will write about the Benefits of Continuous Delivery in the next post.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://docs.google.com/a/multunus.com/present/edit?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw">https://docs.google.com/a/multunus.com/present/edit?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw</a></li>
+  <li><a href="http://www.informit.com/articles/article.aspx?p=1829417">http://www.informit.com/articles/article.aspx?p=1829417</a></li>
+  <li><a href="http://continousdelivery.com/">http://continousdelivery.com</a></li>
+</ul>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Interview with Vamsee</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_05 blog_2017_05_interview-with-Vamsee blog_2017_05_interview-with-Vamsee_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Interview with Vamsee</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">May  8, 2017</p>
+      <p><img src="https://s3.amazonaws.com/multunus-images/vamsee.jpg" alt="Vamsee" style="width:220px;float: left;padding-right:10px;" />
+We have a change for the post in this week. I usually share guidelines or case studies about how software should be delivered. 
+Instead, this week I am interviewing <a href="https://twitter.com/vamsee">Vamsee Kanakala</a> - who is a good friend of mine and a popular personality in both Ruby and DevOps communities, especially in India.</p>
+
+<hr />
+
+<p><strong><em>Q: A quick introduction about yourself i.e. your experience as Dev, Ops and then as a DevOps evangelist</em></strong></p>
+
+<p>I’ve been in the IT industry for nearly 14 years now - out of which I’ve been a web developer for close to 10 years. Though I have worked on multiple web technologies over the years, a large part of my experience is with Ruby on Rails and related technologies. I’m a big believer in Agile methodologies, and Rails had been an easy fit. Since I always had an entrepreneurial bent of mind, I chose to be a consultant working for startups, mostly remotely.</p>
+
+<p>One of my earlier clients, an Australian startup asked me to be the Engineering Manager for their Indian office, I had the opportunity to look at some of the issues a small but dynamic team faces up close - like setting up proper developer workflows - processes around git usage, fixing deployment issues, having proper ci/build server setup, etc. That’s when I realized how important a good DevOps engineer is for startup teams.</p>
+
+<p>Since I had some trouble hiring a good DevOps engineer for that team, after I left that job, I hit upon the idea of offering precisely this expertise as a service to startups. By that time, I was already playing with tools like Puppet, Chef, Docker, etc. So the transition to DevOps consultant was smooth, and I have been helping small teams setup <em>DevOps processes</em> and execute successfully on ambitious release goals for these past 4 years.</p>
+
+<p><strong><em>Q: Can you expand a little more on what you mean by DevOps processes?</em></strong></p>
+
+<p>When you look at the whole nine yards of the building and maintaining of software, a lot of questions arise such as:</p>
+
+<ul>
+  <li>
+    <p>How automated are developer environments?</p>
+  </li>
+  <li>
+    <p>How do they tie into ease of deployments?</p>
+  </li>
+  <li>
+    <p>Do we need containers? Why?</p>
+  </li>
+  <li>
+    <p>Is implementing immutable servers a goal?</p>
+  </li>
+  <li>
+    <p>Are we doing backups?</p>
+  </li>
+  <li>
+    <p>Are the restore-tested?</p>
+  </li>
+  <li>
+    <p>How about monitoring?</p>
+  </li>
+</ul>
+
+<p>And that is what is I meant by DevOps processes above i.e. looking at the whole nine yards and removing the impediments for smooth flow of software delivery.</p>
+
+<p><strong><em>Q: A related question to the above. In your opinion, what is your definition of Continuous Delivery? Why does Continuous Delivery matter?</em></strong></p>
+
+<p>I touched upon that above. My definition of Continuous Delivery would be a team being able to <em>release software early and often, with as little friction as possible</em>. Continuous Delivery matters immensely for any team which cares about shipping features on time. In my opinion, it’s also a state of mind, that’s shared by everyone on the team - the attitude of relentlessly removing the obstacles to getting to a place that would let them ship several times a day without any disruptions to regular development work. In other words, deployments should be as simple as a git commit, and any developer should be able to deploy to production, provided the commit passes the automated tests.</p>
+
+<p><strong><em>Q: I assume customers approach you when they have good traction in the market and want to improve the predictability and sustainability of delivery. But the challenge the team has is implementing Continuous Delivery Pipeline while continuing to deliver the product. How do you approach this to maintain the product delivery and improving the delivery pipeline?</em></strong></p>
+
+<p>Actually, my clients span the whole spectrum - some approach me because they’ve had a break-in on one of their servers and they realize that the current team doesn’t have the bandwidth to take care of the servers. Some, like you mentioned, need help in scaling up the speed of releases. I’ve also worked with startups who’ve had forward-thinking technical leadership and wanted to do things the "right way" from the get go.</p>
+
+<p>But if it’s help with scaling release speed they want, I always tell them there’s no easy answer - first, I need to measure the velocity of the current team, understand their current bottlenecks, and make changes to the status quo - this might involve training the developers with the correct git workflows, helping them write better tests, etc. This might also involve rationalizing the deploy process so they could ship faster.</p>
+
+<p>I always look for the low-hanging fruit first and then go about changing the hard things - like development culture. If it means that the releases have to take a break so I can fix some broken workflows, so be it. I don’t make any promises up front because each team is different when it comes to the challenges they face in shipping faster. However, usually the solutions are not inaccessible by any measure - it just takes instilling discipline in the team and educating them about the <em>right way</em> of doing things, and how a little faith in the process makes their lives easier.</p>
+
+<p><strong><em>Q: What do you think are the fundamentals that every team should be doing, to implement a smooth Continuous Delivery Pipeline? What needs to change in the team fundamentally for this?</em></strong></p>
+
+<p>What I hope for the most is a <em>curious team</em> - a team which realizes some things are broken and are eager to the fix them - it makes my job immensely easier. And equally frequently, I hope for <em>humble technical leadership</em> - people who are ready to admit things are broken and are ready to listen to an outside consultant - however hard it might be to have someone external point out weaknesses. This is perhaps the single most important reason whether I succeed or not - if the client doesn’t give me enough rope to change how things are currently being done, there’s very little I can do to fix those issues.</p>
+
+<p>All change is hard, so it involves courage on all parties - on my part to push the team to change, the leadership to accept things are broken and to seek help and the team to be open to new ideas and be willing to try something new. Obviously, I go out of my way to help all parties get to this place as much as I can, but the fundamental requirement is for the team to be <em>ready for the change.</em> It’s not always easy, which is what makes my work very challenging and when it works, equally rewarding.</p>
+
+<p><strong><em>Thank you Vamsee for taking time and sharing your thoughts and opinions with us.</em></strong> <br />
+<strong><em>In the next part, we’ll talk more about your experiences while working with customers.</em></strong></p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

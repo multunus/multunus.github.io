@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Convert code signing certificates from "pfx" to "p12" format</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2010 blog_2010_02 blog_2010_02_convert-code-signing-certificates-from-pfx-to-p12-format blog_2010_02_convert-code-signing-certificates-from-pfx-to-p12-format_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Convert code signing certificates from "pfx" to "p12" format</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">February  6, 2010</p>
+      <p>One of the requirements we had was to sign the applet that we built for 
+<a href="http://alpha.userthoughts.com/">UserThoughts</a>. We had purchased Comodo’s 
+<a href="http://en.wikipedia.org/wiki/Code_signing">code signing certificate</a> from 
+<a href="https://secure.ksoftware.net/code_signing.html?gclid=CN-epdfskZ8CFVBd4wodTC6EIA">KSoftware</a>. 
+When you download the certificate from their site, it automatically gets installed in IE. Follow these steps for converting it into format which you can use with the Java Jarsigner:</p>
+
+<ol>
+  <li>
+    <p>Export the certificate from IE by following the instructions given here: 
+ <a href="http://www.tech-pro.net/export-to-pfx.html">http://www.tech-pro.net/export-to-pfx.html</a></p>
+  </li>
+  <li>The certificate with Private key will be exported as PFX format in the above step - but this 
+<strong>cannot</strong> be used by the jarsigner. So you need to convert it into “p12 format” which the jarsigner can understand. For that you need to use Mozilla. First import the certificate  saved in step 1 into Mozilla as follows:
+    <ul>
+      <li>From the “Edit” menu select “Preferences” and open the “Privacy &amp; Security” category and click on the “Certificates” item.</li>
+      <li>In the “Manage Certificates” section, click on the “Manage Certificates” button.</li>
+      <li>In the “Certificate Manager” window, the “Your Certificates” tab should automatically open. (If not, select it.)</li>
+      <li>Click the “Impor”t button at the bottom of the window.</li>
+      <li>It prompts you to select an existing file; select your certificate file from the location where you saved it in when you exported it.</li>
+      <li>It prompts you to provide the “Master Password”; enter it, if you have set one.</li>
+      <li>It prompts you to provide the password used to encrypt the certificate backup; enter it.</li>
+      <li>It should say “Successfully restored your certificate(s) and private key(s).” Click OK.</li>
+    </ul>
+  </li>
+  <li>Then export the certificate as p12 format:
+    <ul>
+      <li>From the “Edit” menu select “Preferences” and open the “Privacy &amp; Security” category and click on the “Certificates” item</li>
+      <li>In the “Manage Certificates” section, click on the “Manage Certificates” button.</li>
+      <li>In the “Certificate Manager” window, the “Your Certificates” tab should automatically open. (If not, select it.)</li>
+      <li>To export your “DOEGrids” or “KCA Personal Certificate”, click on it to select it, and click the “Backup” button at the bottom of the window.</li>
+      <li>You’ll be prompted to specify a filename and location for the “PKCS#12-format” certificate file (file extension will be “.p12” in UNIX/Linux,  ”.pfx” in Windows).  Provide them and click OK.</li>
+      <li>A dialog box requesting the Master Password may appear (the password and certificate database). If you have set a Master Password, provide it. If not, you can make one up and provide it (optional). 
+ <strong>Remember this password!</strong></li>
+      <li>You’ll be prompted to make up and (twice) enter a second password. This one is for restoring this particular backup of this certificate. 
+ <strong>Remember this password!</strong></li>
+      <li>Once the system says it’s successfully backed up your certificate and private key, click OK.</li>
+    </ul>
+  </li>
+  <li>
+    <p>We also need to know the alias of the “.p12” file so run:</p>
+
+    <p><code>
+ keytool -list -storetype pkcs12 -keystore &lt;path to the cert file
+</code></p>
+
+    <p>Then you will see output like this:</p>
+
+    <p><code>
+ Keystore type: pkcs12 Keystore provider: SunJSSE
+ Your keystore contains 1 entry
+ xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx, Apr 26, 2006, keyEntry,
+ Certificate fingerprint (MD5):hh:hh:hh:hh:hh:hh:hh:hh:hh:hh:hh:hh:hh:hh:hh:hh
+ The xxxx-xxx… number is the alias for the key
+</code></p>
+  </li>
+  <li>
+    <p>Change your ant script as follows to sign the certificate:</p>
+
+    <p><code>
+ [xml]&lt;target name=”signjar” depends=”jar”&gt; &lt;signjar jar=”yourJar.jar” storetype=”pkcs12″ keystore=”yourkey.p12″ alias=”Your Alias” storepass=”your password”/&gt;&lt;/target&gt;[/xml]
+</code></p>
+  </li>
+</ol>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

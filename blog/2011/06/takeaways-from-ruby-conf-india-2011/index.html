@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Takeaways from Ruby Conf India 2011</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2011 blog_2011_06 blog_2011_06_takeaways-from-ruby-conf-india-2011 blog_2011_06_takeaways-from-ruby-conf-india-2011_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Takeaways from Ruby Conf India 2011</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">June 14, 2011</p>
+      <p>I know its been almost two weeks since its all over, things may not be fresh in mind. And all of us were very busy with “go live” for one of our client projects. But as its “better later than never”, I am putting my thoughts about the recently concluded RubyConf held in Bangalore on 28th and 29th of May 2011.</p>
+
+<p>There were quite a few presentations this year which I felt were very useful for me. Those are:
+- <a href="http://rubyconfindia.org/2011/presentations/brianGuthrie-RubyPlusRailsPlusAppMinusRails.key">Ruby Plus Rails Plus Your Application Minus Rails</a> by Brian Guthrie
+- <a href="http://rubyconfindia.org/2011/presentations/janmejay-TLB-rocketBoosterForYourBuild.pdf">Test Load Balancer: Rocket Booster for your Build</a> by Janmejay Singh and Pavan
+- <a href="http://rubyconfindia.org/2011/presentations/brianGuthrie-ContinuousDelivery.key">Continuous Delivery</a> in Ruby by Srushti Ambekallu and Brian Guthrie</p>
+
+<p>And its needless to say that the keynotes by Yehuda Katz, Chad Fowler, Nick Sieger and Ola Bini were awesome too. Especially
+<a href="http://rubyconfindia.org/2011/presentations/chadFowler-service.key"> Chad Fowler’s session</a> gave a new perspective on “Service” and who should be considered as a “Customer”. And Nick Sieger’s closing note gave a different perspective on how to contribute back to the community by conducting workshops and with <a href="http://kidsruby.com/">Kidsruby</a>.</p>
+
+<p>So whats next? Yes, implement the stuff we learned. So these are the immediate action items for us:</p>
+
+<ul>
+  <li>More automation for the entire release mechanism. We do have a CI server and do have a Cap script for deployment. But we do not have a “one click deployment” process. A ”<a href="http://www.google.com/url?sa=D&amp;q=http://code.google.com/p/build-pipeline-plugin/">Build pipeline</a>” plugin for Hudson should help us achieve that.</li>
+  <li>Tools like <a href="http://wiki.opscode.com/display/chef/Home">Chef</a>/<a href="http://www.puppetlabs.com/puppet/introduction/">Puppet</a> for server configuration management. We’ve tried <a href="https://github.com/wr0ngway/rubber/wiki">rubber</a>, but are yet to use it for any production setup.</li>
+  <li>Use <a href="http://test-load-balancer.github.com/">TLB</a> to run tests in parallel.  Setup seem to be pretty straightforward. This will be a huge help when you are doing many deployment in a day.</li>
+</ul>
+
+<p><strong>Update:</strong> One talk I missed in the list was <a href="http://rubyconfindia.org/2011/presentations/sherinC-DesigningHighThroughputWebServiceClients.key">Designing High Throughput Web Service Clients</a> by Sherin. He was able to convey the problems he faced and how he went ahead and solved those.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

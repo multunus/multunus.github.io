@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>HTML Fixtures with Jasmine and JSTestdriver</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2011 blog_2011_03 blog_2011_03_html-fixtures-with-jasmine-and-jstestdriver blog_2011_03_html-fixtures-with-jasmine-and-jstestdriver_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">HTML Fixtures with Jasmine and JSTestdriver</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">March 14, 2011</p>
+      <p>Unit Testing Javascript is great using JSTestDriver and Jasmine, but maintaining HTML fixtures for the same is a pain. One of the approaches for fixing the same issue is by creating the HTML from the controller specs and loading the HTML using AJAX. This approach is mentioned <a href="http://pivotallabs.com/users/jb/blog/articles/1152">here</a>.</p>
+
+<p>But I could not make it work with JSTestDriver as the server was not able to find the path for HTML fixtures. So I modified the above approach.</p>
+
+<p><strong>Update:</strong> I’ve created a gem using which you can achieve the same. Click <a href="https://github.com/multunus/js_fixtures">here</a> for the same.</p>
+
+<h2 id="generate-the-fixtures">Generate the fixtures</h2>
+<p>Create a file fixture_generator.rb and save it in spec/support directory. The contents of the file is as follows:</p>
+
+<p>```
+RSpec::Rails::ControllerExampleGroup.class_eval do
+  # Saves the markup to a fixture file using the given name
+  def save_fixture(markup, name)
+    fixture_path = File.join(Rails.root.to_s, 'spec/javascripts/helpers')
+    Dir.mkdir(fixture_path) unless File.exists?(fixture_path)</p>
+
+<pre><code>fixture_file = File.join(fixture_path, &amp;quot;#{name}.js&amp;quot;)
+
+fixture_function = 'function load#{name}Fixture(){   /* :DOC +='+markup+'* /
+}'
+File.open(fixture_file, 'w') do |file|
+  file.puts(fixture_function)
+end   end
+</code></pre>
+
+<p># From the controller spec response body, extracts html identified
+  # by the css selector.
+  def html_for(selector)
+    doc = Nokogiri::HTML(response.body)</p>
+
+<pre><code>#remove_third_party_scripts(doc)
+content = doc.css(selector).first.to_s
+
+convert_body_tag_to_div(content)   end
+</code></pre>
+
+<p># Recommended that you add all body-level third party scripts inside a div called #third-party-scripts
+  # so that they can be removed during testing.
+  def remove_third_party_scripts(doc)
+    scripts = doc.at('#third-party-scripts')
+    scripts.remove if scripts
+  end</p>
+
+<p># Here we convert the body tag to a div so that we can load it into
+  # the document running js specs without embedding a  within a body.
+  def convert_body_tag_to_div(markup)
+    markup.gsub('&lt;body', '&lt;div').gsub('&lt;/body&gt;', '&lt;/div&gt;')
+  end
+end
+```</p>
+
+<p>Call the save_fixture within the controller spec as follows:</p>
+
+<p><code>
+describe 'Sign up' do
+  it "should show the signup form" do
+  get :new
+  response.should render_template('new')
+  save_fixture(html_for('body'), 'Signup')
+  end
+end
+</code></p>
+
+<p>The above will create a file Signup.js in the path spec/javascripts/helpers</p>
+
+<h2 id="load-the-fixtures-in-js-tests">Load the fixtures in JS tests</h2>
+<p>For this the spec/javascripts/helpers should be added to the load path for JSTD in jsTestDriver.conf.
+Then call the method within the test.</p>
+
+<p>```
+describe('Validate registration form', function () {
+  beforeEach(function () {
+    $(this).ready(function () {
+      loadSignupFixture()
+    });
+  });</p>
+
+<p>it('should validate the form ', function () {
+      form = $('#user-registration-form')
+      bindValidationForRegistrationForm()
+      form.submit()
+      expect($('.status').first().text()).toMatch('Please enter your name')
+  });
+});
+```</p>
+
+<p>Thats all. In this way it is assured that the HTML is consistent with the actual view. The only thing that needs to be taken care is to make sure that the controller spec should be run whenever there is a change in the DOM, so that it is available to JS unit tests.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Continuous Delivery - Part 3: Running custom rake tasks during deployment</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2011 blog_2011_07 blog_2011_07_continuous-delivery-part-3-running-custom-rake-tasks-during-deployment blog_2011_07_continuous-delivery-part-3-running-custom-rake-tasks-during-deployment_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Continuous Delivery - Part 3: Running custom rake tasks during deployment</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">July 31, 2011</p>
+      <p>One problem we faced with the pipeline setup what I had mentioned in my <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:</p>
+
+<ul>
+  <li>Reindex the solr/lucene indexes if any new field has been added to the index</li>
+  <li>Some custom rake tasks , say for eg: task to update values in the DB, which you don’t want to add to migrations</li>
+</ul>
+
+<p>We do have Cap tasks for running the required rake tasks, but again it was done manually. So we’ve to remember to run them after deploying to production.  And also there is no way to track what steps were followed for a certain deployment.</p>
+
+<p>I used the build parameter again for fixing the above issue i.e. after accepting the extra tasks as parameter for the build for the first job, they will be passed on to the downstream jobs. In this way the same deployment steps will be automatically followed for rest of the jobs in the pipeline.</p>
+
+<p>The only difference in this case is that - sometimes the parameter can be empty. This check has to be done in the scripts i.e. if the value exists for the parameter, execute the extra tasks along with the normal deployment else just do a normal deployment.</p>
+
+<p>Continued..</p>
+
+<ul>
+  <li><a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+  <li><a href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+  <li><a href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+</ul>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

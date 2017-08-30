@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Technical Debt - A catchall phrase?</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_04 blog_2017_04_technical-debt-a-catchall-phrase blog_2017_04_technical-debt-a-catchall-phrase_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Technical Debt - A catchall phrase?</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">April  6, 2017</p>
+      <p>Those who have driven in Bangalore know that how much tough it is to drive here especially during the peak hours @ signals like Silk Board. Everyone tries to get out of the signal as quickly as possible, not giving much importance to the shortcuts we take, like the wrong side, overtaking from left etc.</p>
+
+<p>We complain about how tough it is to drive in Bangalore and the question that can be asked is <em>how much we contribute to it</em> or <em>how much we try to correct it</em>?</p>
+
+<p>This is similar to the excuse we've for Technical Debt. The code is anyways messy, adding one more is not going to make any different. It was like this when I joined the project. We had time pressures so had to release it faster.</p>
+
+<p>And this thought process ends up creating the Vicious cycle as follows:</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/04/vicious-circle-code.png" alt="image alt text" /></p>
+
+<p>And this is the beginning of the so-called Technical Debt.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/04/technical-debt-a-mess.png" alt="image alt text" /></p>
+
+<p>And there is one more term that we all like to complain - Legacy Code. Below is one of the best definitions of legacy code I've ever seen.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/04/legacy-code.png" alt="image alt text" /></p>
+
+<p>Let's look at some examples of what we call as Technical Debt.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/04/example1.png" alt="image alt text" /></p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/04/example2.png" alt="image alt text" /></p>
+
+<p><em>Credit:</em> <a href="http://thedailywtf.com/articles/the-refactoring"><em>http://thedailywtf.com/articles/the-refactoring</em></a></p>
+
+<p>The following is commonly seen - <em>Ignoring Exceptions</em></p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/04/example3.png" alt="image alt text" /></p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/04/example4.png" alt="image alt text" /></p>
+
+<p>And other common examples which I've not covered are:</p>
+
+<ul>
+  <li>Code duplication</li>
+  <li>Mismatching names</li>
+  <li>Longer methods and/or classes</li>
+</ul>
+
+<p>I am sure all of us seen variations of all these.</p>
+
+<h1 id="what-is-technical-debt">What is Technical Debt</h1>
+
+<p>Let's take a step back and look at what Wikipedia has to say about Technical debt:</p>
+
+<p><em>Technical debt can be compared to monetary debt. Unaddressed technical debt increases software entropy. Technical debt is not necessarily a bad thing, and sometimes (e.g., as a proof-of-concept) technical debt is required to move projects forward.</em></p>
+
+<p>And this is what Ward Cunningham, the person who coined the metaphor, also seemed to have in mind while he coined the term.</p>
+
+<p>To summarise, it is not a license to create an architecture as follows, nor <a href="https://sites.google.com/site/unclebobconsultingllc/a-mess-is-not-a-technical-debt">the license to create crappy code</a>.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/04/messy-architecture.png" alt="image alt text" /></p>
+
+<p>If we all agree that the above flaw is not considered as professional in other engineering streams, the same rule is applicable to Software Engineering too.</p>
+
+<p>As prudent professionals, it is our responsibility to follow <a href="https://martinfowler.com/bliki/BeckDesignRules.html">the four rules of simple design</a>:</p>
+
+<ul>
+  <li>Passes all the tests</li>
+  <li>Expresses every idea that we need to express</li>
+  <li>No Duplication</li>
+  <li>Minimal methods, classes and modules</li>
+</ul>
+
+<p>And this includes the following:</p>
+
+<ul>
+  <li><a href="https://blog.codinghorror.com/i-shall-call-it-somethingmanager/">Frequent activity of renaming classes, modules, methods, variables</a></li>
+  <li>Applying <a href="http://wiki.c2.com/?BoyScoutRule">Boy scout rule</a> i.e. Leave the campground cleaner than you found it</li>
+  <li><a href="http://blog.8thcolor.com/en/2013/04/dead-code-is-rotting-your-codebase/">Delete the unused code courageously</a></li>
+</ul>
+
+<h1 id="technical-debt-quadrant">Technical Debt Quadrant</h1>
+
+<p>Going back to the definition of Technical Debt by Wikipedia, it should be a result of a  conscious, thoughtful and prudent decision than that of an unconscious one.</p>
+
+<p>Martin Fowler uses a quadrant to explain similar concepts where he points out that it is not useful to discuss whether something is a debt or not, better ask whether it is reckless or prudent. The more the issues/flows are in the Prudent section, better it is.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/04/technical-debt-quadrant.png" alt="image alt text" /></p>
+
+<h1 id="paying-down-technical-debt">Paying down Technical Debt</h1>
+
+<p>Every team will have technical debt, and it is normal because we learn with our products continuously so it is ideal to have prudent debts.</p>
+
+<p>Another thing is that not all of them needs-pay off. Some of them might be in those areas where we hardly make changes.</p>
+
+<p>So how to identify what needs-payoff? I would like to quote Henrik Kniberg here:</p>
+
+<p><em>What is technical debt anyway? Anything about your code &amp; development environment that slows you down. For example:</em></p>
+
+<ul>
+  <li><em>Unclear, unreadable code.</em></li>
+  <li><em>Lack of test automation, build automation, deployment automation, and anything else that could be automated that you do manually today.</em></li>
+  <li><em>Duplicate code.</em></li>
+  <li><em>Tangled architecture &amp; unnecessarily complex dependencies.</em></li>
+  <li><em>Slow, ineffective tools.</em></li>
+  <li><em>Uncommitted code &amp; long-lived branches (hides problems that will slow you down later).</em></li>
+  <li><em>Important technical documentation that is missing or out-of-date.</em></li>
+  <li><em>Unnecessary technical documentation that is being maintained and kept up-to-date.</em></li>
+  <li><em>Lack of test environments.</em></li>
+  <li><em>Long build-test cycle &amp; lack of continuous integration.</em></li>
+</ul>
+
+<p>And pay off them with:</p>
+
+<ul>
+  <li>Continuous refactoring, applying <a href="http://wiki.c2.com/?BoyScoutRule">Boy Scout Rule</a></li>
+  <li><a href="http://www.multunus.com/blog/2017/01/naming-hardest-thing-software/">Use constant communications to improve namings</a></li>
+  <li>Setup Continuous Integration, Follow Mainline Development</li>
+  <li>Setup Deployment Pipeline [Automated Testing and Deployment]</li>
+  <li>For long running rewrites or major design/architectural changes, use:
+    <ul>
+      <li><a href="https://trunkbaseddevelopment.com/branch-by-abstraction/">Branch by abstraction</a></li>
+      <li><a href="https://trunkbaseddevelopment.com/strangulation/">Strangler Pattern</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="references">References</h1>
+
+<p>Following are some of the highly recommend books for improving the code quality and cleanliness:</p>
+
+<p><a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a></p>
+
+<p><a href="https://www.amazon.in/Refactoring-Improving-Existing-Addison-Wesley-Technology-ebook/dp/B007WTFWJ6?_encoding=UTF8&amp;amp;btkr=1&amp;amp;ref_=dp-kindle-redirect">Refactoring</a></p>
+
+<p><a href="https://www.amazon.com/Growing-Object-Oriented-Software-Guided-Tests/dp/0321503627">Growing Object Oriented Software - Guided by Tests [known as the GOOS book]</a></p>
+
+<p>The following are some of the articles/talks on the same subject:</p>
+
+<p><a href="https://www.youtube.com/watch?v=IadcIkBeBuI">Building a Culture of Code Quality - Bryan Helmkamp</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=SfWCRl75Kas">The Technical Debt Trap - Doc Norton</a></p>
+
+<p><a href="http://blog.davidpeterson.co.uk/2011/04/why-do-agile-projects-fail-so-often.html">Why do teams fail to sustain code quality?</a></p>
+
+<p><a href="https://sites.google.com/site/unclebobconsultingllc/a-mess-is-not-a-technical-debt">A mess is not a technical debt - Uncle Bob</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=pqeJFYwnkjE">Debt Metaphor - Ward Cunningham</a></p>
+
+<p><a href="https://martinfowler.com/bliki/TechnicalDebtQuadrant.html">Technical Debt Quadrant - Martin Fowler</a></p>
+
+<p><a href="https://martinfowler.com/bliki/SacrificialArchitecture.html">Sacrificial Architecture - Martin Fowler</a></p>
+
+<p><a href="http://blog.crisp.se/2013/07/12/henrikkniberg/the-solution-to-technical-debt">The solution to technical debt - Henrik Kniberg</a></p>
+
+<p><a href="https://blog.codinghorror.com/i-shall-call-it-somethingmanager/">I Shall Call It.. SomethingManager - Jeff Atwood</a></p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

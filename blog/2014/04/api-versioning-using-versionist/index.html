@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>API Versioning using Versionist</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2014 blog_2014_04 blog_2014_04_api-versioning-using-versionist blog_2014_04_api-versioning-using-versionist_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">API Versioning using Versionist</h1>
+            <a href="/blog/tags/cap-sandeep" class="blog-author">sandeep</a>
+      <p class="post-description">April 15, 2014</p>
+      <p>A couple of months back, we implemented versioning in one of our projects. There are many tools available for versioning APIs like <a href="https://github.com/intridea/grape" title="grape">grape</a>, <a href="https://github.com/fabrik42/acts_as_api" title="acts_as_api">acts_as_api</a>, <a href="https://github.com/Sutto/rocket_pants" title="rocket_pants">rocket_pants</a> and of course <a href="https://github.com/bploetz/versionist" title="versionist">versionist</a>. After a bit of research, we went ahead with versionist and so far its been working well for us.</p>
+
+<h2 id="why-do-you-need-versioning">Why do you need Versioning?</h2>
+
+<p>The reasoning behind API versioning is simple - to avoid breaking existing clients. Once you publish your API, people are going to start writing software that depends on your API. And every time you make a change in your API, there is a chance of breaking their software. For example, consider an API which gives user profile details. Let's say it has an attribute called <code>created_on</code> which returns the date on which the profile was created. Suppose you have to also return the time along with the date, and hence you rename the column to <code>created_at</code>. This will break any application that uses this API, especially if it uses the <code>created_on</code> attribute. Hence, once an API is published, it’s frozen. You can’t change that code, or else you’ll mess up the working of all those who are using that API. The solution for the above problem is to create new versions of API and introduce your changes there and not in the already published ones. Hence there will be two versions of the API say v1 and v2, where v1 is the original API and v2 is the new API where the latest changes are made. But you may have to do some tweaks in the old APIs in order to ensure that they still function the same way. For instance in the above example, after renaming the column to <code>created_at</code>, it will break the old api. So you need to tweak your old api to support the <code>created_on</code> attribute.</p>
+
+<h2 id="versioning-using-versionist">Versioning using Versionist</h2>
+
+<p>Versionist is a Rails plugin for versioning Rails-based APIs. After installing the Versionist gem, you can version your current API and set it as the default by using the Versionist generators. <strong><em>Versionist supports 3 versioning strategies:</em></strong> 1) HTTP header - This strategy uses an HTTP header to request a specific version of your API.</p>
+
+<pre>Accept: application/vnd.mycompany.com; version=1,application/jsonGET /foos</pre>
+
+<p>2) Request parameter - here request parameter is used to request a specific version of your API.</p>
+
+<pre>GET /foos?version=v2</pre>
+
+<p>3) Path - This uses a URL path prefix to request a specific version of your API.</p>
+
+<pre>GET /v3/foos</pre>
+
+<p>In this post, I'll go through the <em>path based method of _versioning of APIs using Versionist. <strong>STEPS to version your current API using the path based versioning strategy:</strong> _STEP 1</em></p>
+
+<pre>rails generate versionist:new_api_version v1 V1 --path=value:v1 --default</pre>
+
+<p>This will create all the necessary directory structures. <em>STEP 2</em> Now, move all the controller files into the new folder and do not copy the application controller. For specs, only the controller specs need to be moved, there will already be a new folder for the specs in the controller directory. <em> STEP 3</em> Manually create a folder with the same version (v1) for  the views and  move all the files related to the controllers into that folder. <em> STEP 4</em> Modify all the controller class names to use namespacing and to reference the respective base controllers.</p>
+
+<pre>#Controller:
+class V1::MyController &lt; V1::BaseController
+	...
+end</pre>
+
+<h2 id="subsequent-versioning">Subsequent Versioning</h2>
+
+<p>Now if you want create version 2 from version1: <em>STEP 1</em></p>
+
+<pre>rails generate versionist:copy_api_version v1 V1 v2 V2</pre>
+
+<p><strong>IMPORTANT:</strong> This will duplicate the existing version to create the starting point for the next version. There is one thing that gets duplicated which shouldn't be i.e the default version setting <code>{:default =&gt; true}</code> in <code>config/routes</code>. So we have to remove this as there cannot be two default versions. <em>STEP 2</em> The views will not be duplicated by this command, so create a copy of the folder and name it appropriately</p>
+
+<h2 id="further-steps">Further Steps</h2>
+
+<p>API versioning is a nice way to introduce changes in your application without affecting existing clients. However, an API is not going to be completely stable, inevitable changes will always come in your way. Hence, it is very important you are prepared for such changes. Below are a couple of best practices that helps you in that direction:</p>
+
+<ol>
+  <li>Document your APIs</li>
+  <li>Have a deprecation schedule i.e give sufficient time for the users of your API to migrate to new version.</li>
+</ol>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="http://railscasts.com/episodes/350-rest-api-versioning">http://railscasts.com/episodes/350-rest-api-versioning</a></li>
+  <li><a href="https://github.com/bploetz/versionist">https://github.com/bploetz/versionist</a></li>
+</ul>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

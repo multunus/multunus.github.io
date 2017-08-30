@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Configuring Hudson CI server behind firewall</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2010 blog_2010_09 blog_2010_09_configuring-hudson-ci-server-behind-firewall blog_2010_09_configuring-hudson-ci-server-behind-firewall_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Configuring Hudson CI server behind firewall</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">September  2, 2010</p>
+      <p>When firewall was introduced within our local network, the Hudson server stopped working with the error:</p>
+
+<p><code>
+javax.jmdns.impl.tasks.Prober run
+WARNING: run() exception
+java.io.IOException: Operation not permitted
+at java.net.PlainDatagramSocketImpl.send(Native Method)
+at java.net.DatagramSocket.send(DatagramSocket.java:625)
+at javax.jmdns.impl.JmDNSImpl.send(JmDNSImpl.java:1200)
+at javax.jmdns.impl.tasks.Prober.run(Prober.java:163)
+at java.util.TimerThread.mainLoop(Timer.java:512)
+at java.util.TimerThread.run(Timer.java:462)
+</code></p>
+
+<p>And when you access hudson in browser, it stays with the message <strong>“Please wait while Hudson is getting ready to work….”</strong> forever.</p>
+
+<p>Initially I thought the problem might be because the ports which are required by the Hudson server i.e. 8080 and 5353, were not opened in the Firewall. I opened those, but the error remained.</p>
+
+<p>After googling for sometime, I could find similar issues being reported here:
+<a href="http://issues.hudson-ci.org/browse/HUDSON-7129?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab">http://issues.hudson-ci.org/browse/HUDSON-7129?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab</a></p>
+
+<p>And the issue got fixed by adding</p>
+
+<p><code>
+-Dhudson.DNSMultiCast.disabled=true
+</code></p>
+
+<p>to the java command as follows:</p>
+
+<p><code>
+java -Dhudson.DNSMultiCast.disabled=true -jar hudson.war --httpPort=8080
+</code></p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

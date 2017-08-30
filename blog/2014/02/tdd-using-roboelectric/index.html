@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>TDD in Android with Robolectric Part.1</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2014 blog_2014_02 blog_2014_02_tdd-using-roboelectric blog_2014_02_tdd-using-roboelectric_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">TDD in Android with Robolectric Part.1</h1>
+            <a href="/blog/tags/cap-sandeep" class="blog-author">sandeep</a>
+      <p class="post-description">February 20, 2014</p>
+      <p>In the recently concluded 
+<a href="https://droidcon.in/2013/home">Droidcon India 2013</a>, 
+<a href="https://twitter.com/leenasn">Leena</a> and 
+<a href="https://twitter.com/krikrn">KP</a> did a 
+<a href="https://funnel.hasgeek.com/droidcon2013/886-unit-test-your-android-application-using-robolectr">workshop on Robolectric</a>. But if you missed that, then this post should help to get you started.</p>
+
+<p>We have been test-driving our Android development using 
+<a href="http://robolectric.org/">Robolectric</a> for over three months. I will be sharing our experience with Robolectric in a three-part blog post [ 
+<a href="http://www.multunus.com/blog/2014/03/tdd-android-robolectric-part-2/">Part 2</a>, 
+<a href="http://www.multunus.com/blog/2014/03/tdd-android-using-robolectric-part-3/">Part 3</a> ]. In this post, which is Part 1 of this series, I will be giving a summary on why we chose Robolectric and how it helps in test-driving Android applications.</p>
+
+<p><strong>Problems In Unit Testing Android Applications</strong></p>
+
+<p>1) Android framework code has to run on the emulator or on the device</p>
+
+<p>The android.jar file that you get with the Android SDK does not contain the Android framework code. It just has method stubs that throw a run time exception. The actual implementation lies on the device or on the emulator.</p>
+
+<p>As a result, tests have to be run on the device or emulator. So, every time you run a test it has go through steps like dexing, packaging and installing on the emulator or device. Needless to say that it will be SLOW!</p>
+
+<p>2) Mocking the Android framework code is Hard</p>
+
+<p>One of the approaches to solving the first problem is to mock out the Android classes so that you can run the code in JVM. But the problem with that is this - many methods in the Android framework are declared as final, making them impossible to mock through sub-classing. It also has many utilities that are static methods, which are also difficult to mock.</p>
+
+<p>Frameworks such as 
+<a href="http://code.google.com/p/powermock/">PowerMock</a> or 
+<a href="https://code.google.com/p/jmockit/">jmockit</a> can solve the above problems for you but this will lead to tests that are harder to read and maintain.</p>
+
+<p><strong>Roboelectric to the rescue</strong></p>
+
+<p><a href="http://robolectric.org/">Robolectric</a> is a unit test framework that allows you to test-drive the development of your Android app. Robolectric has replaced all Android classes by so-called shadow objects. Robolectric sits between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM.</p>
+
+<p>This effectively means you can run your tests on your desktop, without having to wait for steps like dexing, packaging etc as previously mentioned. This significantly reduces the cycle time for a test and helps you iterate faster and refactor your code with confidence.</p>
+
+<p>This also means you don't have to take the approach of mocking the Android framework code as discussed previously. This way Robolectric solves both of our problems.</p>
+
+<p><strong>How it works</strong></p>
+
+<p>Shadow objects</p>
+
+<p>Robolectric intercepts the loading of Android classes under test. It rewrites the method bodies of Android classes using 
+<a href="http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/">javassist</a>. It binds the new shadow objects to new Android objects. Any method calls to the Android object are forwarded to the shadow object's method of same signature, if it exists.</p>
+
+<p>View and Resource Loading</p>
+
+<p>Robolectric handles inflation of views, resource loading, and others that have been  implemented in native C code on Android devices. This allows tests to do most things you could do on a real device.</p>
+
+<p>For example, it parses all the files that are under the resources directory like layout files, and builds a view object tree made of Android view objects and of course their shadows. This allows you to test your code that uses these resources.</p>
+
+<p><strong>What’s New in 2.0</strong></p>
+
+<p><a href="http://corner.squareup.com/2013/05/robolectric-two-point-oh.html">Robolectric 2.0</a> is dramatically better at emulating the Android OS, because it uses real Android code ( modified so it can run on a JVM ) behind the scenes. Styles and themes are now supported, and system resources are available. The startup time for tests is significantly improved from the 1.x releases.</p>
+
+<p>With Robolectric getting better with each release you don't have many excuses not to do TDD. Start test-driving your Android applications using Roboelectric. In Part 2 of this series, we will have a much closer look at the Robolectric framework.</p>
+
+<p><strong>References</strong></p>
+
+<ul>
+  <li>
+    <p><a href="http://www.slideshare.net/leenasn">http://www.slideshare.net/leenasn</a></p>
+  </li>
+  <li>
+    <p><a href="http://robolectric.org/">http://robolectric.org/</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.slideshare.net/tylerschultz/robolectric-android-unit-testing-framework">http://www.slideshare.net/tylerschultz/robolectric-android-unit-testing-framework</a></p>
+  </li>
+  <li>
+    <p><a href="https://sites.google.com/site/androiddevtesting/">https://sites.google.com/site/androiddevtesting/</a></p>
+  </li>
+</ul>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

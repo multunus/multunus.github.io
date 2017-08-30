@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>CSS3 animations versus Javascript animations</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2012 blog_2012_09 blog_2012_09_css3-animations-versus-javascript-animations blog_2012_09_css3-animations-versus-javascript-animations_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">CSS3 animations versus Javascript animations</h1>
+            <a href="/blog/tags/cap-manoj" class="blog-author">manoj</a>
+            , <a href="/blog/tags/cap-midhun" class="blog-author">midhun</a>
+      <p class="post-description">September 27, 2012</p>
+      <p>Layout engines in major browsers, like gecko, webkit or trident now have many optimization functions for animations. But these will simply cease to function if you’re using jQuery animations because in reality jQuery is not “animating” anything. However, in the case of CSS3, the browser optimizes animations using the GPU’s resources to give a much more polished effect. Go in for CSS3 whenever possible.</p>
+
+<p><strong>The long version:</strong> jQuery is an excellent js framework to do a lot of things, but is it what you need for blazing fast performance with animations for your website? Lets dig a little bit deeper into the actual implementations, by considering these two examples,</p>
+
+<h3 id="jquery-animation">jQuery animation</h3>
+
+<p><code>
+$(".onclick").toggle(
+      function(){
+$(".children").animate({height:'50'});
+      },
+      function(){
+$(".children").animate({height:'0'});
+      }
+  );
+</code></p>
+
+<iframe style="width: 100%; height: 272px;" src="http://jsfiddle.net/midhun_k/aq9gq/embedded/" height="240" width="320" frameborder="0"></iframe>
+
+<p>In this case the drop down menu is implemented using jquery animate method.</p>
+
+<h3 id="css3-animation">CSS3 animation</h3>
+
+<p><code>
+.children{
+   height: 0px;
+   border-bottom: 1px solid grey;
+   -webkit-transition: height .3s ease-in-out;
+}
+.children-onhover{
+   height: 50px;
+}
+$(".onclick").click(function(){
+    $(".children").toggleClass("children-onhover");
+});
+</code></p>
+
+<iframe style="width: 100%; height: 272px;" src="http://jsfiddle.net/midhun_k/kANVs/embedded/" height="240" width="320" frameborder="0"></iframe>
+
+<p>In this case the drop down menu is done using css3 transitions using ease-in-out transition effect.</p>
+
+<p>Lets analyze what’s going on with the css3 animation for sliding down the menus. Both of these menus progressively increase the height of each of the containing submenus, but in case of css3, the height is progressively updated from the old value to the new value over time, which is done by the layout engine of the browser internally, as it is described in the "http://www.webkit.org/blog/138/css-animation/"&gt;surfin’ safari blog.</p>
+
+<p>In case of jQuery, inside the animate of each property, an fx Object is created.</p>
+
+<p><code>
+jQuery.each( prop, function( name, val ) {
+  var e = new jQuery.fx( self, opt, name );
+}
+</code></p>
+
+<p>This return a javascript object instance.</p>
+
+<p><code>
+fx: function( elem, options, prop ) {
+  this.options = options;
+  this.elem = elem;
+  this.prop = prop;
+  if ( !options.orig ) {
+      options.orig = {};
+  }
+}
+</code></p>
+
+<p>After that, the start and end values is set. In our case:</p>
+
+<p><code>
+start = 0;
+   end = 50;
+   unit = 'px';
+   e.custom( start, end, unit );
+</code></p>
+
+<p>The above snippet calls the custom function:</p>
+
+<p>```
+custom: function( from, to, unit ) {
+  this.startTime = now();
+  this.start = from;
+  this.end = to;
+  this.unit = unit || this.unit || "px";
+  this.now = this.start;
+  this.pos = this.state = 0;</p>
+
+<p>var self = this;
+  function t( gotoEnd ) {
+      return self.step(gotoEnd);
+  }</p>
+
+<p>t.elem = this.elem;</p>
+
+<p>if ( t() &amp;&amp; jQuery.timers.push(t) &amp;&amp; !timerId ) {
+      timerId = setInterval(jQuery.fx.tick, 13);
+  }
+}
+```</p>
+
+<p>As you can see above, a call to step method is made every every 13 milliseconds. As of jQuery 1.8 this interval is called JQuery.fx.interval.</p>
+
+<p>That is for a height increase of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps of 13 ms each.</p>
+
+<p><code>
+jQuery.fx.speeds = {
+  slow: 600,
+  fast: 200,
+  // Default speed
+  _default: 400 
+};
+</code></p>
+
+<p>As of jQuery 1.8 the step function is replaced, but the same logic is applied:</p>
+
+<p><code>
+step: function( gotoEnd ) {
+  var t = now();
+  var n = t - this.startTime;
+  this.state = n / this.options.duration;
+  pos = jQuery.easing['swing'](this.state, n, 0, 1, this.options.duration);
+  this.now = this.start + ((this.end - this.start) *  this.pos);
+  this.update();
+}
+</code></p>
+
+<p>You can dig deeper into jQuery effects at: <a href="https://github.com/jquery/jquery/blob/master/src/effects.js#L124">https://github.com/jquery/jquery/blob/master/src/effects.js#L124</a></p>
+
+<p>Also make sure to check out the relevant webkit source: <a href="https://github.com/WebKit/webkit/tree/master/Source/WebCore">https://github.com/WebKit/webkit/tree/master/Source/WebCore</a></p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

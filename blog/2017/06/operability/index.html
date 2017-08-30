@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Operability</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_06 blog_2017_06_operability blog_2017_06_operability_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Operability</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">June 28, 2017</p>
+      <p><img src="https://s3.amazonaws.com/multunus-cdimages/operability+-+meme.jpg" alt="Operability" /></p>
+
+<p><em>Operability is the ability to keep an equipment, a system or a whole industrial installation in a safe and reliable functioning condition, according to predefined operational requirements.</em>
+~<em><strong><a href="https://en.wikipedia.org/wiki/Operability]">https://en.wikipedia.org/wiki/Operability</a></strong></em></p>
+
+<p>The term Operability caught my attention during <a href="https://web.pipelineconf.info/programme/speakers/#Dan+North">Dan North’s keynote titled Ops and Operability @ Pipeline Conference</a>. I had heard this term many times in the past, especially as part of <a href="https://en.wikipedia.org/wiki/Non-functional_requirement">"ilities"</a>. But this talk was different, about the importance of developers asking and experiencing the answers for the below questions:</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/ops-and-operability.png" alt="Ops and Operability" /></p>
+
+<p>So how do you measure Operability? How do you need to know what needs to be improved?</p>
+
+<h2 id="state-of-devops-report-17">State of DevOps Report ‘17</h2>
+
+<p>Every year, Puppet along with <a href="https://devops-research.com/about.html">Nicole Forsgren</a>, <a href="https://continuousdelivery.com/">Jez Humble</a>, <a href="http://www.realgenekim.me/">Gene Kim</a>, <a href="https://puppet.com/company/leadership/nigel-kersten">Nigel Kersten</a> publishes this report by analysing the results of a survey that they conduct. 
+They have received more than 27,000 responses over the last six years and found clear evidence that DevOps practices yield remarkable results for IT teams and organisations.</p>
+
+<p>The report measures the performance of various teams using the following four metrics and categorises them as <strong>High</strong>, <strong>Medium</strong> and <strong>Low</strong> performers.</p>
+
+<ul>
+  <li>
+    <p>Deployment Frequency</p>
+  </li>
+  <li>
+    <p>Lead time [from commit to production]</p>
+  </li>
+  <li>
+    <p>Mean Time to Recovery</p>
+  </li>
+  <li>
+    <p>Change Failure Rate [% of changes resulting in impairment or service outage requiring hotfix or patch]</p>
+  </li>
+</ul>
+
+<p>The analysis shows that the high performing teams always outplay the rest on all the above metrics by:</p>
+
+<ul>
+  <li>
+    <p><strong><em>On Demand deployment</em></strong> over deployments once per week or month</p>
+  </li>
+  <li>
+    <p><strong><em>Less than an hour of Lead time</em></strong> than once in a week to a month</p>
+  </li>
+  <li>
+    <p><strong><em>Less than an hour of Mean time to Recovery</em></strong> than once in a week to a month</p>
+  </li>
+  <li>
+    <p><strong><em>0-15% Change Failure Rate</em></strong> than 30-45%</p>
+  </li>
+</ul>
+
+<p>The reasons the high performance teams outplay others are due to:</p>
+
+<ul>
+  <li>
+    <p>High level of Automation [build, test and deploy automations]</p>
+  </li>
+  <li>
+    <p><a href="http://www.multunus.com/blog/2016/03/merge-hells-feature-toggles-rescue/">Trunk Based Development</a></p>
+  </li>
+  <li>
+    <p>Loosely coupled Architecture</p>
+  </li>
+  <li>
+    <p><a href="https://en.wikipedia.org/wiki/Lean_product_development">Lean product development</a> [working in small batches with tight feedback cycle]</p>
+  </li>
+</ul>
+
+<p>To summarise, Continuous Delivery, DevOps along with Lean product development helps the team to be high performant.</p>
+
+<p>The report covers in detail about each aspect of the above. You can download the report from the below link.</p>
+
+<p><a href="https://puppet.com/resources/whitepaper/state-of-devops-report">https://puppet.com/resources/whitepaper/state-of-devops-report</a></p>
+
+<h2 id="aim-for-operability">Aim for Operability</h2>
+
+<p>Coming back to Operability, the topic of this post, Continuous Delivery focuses on Operational Excellence. As Steve Smith has mentioned in the post <a href="http://www.alwaysagileconsulting.com/articles/aim-for-operability-not-devops-as-a-cult/">Aim for Operability, not DevOps as a cult</a>:</p>
+
+<blockquote>
+  <p><strong><em>Operability</em></strong> <em>is of critical importance to Continuous Delivery, as throughput is dependent upon the ability of the organisation to maintain safe and reliable systems according to its operational requirements.</em></p>
+</blockquote>
+
+<p>And focusing on improving the four metrics mentioned above - Deployment Frequency, Lead Time, <a href="https://www.thoughtworks.com/radar/techniques/focus-on-mean-time-to-recovery">Mean time to Recovery (MTTR)</a>, Change Failure Rate - helps you to improve Operability. These metrics are for improving the flow - a continuous flow of value to the customers.</p>
+
+<p>Key for this, IMO, is <a href="http://www.multunus.com/blog/2014/08/production-outages-part-2/">building resilience</a> - resilient teams, resilient management and leadership and resilient systems. And that is where the culture comes into the picture, a culture where there are blameless postmortems to learn from incidents and take appropriate measures in the future.</p>
+
+<p>I had written briefly about <a href="http://www.multunus.com/blog/2016/11/tryst-continuous-delivery/#get-started">how to get started with Continuous Delivery</a> at a very high level. If you are really keen on taking it forward, please read <a href="http://itrevolution.com/devops-handbook">DevOps Handbook</a> by Gene Kim, Jez Humble, Patrick Debois, and John Willis.</p>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

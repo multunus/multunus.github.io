@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Rendering JSON responses using Jbuilder</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2014 blog_2014_03 blog_2014_03_using-jbuilder-instead-erb-rendering-json-response blog_2014_03_using-jbuilder-instead-erb-rendering-json-response_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Rendering JSON responses using Jbuilder</h1>
+            <a href="/blog/tags/cap-sandeep" class="blog-author">sandeep</a>
+      <p class="post-description">March  7, 2014</p>
+      <p>When building JSON APIs for Rails applications, we used to build it using the following methods:</p>
+
+<ul>
+  <li>
+    <p>respond_toblock and 
+as_json in the controller or model</p>
+  </li>
+  <li>
+    <p>By hand crafting the JSON response in our ERB view templates</p>
+  </li>
+</ul>
+
+<p>But as these applications grew, the JSON APIs used in these applications became complex and we found these methods to be inefficient. Hence we started looking for alternatives and that is when we considered <a href="https://github.com/rails/jbuilder">Jbuilder</a>.</p>
+
+<p>In this post, I have shed some light on the problems involved in these methods and how Jbuilder can help you overcome those problems.</p>
+
+<p><strong>Problems in rendering JSON</strong></p>
+
+<p>1) using respond_to block and as_json</p>
+
+<p>This is probably the simplest way to build JSON APIs, all you have to do here is to use 
+respond_to block in the controller action and render the appropriate model. For example, if your application has many articles and you want a JSON representation of a particular article, then you would probably have this code in the 
+show action of articles controller:</p>
+
+<p>def show
+  @article = Article.find(params[:id])
+  respond_to do |format|
+    format.html
+    format.json { render json: @article }
+  end
+end</p>
+
+<p>But the JSON returned includes all of the article's attributes and you cannot customize it. This is where 
+as_json comes in - 
+as_json is used to create the structure of the JSON as a hash, and the rendering of that hash into a JSON string is left up to 
+<a href="http://api.rubyonrails.org/classes/ActiveSupport/JSON/Encoding/Encoder.html">ActiveSupport::json.encode</a>.</p>
+
+<p>You can use
+as_json on the article and customize the response. So if you wanted only 
+id, 
+name and 
+content fields from the article, you can do something like this:</p>
+
+<p>def show
+  @article = Article.find(params[:id])
+  respond_to do |format|
+    format.html
+    format.json { render json: @article.as_json(only: [:id, :name, :content]) }
+  end
+end</p>
+
+<p>This is still fine but the moment the complexity of your customization increases, the code starts getting ugly. For example, apart from the three fields shown in the above example, if you also wanted the author of the article and three fields from comments of the article to be included in the JSON response, you could do something as follows:</p>
+
+<p>def show
+  @article = Article.find(params[:id])
+  respond_to do |format|
+    format.html
+    format.json { render json: @article.as_json(only: [:id, :name, :content], include: [:author, {comments: {only:[:id, :name, :content]}}]) }
+  end
+end</p>
+
+<p>You can use 
+as_json in the model instead of controller but it wouldn't be much better there either. It's like trasferring the ugly code from controller to model.</p>
+
+<p>2) using ERB templates</p>
+
+<p>Here, we have to manually create or craft the JSON in the ERB template to be rendered and it becomes pretty hard to manage it when the structures are huge. When there are conditionals involved while rendering then also it becomes difficult to maintain. Also, when you are looping a collection you have to ensure that there is no comma after the last element. And certainly, you don't want to be doing things like these.</p>
+
+<p><strong>Using Jbuilder</strong></p>
+
+<p><a href="https://github.com/rails/jbuilder">Jbuilder</a> is a template engine for rendering JSON responses. It gives you a simple DSL for declaring JSON structures that simplifies managing giant hash structures. You can have Jbuilder in your applications through its 
+<a href="http://rubygems.org/gems/jbuilder">gem</a>.</p>
+
+<p>Just to demonstrate how Jbuilder helps solve the problems discussed so far:</p>
+
+<p>In the 
+articles controller you can remove the 
+respond_to call and revert to the default behavior which is to look for a template of the requested format. In this case it will look for a template named 
+show.json.jbuilder, and the show action in the 
+articles controller becomes:</p>
+
+<p>def show
+  @article = Article.find(params[:id])
+end</p>
+
+<p>Next, you can create the view template 
+show.json.jbuilder. In this view template, you can use Ruby code to define the JSON output. You will have access to the json object on which you can define attributes.</p>
+
+<p>json.id @article.id
+json.name @article.name
+json.name @article.content</p>
+
+<p>Instead of listing out each attribute separately, we can call 
+extract! on the JSON object and pass in the object and a list of the methods or attributes we want to call against it:</p>
+
+<p>json.extract! @article, :id, :name, :content</p>
+
+<p>There's also an alternative syntax which works in Ruby 1.9 or later:</p>
+
+<p>json.(@article, :id, :name, :content)</p>
+
+<p>Now, in order to include author of the article and comments of articles, it is as simple as:</p>
+
+<p>json.(@article, :id, :name, :content)
+json.(@article.author, :id, :name)
+json.comments @article.comments, :id, :name, :content</p>
+
+<p>Jbuilder allows you to do more complex things than just listing down the attributes. For example if you want to assign a URL to the author, you can just pass a block to the author and call helper methods inside the block:</p>
+
+<p>json.(@article, :id, :name, :content)
+json.author do |json|
+    json.(@article.author, :id, :name)
+    json.url author_url(@article.author)
+end
+json.comments @article.comments, :id, :name, :content</p>
+
+<p>That's not all - some of the other useful features of Jbuilder are as follows: rendering partials, rendering collection of partials, 
+<a href="http://guides.rubyonrails.org/caching_with_rails.html">Fragment caching</a> and Key formatting. Key formatting can be used to convert keynames from the standard ruby format to camel case.</p>
+
+<p>All these make Jbuilder a very good alternative to some of the traditional methods especially if the JSON representation in your APIs are complex. i.e, it involves a high degree of customization, it has a lot conditionals or nesting.</p>
+
+<p><strong>References</strong></p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/rails/jbuilder">https://github.com/rails/jbuilder</a></p>
+  </li>
+  <li>
+    <p><a href="http://railscasts.com/episodes/320-jbuilder?view=asciicast">http://railscasts.com/episodes/320-jbuilder?view=asciicast</a></p>
+  </li>
+</ul>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

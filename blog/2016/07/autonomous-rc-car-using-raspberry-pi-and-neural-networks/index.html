@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Autonomous RC car using Raspberry Pi and Neural Networks</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2016 blog_2016_07 blog_2016_07_autonomous-rc-car-using-raspberry-pi-and-neural-networks blog_2016_07_autonomous-rc-car-using-raspberry-pi-and-neural-networks_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Autonomous RC car using Raspberry Pi and Neural Networks</h1>
+            <a href="/blog/tags/cap-vignesh" class="blog-author">vignesh</a>
+            , <a href="/blog/tags/cap-vimal" class="blog-author">vimal</a>
+      <p class="post-description">July 29, 2016</p>
+      <p>In this project, we will be building an autonomous rc car using <a href="https://en.wikipedia.org/wiki/Supervised_learning">supervised learning</a> of a <a href="https://en.wikipedia.org/wiki/Artificial_neural_network">neural network</a> with a single hidden layer. We will use a remote-controlled car with a <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi</a> and a <a href="https://www.raspberrypi.org/products/camera-module/">Raspberry Pi camera module</a> mounted on top. In the training mode, the camera module would provide images needed to train the neural network and in the autonomous mode; would provide the images to the trained model to predict the movements and direction of the car. You can find the Github repository for this project <a href="https://github.com/multunus/autonomous-rc-car">here</a>. Here's a video of the car in action.</p>
+
+<iframe class="frame-container" width="100%" height="315" src="https://www.youtube.com/embed/dCyBvLjW6X0" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="setup">Setup</h2>
+<p>We will need a remote controlled car, a Raspberry Pi, a power bank, an L293D Motor Driver IC and some jumper wires to connect the circuits. We glued a cardboard to the top of the RC car and fixed the Raspberry Pi and the power bank to it.</p>
+
+<p><a href="https://s3.amazonaws.com/multunus-website/uploads/2016/07/IMG_0618.jpg"><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/07/IMG_0618-300x225.jpg" alt="Autonomous car" /></a></p>
+
+<h2 id="take-one">Take One</h2>
+<p>Our initial approach was to use the Raspberry Pi as a radio transmitter by figuring out the frequencies for the RC car using <a href="https://github.com/bskari/pi-rc">pi-rc</a> and replace the remote control. We adopted this approach, and things were progressing well until we developed slightly more complicated circuits. The car would be too fast around the turns, and the natural approach to take would be to reduce the speed around the corners. We would have had to make modifications to control the DC motors of the car or get a geared remote controlled car. We went ahead with the first approach!</p>
+
+<h2 id="say-no-to-remote-controllers">Say no to remote controllers</h2>
+<p><a href="https://s3.amazonaws.com/multunus-website/uploads/2016/07/IMG_0522.jpg"><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/07/IMG_0522-300x225.jpg" alt="Autonomous car without the remote" /></a> The remote controller on the left is disappearing slowly!!</p>
+
+<p>We will be referring the DC motor controlling the left/right direction as the front motor and the motor controlling the forward/reverse direction as the back motor. An L293D Motor Driver IC will be used to control the motors.</p>
+
+<p><a href="https://s3.amazonaws.com/multunus-website/uploads/2016/07/RC-car-driver-IC-3.png"><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/07/RC-car-driver-IC-3-300x282.png" alt="Circuit Diagram for the RC car controller" /></a> Circuit Diagram for the RC car controller</p>
+
+<p>We'll connect two <code>GPIO</code> pins( <code>GPIO17</code> and <code>GPIO27</code>) from the Raspberry Pi to the two Input pins for Motor 1(Input 1, Input 2) of the IC and another <code>GPIO</code> pin(<code>GPIO22</code>) to the Enable pin for Motor 1(Enable 1,2) of the IC. We'll connect the Output pins for Motor 1(Output 1, Output 2) of the IC to the back motor. With this approach, we can control not only the forward/reverse direction of the motor but also the speed of the motor by setting the frequency and duty cycle of the PWM output to the Enable pin. Similarly, two <code>GPIO</code> pins(<code>GPIO19</code> and <code>GPIO26</code>) from the Raspberry Pi are connected to the two Input pins for Motor 2(Input 3, Input 4) of the IC and the Output pins for Motor 2(Output 3, Output 4) of the IC is connected to the front motor. We have now eliminated the need for any radio transmitter to control the movement of the car.</p>
+
+<h2 id="lets-mount-that-camera">Let's mount that camera</h2>
+<p>The Raspberry Pi camera module mounted on top of the car captures the images required for the training and the autonomous navigation of the car. The camera module was attached to a piece of cardboard which was not sturdy and would change the angle of inclination of the camera. A slight shift in the angle of inclination would cause the model trained on the previous set of images to perform very poorly due to the mismatch between the current viewport and the earlier viewport. We fixed this issue by mounting the camera on a sturdy stand and also ensured that the camera would be centred thus, providing a very broad view.</p>
+
+<p><a href="https://s3.amazonaws.com/multunus-website/uploads/2016/07/146979113190599.png"><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/07/146979113190599-225x300.png" alt="Camera mounted on a sturdy stand atop the autonomous car" /></a> Camera mounted on a sturdy stand</p>
+
+<h2 id="with-great-images-come-great-responsibility">With great images come great responsibility</h2>
+<p>After stabilising the camera, the trained models would give excellent results on the earlier circuit configurations, but it would perform poorly when the circuit configuration changed slightly. The new camera position provided a stabilised set of images, but a large area of the new image set would contain information irrelevant for the navigation of the car. Since portions of the road necessary for the next navigation action would be almost entirely in the lower half of the image, we used this as inputs to the neural network for training and prediction.</p>
+
+<p><a href="https://s3.amazonaws.com/multunus-website/uploads/2016/07/image01.png"><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/07/image01-300x225.png" alt="Image captured by the camera module of the autonomous car" /></a> The lower half of the image will be input to the neural network</p>
+
+<h2 id="training-with-neural-networks">Training with Neural Networks</h2>
+<p>The images required for training the neural network can be captured using
+interactive_control_train.py. At the command prompt, run the following command:</p>
+
+<pre><code>python interactive_control_train.py
+</code></pre>
+
+<p>The command opens a <a href="http://www.pygame.org/">Pygame</a> screen where the movements of the car can be controlled using the direction arrows. The images are captured along with the corresponding key press to assist us in their segregation later. We initially used <a href="http://picamera.readthedocs.io/en/release-1.10/api_camera.html#picamera.camera.PiCamera.capture">PiCamera's capture()</a> method with the filename parameter to capture the images, and could capture only a few but high-quality images. When the use_video_port parameter is not specified, the camera utilises the still mode; the images are obtained using the full area of the sensor and a<a href="http://picamera.readthedocs.io/en/release-1.10/fov.html#under-the-hood">slow, powerful denoise algorithm</a>processes these images. When set, the use_video_port parameter uses the video port with which we can capture images rapidly but typically appear grainier when compared to those obtained with the still port. We drove the car on various circuit configurations and generated around 2000 images for the training data set. We should clean the data before segregating the images into their respective class folders based on the key press indicated in their filenames.</p>
+
+<p><a href="https://s3.amazonaws.com/multunus-website/uploads/2016/07/image02.png"><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/07/image02-300x300.png" alt="Image captured with the still port (top) and video port (bottom)" /></a> Image captured with the still port (top) and video port (bottom)</p>
+
+<p>With the images in their respective class folder, we can start training the neural network. We split the image horizontally and convert the lower half into a <a href="http://www.numpy.org/">numpy</a> <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html">ndarray</a> where the colour layers flatten into a single gray-scale layer. The colour information does not provide additional information to identify features and hence the images are gray-scaled. We resize the ndarray according to the dimensions specified in the configuration file and flatten it. The flattened ndarray for each image serves as input to the neural network, and its corresponding class label value is the expected output. We can provide the regularisation parameter(
+<code>lambda</code>) and the number of hidden layer nodes(hidden layer size) while training the neural network; default values would be those specified in the configuration file. At the command prompt, run the following command:</p>
+
+<pre><code>python train.py 0.1 60
+</code></pre>
+
+<p>The values of <code>lambda</code> and the <code>hidden layer size</code> should be chosen carefully to prevent the network from overfitting/underfitting the data. The network will underfit for large values of <code>lambda</code> and small values of the
+hidden layer size. Similarly, lower values of <code>lambda</code> and large values of the hidden layer size cause the network to overfit the data and will start incorporating noise into the model. We have experimented with various values of <code>lambda</code> and found that values between 0 and 0.1 are adequate in most cases. The rule of the thumb for the number of nodes in the hidden layer is that they are usually between the size of the input layer and the size of the output layer. We collected around 2000 images and used a <code>lambda</code> value of 0.1 and a hidden layer size of 110. The cost function is minimised using the L-BFGS-B algorithm. We'll store the trained model as a pickle file in the <code>optimized-thetas</code> folder.</p>
+
+<h2 id="give-that-car-some-autonomy">Give that car some autonomy</h2>
+<p>Once we have the trained model, we can run the RC car autonomously using
+autonomous.py. It accepts an optional argument for the trained model; default will use the latest model in the
+optimized_thetas folder. At the command prompt, run the following command:</p>
+
+<pre><code>python autonomous.py
+</code></pre>
+
+<p>The lower half of the images captured by the camera module is input to the trained model which predicts the next navigation action. The front and the back motors are set based on the predicted action. We'll save the images with their predicted output for training models in the future.</p>
+
+<p><a href="https://s3.amazonaws.com/multunus-website/uploads/2016/07/image05.png"><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/07/image05-300x169.png" alt="That's all Folks" /></a></p>
+
+<p>We started this project with the intention of making Machine Learning fun and exciting for all ML enthusiasts. We built this during our <a href="http://www.multunus.com/blog/2016/01/20-investment-time-background-story/">20% investment time</a> and wanted to share our learnings and experiences with you. Special thanks to <a href="http://www.andrewng.org/">Andrew Ng</a> for his fantastic <a href="http://www.coursera.org/learn/machine-learning">Coursera course</a> on Machine Learning. Please let us know if you have any queries or suggestions on improving this project. Thank You for going through this post, we hope you find it useful. :)</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

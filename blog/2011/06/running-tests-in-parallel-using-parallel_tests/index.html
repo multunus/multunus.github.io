@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Running tests in parallel using parallel_tests</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2011 blog_2011_06 blog_2011_06_running-tests-in-parallel-using-parallel_tests blog_2011_06_running-tests-in-parallel-using-parallel_tests_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Running tests in parallel using parallel_tests</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">June 27, 2011</p>
+      <p>One of the action items I had mentioned in <a href="http://www.multunus.com/2011/06/takeaways-from-ruby-conf-india-2011/">an earlier post</a>, was to setup the  infrastructure for running tests in parallel.</p>
+
+<p>I tried <a href="http://test-load-balancer.github.com/">TLB</a>, but stopped on it because it required cluster setup for our CI server i.e. hudson. I was looking for something which was even simpler than TLB, and tried <a href="https://github.com/ngauthier/hydra">Hydra</a>, but could not setup it successfully. Thankfully though, the Hydra committer  <a href="https://github.com/ngauthier/hydra/issues/48">suggested</a> that I try out <a href="https://github.com/grosser/parallel_tests">parallel_tests</a> - as hydra is not currently being maintained.</p>
+
+<p>I am yet to try running it parallelly on multiple machines, but I tried it on a dual core machine and can clearly see the difference. The following are the results:</p>
+
+<h3 id="without-paralleltests">Without parallel_tests</h3>
+
+<p><code>
+Finished in 451.01 seconds
+1089 examples, 20 failures, 1 pending
+real    8m14.908s
+user    3m4.236s
+sys 3m20.061s
+</code></p>
+
+<h3 id="with-paralleltests">With parallel_tests</h3>
+
+<p><code>
+Results:
+544 examples, 10 failures, 1 pending
+545 examples, 10 failures
+Took 330.528104223 seconds
+Specs Failed
+real    5m35.586s
+user    7m3.150s
+sys 0m14.269s
+</code></p>
+
+<p>The different is 2-3 minutes which I think is a huge deal.</p>
+
+<p>I <a href="https://github.com/leenasn/parallel_tests">forked</a> parallel_tests to make a change to its default behaviour of running tests only under spec folder. As our app was built using rails engines, we had tests even under our vendor/engines directory.</p>
+
+<p>The feature, I feel, missing in parallel_tests compared to TLB is the logic it uses to split the tests. TLB is intelligent enough to split the tests into different processes depending upon the time each test takes, so that all the threads finish by the same time. I am not sure whether how exactly parallel_tests works, but looks like it splits the total no of tests among the number of processes because when it started I could see the message:</p>
+
+<p><code>
+"2 processes for 162 specs, 81 specs per process"
+</code></p>
+
+<p>But parallel_tests by default spawns multiple processes depending upon the “core” i.e. on a dual core it starts 2 processes unless you mention otherwise.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

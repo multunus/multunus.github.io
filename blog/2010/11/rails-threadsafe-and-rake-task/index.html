@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Rails threadsafe and rake task</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2010 blog_2010_11 blog_2010_11_rails-threadsafe-and-rake-task blog_2010_11_rails-threadsafe-and-rake-task_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Rails threadsafe and rake task</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">November  3, 2010</p>
+      <p>We’ve got an application which uses JRuby + RoR deployed in Glassfish. We enabled <code>config.threadsafe!</code> in the production.rb file to support multithreaded environment.</p>
+
+<p>The server was working fine, but the rake tasks started failing because of a class loading issue. The immediate fix we had was to disable threadsafe for rake tasks and enable it when the server is started. This is not a scalable solution and when we started looking further into it, we found that the following change in the rails initializer should resolve the issue:</p>
+
+<ul>
+  <li>Open the file railities/lib/initiazer.rb</li>
+  <li>Change the line <code>return if $rails_rake_task</code> in load_application_classes method to <code>return if $rails_rake_task &amp;&amp; configuration.dependency_loading</code></li>
+</ul>
+
+<p>You can see the issue and solution being discussed in the following thread:
+<a href="http://groups.google.com/group/rubyonrails-core/browse_thread/thread/b13dbe0b8f12b7dc">http://groups.google.com/group/rubyonrails-core/browse_thread/thread/b13dbe0b8f12b7dc</a></p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

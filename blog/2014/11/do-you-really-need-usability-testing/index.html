@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Do you really need Usability Testing?</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2014 blog_2014_11 blog_2014_11_do-you-really-need-usability-testing blog_2014_11_do-you-really-need-usability-testing_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Do you really need Usability Testing?</h1>
+            <a href="/blog/tags/cap-manish" class="blog-author">manish</a>
+      <p class="post-description">November 12, 2014</p>
+      <p><img src="https://s3.amazonaws.com/multunus-website/uploads/2014/11/1.jpg" alt="Should you do usability testing on a perfect design?" /></p>
+
+<p>One of our customers is the <a href="http://intersectfund.org">IntersectFund</a>. They are a nonprofit microlender who have trained, coached and financed hundreds of New Jersey's emerging entrepreneurs from lower income groups.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2014/11/IF_logo_small.jpg" alt="The Intersect Fund Logo" /></p>
+
+<p>Given that they’ve been doing it for 7 years, our customer was already very comfortable with the needs and the workflow of the the Loan Officers - who are the primary users of the system.</p>
+
+<p>Considering this, we felt confident on the designs too. But eating our own dog-food, we forced ourselves to conduct a Usability Test anyway. Read along to find out what we found. Let’s just say, Steve Krug wouldn’t be surprised.</p>
+
+<h2 id="a-quick-intro-to-the-product">A Quick Intro to The Product</h2>
+
+<p>The first product we’re building for the IntersectFund is called Closer. The goal of Closer is to make the process of Closing a loan much more efficient:</p>
+
+<ul>
+  <li>
+    <p>Reduce Communication Overhead</p>
+  </li>
+  <li>
+    <p>Reduce Manual Errors</p>
+  </li>
+  <li>
+    <p>Reduce Dependency on Single Person</p>
+  </li>
+  <li>
+    <p>Build a system that can scale.</p>
+  </li>
+</ul>
+
+<h2 id="persona---the-loan-officer">Persona - The Loan Officer</h2>
+
+<p>The Loan Officer is the primary user of Closer. Her role involves meeting Loan Applicants, understand their needs, and help get their loan approved.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2014/11/1984_Davie_JaneDoe_Reconstruction_004b-150x150.jpg" alt="Jane Doe - Example Image" style="float:left" /></p>
+
+<p>Jane Johnsons</p>
+
+<p>Age: 30</p>
+
+<p>Location: <strong>NJ</strong></p>
+
+<p>Speaks Spanish</p>
+
+<p>Behaviour</p>
+
+<ul>
+  <li>
+    <p>Works out of Intersect office. But spend about 90% time on the go.</p>
+  </li>
+  <li>
+    <p>Loan Officer meets with the Borrower to discuss about the loans.</p>
+  </li>
+  <li>
+    <p>Work Long hours - mostly in the evening as that's when borrowers are available.</p>
+  </li>
+  <li>
+    <p>Fairly tech savvy. Troubleshooting is difficult, though.</p>
+  </li>
+  <li>
+    <p>Carries iPhone, MacBook Air &amp; a Portable Scanner.</p>
+  </li>
+  <li>
+    <p>Access to Internet is through the iPhone.</p>
+  </li>
+</ul>
+
+<p>Problems</p>
+
+<ul>
+  <li>
+    <p>Having to drive long distances to do small tasks is painful.</p>
+  </li>
+  <li>
+    <p>Lot of Phone calls. (Phone call every 5 minutes)</p>
+  </li>
+  <li>
+    <p>Has to deal with complaints from the applicants.</p>
+  </li>
+  <li>
+    <p>Not having access to all information is a problem. (Ex. not having balances on active loans.)</p>
+  </li>
+  <li>
+    <p>Waiting for approval of loan applications.</p>
+  </li>
+  <li>
+    <p>Declining to people is difficult. Has to figure how to translate what document are needed to what the borrower can provide.</p>
+  </li>
+  <li>
+    <p>Has to deal with borrowers lacking documents.</p>
+  </li>
+</ul>
+
+<p>Goals</p>
+
+<ul>
+  <li>
+    <p>Reduce communication overhead times.</p>
+  </li>
+  <li>
+    <p>Get loan approved and disbursed as soon as possible.</p>
+  </li>
+  <li>
+    <p>Spend time talking to more Borrowers.</p>
+  </li>
+  <li>
+    <p>Be able to answer queries from borrowers quickly - without relying on other people from Intersect.</p>
+  </li>
+</ul>
+
+<h2 id="how-we-did-the-usability-test">How We Did The Usability Test</h2>
+
+<p>Since the IntersectFund Team is based out of NJ, we decided to do remote usability testing with two Loan Officers. We used <a href="http://www.multunus.com/blog/2014/09/using-google-hangouts-air-remote-usability-testing/">Google Hangouts on Air</a> for conducting and recording the test for later use - Everybody already has it installed, automatically saves the video to youtube, and easy to share the video privately with multiple people.</p>
+
+<h2 id="heres-what-we-found">Here’s What We Found</h2>
+
+<ul>
+  <li><strong>Merge before Uploading</strong></li>
+</ul>
+
+<p>Closer required them to upload single bank statements for 3 months. What we found though was that each month was stored in a separate scanned document. That meant they had to combine them before uploading.</p>
+
+<ul>
+  <li><strong>Switching back and forth</strong></li>
+</ul>
+
+<p>After the Collateral Documents are uploaded, the loan officer is supposed to enter a few details from the document such as validity of the document. This is to ensure that the validity of the documents are checked soon after the upload. During the usability test, we found the Loan Officer constantly switching windows between the new system and the document to fill all the fields. Since the fields were important, she did that frequently with smaller chunks of data.</p>
+
+<ul>
+  <li>
+    <p><strong>Less keystrokes is more keystrokes</strong>
+The date fields had * auto*  addition of '/' to save on a few keystrokes. But, since they were used to filling dates with separate input fields or including the ‘/’ manually, they ended by making a lot of corrections. It was irksome!</p>
+  </li>
+  <li>
+    <p><strong>No Aid for Explanation</strong></p>
+  </li>
+</ul>
+
+<p>During the process of closing a loan, there’s a step when the Loan Officer explains how things will work out, to the Borrower. We have a page which is supposed to help her explain. What we found out though was that the interface was hardly used during explanation.</p>
+
+<ul>
+  <li><strong>Webcam Permission</strong></li>
+</ul>
+
+<p>The browser vendors aren’t doing a great job with making the Webcam Permissions apparent. In this case, they Loan Officers were using chrome. It’s the same color as the address/bookmarks bar and the buttons aren’t highlighted either. Complete amiss.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2014/11/Screen_Shot_2014-10-20_at_12_02_43_PM.jpg" alt="webcam permission - chrome browser" /></p>
+
+<ul>
+  <li><strong>Help-Text-Don’t-Read [HTDR]</strong></li>
+</ul>
+
+<p>With so much information overload these days, it doesn’t matter how good intentions you have and how short you try to keep it. Nobody reads the help-text. They may come back to it when they face any error. But, don’t expect them to read it in the first pass.</p>
+
+<ul>
+  <li><strong>Mandatory Address Line 2</strong></li>
+</ul>
+
+<p>For some reason, the address line 2 was made mandatory. Since we tested with some real data though, we figured that address line 2 was hardly used which we later made optional.</p>
+
+<ul>
+  <li><strong>To Err is human</strong></li>
+</ul>
+
+<p>We discovered that the current way of highlighting the fields with errors is too subtle and not very intuitive.</p>
+
+<ul>
+  <li><strong>“Enter Your Email Address” - Yours or Mine?</strong></li>
+</ul>
+
+<p>One of the pages is supposed to collect the details the Loan Borrower. At the end of the page are the email and phone fields which would be used to send reminds to the borrower. We saw that the browser would auto-fill the Loan Officer’s details and since the Loan Officer would be filling it up for the borrower, she perceived it to be her details instead of the borrowers.</p>
+
+<ul>
+  <li><strong>In the Logo they trust</strong></li>
+</ul>
+
+<p>We also found that there wasn’t any place where IntersectFund logo was displayed. The Loan officer thought that it would be essential to maintain the trust with the borrowers.</p>
+
+<h2 id="how-we-prioritized">How We Prioritized</h2>
+
+<p>With all these insights from the usability test at hand and the constraints of time we decided to prioritize
+ related issues over first time user experience issues for the following reasons:</p>
+
+<ul>
+  <li>
+    <p>It’s the same persons using the app everyday.</p>
+  </li>
+  <li>
+    <p>The risk of the users abandoning doesn’t exist.</p>
+  </li>
+  <li>
+    <p>All this just goes to say that, even if you are very confident about your designs, there will always be a few things Usability Testing will uncover. Plan to spend a few hours every month and make your design better.*</p>
+  </li>
+</ul>
+
+<p><strong>If you are facing difficulty getting insights to make your products better, feel free to reach out to me on
+<a href="http://sohelpful.me/manishrc">SoHelpful.me/manishrc</a></strong></p>
+
+<p>Photo Credit:
+<a href="http://startupstockphotos.com/post/78227111700/download">http://startupstockphotos.com/post/78227111700/download</a></p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

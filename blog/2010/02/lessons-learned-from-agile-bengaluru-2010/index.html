@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Lessons learned from Agile Bengaluru 2010</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2010 blog_2010_02 blog_2010_02_lessons-learned-from-agile-bengaluru-2010 blog_2010_02_lessons-learned-from-agile-bengaluru-2010_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Lessons learned from Agile Bengaluru 2010</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">February 14, 2010</p>
+      <p>It was a great feeling after attending the <a href="http://www.agileindia.org/agilebengaluru2010">Agile Bengaluru Conf 2010</a>. The theme for this Agile Conference was <strong>Post-Modern Agile</strong> i.e. what’s next after Agile. Most of the sessions were talking mainly on what needs to be done to make a product a success. Just following agile practices will not make any product a success. The team needs to get out of their circle and think outside the coding level to understand their customers. The main takeaway points of the session are:</p>
+
+<ul>
+  <li><strong>Frequent Validation</strong> - Always validate with actual customers. Talk directly to them, take their feedback, implement it and soon release it. This cycle has to continue. If we don’t do this, there is no meaning in building any product with BDD/TDD, Automated tests etc.</li>
+  <li><strong>Limiting WIP</strong> [Work-In-Progress] - Never leave too many things untested or unreleased. Get your QA team to test as soon as the dev team is done. Release to production as soon as QA is done. When we make frequent releases, you can also get frequent validation.</li>
+  <li><strong>Checking vs Testing</strong> - If you’re not sure what the difference is, there’s an <a href="http://www.infoq.com/news/2009/12/testing-or-checking">article on InfoQ</a> that explains this well. The bottom line is, use automated tests for mundane tasks [“checking”] and use manual testing for exploratory testing.</li>
+</ul>
+
+<p>There was an <a href="http://www.agileindia.org/agilebengaluru2010/agile-bengaluru-2010-a-startup-journey.htm">interesting session</a> by 
+<strong>Siddhartha Govindaraj</strong>, who is the founder of Silver Stripe Software. He talked about how they evolved from ad-hoc to Agile and from Agile to <a href="http://en.wikipedia.org/wiki/Kanban">Kanban</a>. The points I felt interesting and which are worth trying out are:</p>
+
+<ol>
+  <li><strong>No iterations/sprint</strong> - Always take top items from backlog - What usually happens during an iteration is, either you might finish all the items in an iteration and as there is still more time left you might have to pull some item from the backlog. The other case can be, you are not fully done with some tasks you might have to push some items to next sprint. Instead of this, always take items from backlog. The developers are supposed to work on the top items in the backlog and QA will be testing as soon as the development is done. QA need not have to wait for a certain period to test.</li>
+  <li><strong>Limiting WIP (Work In Progress)</strong> - Don’t pile up stuff, never leave anything untested/unreleased. If WIP goes beyond a specific number, then change the plan like stop development make devs to test. And don’t keep tested stuff unreleased. Alway keep a maximum number of items that needs to be part of released. So even if the release is planned weekly, there can be multiple releases during the week if a lot of features are implemented during a certain week. Another advantage with this approach is, when dev team gets a chance to sit with QA, they also learn about exploratory testing.</li>
+  <li><strong>Single backlog for multiple projects</strong> - This is an interesting point. He had multiple projects say A &amp; B, both in maintenance stage. He has a team of 5. So rather than splitting the team into 2 across these 2 projects, they kept a single backlog of both projects. They prioritize the backlog and take items from that. This way both projects move in parallel more smoothly.</li>
+  <li><strong>Checking vs testing</strong> - Checking should always be automated while  Manual testing effort should be reserved for exploratory testing only.</li>
+</ol>
+
+<p>He also suggests avoiding a daily Scrum meeting. The point he had was, the team should be interacting so closely throughout the day, which avoids the need for a stand-up . But if there is an issue that needs to be discussed or if there is a requirement for having a discussion within teams, then such a stand-up is called for. I heard the same being discussed by many people - that Scrum is not really mandatory but am not sure about the same as of now. At Multunus, we still get quite a lot of value out of the stand- ups, because 
+<a href="http://www.multunus.com/2010/01/our-pragmatic-processes/">we do it a little differently</a>.</p>
+
+<p>It was a pretty simple presentation in which he was talking about how their company has evolved. As it was about his own experience, he had concrete examples for validating his points. There were questions from the audience like, how velocity is calculated if there were no sprints, how the team would get adjusted to context switching in case of single backlog etc. His answer was that, they are a small team - so these were mostly non-issues for them. And about velocity, productivity etc, those really will come into picture only if there is not enough trust in the team. If the team trusts the management and the management also trusts the team, then these productivity/burn down charts etc are meaningless. That point really made a lot of sense to me. If the team always perform/deliver well and if the management has trust on the team, why should they look at the burn down charts etc to see the team’s performance ?.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

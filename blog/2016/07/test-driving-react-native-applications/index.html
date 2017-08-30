@@ -1,0 +1,1046 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Test driving React Native applications</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2016 blog_2016_07 blog_2016_07_test-driving-react-native-applications blog_2016_07_test-driving-react-native-applications_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Test driving React Native applications</h1>
+            <a href="/blog/tags/cap-jayakrishnan" class="blog-author">jayakrishnan</a>
+            , <a href="/blog/tags/cap-roshanjossey" class="blog-author">roshanjossey</a>
+      <p class="post-description">July 16, 2016</p>
+      <p>React Native is a game changing mobile app development framework that concentrates on fast development. Based on the philosophy “Learn once, write anywhere”, it makes it possible to build iOS, Android and Windows mobile apps just using Javascript. So React Native helps you to build awesome applications across multiple platforms.</p>
+
+<p>Now you have one question lingering in your head and that is the reason you are reading this post. How am I going to test these? We also had the same question while working on React Native and couldn’t find a hands-on tutorial that helps a beginner get started on writing tests for React Native applications.</p>
+
+<p>Read on this post and once you finish it, you will feel much more confident in testing React Native applications. This tutorial assumes you are comfortable working with React Native, basic concepts of React, and testing of Javascript code. If not, feel free to checkout the following links.</p>
+
+<ul>
+  <li><a href="https://facebook.github.io/react/">https://facebook.github.io/react/</a></li>
+  <li><a href="https://facebook.github.io/react-native/">https://facebook.github.io/react-native/</a></li>
+  <li><a href="https://www.sitepoint.com/unit-test-javascript-mocha-chai/">https://www.sitepoint.com/unit-test-javascript-mocha-chai/</a></li>
+</ul>
+
+<p>After completing this tutorial you will be able to:</p>
+
+<ul>
+  <li>Write unit tests for your component logic.</li>
+  <li>Test behaviour of components on various user interactions like press and scroll.</li>
+  <li>Easily test defaultProps, propTypes, state transitions and similar aspects of React components.  </li>
+  <li>Appreciate how TDD encourages you to follow idioms in react.</li>
+</ul>
+
+<p>Before we actually jump into the code, let us take a brief walkthrough over our test setup. We will be using the following libraries for testing.</p>
+
+<ul>
+  <li><a href="https://babeljs.io/">Babel</a>: A Javascript compiler to transpile our Javascript code so that it is compatible everywhere.</li>
+  <li><a href="https://mochajs.org/">Mocha</a>: A Javascript testing framework running on<a href="https://nodejs.org/en/">node.js</a> to run our tests.</li>
+  <li><a href="http://chaijs.com/">Chai</a>: A library that provides us with interfaces to write assertions in our test.</li>
+  <li><a href="http://sinonjs.org/">Sinon</a>: A library that provides us with spies, stubs and mocks which are used extensively while testing.</li>
+  <li><a href="https://github.com/lelandrichardson/react-native-mock">React Native Mock</a>: Library that provides a completely mocked version of react-native that is easily testable.</li>
+  <li><a href="http://airbnb.io/enzyme/">Enzyme</a>: A React test utility that helps us to write painless tests for react components. Javascript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components.</li>
+</ul>
+
+<p>Setting all these up is a pain, but we have done that for you. Checkout our <a href="https://github.com/multunus/react-native-boilerplate">react native boiler plate</a> that helps you kickstart your application development with all the setup done for state model, testing, continuous integration etc. Go to your console and type the following commands.</p>
+
+<pre><code>git clone https://github.com/multunus/react-native-boilerplate ReactNativeBoilerplate
+cd ReactNativeBoilerplate
+npm install
+</code></pre>
+
+<p>Rename <code>config.example.json</code> to <code>config.json</code> and modify it as required. The app is setup to use the <a href="https://github.com/auth0/nodejs-jwt-authentication-sample">NodeJS JWT Authentication sample server</a>, follow the instructions and update the baseURL in <code>config.json</code> to a valid url say <code>http://localhost</code>. That’s it.</p>
+
+<h2 id="time-for-coding">Time for coding!</h2>
+
+<p>It’s time to rewind back a little bit and refresh the first tutorial you ever did on <a href="https://facebook.github.io/react/">React</a>. The simple Comment Box. If you haven’t gone through it, you can take a look at it <a href="https://facebook.github.io/react/docs/tutorial.html">here</a>.</p>
+
+<p>We will build the same application in React Native using <a href="https://en.wikipedia.org/wiki/Test-driven_development">TDD</a>. We will be replacing the react components used in the tutorial by native components for android and using <a href="https://facebook.github.io/react-native/docs/asyncstorage.html">Async Storage</a> provided by react native to store our data instead of a server with a database.</p>
+
+<p>If you are not comfortable with Test Driven Development, you may choose to write your code and then write tests for it. But we feel TDD improves the quality of your code and especially while working on React, this is more evident as the components you build will be simple, testable and you will refrain yourselves from writing too much of logic into your components.</p>
+
+<p>We are going to build the app in Android platform. But don’t worry if you are using react native for iOS or Windows mobile app development. The testing techniques you learn here is independent of the platform and can be applied across platforms. We shall use the same component structure as in the react tutorial for our app.</p>
+
+<ul>
+  <li>A view of all of the comments</li>
+  <li>A form to submit a comment</li>
+</ul>
+
+<p>We will have the following component hierarchy</p>
+
+<ul>
+  <li><code>CommentBox</code>: The root component    
+    <ul>
+      <li><code>CommentList</code> : To display a list of all components     
+        <ul>
+          <li><code>Comment</code> : To display a single comment    </li>
+        </ul>
+      </li>
+      <li><code>CommentForm</code> : A form for user to write a comment</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="our-first-test">Our first test</h2>
+
+<p>Okay, now it’s time for coding. Let us write our first test. The components for the app are written in <code>src/components</code> directory and the corresponding  tests for components are written in <code>src/components/__specs__</code> directory. Open a new file <code>src/components/__specs__/Comment.spec.js</code> and write the following code:</p>
+
+<pre><code>import React, { View } from 'react-native';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+
+import Comment from '../Comment.js';
+
+describe('&lt;Comment /&gt;', () =&gt; {
+  it('should be a view component', () =&gt; {
+    const wrapper = shallow(&lt;Comment&gt;&lt;/Comment&gt;);
+
+    expect(wrapper.type()).to.equal(View);
+  });
+});
+</code></pre>
+
+<p>That is a simple test to begin with. Let’s checkout what is going on here. We are using <a href="http://airbnb.io/enzyme/docs/api/shallow.html">shallow rendering API</a> of enzyme here. It is useful to constrain yourself to testing a component as a unit, and to ensure that your tests aren't indirectly asserting on behaviour of child components. <code>shallow()</code> method returns a shallow wrapper object around the component that is to be tested. Enzyme provides a rich set of methods that can be called on the wrapper instance, for testing various aspects of a component. Check out the <a href="http://airbnb.io/enzyme/docs/api/shallow.html">docs</a> .</p>
+
+<p>In this spec we are just checking the type of the component. We must appreciate the work of Leland Richardson for building<a href="https://github.com/airbnb/enzyme">Enzyme</a> ( JS testing utility which helps us write tests for react “web” components) and <a href="https://github.com/lelandrichardson/react-native-mock">React Native Mock</a> ( fully mocked and test-friendly version of react native, which makes enzyme compatible with react native). The result of this effort is painless testing of react native components. Now save the file and run <code>npm test</code> from console and watch your tests fail. Now we build the <code>Comment</code> component. Open <code>src/components/Comment.js</code> and write the following code:</p>
+
+<pre><code class="language-javascript">    import React, {Component, View } from 'react-native';
+
+    export default class Comment extends React.Component {
+      render() {
+        return(
+          &lt;View&gt;
+          &lt;/View&gt;
+        );
+      }
+    }
+</code></pre>
+
+<p>Now run <code>npm test</code> from console and see your tests pass. Bingo! Now we will be progressively writing tests and code to build the complete app. We’ll be following the same procedure for the rest of our tutorial. Write tests, watch it fail, write code, see it passing, refactor if necessary. You can read more about <a href="http://www.jamesshore.com/Blog/Red-Green-Refactor.html">Red Green Refactor here</a>. Now that we're all good to go, let's start with the topmost component in the component structure.</p>
+
+<p><code>src/components/__specs__/CommentBox.spec.js</code></p>
+
+<pre><code class="language-javascript">    import React, { View, Text } from 'react-native';
+    import { shallow } from 'enzyme';
+    import { expect } from 'chai';
+
+    import CommentBox from '../CommentBox.js';
+
+    describe('&lt;CommentBox /&gt;', () =&gt; {
+      beforeEach(function() {
+        wrapper = shallow(&lt;CommentBox/&gt;);
+      });
+
+      it('should be a view component', () =&gt; {
+        expect(wrapper.type()).to.equal(View);
+      });
+
+      it('should have a title Comment It', () =&gt; {
+        expect(wrapper.contains(&lt;Text&gt;Comment It&lt;/Text&gt;)).to.equal(true);
+</code></pre>
+
+<p>These tests describe CommentBox to be a View component and have a Text component inside it. We’ll write minimal amount of code to make this test pass and a Text component with the text “Comment It” in it. Now the actual code:</p>
+
+<p><code>src/components/CommentBox.js</code></p>
+
+<pre><code class="language-javascript">    import React, {Component, Text, View } from 'react-native';
+
+    export default class CommentBox extends React.Component {
+      render() {
+        return(
+            &lt;View&gt;
+              &lt;Text&gt;Comment It&lt;/Text&gt;
+            &lt;/View&gt;
+        );
+      }
+    }
+</code></pre>
+
+<p>We need a CommentList and CommentForm component inside our CommentBox.We’ll just define these components without working logic just for now, and come back to these components and complete them later.
+<code>src/components/__specs__/CommentForm.spec.js</code></p>
+
+<pre><code class="language-javascript">    import React, { View } from 'react-native';
+    import { shallow } from 'enzyme';
+    import { expect } from 'chai';
+
+    import CommentForm from '../CommentForm.js';
+
+    describe('&lt;CommentForm /&gt;', () =&gt; {  
+      it('should be a view component', () =&gt; {
+        wrapper = shallow(&lt;CommentForm /&gt;);
+
+        expect(wrapper.type()).to.equal(View);
+      });  
+    });
+</code></pre>
+
+<p><code>src/components/CommentForm.js</code></p>
+
+<pre><code class="language-javascript">    import React, {Component, View } from 'react-native';
+
+    export default class CommentForm extends React.Component {
+      render() {
+        return(
+            &lt;View&gt;
+            &lt;/View&gt;
+        );
+      }
+    }
+</code></pre>
+
+<p><code>src/components/__specs__/CommentList.spec.js</code></p>
+
+<pre><code class="language-javascript">    import React, { ListView } from 'react-native';
+
+    import { shallow } from 'enzyme';
+    import { expect } from 'chai';
+
+    import CommentList from '../CommentList.js';
+
+    describe('&lt;CommentList /&gt;', () =&gt; {
+      it('should be a ListView component', () =&gt; {
+        const wrapper = shallow(&lt;CommentList /&gt;);
+
+        expect(wrapper.type()).to.equal(ListView);
+      });
+    });
+</code></pre>
+<p><code>src/components/CommentList.js</code></p>
+
+<pre><code class="language-javascript">    import React, {Component, ListView} from 'react-native';
+
+    export default class CommentList extends React.Component {
+      render() {
+        return(
+            &lt;ListView /&gt;
+        );
+      }
+    }
+</code></pre>
+
+<p>Let s add them to CommentBox component. Add a couple of specs to <code>CommentBox.spec.js</code> as follows:</p>
+
+<p><code>src/components/__specs__/CommentBox.spec.js</code></p>
+
+<pre><code class="language-javascript">
+    import React, { View, Text } from 'react-native';
+    import { shallow } from 'enzyme';
+    import { expect } from 'chai';
+
+    import CommentBox from '../CommentBox.js';
+    import CommentList from '../CommentList.js';
+    import CommentForm from '../CommentForm.js';
+
+    describe('&lt;CommentBox /&gt;', () =&gt; {
+      beforeEach(function() {
+        wrapper = shallow(&lt;CommentBox /&gt;);
+      });
+
+      it('should be a view component', () =&gt; {
+        expect(wrapper.type()).to.equal(View);
+      });
+
+      it('should have a title Comment It', () =&gt; {
+        expect(wrapper.contains(&lt;Text&gt;Comment It&lt;/Text&gt;)).to.equal(true);
+      });
+
+      it('should render CommentList component', () =&gt; {
+        expect(wrapper.find(CommentList)).to.have.length(1);
+      });
+
+      it('should render CommentForm component', () =&gt; {
+        expect(wrapper.find(CommentForm)).to.have.length(1);
+      });
+    });
+</code></pre>
+
+<p><code>src/components/CommentBox.js</code></p>
+
+<pre><code class="language-javascript">    import React, {Component,Text, View} from 'react-native';
+
+    import CommentList from './CommentList.js';
+    import CommentForm from './CommentForm.js';
+
+    export default class CommentBox extends React.Component {
+      render() {
+        return(
+            &lt;View&gt;
+            &lt;Text&gt;Comment It&lt;/Text&gt;
+            &lt;CommentList /&gt;
+            &lt;CommentForm /&gt;
+            &lt;/View&gt;
+        );
+      }
+    }
+</code></pre>
+
+<p>Now that we have the whole structure in place, we’ll implement with the functionality starting with Comment component.For each comment we’ll pass author name of the comment and the actual comment as props. Comment component should take these props and render both the author name and actual comment.</p>
+
+<p><code>src/components/__specs__/Comment.spec.js</code></p>
+
+<pre><code class="language-javascript">
+    import React, { View, Text } from 'react-native';
+    import { shallow } from 'enzyme';
+    import { expect } from 'chai';
+
+    import Comment from '../Comment.js';
+
+    describe('&lt;Comment /&gt;', () =&gt; {
+      it('should be a view component', () =&gt; {
+        const wrapper = shallow(&lt;Comment&gt;&lt;/Comment&gt;);
+
+        expect(wrapper.type()).to.equal(View);
+      });
+
+      it('should render 2 text components', () =&gt; {
+        const wrapper = shallow(&lt;Comment /&gt;);
+
+        expect(wrapper.find(Text)).to.have.length(2);
+      });
+
+      it('should render the given comment', () =&gt; {
+        const wrapper = shallow(&lt;Comment&gt; This is a comment &lt;/Comment&gt;);
+
+        expect(wrapper.contains(&lt;Text&gt; This is a comment &lt;/Text&gt;)).to.equal(true);
+      });
+
+      it('should render the given author name', () =&gt; {
+        const wrapper = shallow(&lt;Comment author="Author"&gt;&lt;/Comment&gt;);
+
+        expect(wrapper.contains(&lt;Text&gt;Author&lt;/Text&gt;)).to.equal(true);
+      });
+    });
+</code></pre>
+
+<p><code>src/components/Comment.js</code></p>
+
+<pre><code>import React, {Component, View, Text} from 'react-native';
+
+export default class Comment extends React.Component {
+  render() {
+    return(
+        &lt;View&gt;
+         &lt;Text&gt;
+           {this.props.author}
+          &lt;/Text&gt;
+          &lt;Text&gt;
+           {this.props.children}
+          &lt;/Text&gt;
+        &lt;/View&gt;
+    );
+  }
+}
+</code></pre>
+
+<p>Aha! We have successfully test-driven our first React Native component.  Since we have comments now, let’s list them out in our CommentList component. The CommentList component takes all the comment data as an array of JSONs and render each comment. Feel free to refer docs if you have any questions on usage of <a href="https://facebook.github.io/react-native/docs/listview.html">ListView</a>.</p>
+
+<p><code>src/components/__specs__/CommentList.spec.js</code></p>
+
+<pre><code>import React, { View, ListView } from 'react-native';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+
+import CommentList from '../CommentList.js';
+import Comment from '../Comment.js';
+
+describe('&lt;CommentList /&gt;', () =&gt; {
+  beforeEach(function() {
+    data = [
+      { author: "Pete Hunt", text: "This is one comment"},
+      { author: "Jordan Walke", text: "This is a super comment"},
+      { author: "Jordan Walkerr", text: "This is an ordinary comment"}
+    ];
+  });
+
+  it('should define its propTypes', () =&gt; {
+    expect(CommentList.propTypes.data).to.be.an('function');
+  });
+
+  it('should be a ListView component', () =&gt; {
+    const wrapper = shallow(&lt;CommentList data={data} /&gt;);
+
+    expect(wrapper.type()).to.equal(ListView);
+  });
+
+  it('should have correct datasource in state', () =&gt; {
+    const wrapper = shallow(&lt;CommentList data={data} /&gt;);
+
+    expect(wrapper.state('dataSource')._dataBlob).to.equal(data);
+  });
+});
+
+`src/components/CommentList.js`
+
+import React, {Component, View, ListView} from 'react-native';
+import Comment from './Comment.js';
+
+export default class CommentList extends React.Component {
+  static propTypes =  {
+    data: React.PropTypes.array
+  };
+
+  constructor(props) {
+    super(props);
+    this.state =  {
+      dataSource: new ListView.DataSource({rowHasChanged:
+(r1, r2) =&gt; r1 !== r2}).cloneWithRows(this.props.data)
+    };
+  }
+
+  componentWillReceiveProps(){
+    this.setState({
+      dataSource: this.state.dataSource.cloneWithRows(this.props.data)
+    });
+  }
+
+  render() {
+    return (
+        &lt;ListView
+          dataSource={this.state.dataSource}
+          renderRow={this.renderComment.bind(this)}
+        /&gt;
+    );
+  }
+  renderComment(row) {
+    return (
+        &lt;Comment author={row.author} &gt;{row.text}&lt;/Comment&gt;
+    );
+  }
+}
+</code></pre>
+
+<p>Every time the CommentList component gets re-rendered, we need to update the dataSource state of the component to display newly added comment to the CommentList. We are just doing that in <code>componentWillReceiveProps</code> method. Note that we wrote a spec to ensure that the propTypes of the component is defined. Read more about propTypes <a href="https://facebook.github.io/react/docs/reusable-components.html">here</a>.</p>
+
+<p>We can list comments but cannot add a new one. For that let us build the CommentForm component. It has two text input fields to input author name and actual comment and a submit button to submit the comment. Let’s build the basic UI of this component and then build the functionality.
+<code>src/components/__specs__/CommentForm.spec.js</code></p>
+
+<pre><code>import React, { View, TouchableNativeFeedback, TextInput, Text } from 'react-native';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+
+import CommentForm from '../CommentForm.js';
+
+describe('&lt;CommentForm /&gt;', () =&gt; {
+  beforeEach(function() {
+     wrapper = shallow(&lt;CommentForm /&gt;);
+  });
+
+  it('should be a view component', () =&gt; {
+    expect(wrapper.type()).to.equal(View);
+  });
+
+  it('should have 2 TextInput components', () =&gt; {
+    expect(wrapper.find(TextInput)).to.have.length(2);
+  });
+
+  it('should have a submit button', () =&gt; {
+    expect(wrapper.find(TouchableNativeFeedback)).to.have.length(1);
+    expect(wrapper.find(TouchableNativeFeedback).containsMatchingElement(&lt;Text&gt;Submit&lt;/Text&gt;)).to.equal(true);
+  });
+});
+</code></pre>
+
+<p><code>src/components/CommentForm.js</code></p>
+
+<pre><code>import React, {Component, View, TouchableNativeFeedback, Text, TextInput} from 'react-native';
+
+export default class CommentForm extends React.Component {  
+  render() {
+    return(
+        &lt;View&gt;
+          &lt;TextInput
+           placeholder="name"
+           style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          /&gt;
+          &lt;TextInput
+           placeholder="comment"
+           style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          /&gt;
+        &lt;TouchableNativeFeedback&gt;
+           &lt;View style={{width: 150, height: 100, backgroundColor: 'red'}}&gt;
+             &lt;Text style={{margin: 30}}&gt;Submit&lt;/Text&gt;
+           &lt;/View&gt;
+        &lt;/TouchableNativeFeedback&gt;
+        &lt;/View&gt;
+    );
+  }
+}
+</code></pre>
+
+<p>The functionality of the CommentForm component is as follows.</p>
+
+<ul>
+  <li>The input value of two TextInput components for entering author and comment should depend on state of the CommentForm component.</li>
+  <li>When user enters text and the text in the input field changes, update the state to corresponding value</li>
+  <li>On clicking the submit button, it should invoke <code>handleCommentSubmit</code> method of CommentBox component, which is passed as props to the CommentForm component and it should also set the author and comment state to initial blank string.</li>
+</ul>
+
+<p>For time-being let us define an empty method in CommentBox component.
+<code>src/components/CommentBox.js</code></p>
+
+<pre><code>import React, {Component,Text, View} from 'react-native';
+
+import CommentList from './CommentList.js';
+import CommentForm from './CommentForm.js';
+
+export default class CommentBox extends React.Component {  
+
+  handleCommentSubmit(comment_data) {    
+  }
+
+  render() {
+    return(
+        &lt;View&gt;
+          &lt;Text&gt;Comment It&lt;/Text&gt;
+          &lt;CommentList /&gt;
+          &lt;CommentForm /&gt;
+        &lt;/View&gt;
+    );
+  }
+}
+</code></pre>
+
+<p>Now lets make sure that state of the CommentForm component changes with data in the input fields and the value of the input components are dependent on state.</p>
+
+<p><code>src/components/__specs__/CommentForm.spec.js</code></p>
+
+<pre><code>import React, { View, TouchableNativeFeedback, TextInput, Text} from 'react-native';
+
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+
+import CommentForm from '../CommentForm.js';
+
+describe('&lt;CommentForm /&gt;', () =&gt; {
+  beforeEach(function() {
+    wrapper = shallow(&lt;CommentForm /&gt;);
+  });
+
+  it('should be a view component', () =&gt; {
+    expect(wrapper.type()).to.equal(View);
+  });
+
+  it('should have an initial state', () =&gt; {
+    expect(wrapper.state('name')).to.equal("");
+    expect(wrapper.state('comment')).to.equal("");
+  });
+
+  it('should have 2 TextInput components', () =&gt; {
+    expect(wrapper.find(TextInput)).to.have.length(2);
+  });
+
+  it('should have a submit button', () =&gt; {
+    expect(wrapper.find(TouchableNativeFeedback)).to.have.length(1);
+    expect(wrapper.find(TouchableNativeFeedback).containsMatchingElement(&lt;Text&gt;Submit&lt;/Text&gt;)).to.equal(true);
+  });
+
+  it('should have author input component with value dependent on state', () =&gt; {
+    wrapper.setState({name: 'JK'});
+
+    expect(wrapper.find(TextInput).first().props().value).to.equal('JK');
+  });
+
+  it('should have the comment input component with value dependent on state', () =&gt; {
+    wrapper.setState({comment: 'An awesome comment'});
+
+    expect(wrapper.find(TextInput).at(1).props().value).to.equal('An awesome comment');
+  });
+
+  it('should change state when the text of author input component changes', () =&gt; {
+    const authorInputComponent = wrapper.find('TextInput').first();
+
+    authorInputComponent.simulate('ChangeText','wenger');
+    expect(wrapper.state('name')).to.equal('wenger');
+  });
+
+  it('should change state when the text of comment input component changes', () =&gt; {
+    const commentInputComponent = wrapper.find('TextInput').at(1);
+
+    commentInputComponent.simulate('ChangeText','arsenal');
+
+    expect(wrapper.state('comment')).to.equal('arsenal');
+  });
+});
+</code></pre>
+
+<p><code>src/components/CommentForm.js</code></p>
+
+<pre><code>import React, {Component, View, TouchableNativeFeedback, Text, TextInput} from 'react-native';
+
+export default class CommentForm extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {name: '', comment: ''};
+  }
+
+  render() {
+    return(
+        &lt;View&gt;
+          &lt;TextInput
+            placeholder="name"
+            style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+            onChangeText={(text) =&gt; this.setState({name: text})}
+            value={this.state.name}
+          /&gt;
+          &lt;TextInput
+            placeholder="comment"
+            style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+            onChangeText={(content) =&gt; this.setState({comment: content})}
+            value={this.state.comment}
+          /&gt;
+          &lt;TouchableNativeFeedback&gt;
+            &lt;View style={{width: 150, height: 100, backgroundColor: 'red'}}&gt;
+              &lt;Text style={{margin: 30}}&gt;Submit&lt;/Text&gt;
+            &lt;/View&gt;
+          &lt;/TouchableNativeFeedback&gt;
+        &lt;/View&gt;
+    );
+  }
+}
+</code></pre>
+
+<p>Now that that's done we'll wire up submission of form on clicking submit button. We must ensure that the submit button click should restore the state of two input components to initial state.</p>
+
+<p><code>src/components/__specs__/CommentForm.spec.js</code></p>
+
+<pre><code>import React, { View, TouchableNativeFeedback, TextInput, Text} from 'react-native';
+
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+import sinon from 'sinon';
+
+import CommentForm from '../CommentForm.js';
+import CommentBox from '../CommentBox.js';
+
+describe('&lt;CommentForm /&gt;', () =&gt; {
+  beforeEach(function() {
+    wrapper = shallow(&lt;CommentForm /&gt;);
+  });
+
+  it('should be a view component', () =&gt; {
+    expect(wrapper.type()).to.equal(View);
+  });
+
+  it('should have an initial state', () =&gt; {
+    expect(wrapper.state('name')).to.equal("");
+    expect(wrapper.state('comment')).to.equal("");
+  });
+
+  it('should have 2 TextInput components', () =&gt; {
+    expect(wrapper.find(TextInput)).to.have.length(2);
+  });
+
+  it('should have a submit button', () =&gt; {
+    expect(wrapper.find(TouchableNativeFeedback)).to.have.length(1);
+    expect(wrapper.find(TouchableNativeFeedback).containsMatchingElement(&lt;Text&gt;Submit&lt;/Text&gt;)).to.equal(true);
+  });
+
+  it('should have author input component with value dependent on state', () =&gt; {
+    wrapper.setState({name: 'JK'});
+    expect(wrapper.find(TextInput).first().props().value).to.equal('JK');
+  });
+
+  it('should have the comment input component with value dependent on state', () =&gt; {
+    wrapper.setState({comment: 'An awesome comment'});
+    expect(wrapper.find(TextInput).at(1).props().value).to.equal('An awesome comment');
+  });
+
+  it('should change state when the text of author input component changes', () =&gt; {
+    const authorInputComponent = wrapper.find('TextInput').first();
+
+    authorInputComponent.simulate('ChangeText','wenger');
+
+    expect(wrapper.state('name')).to.equal('wenger');
+  });
+
+  it('should change state when the text of comment input component changes', () =&gt; {
+    const commentInputComponent = wrapper.find('TextInput').at(1);
+
+    commentInputComponent.simulate('ChangeText','arsenal');
+
+    expect(wrapper.state('comment')).to.equal('arsenal');
+  });
+
+  it('invokes handleCommitSubmit method of CommentBox with author and comment', () =&gt; {
+    sinon.stub(CommentBox.prototype, "handleCommentSubmit");
+
+    const wrapper = shallow(&lt;CommentForm onCommentSubmit={CommentBox.prototype.handleCommentSubmit}/&gt;);
+    const submitButton = wrapper.find('TouchableNativeFeedback').first();
+    wrapper.setState({name: 'JK '});
+    wrapper.setState({comment: ' Arsenal is the best'});
+
+    submitButton.simulate('press');
+
+    expect(CommentBox.prototype.handleCommentSubmit.calledWith({author: 'JK', text: 'Arsenal is the best'})).to.be.true;
+    CommentBox.prototype.handleCommentSubmit.restore();
+  });
+
+  it('sets the state of two input fields to the initial state on press', () =&gt; {
+    sinon.stub(CommentBox.prototype, "handleCommentSubmit");
+
+    const wrapper = shallow(&lt;CommentForm onCommentSubmit={CommentBox.prototype.handleCommentSubmit}/&gt;);
+    const submitButton = wrapper.find('TouchableNativeFeedback').first();
+    wrapper.setState({name: 'JK'});
+    wrapper.setState({comment: 'Arsenal is the best'});
+
+    submitButton.simulate('press');
+
+    expect(wrapper.state('name')).to.equal("");
+    expect(wrapper.state('comment')).to.equal("");
+
+    CommentBox.prototype.handleCommentSubmit.restore();
+  });
+});
+</code></pre>
+
+<p><code>src/components/CommentForm.js</code></p>
+
+<pre><code>import React, {Component, View, TouchableNativeFeedback, Text, TextInput} from 'react-native';
+
+export default class CommentForm extends React.Component {
+
+ constructor(props) {
+  super(props);
+  this.state = {name: '', comment: ''};
+ }
+ static propTypes = {
+  onCommentSubmit: React.PropTypes.func
+ };
+
+ render() {
+  return(
+  &lt;View&gt;
+   &lt;TextInput
+    placeholder="name"
+    style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+    onChangeText={(text) =&gt; this.setState({name: text})}
+    value={this.state.name}
+   /&gt;
+  &lt;TextInput
+   placeholder="comment"
+   style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+   onChangeText={(content) =&gt; this.setState({comment: content})}
+   value={this.state.comment}
+  /&gt;
+  &lt;TouchableNativeFeedback
+   onPress={() =&gt; this.onPressButton()}&gt;
+   &lt;View style={{width: 150, height: 100, backgroundColor: 'red'}}&gt;
+    &lt;Text style={{margin: 30}}&gt;Submit&lt;/Text&gt;
+   &lt;/View&gt;
+  &lt;/TouchableNativeFeedback&gt;
+ &lt;/View&gt;
+ );
+ }
+
+ onPressButton() {
+  var author = this.state.name.trim();
+  var comment = this.state.comment.trim();
+  this.state = {name: '', comment: ''};
+  this.props.onCommentSubmit({author: author, text: comment});
+ }
+}
+</code></pre>
+
+<p>Observe how we test the behaviour of components on user interaction. We use <a href="http://airbnb.io/enzyme/docs/api/ShallowWrapper/simulate.html">simulate()</a> method provided by shallow rendering API of enzyme to simulate the <code>press</code> event here. This method can be used to test other types of user interactions as well.CommentBox component  is where everything is wired up together. It should pass a list of comment data to CommentList as props and also handle storing the comments when submitted from CommentForm.</p>
+
+<p>We’ll use  <a href="https://facebook.github.io/react-native/docs/asyncstorage.html">Asyncstorage</a> of React-Native to store and retrieve comments. We’ll start with getting the comments and passing them to CommentList. The key for AsyncStorage data collection will be passed as props to CommentBox from app’s root component. Let us take care of submitting of a comment first.</p>
+
+<p><code>src/components/__specs__/CommentBox.spec.js</code></p>
+
+<pre><code>import React, { View, Text, AsyncStorage } from 'react-native';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+import sinon from 'sinon';
+
+import CommentBox from '../CommentBox.js';
+import CommentList from '../CommentList.js';
+import CommentForm from '../CommentForm.js';
+
+describe('&lt;CommentBox /&gt;', () =&gt; {
+
+ beforeEach(function() {
+   wrapper = shallow(&lt;CommentBox asyncStorageKey={'comments'} /&gt;);
+ });
+
+ it('should be a view component', () =&gt; {
+   expect(wrapper.type()).to.equal(View);
+ });
+
+ it('should have a title Comment It', () =&gt; {
+   expect(wrapper.contains(&lt;Text&gt;Comment It&lt;/Text&gt;)).to.equal(true);
+ });
+
+ it('should render comment list component', () =&gt; {
+   expect(wrapper.find(CommentList)).to.have.length(1);
+ });
+
+ it('should render comment form component', () =&gt; {
+   expect(wrapper.find(CommentForm)).to.have.length(1);
+ });
+
+ it('should have an initial state', () =&gt; {
+   expect(wrapper.state('data').length).to.equal(0);
+ });
+
+ it('should pass its state data as props to commentlist component', () =&gt; {
+   expect(wrapper.find(CommentList).props().data).to.eql(wrapper.state('data'));
+ });
+
+ it('should pass its handleCommentSubmit method as props to CommentForm component', () =&gt; {
+   commentBox = new CommentBox();
+
+   var definedMethod = commentBox.handleCommentSubmit;
+
+   var passedMethod = wrapper.find(CommentForm).props().onCommentSubmit;
+   expect(definedMethod.toString()).to.equal(passedMethod.toString());
+ });
+
+ describe('handleCommentSubmit', () =&gt; {
+  it('stores comment data using asyncstorage on comment submit', () =&gt; {
+   var data = [
+     { author: "Pete Hunt", text: "This is one comment"},
+     { author: "Jordan Walke", text: "This is a super comment"},
+     { author: "Jordan Walkerr", text: "This is an ordinary comment"}
+   ];
+
+   commentBox = new CommentBox({asyncStorageKey: 'comments'});
+   commentBox.state.data = data;
+   var commentData = {author: 'JK', text: 'Arsenal is the best'};
+   data.push(commentData);
+   var spy = sinon.spy(AsyncStorage, "setItem");
+
+   commentBox.handleCommentSubmit(commentData);
+
+   expect(spy.calledOnce).to.be.true;
+   expect(spy.calledWith('comments', JSON.stringify(data))).to.be.true;
+</code></pre>
+
+<p><code>src/components/CommentBox.js</code></p>
+
+<pre><code>import React, {Component, Text, View, AsyncStorage } from 'react-native';
+import CommentList from './CommentList.js';
+import CommentForm from './CommentForm.js';
+
+export default class CommentBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {data: []};
+    this.handleCommentSubmit = this.handleCommentSubmit.bind(this);
+  }
+
+  static propTypes =  {
+    asyncStorageKey: React.PropTypes.string
+  };
+
+  handleCommentSubmit(comment_data) {
+    var comments = this.state.data;
+    comments.push(comment_data);
+    AsyncStorage.setItem(this.props.asyncStorageKey, JSON.stringify(comments));
+  }
+
+  render() {
+    return(
+        &lt;View&gt;
+          &lt;Text&gt;Comment It&lt;/Text&gt;
+          &lt;CommentList data={this.state.data}/&gt;
+          &lt;CommentForm onCommentSubmit={this.handleCommentSubmit}/&gt;
+        &lt;/View&gt;
+    );
+  }
+}
+</code></pre>
+
+<p>That takes care of submitting comment part. Now lets do the comment loading part.</p>
+
+<p><code>src/components/__specs__/CommentBox.spec.js</code></p>
+
+<pre><code>import React, { View, Text, AsyncStorage } from 'react-native';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+import sinon from 'sinon';
+
+import CommentBox from '../CommentBox.js';
+import CommentList from '../CommentList.js';
+import CommentForm from '../CommentForm.js';
+
+describe('&lt;CommentBox /&gt;', () =&gt; {
+ describe('handleCommentSubmit', () =&gt; {
+   it('stores comment data using asyncstorage on comment submit', () =&gt; {
+     var data = [
+      { author: "Pete Hunt", text: "This is one comment"},
+      { author: "Jordan Walke", text: "This is a super comment"},
+      { author: "Jordan Walkerr", text: "This is an ordinary comment"}
+    ];
+
+    commentBox = new CommentBox({asyncStorageKey: 'comments'});
+    commentBox.state.data = data;
+    var commentData = {author: 'JK', text: 'Arsenal is the best'};
+    data.push(commentData);
+    var spy = sinon.spy(AsyncStorage, "setItem");
+
+    commentBox.handleCommentSubmit(commentData);
+
+    expect(spy.calledOnce).to.be.true;
+    expect(spy.calledWith('comments', JSON.stringify(data))).to.be.true;
+ });
+
+ it('invokes the getComments method', () =&gt; {
+   var data = [
+     { author: "Pete Hunt", text: "This is one comment"},
+     { author: "Jordan Walke", text: "This is a super comment"},
+     { author: "Jordan Walkerr", text: "This is an ordinary comment"}
+   ];
+
+   commentBox = new CommentBox({asyncStorageKey: 'comments'});
+   sinon.stub(commentBox, "getComments");
+   var commentData = {author: 'JK', text: 'Arsenal is the best'};
+
+   commentBox.handleCommentSubmit(commentData);
+
+   expect(commentBox.getComments.calledOnce).to.be.true;
+   });
+  });
+ });
+</code></pre>
+
+<p><code>src/components/CommentBox.js</code></p>
+
+<pre><code>import React, {Component,Text, View, AsyncStorage } from 'react-native';
+import CommentList from './CommentList.js';
+import CommentForm from './CommentForm.js';
+
+export default class CommentBox extends React.Component {
+ constructor(props) {
+   super(props);
+   this.state = {data: []};
+   this.handleCommentSubmit = this.handleCommentSubmit.bind(this);
+   this.getComments = this.getComments.bind(this);
+ }
+
+ static propTypes = {
+   asyncStorageKey: React.PropTypes.string
+ };
+
+ getComments() {
+   AsyncStorage.getItem(this.props.asyncStorageKey)
+     .then((comments) =&gt; {
+       comments = JSON.parse(comments);
+       this.setState({ data: comments });
+     })
+    .catch(() =&gt; {
+    });
+ }
+
+ handleCommentSubmit(comment_data) {
+   var comments = this.state.data;
+   comments.push(comment_data);
+   AsyncStorage.setItem(this.props.asyncStorageKey, JSON.stringify(comments));
+   this.getComments();
+ }
+
+ render() {
+   return(
+     &lt;View&gt;
+       &lt;Text&gt;Comment It&lt;/Text&gt;
+       &lt;CommentList data={this.state.data}/&gt;
+       &lt;CommentForm onCommentSubmit={this.handleCommentSubmit}/&gt;
+     &lt;/View&gt;
+  );
+ }
+}
+</code></pre>
+
+<p>To get the app up and running we need to have a root component and register it in the App registryLet us create a component called App and render CommentBox component inside it. While rendering the CommentBox component, we pass in the AsyncStorage key as props.</p>
+
+<p><code>src/__specs__/app.spec.js</code></p>
+
+<pre><code>import React from 'react-native';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+
+import CommentBox from '../components/CommentBox.js';
+import App from '../app.js';
+describe('&lt;App /&gt;', () =&gt; {
+  it('should render a commentBox component', () =&gt; {
+    const wrapper = shallow(&lt;App /&gt;);
+
+    expect(wrapper.find(CommentBox)).to.have.length(1);
+  });
+
+  it('should pass data as props on rendering CommentBox component', () =&gt; {
+    const wrapper = shallow(&lt;App/&gt;);
+
+    expect(wrapper.find(CommentBox).props().asyncStorageKey).to.eql('comments');
+  });
+});
+</code></pre>
+
+<p><code>src/components/app.js</code></p>
+
+<pre><code>import React, { Component } from 'react-native';
+import CommentBox from './components/CommentBox.js';
+
+export default class App extends Component {
+  render() {
+
+    return (
+        &lt;CommentBox asyncStorageKey={'comments'}/&gt;
+    );
+  }
+}
+</code></pre>
+
+<p>Now register the component in the app registry and that’s it. <code>index.android.js</code></p>
+
+<pre><code>import { AppRegistry } from 'react-native';
+import App from './src/app';
+AppRegistry.registerComponent('ReactNativeBoilerplate', () =&gt; App);
+</code></pre>
+
+<p>You can view the entire codebase <a href="https://github.com/multunus/React-Native-TDD-Tutorial">here</a> .</p>
+
+<hr />
+
+<p><strong>Finally</strong> Phew!  That was a long exercise. We’re proud that you completed it and happy for your learnings. That was mostly about UI testing. We also have sample tests for asynchronous JS code, redux, authentication etc. in our boilerplate. Do check them out.</p>
+
+<p>TDD provides a tight feedback loop that cranks up our development workflow and improves quality and maintainability of code. TDD is one among many engineering practises that we follow here at Multunus. There are other practises that we follow, like <a href="https://www.thoughtworks.com/continuous-integration">Continous Integration</a>.</p>
+
+<p>We’ve started integrating these concepts into our boilerplate too. Do checkout our blogpost about <a href="http://www.multunus.com/blog/2016/06/automated-environment-management-react-native-ios/">Automated environment management in React Native – iOS</a>.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Setting up Development Environment using Vagrant</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2012 blog_2012_10 blog_2012_10_setting-up-development-environment-using-vagrant blog_2012_10_setting-up-development-environment-using-vagrant_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Setting up Development Environment using Vagrant</h1>
+            <a href="/blog/tags/cap-abhilash" class="blog-author">abhilash</a>
+            , <a href="/blog/tags/cap-vimal" class="blog-author">vimal</a>
+      <p class="post-description">October  3, 2012</p>
+      <h2 id="problem">Problem</h2>
+<p>We have some projects which takes lot of effort to set up. As with every projects setting up development environment includes installing git, curl, apache, mysql-server, ruby, rvm, ruby-gems for the app, etc. and also the project specific configurations.</p>
+
+<p>Doing all these every time when you need to setup the development environment will be time consuming and takes a lot of effort.</p>
+
+<h2 id="solution">Solution</h2>
+<p>Setting up the development environment in VM using Vagrant.</p>
+
+<p>Vagrant helps to build development environment for projects and rebuild them when needed. And this environment can be shared among the team easily.</p>
+
+<h2 id="how-">How ?</h2>
+<p>Vagrant is primarily a driver for Oracle VirtualBox virtual machines. You can download and install Vagrant from <a href="http://downloads.vagrantup.com/">here</a> or you can install it as a ruby gem for the rails projects. Vagrant uses a “base box” which is a base install (an OS) for the system you are going to use.</p>
+
+<p>Different flavours of base boxes can be downloaded from <a href="http://www.vagrantbox.es/">http://www.vagrantbox.es/</a>.</p>
+
+<p>First step is to mark the root directory and setup the basic required files using the following command:</p>
+
+<p><code>
+vagrant init
+</code></p>
+
+<p>This will create a file called <strong>Vagrantfile</strong> this will contain the configuration details for the VM.</p>
+
+<p>After the project initailization you can download Vagrant boxes from <a href="http://www.vagrantbox.es/">http://www.vagrantbox.es/</a> and add it to your project:</p>
+
+<p><code>
+vagrant box add lucid64 lucid64.box
+</code></p>
+
+<p>You can also add the box from a remote server using:</p>
+
+<p><code>
+vagrant box add lucid64 http://files.vagrantup.com/lucid64.box
+</code></p>
+
+<p>To list the boxes that you added you can use:</p>
+
+<p><code>
+vagrant box list
+</code></p>
+
+<p>Now you have to edit the Vagrantfile to use the base box that you have added.</p>
+
+<p><code>
+Vagrant::Config.run do |config|
+config.vm.box = "lucid64" 
+end
+</code></p>
+
+<p>Now we can start our new VM:</p>
+
+<p><code>
+vagrant up
+</code></p>
+
+<p>This will start a fully functional VM. To access the VM you have to do ssh:</p>
+
+<p><code>
+vagrant ssh
+</code></p>
+
+<p>This will log you into the virtual machine. Now you can start setting up the development environment. Once everything is ready we can package this VM to a box. This will help us to share the virtual environment that we created with the other team members.</p>
+
+<p><code>
+vagrant package
+</code></p>
+
+<p>This will create a vagrant box with the entire dev environment setup. Now to use this any machine, you have to install Virtualbox and Vagrant. Then add this box using:</p>
+
+<p><code>
+vagrant box add lucid64_with_dev_setup package.box
+</code></p>
+
+<p>You can create a VM with this box and all the dev environment setup will be available with this VM.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

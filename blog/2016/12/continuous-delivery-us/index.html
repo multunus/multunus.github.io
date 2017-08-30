@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Continuous Delivery – Is it for everyone?</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2016 blog_2016_12 blog_2016_12_continuous-delivery-us blog_2016_12_continuous-delivery-us_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Continuous Delivery – Is it for everyone?</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">December  5, 2016</p>
+      <p>During the meetups or conferences related to Continuous Delivery, I've seen many raising the below concerns about Continuous Delivery:</p>
+
+<ul>
+  <li>I think it works only for technology companies. Does it work in high-security environments like banks and insurance companies?</li>
+  <li>It works for high performing companies like Amazon, Facebook and Netflix. Our project is unique so it may not work</li>
+  <li>Our business is not ready for Continuous Delivery</li>
+  <li>The investment required is too big which, our business can't afford</li>
+  <li>We'd invested the time, but got little returns.</li>
+</ul>
+
+<p>All of us know stories and experiences are the most effective way to learn. Let me share a few of my experiences with Continuous Delivery and how it impacted great business outcomes and team performance.</p>
+
+<h1 id="dream-come-true">Dream come true</h1>
+
+<p><em>"A longtime dream come true!  It is exciting to <strong>be able to </strong>educate patients while they wait in the exam room. They select and view topics of their choice.  The presentations are engaging and free of commercial bias. This </em><strong><em>is</em></strong><em> the future<strong>"</strong>. ~ Feedback from the senior doctor at the clinic</em></p>
+
+<p>In my <a href="http://www.multunus.com/blog/2016/11/tryst-continuous-delivery/">earlier post</a>, I mentioned the product we developed for a Media Company, where we deployed Android Tablets and Linux Media Players as Kiosk Devices in clinics across the US. These devices air informative content relevant to the patients visiting the clinics.</p>
+
+<p>We deployed the first kiosk mode tablet within 6 weeks. We received excellent feedback from both the patients and the doctors. The content improved the relationship between the patients, doctors and the clinic as patients became more curious and optimistic about being cured.</p>
+
+<h2 id="the-constraints">The Constraints</h2>
+
+<p>Once the number of devices increased in the field, we identified that the "initial setup of the device" was the most time-consuming process. We automated the same using Custom ROM, which increased the number of installations drastically.</p>
+
+<p>For remote control of the devices, we were using a commercial software - a well known Mobile Device Management Software. The software was costly and had reliability issues. But the focus was on acquiring customers, and the cost was manageable until the customer base reached a certain threshold.</p>
+
+<p>But later it became a constraint as the reliability of the software affected the revenues. We had to make frequent updates to the devices to learn faster from the field, but because of unreliable nature of the off-the-shelf software, we couldn't deploy as frequently we expected.</p>
+
+<p>We invested on porting it to own custom solution over a period of time through continuous delivery and got rid of the commercial software once we got enough confidence on our own solution.</p>
+
+<p><a href="https://s3.amazonaws.com/multunus-website/uploads/2016/11/if-stats.jpg"><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/11/if-stats.jpg" alt="if-stats" /></a></p>
+
+<p><em>"<strong>Without the speed of the </strong>Multunus<strong> team and the ability to show real live tablets, we </strong>would** not be in the position. So, thank you and congrats."</em></p>
+
+<h2 id="speed-discipline-and-quality---not-a-paradox">Speed, Discipline and Quality - Not a paradox</h2>
+
+<p>Delivering on the business cadence wouldn't have been possible without Continuous Delivery - delivering software continuously in a sustainable and predictable manner.</p>
+
+<p>It is not simple to bring in that cadence. There was always pressure to deliver faster with compromises, especially on the code quality.</p>
+
+<p>It is the business policy to hustle, and that is where the great engineering culture comes into the picture. A culture that balances discipline, quality and speed. Many consider Speed and Discipline don't go together. But if you practice Continuous Delivery well, you see that it can be done.</p>
+
+<p>To take one instance, one of the major struggles for us was to <a href="http://www.multunus.com/blog/2014/02/tdd-using-roboelectric/">Test Drive Android Code</a>. Because of the way the Android Framework was designed and also because of the device dependency to run the test suite, the unit tests were slower which has affected the pace of development. We moved to <a href="http://robolectric.org/">Robolectric</a>, but learning Robolectric while writing the production code was a challenge which we balanced and overcame over a period of time.</p>
+
+<h2 id="the-outage">The outage</h2>
+
+<p>Continuous Delivery is good but requires investment too. When invested well, it gives you continuous and sustainable delivery of high-quality software. We learned that hard lesson.</p>
+
+<p>The business decided to move away from the off-the-shelf mobile device management software to the custom built one. They arrived at a deadline without planning much about the smooth transition from one system to the other for the production devices. With large devices on the field, with hardly any human access, deploying a new system needs to be done in small batches of rollouts along with enough monitoring and alerting systems to help us quickly react.</p>
+
+<p>The deployment of monitoring systems got deprioritized with the other features. A small configuration issue resulted in an outage for 80% of the field devices. Something that was least expected and became very costly.</p>
+
+<p><a href="http://www.multunus.com/blog/2014/07/production-outages-part1/">We pulled off the situation</a> both emotionally and technically using the same agility practices. It was really stressful and high pressure, but the practices helped us to maintain calm and take control as quickly as possible.</p>
+
+<h1 id="christmas-every-week">Christmas every week</h1>
+
+<p><em>"We consider Every Tuesday meeting [the lending meeting] as Christmas  every Tuesday<strong>"</strong>. ~ Feedback from a loan officer <strong>about</strong> the weekly production updates</em></p>
+
+<p>A few years back a Micro-Finance institute approached us to build end-to-end loan processing application. They were managing the entire cycle through Zoho and Google Docs integrated with 3rd party APIs.</p>
+
+<p>When the number of manual steps  became a bottleneck for scaling to more users, they approached us to build an end to end solution.</p>
+
+<h2 id="weakest-linkin-the-chain">Weakest link in the chain</h2>
+
+<p><a href="http://www.multunus.com/portfolio/micro-loan-processing-platform/"><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/12/closer.png" alt="closer" /></a></p>
+
+<p>The weakest link was the loan closing module. The loans are requested for different reasons or purposes  - an individual to start a business, a group of people starting a business as partners, a small business taking a loan to expand their business - as examples.</p>
+
+<p>So we need to slice entire the loan processing system into multiple modules and automate one by one. We identified the workflow to be automated, agreed on the UX considering that this needs to be used by non-tech savvy people and built the first version in eight weeks.</p>
+
+<h2 id="handling-resistance">Handling Resistance</h2>
+
+<p>The first version was basic - support for only one type of loan - just enough to get early feedback. The customer was embarrassed to release it to his loan officers. We were very persistent because we value Continuous learning and experimenting, so told him "let's try this once, and later if you think release early is not working let's not do that anymore".</p>
+
+<p>Once it went to production, he and his colleagues saw the value of the same and got the power of "Done means Released" and "Iterative Development".</p>
+
+<p>Our customer was a programmer too, and the build pipeline gave him the confidence to change the code and deploy. Feature Toggles gave him the power of turning features on/off according to his discretion with no dependency on us.</p>
+
+<p>All these were possible because of the investment we'd put in for a build pipeline to make the codebase ready to deploy anytime.</p>
+
+<p><a href="https://s3.amazonaws.com/multunus-website/uploads/2016/12/Continuous-Delivery-Case-Studies-Part-1.png"><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/12/Continuous-Delivery-Case-Studies-Part-1.png" alt="" /></a></p>
+
+<h1 id="iterative-and-incremental">Iterative and Incremental</h1>
+
+<p>The above case studies show how Continuous Delivery can result in positive business outcomes. The focus is on the discipline of delivery, to become predictable and sustainable through iterative and incremental development.</p>
+
+<p><a href="https://s3.amazonaws.com/multunus-website/uploads/2016/12/iterative-development.png"><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/12/iterative-development.png" alt="iterative-development" /></a></p>
+
+<p>I can write a set of tools we used for Test Driven Development, Continuous Integration, Configuration Management etc. Those are important, but the easier bit too. The tools will help you be efficient, the process of iterations is what helps in being predictable.</p>
+
+<p>So what is the iteration? It is a four steps process:</p>
+
+<h2 id="understand">Understand</h2>
+
+<p>The key here is understanding the end users, understanding the business. The important questions to ask are: What are the problems? What are the constraints? This improves Empathy - the empathy for end users, empathy for the team - the key for any product's success.</p>
+
+<p>During the onsite trip, we visited and spoke to the end users , watched their challenges and their constraints. This helped us to understand "why are we building what we are building".</p>
+
+<h2 id="define">Define</h2>
+
+<p>In this step, we defined what are the milestones to be achieved. The team has a good understanding of the goals and the constraints, this step is solving those in a way that the business gets the value as quickly as possible.</p>
+
+<p>We did quick prototypes and ran it through the end users. This helped us to build the right things which users will potentially use. These prototypes become the basis for what needs to be built and the focus is to have the first usable version within 4-6 weeks or earlier.</p>
+
+<p>We use <a href="http://www.gv.com/sprint/">Design Sprints</a> and <a href="http://impactmapping.org/">Impact Mapping</a> to define the milestones which rely heavily on <a href="https://en.wikipedia.org/wiki/Design_thinking">Design Thinking Principles</a>.</p>
+
+<h2 id="deliver">Deliver</h2>
+
+<p>This is the step to convert the ideas into working software in small steps in a sustainable and repeatable way. The focus in this step is to make the software demoable throughout so that the deployment can be done anytime.</p>
+
+<p>The standard Extreme Programming and Continuous Delivery Practices are followed here such as:</p>
+
+<ul>
+  <li><a href="https://github.com/multunus/engineering-handbook/blob/master/tdd.md">Test Driven Development</a></li>
+  <li><a href="https://github.com/multunus/engineering-handbook/blob/master/pair-programming.md">Pair Programming</a></li>
+  <li><a href="https://continuousdelivery.com/foundations/continuous-integration/">Continuous Integration</a></li>
+  <li><a href="http://www.multunus.com/blog/2016/03/merge-hells-feature-toggles-rescue/">Feature Toggles</a></li>
+  <li><a href="https://continuousdelivery.com/foundations/configuration-management/">Automated Deployment</a></li>
+  <li><a href="http://martinfowler.com/bliki/DeploymentPipeline.html">Build Pipeline</a></li>
+</ul>
+
+<h2 id="improve">Improve</h2>
+
+<p>Nothing is perfect, that is why Continuous Improvement is important. In this step you look back and ahead and see what needs to be changed to improve the value stream. Here look at the business metrics to see what has changed and what needs to be improved. </p>
+
+<p><a href="http://www.jamesshore.com/Agile-Book/retrospectives.html">Retrospectives</a> and <a href="http://blog.crisp.se/2009/09/29/henrikkniberg/1254176460000">Cause-Effect Analysis</a> help the team to reflect and improve continuously.  </p>
+
+<p>And finally, <strong><em>rinse and repeat</em></strong> the process continuously throughout the software delivery.</p>
+
+<h2 id="keen-togive-a-try">Keen to give a try?</h2>
+
+<p><a href="http://www.multunus.com/blog/2016/11/continuous-delivery-consulting-framework/">Checkout our detailed write-up</a> to know more about a step by stepprocess of implementing Continuous Delivery.</p>
+
+<p>Let's know your thoughts/questions/comments/suggestions. We will be glad to talk more.</p>
+
+<h1 id="more-stories">More Stories</h1>
+
+<p>The above are the highlights of our experiences with Continuous Delivery.</p>
+
+<p>If you want to hear more stories about Continuous Delivery check out the following links. It talks in detail about implementing Continuous Delivery across different domains, the challenges faced and how the teams overcame the same.</p>
+
+<p><a href="https://www.youtube.com/watch?v=bbWFCKGhxOs">Banking on Innovation &amp; DevOps - Capital One</a></p>
+
+<p><a href="https://www.infoq.com/presentations/financial-services-devops">Fighting the #fintech Wave with DevOps</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=bAPyI0Js5pE">DevOps for Telegraph Companies - Western Union</a></p>
+
+<p><a href="https://www.infoq.com/presentations/CIM-continuous-delivery">Continuous Delivery @ Comcast Interactive Media</a></p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

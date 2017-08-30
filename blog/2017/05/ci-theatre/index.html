@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Are you doing CI or CI Theatre ?</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_05 blog_2017_05_ci-theatre blog_2017_05_ci-theatre_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Are you doing CI or CI Theatre ?</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">May 27, 2017</p>
+      <p><img src="https://s3.amazonaws.com/multunus-cdimages/theatre.jpg" alt="How to do Code Review" /></p>
+
+<p>There are many Continuous Integrations tools available - Jenkins (the most popular one), and other hosted tools such as Circle CI, Wercker, Codeship, Bitrise to name a few. Does it mean that if we are using any of the tools, we are "<em>doing CI</em>?"</p>
+
+<p>The following is the definition of Continuous Integration as per the Wikipedia:</p>
+
+<p><em>Continuous Integration (CI) is the practice of merging all developer working copies to a shared <strong><a href="https://en.wikipedia.org/wiki/Trunk_(software)">mainline</a> several times a day</strong>.</em></p>
+
+<p>According to the definition above, if you are not integrating <strong><em>at least once in a day</em></strong> to mainline (aka trunk), then it is not Continuous Integration. Instead, it is called <a href="https://www.thoughtworks.com/radar/techniques/ci-theatre">CI Theatre</a> which means:</p>
+
+<ul>
+  <li>
+    <p>Running CI against a shared mainline but with infrequent commits, so integration isn't really continuous;</p>
+  </li>
+  <li>
+    <p>Running a build with poor test coverage</p>
+  </li>
+  <li>
+    <p>Allowing the build to stay red for long periods;</p>
+  </li>
+  <li>
+    <p>Running CI against feature branches which result in <a href="http://paulhammant.com/2017/02/14/fake-news-via-continuous-isolation/">continuous isolation</a></p>
+  </li>
+</ul>
+
+<h2 id="commits-as-communication">Commits as communication</h2>
+
+<p>CI Theatre gives the developers a good feeling, but sadly it misses out the benefits.</p>
+
+<p>Commits are the way to communicate between the developers. If we are delaying that for later by not committing or committing to a branch, then it is a problem as it is important to communicate at the right time.</p>
+
+<p>The Feature Branching popularised by Github Flow makes sense for Open Source where you need a more rigorous way to look at what goes into the codebase, in an organisation where you seem to be knowing or can know each individual who commits code, a very strict commit policy may not be required.</p>
+
+<p>If you believe that your environment totally demands Code Review, do pairing which is the best way to review as it is a continuous review or have short living branches i.e. branches those live for few hours to a day or two.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/code-review.png" alt="How to do Code Review" /></p>
+
+<p><sup><em><strong>Courtesy:</strong> <a href="https://speakerdeck.com/tdpauw/xp2017-feature-branching-is-evil">Feature Branching is Evil by Thierry de Pauw</a></em></sup></p>
+
+<p>And the tooling is not important for doing Continuous Integration. Read <a href="http://www.jamesshore.com/Blog/Continuous-Integration-on-a-Dollar-a-Day.html">Continuous Integration a Dollar a Day</a>, to see how to <em>"do CI"</em> with an old machine and a rubber duck.</p>
+
+<p>Once you start <em>doing CI</em> [not <a href="https://www.gocd.io/2017/05/16/its-not-CI-its-CI-theatre/"><em>CI Theatre</em></a>], see whether you pass the <a href="https://martinfowler.com/bliki/ContinuousIntegrationCertification.html">CI certification test</a>.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/ci-certification.png" alt="CI Certification" /></p>
+
+<p>If it passes, excellent. You are on the right track for Continuous Delivery.</p>
+
+<h2 id="wrong-branching-strategy">Wrong branching strategy</h2>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/long-lived-branches.png" alt="Long Lived Branches" /></p>
+
+<p>I got a chance to listen to <a href="https://twitter.com/alainhelaili">Alain Hélaïli</a> about <a href="https://xp2017.sched.com/event/91if/end-to-end-agility-at-github">End to End Agility @ Github</a> in which he emphasised that the branches are short lived @ Github than the complex long-lived branches as shown above. And they deploy 50 times a day to production. But it is sad to see that many of us ignore "short-lived" from the branching and say we follow Github flow which kills the purpose.</p>
+
+<p>I also heard about an organisation installing a daemon on every developer machine which deletes uncommitted changes. That will be really fun :)</p>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

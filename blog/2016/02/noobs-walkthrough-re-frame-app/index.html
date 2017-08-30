@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>A Noob's Walkthrough of a re-frame Application</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2016 blog_2016_02 blog_2016_02_noobs-walkthrough-re-frame-app blog_2016_02_noobs-walkthrough-re-frame-app_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">A Noob's Walkthrough of a re-frame Application</h1>
+            <a href="/blog/tags/cap-jerry" class="blog-author">jerry</a>
+      <p class="post-description">February  5, 2016</p>
+      <p>Are you keen on learning how to build next-gen apps using
+<a href="https://github.com/Day8/re-frame">re-frame</a>? Are you also the type of person that learns best by observing a fully functional prototype purring on the side? Look no further! You have arrived at your destination. Well, you've probably arrived at the first step…</p>
+
+<h2 id="so-what-exactly-is-re-frame">So what exactly is re-frame?</h2>
+
+<p>re-frame is a very simple but expressive library for writing single-page applications (SPAs) in
+<a href="https://github.com/clojure/clojurescript">Clojurescript</a> using
+<a href="http://reagent-project.github.io/">Reagent</a>. Why re-frame, you ask. Because Clojurescriiiipt and Reaaaaaact!!! No really, when functional programming meets reactive programming, it's a new world of possibilities. You'll soon see why. I really recommend going through the brilliant
+<a href="https://github.com/Day8/re-frame/blob/master/README.md">readme</a> that has been put together for the re-frame repo once you're comfortable with the basic aspects that are explained here.</p>
+
+<p>This walkthrough is an attempt at simplifying as much as possible the working of a re-frame application. It does not delve into the depths of how re-frame works, but gives you enough information to take that dive by the end. Of course it is necessary that you be familiar with Clojurescript and Reagent (and hence
+<a href="https://facebook.github.io/react/">React</a> - duh!). While you need not have written any applications using either, you should at the least know the basic syntax of both.</p>
+
+<p>Well then, assuming that's in order, let's jump in!</p>
+
+<h2 id="and-what-are-we-doing-today">And what are we doing today?</h2>
+
+<p>This is a walkthrough and so we need something to, you know, walk through. I thought we could build something together, but
+<a href="https://github.com/tacticiankerala">Sreenath</a> has built a
+<a href="http://tacticiankerala.github.io/re-frame-sample-app/resources/public/index.html">nice little app</a> that we can use. Go on, have a look at it. Use the app and see what it does.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/02/screenshot-2.png" alt="re-frame-sample-app-screenshot" /></p>
+
+<p>You would probably also be interested in going through
+<a href="https://github.com/tacticiankerala/re-frame-sample-app">the codebase</a>. If you're keen on getting the app running locally, the readme in the repo section explains how to do so.</p>
+
+<p>Now, we're going to see how data and control flows through a re-frame app through this example.</p>
+
+<h2 id="the-bare-necessities">The Bare Necessities</h2>
+
+<p>No, this is not a sing-along of The Jungle Book!</p>
+
+<p>Let's start by having a look at the core constituents of every re-frame app:</p>
+
+<ul>
+  <li>
+    <p><strong>Router:</strong>
+ Our app needs to be capable of redirecting the various events triggered by a user to the right places. We'll see soon where and how these events are sent and who processes them.</p>
+  </li>
+  <li>
+    <p><strong>Data store:</strong>
+ Every app out there is in charge of manipulating and storing data. And since we're talking about a React app, we want a reactive data store - one that tells us when there are changes.</p>
+  </li>
+  <li>
+    <p><strong>Views:</strong>
+ This is where we add the visual components of our app. I'm talking of course about the Reagent components.</p>
+  </li>
+  <li>
+    <p><strong>Handlers:</strong>
+ We need agents in the field to manage the events that occur on the DOM. Once an event occurs, it gets dispatched to the handler, which then takes some action. But for this to happen, we need to register the events against their handlers in the router (we'll get there).</p>
+  </li>
+  <li>
+    <p><strong>Subscriptions:</strong>
+ Once a handler does its thing, there are likely to be changes in the data store. A reactive system is expected to update its view automatically when this happens. We'll see how this happens.</p>
+  </li>
+</ul>
+
+<p>So at a high level, here's how it rolls.
+View components get rendered onto the DOM that the user can interact with. These interactions trigger
+events which are dispatched to
+handlers. The handlers in turn usually end up mutating
+data in the data store causing components that have
+subscribed to those data entries to trigger updation of the DOM. And the cycle repeats. Piece of cake, ain't it?</p>
+
+<p><img src="/images/www.multunus.com/wp-content/uploads/2016/02/img1.png" alt="re-frame-flowchart" /></p>
+
+<h2 id="the-directory-structure">The Directory Structure</h2>
+
+<p>Before diving into further details, there's one more thing we need to know. There are two main sources of code to be aware of. One comprises the Clojurescript files that we'll be writing to power the application logic behind our SPA. These files are located in <code>app_root/src/cljs/app_name/</code>. In our example, it becomes <code>re-frame-sample-app/src/cljs/github_profile/</code>.</p>
+
+<p>The second is the static assets such as styles and the HTML template files. These are located in <code>app_root/resources/public/</code>. You should check out what is available in these folders. You'll notice that there's a folder containing Javascript in the second folder. This is where the JS files generated after compiling our Clojurescript code are stored.</p>
+
+<h2 id="where-it-all-starts">Where It All Starts</h2>
+
+<p>Now, to set things in motion, we need a root page to be displayed in our app. This is where every user lands the first time. This stuff is coded in the <code>core.cljs</code> file. If you look at it, you'll find the following block of code:</p>
+
+<pre><code>(defn ^:export init []
+  (routes/app-routes)
+  (re-frame/dispatch-sync [:initialize-db])
+  (mount-root))
+</code></pre>
+
+<p>Let's ignore how we got to this point for the time being. What matters more is that we're here and now we want to know what's going to happen. The first two lines initialize the router and data store (don't worry about these, you'll get them shortly). Our focal point at the moment is the last line of this method, which invokes a method called
+mount-root:</p>
+
+<pre><code>(defn mount-root []
+  (reagent/render [views/main-panel]
+          (.getElementById js/document "app")))
+</code></pre>
+
+<p>This method goes through the DOM hunting for an element with the id app. If you look at the index.html file in the static source directory mentioned above, you'll find a
+div with this id. Once it finds this element, it renders what we're calling the main panel.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/02/img2.png" alt="re-frame-flowchart" /></p>
+
+<h2 id="our-first-view">Our First View</h2>
+
+<p>We've now asked for a render of the main panel, which is essentially a Reagent component. In our views.cljs file, this can be found in the method
+main-panel:</p>
+
+<pre><code>(defn main-panel []
+  (let [active-panel (re-frame/subscribe [:active-panel])]
+    (fn []
+      [:div
+      [loading-throbber]
+      [user-name-and-avatar]
+      (panels @active-panel)
+      ])))
+</code></pre>
+
+<p>This seems quite straightforward, doesn't it? Well, let's go through it line by line. The first line of the method is a subscription. Yes, the same one we were talking about earlier. What that line does is that it triggers a 'listener' for changes to an entry in the data store called <code>active-panel</code>.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/02/img3.png" alt="re-frame-flowchart" /></p>
+
+<p>But where's the data store? If you noticed, there's a file called <code>db.cljs</code>. This however does not contain an entry called <code>active-panel</code>. Wait, so where did that now come from? Jeez!</p>
+
+<p>Remember that we're still at the root view of our application. The root path is at the <code>/</code> location. Just like any other framework, when you visit a particular path/route, there's a couple of things that need to happen. Have a look at the routes in <code>routes.cljs</code>. You'll find the following block of code, which does exactly that:</p>
+
+<pre><code>(defroute "/" []
+  (re-frame/dispatch [:set-active-panel :home-panel]))
+</code></pre>
+
+<p>Something ring a bell? When we visit this path, an event is dispatched. Events are simply vectors that hold nothing but pure data. In our case, the event has information about the name of the event <code>:set-active-panel</code> and a parameter to support the event, <code>:home-panel</code>. So now what?</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/02/img5.png?w=1133" alt="re-frame-flowchart" /></p>
+
+<p>At the beginning, we briefly touched upon the fact that events need to be registered against their handlers in the router. When an event occurs, it reaches the router first. The router then checks against the registered handlers and conveys the event to the matching handlers. One thing to note is that there need not be a one-to-one mapping between events and handlers. Handler registration in our example is done in <code>handlers.cljs</code>. The following snippet is from that file:</p>
+
+<pre><code>(re-frame/register-handler
+:set-active-panel
+(fn [db [_ active-panel]]
+  (assoc db :active-panel active-panel)))
+</code></pre>
+
+<p>This dictates that once the event <code>:set-active-panel</code> is dispatched, set the <code>:active-panel</code> entry in the data store to the parameter that got sent in with the event. In our case, the parameter is <code>:home-panel</code>. Hence a new entry gets added in the data store called active-panel with the value <code>:home-panel</code>.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/02/img6.png?w=1125" alt="re-frame-flowchart" /></p>
+
+<p>Since the initialization is a one-time activity, let's leave it out from our flowchart and simplify the rest to:</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/02/img7.png?w=845" alt="re-frame-flowchart" /></p>
+
+<p>Rewinding to our original <code>main-panel</code> method, you'll see that the subscription we have queries this very data attribute (<code>active-panel</code>) in the data store. Visiting the root path caused a change around this attribute. The subscriber is a Reagent component. It picks up the change, resulting in the triggering of the process to update the DOM.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/02/img8.png?w=841" alt="re-frame-flowchart" /></p>
+
+<p>In the same <code>main-panel</code> method, notice the following line:</p>
+
+<pre><code>(panels @active-panel)
+</code></pre>
+
+<p>Just above that method, there is another line:</p>
+
+<pre><code>(defmethod panels :home-panel [] [home-panel])
+</code></pre>
+
+<p>Needless to say, the method <code>panels</code> is invoked with the <code>:home-panel</code> argument resulting in the calling of the method <code>home-panel</code>, which can be found in the same file. This returns a Reagent component responsible for rendering the elements we see in the root page. Note that this component is constituted by two other components, namely <code>github-id-input</code> and <code>user-repos-list</code>, both of which are now in the DOM.</p>
+
+<p>Phew! So let's have a recap of what happened. The user visited the root path, resulting in the setting of the data attribute <code>active-panel</code> to
+:home-panel in the data store. The
+mount-root method invoked at the end of the initialization triggers the rendering of the main panel in the DOM. The main panel component is subscribed to the
+active-panel data entry and hence ends up rendering the
+home-panel component.</p>
+
+<h2 id="click-me">Click Me!</h2>
+
+<p>So far, we've seen how a user action of navigating to the root path of a re-frame app is handled all the way until the DOM is updated. Now let's ramp things up a bit and have a look at what happens when a user interaction like a click occurs.</p>
+
+<p>You must have already tried using the app and noticed that it displays a list of Github repositories that a Github user has. So how exactly does that work? Well, to be honest, it's quite similar to what we've already seen.</p>
+
+<p>You must have noticed that the div containing the elements to accept a Github username and the button to list the repos for that user was rendered by the component
+<code>github-id-input</code>. There are a couple of things going on in there, but our main interest is with the button and how a click is handled. Check out the following lines in that method:</p>
+
+<pre><code>on-click (fn [_]
+  (when-not (empty? @github-id)
+    (re-frame/dispatch [:set-github-id @github-id])
+    (reset! github-id "")))]
+...
+[:button.btn.btn-default {:type "button"
+                  :on-click #(when-not @loading? (on-click %))}
+</code></pre>
+
+<p>While there are other important parts in that method, these excerpts are the primary drivers of the click. As you can see, once a Github id is entered and the button clicked, there is an <code>:on-click</code> handler waiting to pick up the event. This calls the method <code>on-click</code> which dispatches an event named <code>:set-github-id</code> with the parameter <code>@github-id</code>. That parameter is set when a change is made to the input field (you can find the logic for this in the same method).</p>
+
+<p>From here, it's the same drill. The event that gets dispatched is handled by the registered handler. It triggers the process to fetch the entered user's Github profile and list of repos, the end result being that the data store gets updated with the newly fetched details, causing subscription handlers to trigger updation of the DOM.</p>
+
+<p><strong>Activity For You:</strong>
+ Try mapping out the process that happens when this dispatched event generated on click reaches the corresponding handler and how the DOM gets updated at the end of it.</p>
+
+<h2 id="lets-wrap-it-up">Let's Wrap It Up</h2>
+
+<p>We've seen the various constituents of a re-frame app. We've also seen how these units interact with each other to respond to user events and update the DOM. This is of course a very simplified version of things. You should definitely go and read more on the readme on the re-frame Github page. Equipped with the information you have now, you should find it quite easy to understand all that is explained over there.</p>
+
+<p>If you have any questions or comments, please write them in the section below.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

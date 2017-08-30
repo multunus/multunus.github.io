@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Our experience with Comatose - the MicroCMS</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2010 blog_2010_02 blog_2010_02_our-experience-with-comatose-the-microcms blog_2010_02_our-experience-with-comatose-the-microcms_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Our experience with Comatose - the MicroCMS</h1>
+            <a href="/blog/tags/cap-vaidy" class="blog-author">vaidy</a>
+      <p class="post-description">February 23, 2010</p>
+      <p>In one of our projects which is primarily a web application, the client had asked that we go ahead and make as much of the copy available across the site, editable. This included not just copy in static pages such as “About Us”, but also copy in dynamic pages. I mean things like tooltips for fields in forms, for example.</p>
+
+<p>We first looked at <a href="http://radiantcms.org/">RadiantCMS</a>, with the intention of building our web application on top of it. But then decided to instead build our web app from scratch and then make parts of it editable using <a href="http://github.com/darthapo/comatose">Comatose</a> [which is a “MicroCMS”]. This way, we have more flexibility to add features to the web app using the Rails API and available plugins, rather than being constrained by RadiantCMS system.</p>
+
+<h3 id="things-we-liked-about-comatose">Things we liked about Comatose:</h3>
+
+<ul>
+  <li>Its implemented as a Rails plugin - which makes it a breeze to install</li>
+  <li>Implementing Single Sign On is also simple. Because it works well with the 
+<a href="http://agilewebdevelopment.com/plugins/restful_authentication">restful_authentication plugin</a>.</li>
+  <li>Comatose allows rendering of pages inline from your application view - just like rendering a partial in a Rails app. To include an “editable” tool tip within a form, something as simple as the following is enough:</li>
+  <li>[ror]&lt;%= render :comatose=&gt;’about’ %&gt;[/ror]</li>
+</ul>
+
+<p>There’s of course a lot more you can do with this plugin. Check it out.</p>
+
+<h3 id="now-for-the-bad-part--">Now for the bad part :-(</h3>
+
+<ul>
+  <li>The main issue is font inconsistency. There are some options for setting the font size, but they don’t work as expected - because the CSS styles are inherited from our app.</li>
+  <li>In production mode, there is a noticeable delay between making changes in the CMS and the updated content showing up on the main site. Not sure why this is the case.</li>
+</ul>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

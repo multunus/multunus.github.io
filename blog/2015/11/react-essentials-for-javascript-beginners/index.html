@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>React Essentials for JavaScript Beginners</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2015 blog_2015_11 blog_2015_11_react-essentials-for-javascript-beginners blog_2015_11_react-essentials-for-javascript-beginners_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">React Essentials for JavaScript Beginners</h1>
+            <a href="/blog/tags/cap-peter" class="blog-author">peter</a>
+      <p class="post-description">November 25, 2015</p>
+      <blockquote>
+  <p>React has made working on frontend fun again.</p>
+</blockquote>
+
+<p>You know JavaScript, you might have played around with AngularJS or Node.js. You've been hearing about <a href="https://facebook.github.io/react/">React</a> and your curiosity has been piqued. You're at the right place, this post will cover the essentials of React with simple code snippets.</p>
+
+<p>Unless you’ve been living under a rock for the past year, you would know that React is a <a href="https://facebook.github.io/react/blog/2013/06/05/why-react.html"><strong>View</strong></a> library released by Facebook. In its infancy, people had mixed reactions on its weird looking syntax of HTML inside JavaScript (called <a href="https://facebook.github.io/react/docs/displaying-data.html">JSX</a>). All that weirdness is now invisible with frontend developers considering React as the de-facto standard for creating UIs.</p>
+
+<p>You can use the latest features from the ES6 and ES7 standards in your React app today, thanks to transpilers like Babel. In short React has made working on frontend fun again!</p>
+
+<p>All the code snippets I use here follows the ES6/ES2015 syntax. JS Bin seems to act up occasionally, but as usual, refreshing it seems to fix it.</p>
+
+<h2 id="react-components">React Components</h2>
+
+<p>Let's get started. We'll start by defining a couple of components that we'll use throughout.</p>
+
+<p>Text</p>
+
+<p>Here’s a component that displays the venerable “Hello, World!”</p>
+
+<p><a href="http://jsbin.com/vusuje/1/edit">Check out the code on JS Bin</a></p>
+
+<pre><code>class Text extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+Hello, World!
+      &lt;/div&gt;
+    );
+  }
+}
+
+React.render(&lt;Text /&gt;, document.getElementById('container'));
+
+ 
+</code></pre>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2015/11/text-1024x522.gif" alt="Text Component - Output" /></p>
+
+<p>In line 1, we are defining a class called <code>Text</code> which extends the component class of React. Text has a <code>render</code> method which returns a React element, in this case, a div tag with the text “Hello, World!”. Remember that only a single React element should be returned by the render method. However, there may be nested elements within that element.
+The last line is telling React to render the <code>Text</code> React Element as a child of the DOM node with the id <code>container</code>.</p>
+
+<h3 id="spinner">Spinner</h3>
+
+<p>This component will display a spinner. I will not go into the implementation of it, it's mostly css.</p>
+
+<p><a href="http://jsbin.com/vusuje/4/edit">Check out the code on JS Bin</a></p>
+
+<pre><code>class Spinner extends React.Component {
+  render() {
+      return (
+  &lt;div className="spinner-component"&gt;
+    &lt;svg className="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"&gt;
+      &lt;circle className="path" fill="none" strokeWidth="6" strokeLinecap="round" cx="33" cy="33" r="30"&gt;&lt;/circle&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+)
+  }
+}
+
+React.render(&lt;Spinner /&gt;, document.getElementById('container'));
+</code></pre>
+
+<p> </p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2015/11/spinner-1024x553.gif" alt="Spinner Component" />
+The only thing this component does new, as far as React is concerned, is to apply css class names to HTML tags. JSX requires you to use the keyword <code>className</code> for applying css classes, since <code>class</code> is a JavaScript keyword.</p>
+
+<h3 id="app">App</h3>
+
+<p>We will now define a <code>App</code> component which will behave as the parent component.</p>
+
+<p><a href="http://jsbin.com/vusuje/7/edit">Check out the code on JS Bin</a></p>
+
+<pre><code>class App extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+&lt;Text /&gt;
+&lt;Spinner /&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+
+React.render(&lt;App /&gt;, document.getElementById('container'));
+</code></pre>
+
+<p> </p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2015/11/App-1024x553.gif" alt="App Component" /></p>
+
+<p>I will include only the relevant portion of the code for the sake of brevity, you can follow the <a href="(http://jsbin.com/vusuje/7/edit)">JS Bin</a> link to see the whole code.</p>
+
+<p><code>App</code> is the parent component and it's child components are <code>Text</code> and <code>Spinner</code>. We will modify these components throughout the course of this post.</p>
+
+<p>You might be wondering what the fuss is all about. Things don't look exciting right now? Wait for it - the magic happens when the components use <strong>props</strong> and <strong>state</strong>.</p>
+
+<h2 id="props">Props</h2>
+
+<p>The * props*  (short for properties) are a component’s <strong>configuration</strong>. They are received from a component above it in the component hierarchy. Props are treated as <strong>immutable</strong>in the component receiving them. This means data flow should be top-down.</p>
+
+<p>It sounds confusing I know, but it's really intuitive once you think about it. Props are passed down to a child component from it's parent component. As far as the child is concerned, the prop is owned by the parent and only the parent should modify it.</p>
+
+<p>Therefore, a component is not supposed to change its props, in other words <strong>never write</strong> to props. It is also the responsibility of a component to pass down any required props to its child components.</p>
+
+<p><a href="http://jsbin.com/vusuje/9/edit">Check out the code on JS Bin</a></p>
+
+<pre><code>class Text extends React.Component {
+  render() {
+    &lt;div&gt;
+      {this.props.content}
+    &lt;/div&gt;
+  }
+}
+
+class App extends React.Component {
+
+  render() {
+    return (
+      &lt;div&gt;
+&lt;Text content="I am React"/&gt;
+&lt;Spinner/&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+
+React.render(&lt;App name="React"/&gt;, document.getElementById('container'));
+</code></pre>
+
+<p> </p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2015/11/Prop-1024x553.gif" alt="Props Example" /></p>
+
+<p>No points for guessing what the above code snippet does! It’s mostly the same code as before, but with a slight modification. The <code>Text</code> component inside <code>App</code> takes an attribute called <code>content</code> with the value “I am React”. This is how we transfer data into a component:</p>
+
+<ul>
+  <li>
+    <p>The attribute <code>content</code> is pushed to the props object of the current instance of the <code>Text</code> component.</p>
+  </li>
+  <li>
+    <p>Within the component, this attribute is now accessible as <code>this.props.name</code>.</p>
+  </li>
+  <li>
+    <p>The handlebars(<code>{ }</code>) lets the JSX transformer know that it’s contents should be evaluated and replaced.</p>
+  </li>
+</ul>
+
+<p>The parent, in this case, is <code>App</code> and the child is <code>Text</code>, as mentioned previously, parent provides the child component with the necessary props.</p>
+
+<p>Follow this <a href="http://www.sitepoint.com/video-using-props-to-pass-data-in-react/">post</a> to learn more about props.</p>
+
+<h2 id="state">State</h2>
+
+<p>State is what you use when you want your application to be interactive. The * state*  is initialized with a default value when a component is mounted in the DOM. It then undergoes <strong>mutations</strong> as time passes. These mutations are usually triggered from user events or client-server interaction. It is the representation of a component at a given point of time.</p>
+
+<p>A component takes care of its state internally, but it should not mess with the state of its children. Most of the time, state of the parent is passed down as a prop to the child.</p>
+
+<p>React components can hold state information within them. Each instance of a component maintains a separate state. This quickly proves to be very useful. Let us see how state works:</p>
+
+<p><a href="http://jsbin.com/vusuje/11/edit">Check out the code on JS Bin</a></p>
+
+<pre><code>class Spinner extends React.Component {
+  render() {
+    if(this.props.show) {
+      return (
+  &lt;div className="spinner-component"&gt;
+    &lt;svg className="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"&gt;
+      &lt;circle className="path" fill="none" strokeWidth="6" strokeLinecap="round" cx="33" cy="33" r="30"&gt;&lt;/circle&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+)
+    } else {
+  return (&lt;div&gt;&lt;/div&gt;);
+    }
+  }
+}
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {showSpinner: false};
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+&lt;Text content="I am React"/&gt;
+&lt;Spinner show={this.state.showSpinner}/&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+
+React.render(&lt;App name="React"/&gt;, document.getElementById('container'));
+</code></pre>
+
+<p> </p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2015/11/state-1024x553.gif" alt="State Example" />
+We have modified Spinner component to be able to use the <code>show</code> prop. Spinner will now return an empty <code>div</code> tag if the value of <code>show</code> is false.</p>
+
+<p>Let's see what changes we have made to <code>App</code> component.
+*  It calls super with props to prepare the component for rendering
+*  It initializes the state. In this case, <code>showSpinner</code> is set to <code>false</code>.
+*  <code>Spinner</code> component is given a prop called <code>show</code> which takes the value of the <code>showSpinner</code> state element.</p>
+
+<p>By now you have probably guessed what we are trying to do, we are passing in the state <code>showSpinner</code> as a prop to <code>Spinner</code>. <code>Spinner</code> will now use this prop to determine whether it should display a spinner or not.</p>
+
+<p>There are certain things you should take care of when using state in your app:</p>
+
+<ul>
+  <li>
+    <p>State reduces predictability and increases the complexity of your application</p>
+  </li>
+  <li>
+    <p>Try to use as few components with state as possible.</p>
+  </li>
+  <li>
+    <p>Stateful components are mainly used for handling user events, client-server communication etc.</p>
+  </li>
+</ul>
+
+<p>This excellent 
+<a href="https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html">post</a> will give you more information about when to use state.</p>
+
+<h2 id="dynamic-ui">Dynamic UI</h2>
+
+<p>Alright, state is no fun if we can’t mutate it. Let’s see a small example of how state can be mutated through a user event. Go on to the JS Bin link and try clicking on 
+* Toggle Spinner*</p>
+
+<p><a href="http://jsbin.com/vusuje/15/edit">Check out this code on JS Bin</a></p>
+
+<pre><code>class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {showSpinner: false};
+  }
+
+  toggleShowSpinner() {
+    this.setState({
+      showSpinner: !this.state.showSpinner
+    });
+  }
+
+  handleClick() {
+    this.toggleShowSpinner();
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+&lt;Text content="I am React"/&gt;
+&lt;button onClick={(e) =&gt; {this.handleClick(e)}}&gt;Toggle Spinner&lt;/button&gt;
+&lt;Spinner show={this.state.showSpinner}/&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+React.render(&lt;App name="React"/&gt;, document.getElementById('container'));
+</code></pre>
+
+<p> </p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2015/11/dynamic-ui-1024x522.gif" alt="Dynamic UI Example" />
+The code above looks slightly more complicated, but it’s a no-brainer.</p>
+
+<p>We have created an HTML <code>button</code> and passed in an <code>onClick</code> event handler as a prop. The strange looking 
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">syntax</a> is from ES2015. When you click on the button, <code>handleClick()</code> is invoked.</p>
+
+<p>When <code>handleClick()</code> method is invoked it invokes <code>toggleShowSpinner()</code>. This is where the magic happens. The <a href="https://facebook.github.io/react/docs/component-api.html"><code>setState()</code></a> method is used to mutate the state. In this case, <code>showSpinner</code> is toggled. As soon as the state is mutated, React performs a set of steps. One of these is calling the render method. Pressing the button again toggles the state and the spinner is disabled.</p>
+
+<p>Now you know enough about react to get started with it. If you get stuck in between, dig through the
+<a href="https://facebook.github.io/react/docs/getting-started.html">React Docs</a> or comment here. Stay tuned for the next post which talks about what exactly happens when state is mutated among other things.</p>
+
+<p>Leave your thoughts and suggestions below and make sure to <a href="https://twitter.com/multunus">follow us</a> to receive even more posts :)</p>
+
+<h3 id="further-reading">Further Reading</h3>
+
+<ul>
+  <li>
+    <p><a href="http://firstdoit.com/react-1/">How I learned to stop worrying and love React</a></p>
+  </li>
+  <li>
+    <p><a href="http://babeljs.io/blog/2015/06/07/react-on-es6-plus/">React on ES6+</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/arkency/reactjs_koans">React Koans</a></p>
+  </li>
+  <li>
+    <p><a href="http://ctheu.com/2015/02/12/how-to-communicate-between-react-components/">How to communicate between React Components</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/enaqx/awesome-react">Curated list of React resources</a></p>
+  </li>
+</ul>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

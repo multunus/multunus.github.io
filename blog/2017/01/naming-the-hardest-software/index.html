@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Naming - The hardest thing in Software</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_01 blog_2017_01_naming-the-hardest-software blog_2017_01_naming-the-hardest-software_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Naming - The hardest thing in Software</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">January 31, 2017</p>
+      <p><em>There are only two hard things in Computer Science: cache invalidation and naming things.</em></p>
+
+<p><em>– Phil Karlton</em></p>
+
+<p>All of us struggle with <strong><em>naming</em></strong> on a day to day basis. What should we call a class, a field or table in the database or an action in the controller? The fact that it is harder to change it later adds to the complexity too.</p>
+
+<p>Ubiquitous Language</p>
+
+<p>There are techniques that help you arrive at better names. One of them is called Ubiquitous Language - a common, shared language that the developers and the domain experts/users use to communicate.</p>
+
+<p>The best way to arrive at a common language is through conversation. Let's look at an example of how to use conversations to arrive at Ubiquitous Language.</p>
+
+<p><a href="https://gk-landingpage.firebaseapp.com/">Good Karma</a> is a Phone CRM product we are building for Yoga Studios [yes, it is our <strong><em>own</em></strong> product :)]. The IVR system automates the enquiries the studios receives for different kinds of classes they such as normal yoga classes, ayurvedic classes, yoga teachers training, dietician courses to name a few.</p>
+
+<p>Here’s an interesting conversation I had with a Yoga studio founder -</p>
+
+<p><strong><em>Leena:</em></strong> Hi Naveen, I had a few questions about different types of yoga classes that we should handle in the system. Can we discuss those now?*</p>
+
+<p><strong><em>Naveen:</em></strong> Sure. Did you mean Group class, Teacher’s training etc? We call them Business Lines.</p>
+
+<p><strong><em>Leena:</em></strong> Oh ok. Yes, I meant <strong><em>Business lines</em></strong>. Can you give me examples of how <strong><em>bookings</em></strong> work for each of them?</p>
+
+<p><strong><em>Naveen:</em></strong> For <strong><em>Group classes</em></strong>, we offer <strong><em>Trial classes</em></strong> so that the customers can get a feel of the sessions and about the teachers too. Some customers are particular about certain <strong><em>Senior teachers</em></strong>, so we need to make sure that the system allows the customers to choose a specific teacher in case they prefer so.</p>
+
+<p><strong><em>Leena:</em></strong>Do trial classes exist for other business lines too? Say for <strong><em>Teacher’s training</em></strong> or <strong><em>Ayurvedic courses</em></strong>?</p>
+
+<p><strong><em>Naveen:</em></strong> No, it depends on the business line. For Teachers’ training, usually the customer’s give their details and we get back to them when the course starts. It is not as frequent as Group Classes.</p>
+
+<p><strong><em>Naveen:</em></strong> Forgot to mention another thing - these depend on the <strong><em>branches</em></strong> too. Certain branches don’t offer trial classes.</p>
+
+<p><strong>_Leena: _</strong>One more question. You mentioned senior teachers; do you have any other kind of roles?</p>
+
+<p><strong><em>Naveen:</em></strong> Yes, there are <strong><em>Studio</em></strong> <strong><em>managers</em></strong>. In some branches, they could be senior teachers. But not all seniors teachers are managers. Apart from that, we have <strong><em>founders</em></strong>, i.e. people like me who started the studio.</p>
+
+<p>The advantage of having such conversations is that it will help you identify more than entities and names - even the actions or rules of the system too.</p>
+
+<p>I’ve highlighted the important terminologies that the customer uses and the same should be the used for conversations among the team members. This will get reflected in the code too. For example, in the above conversation, I started off with the term <strong><em>Yoga classes</em></strong> instead of <strong><em>Business lines</em></strong>. Had it not been corrected by Naveen, the term services would have shown up in the code too.</p>
+
+<p>After having conversations such as these, we convert them into story maps or flowcharts as given below. This helps us to visualise and create a common understanding within the team.</p>
+
+<p><a href="https://s3.amazonaws.com/multunus-cdimages/gk-features.png"><img src="https://s3.amazonaws.com/multunus-cdimages/gk-features.png" alt="image alt text" /></a></p>
+
+<p>Domain-Driven Design</p>
+
+<p>Ubiquitous Language is one of the key parts of Domain-Driven Design, where the premise is <strong><em>initiating a creative collaboration between technical and <a href="https://en.wikipedia.org/wiki/Domain_expert">domain experts</a></em></strong> to iteratively refine a conceptual model that addresses particular domain problems.</p>
+
+<p>It is much deeper, the following mindmap should give you a quick overview and depth of this.</p>
+
+<p><a href="https://s3.amazonaws.com/multunus-cdimages/domain-driven-design.png"><img src="https://s3.amazonaws.com/multunus-cdimages/domain-driven-design.png" alt="image alt text" /></a></p>
+
+<p>If done well Domain-driven design helps you move to a <a href="https://www.infoq.com/presentations/ddd-microservices-2016">Microservice Architecture</a>. I will be covering more about domain driven design in the future posts.</p>
+
+<h2 id="further-references">Further References</h2>
+
+<p><a href="http://www.jamesshore.com/Agile-Book/ubiquitous_language.html">Ubiquitous Language - By James Shore</a></p>
+
+<p><a href="https://www.amazon.in/Domain-Driven-Design-Tackling-Complexity-Software-ebook/dp/B00794TAUG">Domain Driven Design: Tackling Complexity Software in the Heart of Software</a></p>
+
+<p><a href="https://www.pluralsight.com/courses/domain-driven-design-fundamentals">Pluralsight Course - Domain Driven Design Fundamentals</a></p>
+
+<p><a href="https://www.pluralsight.com/courses/domain-driven-design-in-practice">Pluralsight course - Domain Driven Design In Practice</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=dnUFEg68ESM">Domain Driven Design By Eric Evans</a></p>
+
+<p><a href="https://m.signalvnoise.com/hunting-for-great-names-in-programming-16f624c8fc03">Hunting for great names in programming by DHH</a></p>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

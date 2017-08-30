@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Optimizing for performance Pipelining</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2013 blog_2013_06 blog_2013_06_optimizing-for-performance-a-hrefhttpredis-ioredisa-pipelining blog_2013_06_optimizing-for-performance-a-hrefhttpredis-ioredisa-pipelining_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Optimizing for performance Pipelining</h1>
+            <a href="/blog/tags/cap-tamillharasan" class="blog-author">tamillharasan</a>
+      <p class="post-description">June 17, 2013</p>
+      <p>In everyday programming, it is a common tendency to overlook certain parts of the code which may not be implemented in the most efficient way. It is usually not a problem, but this could create a performance bottleneck as the data volume grows. When working with huge data, even the slightest overhead introduced in the code can prove to be too big a bottleneck in performance.</p>
+
+<p>Having an unwanted line of code which cost 10 milliseconds when multiplied by a million records in DB can easily take 2.5+ hours extra.</p>
+
+<p>We recently hit one similar problem in one of our project.</p>
+
+<h2 id="some-background-info">Some Background Info</h2>
+<p>This project is backed by MongoDB with over 2 million records. We were using Redis to index the query combinations that can be applied to the data in Mongo. This was done to avoid hitting the MongoDB for all the intermediate steps before the final result.</p>
+
+<p>Our implementation of indexing takes care of picking out the filter combinations which can result in at least one record at the end. This has to be done every time the MongoDB is updated with newer data.</p>
+
+<h2 id="problem">Problem</h2>
+<p>Indexing was taking ~4 hours to complete. This was after optimizing the logic used for indexing. After some close inspection, we found a bottleneck in Redis operation that can be optimized.</p>
+
+<p>Consider the following code:</p>
+
+<p><code>
+SurveyData.all.each_with_index do |survey_data, index|
+     ….
+     $redis.sadd(related_field_id, survey_data.field_id)
+     ….
+end
+</code></p>
+
+<p>The Redis operation ‘sadd’ is fast, but since Redis is a TCP server the operation has to go through Request/Response cycle of TCP. With the use case mentioned above, the number of redis operations is in the range of millions. This puts us in a dreadful situation of going through the TCP cycle every time. On top of this network latency only adds to the worries. (This entire thing is called as Round Trip Time (RTT)).</p>
+
+<p>Take an example RTT of 100 milliseconds. Even with the server capable of processing 10k operations/second, the maximum number of requests that can be processed will be 10/second.</p>
+
+<p>If we can reduce the number of Request/Response cycle. We would greatly benefit from the efficiency of Redis operations. One of the possible solutions - <a href="http://redis.io/topics/pipelining">Redis Pipelining</a></p>
+
+<p>In pipelining mode we send requests without waiting for the response from the server. This makes it possible for us to send more number of requests without any latency. While the requests are being processed, the corresponding responses are queued up in the server. This can be pulled from the server in one single step to the client.</p>
+
+<p>This is called as pipelining and is not a new idea. It was around for long time. This technique can be used to avoid RTTs to a large extent.</p>
+
+<p>Support for pipelining is available in almost all versions of Redis.</p>
+
+<p>Let’s revisit the same code mentioned earlier, but this time with pipelining. The following is the version with redis pipelining.</p>
+
+<p><code>
+$redis.pipelined do
+    survery_data.each_with_index do |survey_data, index|
+       ...
+       $redis.sadd(related_field_id, survey_data.field_id)
+       ...
+    end
+  end
+</code></p>
+
+<p>The code is self-explanatory and only encloses the redis operations in pipeline block. The execution time then reduced to ~1 hr after this optimization. The recommended batch size for the pipeline is around 10k requests. We sliced the 2.8 million records into batches of 10k records.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

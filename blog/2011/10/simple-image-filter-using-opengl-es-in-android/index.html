@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Simple Image Filter using OpenGL ES in Android</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2011 blog_2011_10 blog_2011_10_simple-image-filter-using-opengl-es-in-android blog_2011_10_simple-image-filter-using-opengl-es-in-android_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Simple Image Filter using OpenGL ES in Android</h1>
+            <a href="/blog/tags/cap-kp" class="blog-author">kp</a>
+            , <a href="/blog/tags/cap-tamillharasan" class="blog-author">tamillharasan</a>
+      <p class="post-description">October  7, 2011</p>
+      <p><img src="https://s3.amazonaws.com/multunus-website/uploads/2014/01/Opengl.png" alt="Opengl" /></p>
+
+<p><strong>Note</strong>: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found</p>
+
+<p>OpenGL is widely adopted as the graphics API of choice for real-time interactive 3D graphics applications. OpenGL is easy to understand, but its simplicity and orthogonality enable many interesting possibilities. One such possibility is image processing.</p>
+
+<p>Using “OpenGL” for Image Processing enables us to completely utilize the power of Graphics Processing Unit (GPU) hence the image processing will be faster also it reduces the load on CPU. This can be crucial for Image processing applications, especially in mobile environment where the resources available are relatively lesser.</p>
+
+<p>In this post we will be discussing how to use OpenGL Shader Language to manipulate pixels and create Image filter effects.</p>
+
+<p>As with any OpenGL app, we will start with setting up the view.</p>
+
+<p>The next step is to load an image into the texture, This texture can be mapped on to the surface of a square, which will then be drawn on to the screen.For Image processing, we will require only 2 dimensions so we will set up the view in orthographic projection and will also discard z axis by keeping it to 0.0 most of the times.</p>
+
+<p>But before drawing to the screen, there are many intermediate operations that are done by the graphics hardware, which are now directly programmable in OpenGL ES 2.0 using Shader Language (GLSL). We will be concentrating on Vertex and Fragment processing phases in OpenGL pipeline. We will go through a simple fragment shader program and will explain how it works. Both of these programs are written in GLSL. GLSL is a ‘C’ like language which gives direct control over the  graphics pipeline without having to use assembly language or hardware-specific languages.</p>
+
+<h2 id="vertex-shader">Vertex shader</h2>
+
+<pre><code>uniform mat4 uMVPMatrix;
+attribute vec4 aPosition;
+attribute vec2 aTextureCoord;
+varying vec2 vTextureCoord;
+void main() {
+  gl_Position = uMVPMatrix *  aPosition
+  vTextureCoord = aTextureCoord
+}
+</code></pre>
+
+<p>The Vertex shader is executed for each vertex that is to be drawn. Here, we are drawing a square and mapping the texture on to that.</p>
+
+<p>This calculates the transformed coordinates of the square by multiplying the given coordinates with <a href="http://en.wikibooks.org/wiki/OpenGL_Programming/3D/Matrices">MVPMatrix</a> [ MVP -  Model *  View *  Projection ]. Other than this we are also storing corresponding texture co-ordinates in variable ’ vTextureCoords’ so that it is available in the fragment shader.</p>
+
+<h2 id="fragment-shader">Fragment Shader</h2>
+
+<pre><code>precision mediump float;
+varying vec2 vTextureCoord;
+uniform sampler2D sTexture;
+void main() {
+   vec2 cen = vec2(0.5,0.5) - vTextureCoord.xy;
+   vec2 mcen = -0.07* log(length(cen))* normalize(cen);
+   gl_FragColor = texture2D(sTexture, vTextureCoord.xy-mcen);
+}
+</code></pre>
+
+<p>Fragment shaders are executed to calculate the color of individual pixels. This is where the actual image transformation happens. Instead of mapping the corresponding texture coordinates to corresponding pixels, we can map different coordinates of the texture to different pixels which will distort the image in some way. In the above example the texture co-ordinate to fill each pixel is chosen based on the calculation in line no 6. The actual movement depends on the distance of the texture coordinate from the center. This creates an effect which is similar to what is shown in the below picture.</p>
+
+<p>Although this is a very simple effect, the intention here is to just show potential applications of OpenGL in Android apps.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

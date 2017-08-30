@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Polymorphism - Ruby vs Clojure</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2016 blog_2016_11 blog_2016_11_polymorphism-functional-vs-object-oriented blog_2016_11_polymorphism-functional-vs-object-oriented_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Polymorphism - Ruby vs Clojure</h1>
+            <a href="/blog/tags/cap-kp" class="blog-author">kp</a>
+      <p class="post-description">November 16, 2016</p>
+      <p>One advantage of learning Clojure is that it gives you a different perspective for looking at well-known programming idioms. Polymorphism is one such example.</p>
+
+<p>Roughly speaking Polymorphism is a pattern where a common interface exists for different implementations of the same functionality. The decision as to which one of these implementations is selected usually decided (automatically without any plumbing code) based on the type of the object.</p>
+
+<p>Let's take a look at a more concrete example.</p>
+
+<h2 id="ruby">Ruby</h2>
+
+<p>Let's consider a superficially simple program which exports resumes into different formats like CSV, PDF etc.</p>
+
+<pre><code class="language-ruby">Class Resume
+ attr_accessor :name, :highest_qualification, :dob
+end
+</code></pre>
+
+<p>A simple solution without using polymorphism would be the below</p>
+
+<pre><code class="language-ruby">Class ResumeExporter
+  def initialize(format)
+    @format = format
+  end
+  def export(resume)
+    case format
+    when :csv
+       export_to_csv(resume)
+    when :pdf
+       export_to_csv(resume)
+    end
+  end
+end
+</code></pre>
+
+<p>The downsides to this approach are:</p>
+
+<ul>
+  <li>It does not follow <a href="https://en.wikipedia.org/wiki/Open/closed_principle">open/closed principle</a> - You need to modify an existing method for adding support for new formats.</li>
+  <li>Duplication -  if there is some another functionality similar to export that is different for different formats we will have to repeat the same switch statement there.</li>
+</ul>
+
+<p>A better solution</p>
+
+<pre><code class="language-Ruby">class ResumeExporter
+  def initialize(format)
+    @exporter = Exporters.for(format)
+  end
+  def export(resume)
+    @exporter.export(resume)
+  end
+end
+</code></pre>
+
+<pre><code class="language-Ruby">module Exporters
+   def self.for(format)
+      lookup_exporter(format)
+   end
+
+   class CsvExporter
+     def export(resume)
+       # create csv
+     end
+   end
+
+   class PdfExporter
+     def export(resume)
+       # create PDF
+     end
+   end
+end
+</code></pre>
+
+<p>There is nothing novel about this, this is a very common pattern in object-oriented languages.</p>
+
+<p>The interesting bit is the export method.
+~~~ruby
+ @exporter.export(resume)
+~~~</p>
+
+<p>We are using a common interface "export" and depending on the type the right implementation gets called. The idea of polymorphism and Object orientation seems very intermixed.</p>
+
+<p>How would you achieve the same in a programming language without objects and classes? Let's look at an example in Clojure</p>
+
+<h2 id="clojure">Clojure</h2>
+
+<pre><code class="language-clojure">(ns resume-exporter.core)
+
+
+(defn export
+  [resume format]
+  (case format
+    :csv (export-csv resume)
+    :pdf (export-pdf resume)))
+
+</code></pre>
+
+<p>This solution is very similar to the first Ruby solution and this has all the similar downsides as well. The second solution is where the approaches start to diverge a lot.</p>
+
+<p>In Ruby polymorphism was entirely based around creating separate classes for different exporters. That approach does not translate very well to Clojure because there are no classes in Clojure in the first place.</p>
+
+<p>Let's take a relook at what the Ruby polymorphic approach is doing a little more closely.</p>
+
+<ul>
+  <li>We call the export method on an instance of the exporter without really caring about what the actual concrete type of the exporter.</li>
+  <li>There are different implementation of the export method for each different type of format</li>
+  <li>Ruby's object oriented system correctly picks the right implementation based on the objects. In other words, Ruby's object system act as a dispatcher which dispatches a method call to the right implementation based on the type.</li>
+</ul>
+
+<p>If we look at our first Clojure solution actually all these traits already exist. The only thing that missing is the method dispatch based on the type. Clojure multi-methods provide the same functionality. Let's try rewriting our solution using multi-methods</p>
+
+<pre><code class="language-clojure">(ns resume-exporter.core)
+
+
+(defmulti export-resume (fn [_ format] format))
+
+
+(defmethod export-resume :csv [resume _]
+  (csv-impl))
+(defmethod export-resume :pdf [resume _]
+  (pdf-impl))
+
+
+
+
+(defn export
+  [resume format]
+  (export-resume resume format))
+
+</code></pre>
+
+<p>what does "defmulti" do here?</p>
+
+<p>It takes two arguments. The first one is the function name "export-resume". The second one is a function which just returns the value of the second argument.</p>
+
+<p>It essentially creates a dispatching function (The common interface similar to the export function in the ruby implementation) which will dispatch a function call to a matching implementation.</p>
+
+<pre><code class="language-ruby">(defmulti export-resume (fn [_ format] format))
+</code></pre>
+
+<p>How do you decide what is matching? This is where the second argument to "defmulti" comes into the picture.</p>
+
+<p>The second argument is a function which will be called by the dispatching function with the arguments and return value of this function is matched against values mentioned as the second argument to "defmethod".</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Functional and objectOriented languages tackle the <a href="http://wiki.c2.com/?ExpressionProblem">expression problem</a> differently.</p>
+
+<p>The approach that ruby takes is a common pattern among the object-oriented languages.</p>
+
+<p>The advantage of the Clojure solution is that it enables run-time polymorphism without having to create object hierarchies.</p>
+
+<p>Another advantage of the Clojure solution is that here the dispatch is not limited to the type of the object, it can be based any arbitrary attributes of the input argument.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

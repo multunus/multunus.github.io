@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Automated environment management in React Native - iOS</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2016 blog_2016_06 blog_2016_06_automated-environment-management-react-native-ios blog_2016_06_automated-environment-management-react-native-ios_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Automated environment management in React Native - iOS</h1>
+            <a href="/blog/tags/cap-akshay" class="blog-author">akshay</a>
+      <p class="post-description">June 20, 2016</p>
+      <p>One of the mundane error prone tasks while developing mobile apps, is switching between different versions (say dev and production) of the app for testing. If not automated, this often involves manually changing environment specific configurations back and forth. You know what we programmers do - comment out certain parts of the code and uncomment them back again later. And of course, sometimes we forget to do the latter :)</p>
+
+<p>At Multunus, we started researching and using React Native about 6 months ago. One of the problems we faced early on was switching between development, staging and production environments for our RN app. This included server URLs, keys to third party services like
+<a href="https://microsoft.github.io/code-push/">CodePush</a> and feature toggles! And we had to use these environment specific config in our JS code. Ideally, we wanted to be able to build different versions (i.e., dev, staging, production) of the app instead of switching the environment configuration each time you build.</p>
+
+<p>This post is going to walk you through a solution to this problem on iOS and probably also introduce some idioms of iOS development (assuming you are new to iOS development).</p>
+
+<p>To start with, let us try and break this problem down a little further. What we need is</p>
+
+<ol>
+  <li>Be able to build different versions of the app for each environment.</li>
+  <li>Identify which version the app is built and use the appropriate config (on the JS side)</li>
+</ol>
+
+<p>One strategy for this would be</p>
+
+<ol>
+  <li>Store the config of all environments in a JSON file</li>
+  <li>On the native side, use different XCode configurations to build different versions of the app</li>
+  <li>Expose a configuration specific environment name (Eg., staging) to the JS side using native modules</li>
+  <li>On the JS side, import the native module to get the environment name. Then using the JSON file mentioned above get the appropriate config</li>
+</ol>
+
+<p>Let’s look at step one.</p>
+
+<h2 id="the-json-config-file">The JSON config file</h2>
+
+<p>Let’s start by creating a <code>config.json</code> in the root directory of the project. This will store our config for all the environments.</p>
+
+<pre><code class="language-json">// config.json
+{
+  "development": {
+    "codePushKey": "",
+    "appServerRootURL": "http://localhost:3000"
+  },
+  "staging": {
+    "codePushKey": "STAGING CODE PUSH KEY",
+    "appServerRootURL": "STAGING ROOT URL"
+   },
+  "production": {
+    "codePushKey": "PRODUCTION CODE PUSH KEY",
+    "appServerRootURL": "PRODUCTION ROOT URL"
+  }
+}
+</code></pre>
+<p>Note that the top level keys contain the different environment names and all we need is to figure out which of these keys to access the config from.</p>
+
+<h2 id="build-different-versions-of-the-app">Build different versions of the app</h2>
+
+<p>Let us say, we need development, staging and production versions of the app. Now if you have used the
+react-native-cli to generate the app for the first time, you would have two configurations set up in your XCode project -
+<strong>Debug</strong> and <strong>Release</strong>.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/06/xcode_configurations_1.png?w=1024" alt="xcode_configurations_1" /></p>
+
+<p>Going forward we shall use
+<strong>Debug</strong> for our development app and <strong>Release</strong>
+ for our production app. That means we’ll need one more for our staging app. So, let’s create a duplicate of the <strong>Release</strong>
+ configuration and name it  <strong>Staging</strong>.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/06/xcode_configurations_2.png" alt="xcode_configurations_2" /></p>
+
+<p>Why not rename those configurations to
+<strong>Development</strong> and <strong>Production</strong>
+ and be more consistent in our naming? The React Native code is heavily dependent on those configuration names to make certain optimisations to <strong>Release</strong> builds.</p>
+
+<p>XCode schemes are a convenient way to use different configurations while building an app both from the command line and the XCode GUI. Quoting Apple’s developer docs, <em>An Xcode scheme defines a collection of targets to build, a configuration to use when building, and a collection of tests to execute.</em> So in our case, we need to have three schemes to build using each of those three configurations. So let’s create them! XCode projects usually start with one scheme per target.</p>
+
+<p>To start with, let us create a scheme for development builds. Duplicate the existing scheme (the name is usually the same as that of the project) and give it an appropriate name.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/06/xcode_schemes_1.png" alt="xcode_schemes_1" /></p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/06/xcode_schemes_2.png?w=1024" alt="xcode_schemes_2" /></p>
+
+<p>Choose
+<strong>Debug</strong>as the build configuration for the <strong>Run</strong> and <strong>Archive</strong>
+ actions. Similarly, create a scheme for the staging app and choose <strong>Staging</strong> as the build configuration for the <strong>Run</strong> and <strong>Archive</strong>
+ actions. Now you can choose the new schemes from the top left corner while running / archiving the app from the XCode GUI or while archiving it from the command line.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/06/xcode_schemes_3.png?w=1024" alt="xcode_schemes_3" /></p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/06/xcode_schemes_4.png" alt="xcode_schemes_4" /></p>
+
+<h2 id="the-native-module">The native module</h2>
+
+<p>We are now able to build different versions of the app. What we need next is a way to identify which version was built. We will use a User-Defined setting on XCode to accomplish this. Let’s create a User-Defined setting called <code>BUILD_ENV</code> . Now user defined settings can have different values for each configuration. So let’s set the values as
+<strong>Development</strong>, <strong>Staging</strong> and <strong>Production</strong> for <strong>Debug</strong>,<strong>Staging</strong> and <strong>Release</strong> respectively.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/06/user_defined_setting_1.png?w=1024" alt="user_defined_setting_1" /></p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/06/Screen-Shot-2016-11-03-at-7.54.03-AM.png?w=1024" alt="user_defined_setting_2" /></p>
+
+<p>User-Defined settings are not accessible from the code directly. Instead they have to be stored in the <code>Info.plist</code> to be accessed from the application code. So we now add a new property key-value to the <code>Info.plist</code> file. Let’s call the key <code>BuildEnvironment</code> and set the value to <code>$(BUILD_ENV)</code>. This will set the value from the user defined setting.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/06/Screen-Shot-2016-11-03-at-7.54.03-AM.png?w=1024" alt="user_defined_setting_3" /></p>
+
+<p>Now that <code>buildEnvironment</code> is accessible, let’s create our native module! We’ll call this <code>RNConfig.</code> Let’s create a header file <code>RNConfig.h</code> and an Objective-C class file <code>RNConfig.m</code></p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/06/native_module_1.png?w=1454" alt="native_module_1" /></p>
+
+<p>As mentioned in the docs for native modules, our class should implement the
+RCTBridgeModule protocol.</p>
+
+<pre><code>// RNConfig.h
+#import "RCTBridgeModule.h"
+
+@interface RNConfig : NSObject
+@end
+
+// RNConfig.m
+#import "RNConfig.h"
+
+@implementation RNConfig
+
+RCT_EXPORT_MODULE();
+
+- (NSDictionary *)constantsToExport
+{
+  NSString* buildEnvironment = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"BuildEnvironment"];
+  return @{ @"buildEnvironment": buildEnvironment };
+}
+
+@end%
+</code></pre>
+
+<p>Note the line</p>
+
+<pre><code>NSString* buildEnvironment = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"BuildEnvironment"];
+</code></pre>
+
+<p>This is the bit that reads the
+buildEnvironment from <code>Info.plist.</code> The next line returns a dictionary with the<code>buildEnvironment</code> value. So here we are! The native side of the app can now expose to the JS side the environment’s name the app was built for.</p>
+
+<h2 id="get-the-appropriate-config-in-js">Get the appropriate config in JS</h2>
+
+<p>Now that the native module is created, we just need to import it in our JS code and we will have the environment name. A convenient way of accessing the configuration data in our application code is to create an abstraction on top of the <code>envConfig.json</code> and the <code>RNConfig</code> native module. This will be a JS module which will get the environment name from the native module and use that to get the appropriate config from the JSON file.</p>
+
+<p>So, let’s create a file <code>appConfig.js</code> in the root directory (the main project directory, not the ios/YOUR_PROJECT_NAME directory)</p>
+
+<pre><code>// appConfig.js
+import { RNConfig } from 'NativeModules';
+import EnvConfig from './envConfig.json';
+
+let environment = RNConfig.buildEnvironment;
+
+let getAppServerRootURL = function() {
+  return EnvConfig[environment].appServerRootURL;
+}
+
+export default {
+  appServerRootURL: getAppServerRootURL()
+}
+</code></pre>
+
+<p>It’s now quite straightforward to access the server root URL in our application code. We just import the
+appConfig module and use it like so</p>
+
+<pre><code>import AppConfig from './appConfig';
+
+let appServerRootURL = AppConfig.appServerRootURL;
+</code></pre>
+
+<p>As simple as that! Clearly any environment specific configuration like CodePush keys, GA tracking code and feature toggles depending on your necessity.</p>
+
+<h2 id="final-thoughts">Final thoughts</h2>
+
+<p>We have built a boilerplate app with React Native -
+<a href="https://github.com/multunus/react-native-boilerplate">https://github.com/multunus/react-native-boilerplate</a>. It’s still quite young but it includes some sensible choices already made for things like environment management, state management in JS, etc. So the stuff that is explained in this post has already been taken care of in the boilerplate. All that needs to be done is to change the app name and the scheme names.</p>
+
+<p>Also, another blog post for tackling the same problem in Android is coming up. So stay tuned!</p>
+
+<p>Before ending, I would like to point out one little shortcoming of the approach explained in this post. We are yet to figure out a good way to access the environment specific config on the native side. While I haven’t really found a need for that yet, it is not hard to imagine situations where it will be needed. So, if you’ve figured that out, let us know!</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

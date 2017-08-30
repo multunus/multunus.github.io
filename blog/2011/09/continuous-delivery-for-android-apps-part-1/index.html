@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Continuous Delivery for Android Apps - Part 1</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2011 blog_2011_09 blog_2011_09_continuous-delivery-for-android-apps-part-1 blog_2011_09_continuous-delivery-for-android-apps-part-1_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Continuous Delivery for Android Apps - Part 1</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">September 23, 2011</p>
+      <p>We’ve set up our CI server for building android apps. We use Jenkins as our CI server, but the same steps can be applied to any CI server.</p>
+
+<h2 id="setup-android-environment-on-ci-server">Setup Android Environment on CI server</h2>
+<p>You need to first install the android SDK and platform tools on the CI server. The steps are well defined 
+<a href="http://developer.android.com/sdk/installing.html">here</a>. You can run the command <code>android update sdk --no-ui</code> if the CI server is in an headless environment.</p>
+
+<h2 id="generate-build-script">Generate Build script</h2>
+<p>Using android SDK tool , you can generate build script for the android project which contains the standard steps for building the app such as clean, compile, release, install etc. The following command will generate the build script, replace <appname>, <target> and <project path=""> accordingly.</project></target></appname></p>
+
+<p><code>
+android update project -n &lt;appname&gt; -t &lt;target&gt; -p &lt;project directory&gt;
+</code></p>
+
+<p>This will create build.xml file under the project directory. You need to create build.properties file with the following contents:</p>
+
+<p><code>
+key.store=path-to-keystore
+key.alias=[alias]
+key.store.password=[pw]
+key.alias.password=[pw2]
+</code></p>
+
+<p>You can generate the key file using keytoool or you can generate the key file from eclipse. Run the command  ant clean release, which will compile the files, and generate the apk files (it generates signed, unsigned and unaligned files). The signed version can be used for uploading to Android Market or for installing directly on any device. Couple of stuff to be noted here are:</p>
+
+<ul>
+  <li>Ant version has to be 1.8.0 or higher.</li>
+  <li>Put the external libraries in the libs directory. Build script automatically picks up the libraries put under libs directory, otherwise the script need to be changed to look at a different classpath.</li>
+</ul>
+
+<p>Checkin the build.xml, build.properties and the key file into the repository.</p>
+
+<h2 id="setup-the-ci-server">Setup the CI server</h2>
+<p>The CI server has to run the ant script for building the app. One more setting what we’ve done in our Jenkins server was to archive the apks as artifacts (available in the post build action). In upcoming posts, I will cover how to do the following:</p>
+
+<ol>
+  <li>Running android tests</li>
+  <li>Running code/test coverage tools</li>
+  <li>Actual deployment</li>
+</ol>
+
+<p>References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/">http://skaug.no/ingvald/2011/09/android-app-with-jenkins/</a></p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

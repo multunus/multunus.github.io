@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Why we don't estimate</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_02 blog_2017_02_no-estimate blog_2017_02_no-estimate_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Why we don't estimate</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">February 22, 2017</p>
+      <p>Estimations are predictions. Unfortunately, they end up being perceived as <em>commitments</em>. And the team in question starts getting unduly pressured when the estimates go wrong. At Multunus this has happened many times in the past.</p>
+
+<p>We learnt a lot of things from <a href="http://www.jamesshore.com/Agile-Book/">Art of Agile Development [by James Shore]</a>. We found it tremendously useful for learning how to get started with Extreme Programming - and making the "prevention rather than cure" mental shift. This, in turn, resulted in much less waste - and higher efficiency across the team.</p>
+
+<p>But we were still struggling with estimating. We tried the story points and velocity approach suggested by XP. But we were still unable to deliver things at a predictable pace.</p>
+
+<p>We realised there was no point in trying any harder to come up with better estimates. It was time to look at things from a different perspective, time to look beyond XP’s default practices.</p>
+
+<p>During our search for alternative approaches [see references below], we discovered multiple presentations and blog posts - all suggesting the same thing: Estimating can never be accurate <em>enough</em>.</p>
+
+<p>The rest of the post is how we avoid estimates as much as possible, instead follow the below steps to deliver software:</p>
+
+<ul>
+  <li>
+    <p>First release/milestone to be done within 6-8 weeks</p>
+  </li>
+  <li>
+    <p>And further major milestones need to be done in every few weeks</p>
+  </li>
+  <li>
+    <p>Every story we sliced into stories which can be done in two days</p>
+  </li>
+</ul>
+
+<p>We continuously deliver code to production and features which take longer will be delivered with Feature Toggles so that it can be turned on/off.</p>
+
+<p><strong>Note</strong>: When we say story, we are referring to <a href="http://www.jamesshore.com/Agile-Book/stories.html">Agile Stories</a>.</p>
+
+<h2 id="no-estimates">No Estimates</h2>
+
+<p>As a first step towards to avoid estimating, we started slicing the stories/tasks to the same size. Instead of asking "how big is this", we slice them and make sure that all the stories are of somewhat same size. We further sliced the bigger ones to smaller ones, to make them equal size. This brought up some more predictability and more importantly, the stress of estimation was brought down significantly.</p>
+
+<p>Further, we started seeing a pattern i.e. we are somewhat becoming more comfortable and predictable with <strong>delivering once in two days</strong> or say slicing stories which can be done within two days.</p>
+
+<h2 id="identifying-what-to-deliver">Identifying what to deliver</h2>
+
+<p>The key to achieving this is to continuously prioritise and deliver what is more valuable to the customer. We use certain techniques to achieve the same.</p>
+
+<p>The simplest of the technique is drawing the Story Map [as recommended by <a href="https://blog.intercom.com/using-job-stories-design-features-ui-ux/">Jobs to be done Framework</a>], which helps us to visualise the user interactions of the system and prioritise what is important and what can come late.</p>
+
+<p>Here is a simple Story Map we created for an application where the requirement was to create an application to sync two different kinds of Document Management Systems like Sharepoint, HP Records Manager, Documentum etc. to each other.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/story-map.png" alt="Story Map" /></p>
+
+<p>There are too many things to be implemented for the system, the above is the simplest flow.</p>
+
+<p>We drew the user journey as shown above and highlighted the ones which are minimum enough for the customer to start using the system. So the ones highlighted with stars (*) went for the first milestone, which we delivered in the first 4-6 weeks.</p>
+
+<p>We de-prioritised certain tasks during the development phase too, as it is difficult to think of everything initially. What remained constant was "deliver a useable product as quickly as possible". The idea is to deliver value to the customer as early as possible and continuously and also learn more about the customer through each milestone.</p>
+
+<p>All of you know that a product usually changes once customers/users start using it. So the idea is to deliver the product early so that we can adopt the changes early.</p>
+
+<p>There are more tools like <a href="http://www.multunus.com/blog/2016/02/introduction-impact-mapping-creating-impact-map-ecommerce-product/">Impact Mapping</a> and <a href="http://www.gv.com/sprint/">Design Sprint</a>, which along with the Jobs To be Done framework, helps to bring in better understanding and clarity across team members.</p>
+
+<h2 id="no-estimates---100-of-the-time">No Estimates - 100% of the time?</h2>
+
+<p>Timeboxing helps us to create a sense of urgency which in turn helps us to be more creative. Yes, we would still need to have ballpark estimates to the customer when they engage with us.</p>
+
+<p>We try not to plan anything beyond a couple of months, which has helped us to make the estimate somewhat successful. We politely refuse their request to estimate beyond a few months, by explaining them why.</p>
+
+<p>We try to arrive at the first 2-3 milestones as mentioned above and restricting the overall estimate to a few months than committing to an engagement for many months.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>
+    <p><a href="http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all">http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all/</a></p>
+  </li>
+  <li>
+    <p><a href="http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html">http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.infoq.com/presentations/Want-Better-Estimates-Stop-Estimating">http://www.infoq.com/presentations/Want-Better-Estimates-Stop-Estimating</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.industriallogic.com/blog/stop-using-story-points/">http://www.industriallogic.com/blog/stop-using-story-points/</a></p>
+  </li>
+  <li>
+    <p><a href="http://dannorth.net/2009/07/01/the-perils-of-estimation/">http://dannorth.net/2009/07/01/the-perils-of-estimation/</a></p>
+  </li>
+</ul>
+
+<p>This is an updated version of my earlier post - <strong><em><a href="http://www.multunus.com/blog/2013/04/estimating-to-timeboxing-our-journey/">Estimating to Timeboxing - Our Journey</a></em></strong></p>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

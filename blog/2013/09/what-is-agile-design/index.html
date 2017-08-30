@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>What is Agile Design</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2013 blog_2013_09 blog_2013_09_what-is-agile-design blog_2013_09_what-is-agile-design_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">What is Agile Design</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">September 15, 2013</p>
+      <p>Agile recommends to do design continuously and emerge your design instead of doing a <a href="http://c2.com/cgi/wiki?BigDesignUpFront">Big Design UpFront</a> (BDUF). This post is an attempt to explain how to achieve the same.</p>
+
+<h2 id="start-with-simple-design">Start with Simple Design</h2>
+<p>Extreme Programming recommends you to <a href="http://www.xprogramming.com/Practices/PracSimplest.html">Do The Simplest Thing That Could Possibly Work</a>, known with the acronym (DTSTTCPW). </p>
+
+<p><a href="http://xprogramming.com/classics/expemergentdesign/">As mentioned by Ron Jeffries</a>, the code is simple if it:</p>
+
+<ul>
+  <li>Run all the tests</li>
+  <li>Contain no duplicate code</li>
+  <li>Express all the ideas the author wants to express</li>
+  <li>Minimize classes and methods</li>
+</ul>
+
+<p>The first 3 rules are self explanatory but the fourth one is confusing and contradictory especially with related to SOLID principles and design patterns. But it conveys the principles <a href="http://en.wikipedia.org/wiki/You_aren't_gonna_need_it">YAGNI</a> and <a href="http://www.codinghorror.com/blog/2006/10/the-last-responsible-moment.html">Last Responsible Moment</a> i.e. don’t do anything assuming that it might be required in future.</p>
+
+<h2 id="design-incrementally">Design Incrementally</h2>
+<p>The following is the excerpt from XP Explained Book by Kent Beck on Incremental Design.</p>
+
+<blockquote>
+  <p>XP teams can meet their human need for immediate and frequent success as well as their economic need to defer investment to the last responsible moment. Some of the teams who read and applied the first edition of this book didn’t get the part of the message about the last responsible moment. They piled story on story as quickly as possible with the least possible investment in design. Without daily attention to design, the cost of changes does skyrocket. The result is poorly designed, brittle, hard-to-change systems.</p>
+</blockquote>
+
+<p>The question is not whether or not to design, the question is when to design. Incremental design suggests that the most effective time to design is in the light of experience.</p>
+
+<p>If small, safe steps are how to design, the next question is where in the system to improve the design. The simple heuristic I have found helpful is to eliminate duplication. If I have the same logic in two places, I work with the design to understand how I can have only one copy.</p>
+
+<h2 id="emergent-design-and-continuous-design">Emergent Design and Continuous Design</h2>
+<p>Emergent Design, popularised by Neal Ford the design emerges by following Last Responsible Moment and Idiomatic Patterns. Refer to his 
+<a href="http://www.ibm.com/developerworks/java/library/j-eaed1/index.html">15 article series</a>, which talks about the same. I will write about the same, especially about the Idiomatic Patterns, in another post.</p>
+
+<p><a href="http://www.martinfowler.com/ieeeSoftware/continuousDesign.pdf">Continuous Design</a> was the term given by James Shore. He explains the same as:</p>
+
+<blockquote>
+  <p>I prefer the term continuous design because it emphasizes the core of the process: continuously taking advantage of opportunities to improve your design. When you discover a design flaw, you fix it. When a new feature doesn’t fit, you update the design.</p>
+</blockquote>
+
+<h2 id="summary">Summary</h2>
+<p>Instead of doing a big bang Design phase initially, refactor the code meticulously by applying the principles <a href="http://www.artima.com/intv/dry.html">DRY</a> and <a href="http://c2.com/xp/OnceAndOnlyOnce.html">Once and Only Once</a>. Improve the code further by using tools to identify
+<a href="http://c2.com/cgi/wiki?AbcMetric">Cyclomatic Complexity</a> and <a href="http://www.ibm.com/developerworks/library/j-eaed6/">Afferent Coupling</a>. Follow Test Driven Development which helps to do enough design required for the current requirement. Test coverage gives confidence to re factor the code without fear.</p>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="http://c2.com/cgi/wiki?XpSimplicityRules">http://c2.com/cgi/wiki?XpSimplicityRules</a></li>
+  <li><a href="http://c2.com/cgi/wiki?DoTheSimplestThingThatCouldPossiblyWork">http://c2.com/cgi/wiki?DoTheSimplestThingThatCouldPossiblyWork</a></li>
+  <li><a href="http://www.netobjectives.com/blogs/primer-emergent-design">http://www.netobjectives.com/blogs/primer-emergent-design</a></li>
+  <li><a href="http://martinfowler.com/articles/designDead.html">http://martinfowler.com/articles/designDead.html</a></li>
+  <li><a href="http://wirfs-brock.com/blog/2011/01/18/agile-architecture-myths-2-architecture-decisions-should-be-made-at-the-last-responsible-moment/">http://wirfs-brock.com/blog/2011/01/18/agile-architecture-myths-2-architecture-decisions-should-be-made-at-the-last-responsible-moment/</a></li>
+  <li><a href="http://www.codinghorror.com/blog/2007/03/curlys-law-do-one-thing.html">http://www.codinghorror.com/blog/2007/03/curlys-law-do-one-thing.html</a></li>
+  <li><a href="http://tobeagile.com/2012/10/16/seven-strategies-for-doing-emergent-design/">http://tobeagile.com/2012/10/16/seven-strategies-for-doing-emergent-design/</a></li>
+</ul>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

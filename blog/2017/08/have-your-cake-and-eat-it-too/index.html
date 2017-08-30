@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Have Your Cake and Eat it Too</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_08 blog_2017_08_have-your-cake-and-eat-it-too blog_2017_08_have-your-cake-and-eat-it-too_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Have Your Cake and Eat it Too</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">August 30, 2017</p>
+      <p>One of the problems the teams face, especially those following a fixed length iterations or sprint as Scrum recommends, is not having enough "stuff" built at the end of an iteration. Usually, this is what happens:</p>
+
+<ul>
+  <li>
+    <p>A product team prioritises a set of items for the backlog</p>
+  </li>
+  <li>
+    <p>The team estimates the stories at the beginning of the iteration</p>
+  </li>
+  <li>
+    <p>The team’s optimism comes down towards the end of the iteration</p>
+  </li>
+  <li>
+    <p>The iteration ends with a retrospective where team feels lack of achievement</p>
+  </li>
+</ul>
+
+<p>As <a href="https://vimeo.com/176856933">Joshua Kerievsky mentions</a>, the team goes through the following emotions during the iteration:</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/fixed-iterations.gif" alt="Emotions during fixed iterations" style="display:block;width:380px;" /></p>
+
+<p>We had gone through similar phases multiple times in the past. We followed Mainline/Trunk Based Development along with feature toggles. And also had enough automated tests to give us the confidence to release to production. But still, we had this issue of not achieving enough at the end of the iteration.</p>
+
+<p>That is when we started moving away from fixed iterations to variable length iterations and tried with <a href="http://www.multunus.com/blog/2017/02/no-estimate/">time boxing instead of estimating</a>. This was a huge enabler for Continuous Delivery by having small batches. And slicing the features to really small helped us to get quick feedback and change course depending upon what we learn.</p>
+
+<p>Sprints are still good, from the perspective of zooming in and zooming out, but <a href="http://www.informit.com/articles/article.aspx?p=1833567&amp;seqNum=2">decoupling deployments from releases</a> was a big step forward. Manier times we decided <strong>not</strong> to implement certain things because of our learnings from deployments. This makes products simpler as per <a href="http://agilemanifesto.org/principles.html">Agile Manifesto</a>,  <em>Simplicity - the art of maximising the work <strong>not done</strong> - is essential</em>.</p>
+
+<h2 id="small-batches">Small Batches</h2>
+
+<p>Small batch is a concept that comes from lean manufacturing and is key for Continuous Delivery. It is based on the saying <strong><a href="https://martinfowler.com/bliki/FrequencyReducesDifficulty.html">if it hurts, do it more often</a></strong>.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/iterative+-+incremental.jpg" alt="Agile is iterative and incremental" /></p>
+
+<p>It feels counter intuitive that a team who were not able to release anything at the end of a week or two weeks iteration but were able to get many stuff done when it was done on a daily basis. Surprisingly, this is what fundamentally mainline development enables.</p>
+
+<p>Apart from giving instant gratification to the team, as <a href="https://trunkbaseddevelopment.com/observed-habits/">Paul Hammant mentions</a>, a team who is committing to trunk on a continuous manner builds the below habits:</p>
+
+<ul>
+  <li>
+    <p>No code freeze, every day is the same</p>
+  </li>
+  <li>
+    <p>Quick reviews</p>
+  </li>
+  <li>
+    <p>Always release ready</p>
+  </li>
+  <li>
+    <p>Thin vertical slices</p>
+  </li>
+</ul>
+
+<p>There are a lot of case studies around how small batches help teams to achieve awesome results. You can read the below articles to know more:</p>
+
+<ul>
+  <li>
+    <p><a href="http://queue.acm.org/detail.cfm?id=2945077">The small batches principle</a></p>
+  </li>
+  <li>
+    <p><a href="https://itrevolution.com/the-amazing-devops-transformation-of-the-hp-laserjet-firmware-team-gary-gruver/">The Amazing DevOps Transformation Of The HP LaserJet Firmware Team</a></p>
+  </li>
+</ul>
+
+<p>But the question is, how do you enable small batches. There are only guidelines for doing this i.e. <a href="http://xp123.com/articles/invest-in-good-stories-and-smart-tasks/">INVEST in good stories and SMART tasks</a>. <a href="http://www.scruminc.com/wp-content/uploads/2015/06/User-Stories-2.0.pdf">Better User stories</a> cover a lot of techniques on this.</p>
+
+<p>I will be covering a few examples on this in the upcoming weeks.</p>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

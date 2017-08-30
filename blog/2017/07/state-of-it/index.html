@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>State of IT</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_07 blog_2017_07_state-of-it blog_2017_07_state-of-it_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">State of IT</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">July  5, 2017</p>
+      
+<p>Continuing with my earlier post about <a href="http://www.multunus.com/blog/2017/06/operability/">Operability</a>, but this one focussing more on the State of DevOps report. <a href="https://puppet.com/resources/whitepaper/state-of-devops-report">State of DevOps report</a> is a report published by Puppet every year along with <a href="https://devops-research.com/about.html">Nicole </a><a href="https://devops-research.com/about.html">Forsgren</a>, <a href="https://continuousdelivery.com/">Jez Humble</a>, <a href="http://www.realgenekim.me/">Gene Kim</a>, <a href="https://puppet.com/company/leadership/nigel-kersten">Nigel Kersten</a> by analysing the results of the survey they conduct. 
+They received over <strong><em>27,000 responses over the last six years</em></strong> and found clear evidence that <em>DevOps practices yield remarkable results for IT teams and organisations</em>.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/water-49024_1280.jpg" alt="Continuous Flow" /></p>
+
+<p>The report says by focussing on Continuous Flow of delivering value to the customers, the performance i.e. the individual, the team and the organisation, improves significantly. And this is done by optimising:</p>
+
+<ul>
+  <li>
+    <p>Deployment Frequency</p>
+  </li>
+  <li>
+    <p>Lead time [from commit to production]</p>
+  </li>
+  <li>
+    <p>Meantime to Recovery (MTTR)</p>
+  </li>
+  <li>
+    <p>Change Failure Rate</p>
+  </li>
+</ul>
+
+<p>And the key practices to be followed for improving the above are:</p>
+
+<ul>
+  <li>
+    <p>High level of  automation [build, test and deploy automations]</p>
+  </li>
+  <li>
+    <p><a href="http://www.multunus.com/blog/2016/03/merge-hells-feature-toggles-rescue/">Trunk </a><a href="http://www.multunus.com/blog/2016/03/merge-hells-feature-toggles-rescue/">based</a><a href="http://www.multunus.com/blog/2016/03/merge-hells-feature-toggles-rescue/"> development</a></p>
+  </li>
+  <li>
+    <p>Loosely coupled architecture</p>
+  </li>
+  <li>
+    <p><a href="https://en.wikipedia.org/wiki/Lean_product_development">Lean product </a><a href="https://en.wikipedia.org/wiki/Lean_product_development">development</a> [working in small batches with tight feedback cycle]</p>
+  </li>
+</ul>
+
+<p>What is interesting is Trunk based development, the most controversial of the above. The authors of the <a href="http://itrevolution.com/devops-handbook">DevOps Handbook </a>mentioned the below in the book:</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/devops-book-quote.png" alt="Trunk based development" /></p>
+
+<p>Trunk based development was highlighted in the report for last few years as a key differentiator between the high performing and low performing teams.</p>
+
+<p>Short-lived branches are aligned with Trunk based development because the focus is on small batches. But how short is Short-lived? The research shows that <strong><em>branches</em></strong><strong>_ living beyond a day_</strong> slows down the team’s integration and deployment flow and that’s a warning sign to look at the team’s practices and architecture.</p>
+
+<p>Tapabrata Pal, Director of Engineering at Capital One, <a href="https://www.youtube.com/watch?v=6Q0mtVnnthQ">talks </a><a href="https://www.youtube.com/watch?v=6Q0mtVnnthQ">about</a> how changing the Branching strategy along with automating the pipeline helped them increase the deployments by 20%.</p>
+
+<p><a href="http://samnewman.io/index.html">Sam Newman</a> in his talk <a href="https://www.youtube.com/watch?time_continue=2&amp;v=lqRQYEHAtpk">Feature </a><a href="https://www.youtube.com/watch?time_continue=2&amp;v=lqRQYEHAtpk">Branches</a><a href="https://www.youtube.com/watch?time_continue=2&amp;v=lqRQYEHAtpk"> and Toggles in a post Github world</a> mentions the formulae for calculating the pain of merging:</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/pain-or-merge.png" alt="Pain of Merge" /></p>
+
+<p>He also talks about the Pull Request model popularised by Github and why it makes sense for Open Source and how it becomes a hindrance to Continuous Flow.</p>
+
+<p>Fundamentally the Continuous Flow can be built if the team has clarity <a href="http://www.multunus.com/blog/2017/03/forgotten-story-whom-are-we-building-it-for/">for whom they are building the products for</a> and <a href="http://www.multunus.com/blog/2017/04/optimising-for-happiness/">optimising</a><a href="http://www.multunus.com/blog/2017/04/optimising-for-happiness/"> for happiness</a>.</p>
+
+<p>If you want to know more, please refer the following on the same topic:</p>
+
+<ul>
+  <li>
+    <p><a href="https://www.infoq.com/presentations/death-continuous-integration">The Death of </a><a href="https://www.infoq.com/presentations/death-continuous-integration">Continuous</a><a href="https://www.infoq.com/presentations/death-continuous-integration"> Integration</a></p>
+  </li>
+  <li>
+    <p><a href="https://martinfowler.com/bliki/ContinuousIntegrationCertification.html">Continuous</a><a href="https://martinfowler.com/bliki/ContinuousIntegrationCertification.html"> Integration</a><a href="https://martinfowler.com/bliki/ContinuousIntegrationCertification.html"> Certification</a></p>
+  </li>
+  <li>
+    <p><a href="https://speakerdeck.com/tdpauw/xp2017-feature-branching-is-evil">Feature Branching is Evil</a></p>
+  </li>
+  <li>
+    <p><a href="https://trunkbaseddevelopment.com/">Trunk based </a><a href="https://trunkbaseddevelopment.com/">development</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.multunus.com/blog/2017/03/long-living-feature-branches-an-antipattern/">Long living Feature </a><a href="http://www.multunus.com/blog/2017/03/long-living-feature-branches-an-antipattern/">Branches</a><a href="http://www.multunus.com/blog/2017/03/long-living-feature-branches-an-antipattern/"> - An Anti Pattern</a></p>
+  </li>
+  <li>
+    <p><a href="https://vimeo.com/210631471">Merge hells</a><a href="https://vimeo.com/210631471">!! Feature Toggles to the rescue</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.multunus.com/blog/2013/06/github-workflow-vs-mainline-development/">GitHub Workflow vs Mainline </a><a href="http://www.multunus.com/blog/2013/06/github-workflow-vs-mainline-development/">development</a></p>
+  </li>
+</ul>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

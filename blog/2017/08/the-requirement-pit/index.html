@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>The Requirements Pit</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_08 blog_2017_08_the-requirement-pit blog_2017_08_the-requirement-pit_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">The Requirements Pit</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">August 23, 2017</p>
+      <p><a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1503455788&amp;sr=1-1&amp;keywords=pragmatic+programmer">The Pragmatic Programmer: From Journeyman to Master</a>, is a classic book and must be read by every programmer, maybe again and again. Published by Dave Thomas and Andy Hunt in 1999 as the first in the series The Pragmatic Bookshelf label, the book has a lot of tips on how software should be created and maintained.</p>
+
+<p>The book uses analogies to communicate the ideas. The <a href="https://en.wikipedia.org/wiki/Broken_windows_theory">broken window theory</a>, <a href="https://en.wikipedia.org/wiki/Stone_Soup">the stone soup</a> and <a href="https://en.wikipedia.org/wiki/Boiling_frog">boiling frog</a> are popular analogies from the book. 
+Jeff Atwood's post <a href="https://blog.codinghorror.com/a-pragmatic-quick-reference/">A Pragmatic Quick Reference</a> covers a quick reference of the entire book.</p>
+
+<p>The book describes the experience Brian Eno [the famous producer and musician] had while designing an ultimate mixing board. Quoting from the book:</p>
+
+<blockquote>
+
+  <p><strong><em>Sometimes the Interface Is the System</em></strong></p>
+
+  <p><em>In an article in Wired magazine (January 1999, page 176), producer and musician Brian Eno described an incredible piece of technology—the ultimate mixing board. It does anything to sound that can be done. And yet, instead of letting musicians make better music, or produce a recording faster or less expensively, it gets in the way; it disrupts the creative process.</em></p>
+</blockquote>
+
+<blockquote>
+  <p><em>To see why, you have to look at how recording engineers work. They balance sounds intuitively. Over the years, they develop an innate feedback loop between their ears and their fingertips—sliding faders, rotating knobs, and so on. However, the interface to the new mixer didn't leverage off those abilities. Instead, it forced its users to type on a keyboard or click a mouse. The functions it provided were comprehensive, but they were packaged in unfamiliar and exotic ways. The functions the engineers needed were sometimes hidden behind obscure names, or were achieved with non intuitive combinations of basic facilities.</em></p>
+</blockquote>
+
+<blockquote>
+  <p><em>That environment has a requirement to leverage existing skill sets. While slavishly duplicating what already exists doesn't allow for progress, we must be able to provide a transition to the future.</em></p>
+</blockquote>
+
+<blockquote>
+  <p><em>For example, the recording engineers may have been better served by some sort of touchscreen interface—still tactile, still mounted as a traditional mixing board might be, yet allowing the software to go beyond the realm of fixed knobs and switches. Providing a comfortable transition through familiar metaphors is one way to help get buy-in.</em></p>
+</blockquote>
+
+<blockquote>
+  <p><em>This example also illustrates our belief that successful tools adapt to the hands that use them. In this case, it is the tools that you build for others that must be adaptable.</em></p>
+</blockquote>
+
+<p>Refer to the original Wired magazine article - <a href="https://www.wired.com/1999/01/eno/">The revenge of the intuitive</a></p>
+
+<p>So the summary is <strong><em>Work with a User to Think Like a User.</em></strong></p>
+
+<h2 id="documenting-requirements">Documenting Requirements</h2>
+<p>Like a good codebase, the requirements should also be abstract because none, including the end users, know the requirements well enough. These abstractions, help the software to be flexible. Let's look at an example:</p>
+
+<blockquote>
+  <p><em>"An employee record may be viewed only by a nominated group of people"</em></p>
+</blockquote>
+
+<p>The above conveys in a generic manner that there should be restrictions on who can view what. Compare that with:</p>
+
+<blockquote>
+  <p><em>"Only an employee's supervisors and the personnel department may view that employee's records"</em></p>
+</blockquote>
+
+<p>While this is more specific, it can (or will) change tomorrow because of an addition of new role or change in the privileges for an existing role.</p>
+
+<p>There is a high probability that the system becomes more rigid when requirements are mentioned in more specific way vs when mentioned in a generic way. Documenting them as use cases, as <a href="https://www.ivarjacobson.com/publications/white-papers/use-case-ebook">Ivar Jacobson recommends</a> with the focus on the goal to be achieved helps it to be more abstract.</p>
+
+<h2 id="project-glossary">Project Glossary</h2>
+<p>Also maintain a Project Glossary to bring in common and consistent vocabulary across the team i.e., the domain experts, end users, developers because:</p>
+
+<blockquote>
+  <p><em>It's very hard to succeed on a project where the users and developers refer to the same thing by different names or, even worse, refer to different things by the same name.</em></p>
+</blockquote>
+
+<p>My friend Yedhu has written a short and crisp summary about The Pragmatic Programmer. You can read them <a href="www.yedhukrishnan.blogspot.com/search/label/Pragmatic">here</a>.</p>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

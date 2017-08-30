@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Options to consider while building an MDM Solution</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2015 blog_2015_12 blog_2015_12_options-consider-building-mdm-solution blog_2015_12_options-consider-building-mdm-solution_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Options to consider while building an MDM Solution</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">December 10, 2015</p>
+      <p>Let’s assume you have a good <a href="http://www.multunus.com/blog/2015/11/overview-mdm-landscape/">overview of the MDM landscape</a>. You’ve done your “build vs buy” analysis and have chosen to go for “build”.</p>
+
+<p>Let’s now look what options are available to build an MDM solution that potentially solves a business problem. I'll be focusing on Android in this post and will cover the iOS ecosystem in the upcoming parts of the series.</p>
+
+<p>Before I talk about the options, let’s take a look at two key concepts: 
+Rooting and Custom ROMs.</p>
+
+<h2 id="rooting">Rooting</h2>
+
+<p>Rooting of a device means gaining full control of the device. <a href="http://www.androidcentral.com/android-z-what-kernel">Android uses Linux Kernel</a>, and rooting gives you the super user permission on the device which allows you to do pretty much anything on the device. There are <a href="https://www.google.co.in/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;es_th=1&amp;ie=UTF-8#q=super+user+app+android">apps available in the Android Market</a>, which helps you to managepermission.</p>
+
+<h3 id="when-to-use">When to use</h3>
+
+<p>With rooting, you can install apps as System Apps, those apps which have more privileges than user apps, the apps that we normally install from Play Store. System Apps get installed in thepartition of your device which is read only. Most of the pre-installed apps that we see in the device, especially those from the device manufacturer, are system apps. Users will not be able to uninstall System Apps.</p>
+
+<h3 id="pros">Pros</h3>
+
+<ul>
+  <li>
+    <p>Install apps as System apps, to restrict the app getting uninstalled.</p>
+  </li>
+  <li>
+    <p>Get full control of the device, so can manage the apps silently without any human intervention</p>
+  </li>
+  <li>
+    <p>Rooting is required to install Custom ROM on many devices [Custom ROM is covered in detail in the next section]</p>
+  </li>
+</ul>
+
+<h3 id="cons">Cons</h3>
+
+<ul>
+  <li>
+    <p>Requires flashing, which voids the manufacturer's warranty</p>
+  </li>
+  <li>
+    <p>Can potentially brick the device, if something goes wrong while rooting.</p>
+  </li>
+</ul>
+
+<h2 id="custom-roms">Custom ROMs</h2>
+
+<p>A Custom ROM as the name suggests, is a custom built distribution of the stock Android OS or tweaked versions of the Android ROM provided by the device manufacturer. Custom ROMs make the device suited for very specific needs.</p>
+
+<h3 id="when-to-use-1">When to use</h3>
+
+<p>Custom ROMs make sense when the device is owned by an organization, say an organization providing devices to the field staff. Other use cases include where the device is used as an<a href="https://en.wikipedia.org/wiki/Interactive_kiosk">Information Kiosk</a>, or<a href="https://en.wikipedia.org/wiki/Point_of_sale">POS Systems</a>.</p>
+
+<h3 id="pros-1">Pros</h3>
+
+<ul>
+  <li>
+    <p>More control of the device - As the device is rooted, anything can be done on the device, such as removing bloatware, giving root permissions to specific apps etc.</p>
+  </li>
+  <li>
+    <p>Cost reduction - A device with lower hardware specifications might be sufficient if only few apps are required to be installed on the device. This might reduce the cost of the device.</p>
+  </li>
+  <li>
+    <p>Faster upgrades: Android updates from manufacturers takes a very long time to roll out because of multiple layers of testing and certification. With a Custom ROM you can create your own version of stock Android cutting out the need for waiting for the manufacturer.</p>
+  </li>
+</ul>
+
+<h3 id="cons-1">Cons</h3>
+
+<ul>
+  <li>
+    <p>In BYOD scenarios, employees or partners will be wary of installing a Custom ROM on their owned devices, giving away complete control of their devices.</p>
+  </li>
+  <li>
+    <p>With a Custom ROM you are responsible for testing and fixing issues in the OS, which is usually done by the manufacturer if you are using a Stock ROM.</p>
+  </li>
+  <li>
+    <p>For loading a Custom ROM you have flash the device [many devices require rooting too], which voids manufacturer's warranty.</p>
+  </li>
+  <li>
+    <p>As mentioned above, rooting can brick the device if something goes amiss while rooting.</p>
+  </li>
+</ul>
+
+<h2 id="our-experience-building-mdm-withcustom-rom">Our Experience building MDM with Custom ROM</h2>
+
+<p>One of<a href="http://www.multunus.com/portfolio/end-end-mobile-device-management-solution-health-media-enterprise/">our MDM Customers</a>had the requirement to play Adobe Flash video ads on the devices. Adobe had removed<a href="http://in.pcmag.com/apps/82354/news/adobe-removing-flash-for-android-from-google-play">Flash App from Google Playstore</a>with the release of Android 4.1. We tried to convert the flash videos to HTML5 videos, but hit bottlenecks with animations and annotations in the videos. Many advertising firms still use Adobe Flash for videos, so asking the content distributors to distribute the videos in non-flash format was not a viable option.</p>
+
+<p>That is when we decided to go with Custom ROM which would help us:</p>
+
+<ul>
+  <li>
+    <p>Pre-install the required apps, eg: the Adobe Flash app, I mentioned above</p>
+  </li>
+  <li>
+    <p>Remove unnecessary bloatware</p>
+  </li>
+  <li>
+    <p>Pre-configure the device settings eg: WiFi settings, lock settings, volume settings.</p>
+  </li>
+  <li>
+    <p>OS and app updates</p>
+  </li>
+</ul>
+
+<h2 id="how-to-build-mdm-without-custom-rom-and-rooting">How to build MDM without Custom ROM and Rooting</h2>
+
+<p>Using Android API, along with a <a href="https://en.wikipedia.org/wiki/Push_technology">Push Technology</a> [such as<a href="https://developers.google.com/cloud-messaging/">Google Cloud Messaging</a>],we can create an MDM solution to:</p>
+
+<ul>
+  <li>
+    <p>Manage apps in the device</p>
+  </li>
+  <li>
+    <p>Manage content in the device</p>
+  </li>
+  <li>
+    <p>Run apps in Kiosk mode</p>
+  </li>
+  <li>
+    <p>Control low-security level features eg: lock/unlock device, control volume, Wifi settings</p>
+  </li>
+</ul>
+
+<p>At Multunus, we have started an <a href="http://multunus.github.io/onemdm-server/">Open Source MDM - OneMDM  </a>to help those who need a barebones MDM solution. Please take a look at the 
+<a href="http://multunus.github.io/onemdm-server/#live-demo">Live Demo</a> section if you would like to give a try.</p>
+
+<p>Feel free to contribute to the same by submitting PRs, raising issues.. We are looking forward for comments and/or suggestions.</p>
+
+<h2 id="device-administration-api">Device Administration API</h2>
+
+<p>Android also provides<a href="http://developer.android.com/guide/topics/admin/device-admin.html">Device Administration API</a>, which provides device administration features at the system level to create security-aware applications that are useful in enterprise settings. The API supports enabling password policies, storage encryption and disabling camera based on context or time.</p>
+
+<p>The user must explicitly enable the application for the policies to be enforced. If the user chooses not to enable the application it will still be present on the device, without any policies being enforced, and the user will not get any of the application's benefits.</p>
+
+<p>The following is a sample prompt to the user to enable an app as Device Administration app:</p>
+
+<p><img src="http://developer.android.com/images/admin/device-admin-activate-prompt.png" alt="Android Device Administration" /></p>
+
+<h2 id="android-for-work">Android For Work</h2>
+
+<p><a href="https://www.android.com/work/">Android for Work</a> is Google’s recent initiative for corporate customers with a simplified BYOD platform. With Lollipop, Android introduced support for multiple profiles on device which in turn allows to separate the personal apps from work apps. The Corporate Profile that is setup on the device can be controlled by the administrators. The administrators can set which apps are available for the corporate profile along with separate storage areas.</p>
+
+<p>For devices running below Lollipop i.e. Ice Cream Sandwich and newer,<a href="https://static.googleusercontent.com/media/www.google.co.in/en/IN/work/android/files/android-for-work-apps-guide.pdf">Google Play for Work</a>, can be installed to get similar functionalities.</p>
+
+<p>If you are a Google Enterprise App (not the legacy free tier) user, Android for Work is a useful solution as it offers a simple device registration and administration features.</p>
+
+<p>To create apps for Android For Work, one needs to be <a href="https://www.google.com/work/android/partners/">enrolled as a partner</a>, which is right now available only on request basis. It is expected that in the immediate future, Android For Work should help many enterprises manage BYOD with app distribution, data management and security management.</p>
+
+<h2 id="coming-up">Coming Up</h2>
+
+<p>In the upcoming posts, I will be sharing our learnings [both technical and non-technical] we had while building multiple MDM solutions.</p>
+
+<p>I am speaking at the upcoming <a href="https://droidcon.in/2015/">DroidCon India</a> conference <a href="https://droidconin.talkfunnel.com/2015/57-learnings-from-building-custom-mdm">about MDM</a>. Come and say hi if you are attending the conference.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

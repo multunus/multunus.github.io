@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Continuous Delivery for Database</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_06 blog_2017_06_continuous-delivery-for-database blog_2017_06_continuous-delivery-for-database_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Continuous Delivery for Database</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">June  7, 2017</p>
+      <p>In my previous posts, I touched upon <a href="https://paulhammant.com/blog/branch_by_abstraction.html">Branch by Abstraction</a> and <a href="https://www.martinfowler.com/bliki/StranglerApplication.html">Strangler Pattern</a> which can be used as a technique for long refactorings or rewrites of the application. I also wrote about how to approach <a href="http://www.multunus.com/blog/2013/09/what-is-agile-design/">emergent design</a> instead of <a href="http://c2.com/cgi/wiki?BigDesignUpFront">Big Upfront Design</a>.</p>
+
+<p>What about Database changes? Can it be done in a continuous delivery manner?</p>
+
+<p>Evolutionary Database or Refactoring Database is a concept that came out through the Book - <a href="https://martinfowler.com/books/refactoringDatabases.html">Refactoring Databases</a> published a decade back. The book talks many patterns that can be applied for Evolutionary Design of databases which is key for Continuous Delivery.</p>
+
+<p>Most of ORMs support migrations which allow database versioning. But how do you take care of porting data when refactoring a big table to multiple smaller ones or handling deletion of columns etc. This is where the <a href="https://martinfowler.com/bliki/ParallelChange.html">expand contract pattern</a> can be applied, which is somewhat similar to the Branch by abstraction where you keep the old and new implementation in parallel for some time.</p>
+
+<p>Let me explain that with an example, one of the database changes that we made for our product.</p>
+
+<p>The application receives enquiries through the IVR system to automate the customer support calls. Depending upon the option selected through the IVR, an SMS is sent to the customer which they can use for further interaction with the system.</p>
+
+<p>When we started off, we had the following fields for the enquiries table:</p>
+
+<ul>
+  <li>
+    <p>customer_contact_number</p>
+  </li>
+  <li>
+    <p>call_start_time</p>
+  </li>
+  <li>
+    <p>call_end_time</p>
+  </li>
+  <li>
+    <p>extension</p>
+  </li>
+  <li>
+    <p>customer_name</p>
+  </li>
+  <li>
+    <p>customer_email</p>
+  </li>
+</ul>
+
+<p>We added the <em>name</em> and <em>email</em> of the customer later down the line to the enquiries table. But we realised that it’s time to move out customer related data to another table so that we can reference it throughout the application.</p>
+
+<p>It required the following steps:</p>
+
+<ul>
+  <li>
+    <p>Add the <em>customers</em> table</p>
+  </li>
+  <li>
+    <p>Change the code to use <em>customers</em> table</p>
+  </li>
+  <li>
+    <p>Port the existing data to the <em>customers</em> table</p>
+  </li>
+  <li>
+    <p>Delete the fields from <em>enquiries</em> table</p>
+  </li>
+</ul>
+
+<p>All of us know that rollback of database migrations is hard when it comes to deleting of table or fields. So it is always recommended to do the migrations, port the data and watch it for some time and then delete the unwanted fields.</p>
+
+<p>This means we need to have both the earlier and current implementation running in parallel for some time. And that is what is called the expand-contract pattern.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/db-cd.png" alt="&quot;DB - Expand Contract Pattern&quot;" /></p>
+
+<p>This is also known as <a href="https://martinfowler.com/bliki/ParallelChange.html">Parallel Change</a>, which can be applied for other refactorings which require backward compatibility [eg: API changes]. Branch by Abstraction also follows parallel change to support long-term refactoring.</p>
+
+<p>Following are some references about Database Refactorings and how to support Continuous Delivery of Databases.</p>
+
+<p><a href="https://www.youtube.com/watch?v=ViXMER7RlVU">Enabling Continuous Delivery with Database Practices</a></p>
+
+<p><a href="https://martinfowler.com/bliki/ParallelChange.html">Parallel Change</a></p>
+
+<p><a href="https://martinfowler.com/articles/evodb.html">Evolutionary Database Design</a></p>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

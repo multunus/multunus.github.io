@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Script to merge two identical MySQL Databases</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2011 blog_2011_03 blog_2011_03_script-to-merge-two-identical-mysql-databases blog_2011_03_script-to-merge-two-identical-mysql-databases_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Script to merge two identical MySQL Databases</h1>
+      <p class="post-description">March 21, 2011</p>
+      <p>For one of the applications what we’re working on, we had a requirement to merge two DBs which have the same structure.</p>
+
+<p>As tables in both DBs can hold same value for primary keys, we had to offset all the ID fields (including foreign key references). If the data from DB_2 has to be imported to DB_1, the steps we had to follow were as follows.</p>
+
+<ul>
+  <li>Increment the ID field value (including the foreign keys). This has to be done across all the tables.</li>
+  <li>Import the Data</li>
+</ul>
+
+<p>It is tough to write the script manually especially if you have lot of tables and foreign key references. We used MySQL’s information schema to give us info about the tables and dynamically generated the script to do it across all the tables.</p>
+
+<p><a href="http://gist.github.com/875796">Here</a> is the SQL script we wrote for the same.</p>
+
+<p>It worked like charm and saved a lot of time for us.</p>
+
+<p><strong>NOTE:</strong> This will <strong>not</strong> take care of clashes for unique fields. Luckily though in our case there were no clashes for unique fields.</p>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Long living feature branches - An Anti Pattern</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_03 blog_2017_03_long-living-feature-branches-an-antipattern blog_2017_03_long-living-feature-branches-an-antipattern_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Long living feature branches - An Anti Pattern</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">March 14, 2017</p>
+      <p>A few years back, we were working on a Javascript heavy web application which had built using <a href="http://backbonejs.org/">backbone.js</a>. We found that we were loading all the Javascripts at once than applying lazy loading. This affected the user experience because of the high page load time and wanted to fix that.</p>
+
+<p>We decide to use <a href="http://requirejs.org/docs/whyamd.html">Require.js’s AMD</a> [Asynchronous Module Definition] to implement lazy loading. We had to change our own Javascript files and also needed to apply certain techniques to the external JS [like JQuery] to support AMD. We started on that and realized that we are getting into a black hole as we had to literally change the entire JS code. We didn’t react to our learning and it took around two weeks to completely support AMD.</p>
+
+<p>We saw changes in the application performance, but the as a team we felt bad because We couldn’t work on anything else during this time because:</p>
+
+<ul>
+  <li>
+    <p>It was taking longer than expected so the entire team jumped on trying to finish it faster</p>
+  </li>
+  <li>
+    <p>During this time, the application was somewhat broken, so deploying something to production was not possible</p>
+  </li>
+</ul>
+
+<p>We thought we were doing continuous delivery i.e. every commit can go to production, but it was broken this time. We needed to find out how to handle long running rewriting in a "continuous delivery" manner.</p>
+
+<h2 id="learning-from-experience">Learning from experience</h2>
+
+<p>We came across a similar situation in the recent past. This was for an application which allowed the user to create custom designs, which they can print in their T-Shirts or hoodies. We were using RGhost for creating the designs in PDF but later realised that because of certain constraints with RGhost it’s better to use LaTex.</p>
+
+<p>We didn’t want to repeat the earlier mistake, we want to do the rewrite in small batches. We had an abstraction layer for the PDF Generation somewhat like as follows:</p>
+
+<pre><code class="language-ruby">class PDFGenerator
+
+  def generate_pdf_from_text(text,font_attributes)
+    #Call the RGhost’s implementation
+  end
+
+  def generate_pdf_from_image(image_path,image_attributes)
+    #Call the LaTex’s implementation
+  end
+
+  #other methods
+
+end
+</code></pre>
+
+<p>And we change one function by function to the new implementation. We added feature toggle too so that we can switch to old implementation in case we find a problem in production.</p>
+
+<pre><code class="language-ruby">  def generate_pdf_from_image(image_path,image_attributes)
+
+    if USE_LATEX
+      #new implementation
+    else
+     #old implementation
+    end
+  end
+</code></pre>
+
+<p>The approach was really great, because we could fine tune the new implementation with the learnings from production and as it was in small batches and it was completely fine to complete the port in few weeks time as there was no dependency on this.</p>
+
+<h2 id="branch-by-abstraction">Branch by Abstraction</h2>
+
+<p>The above technique is similar to the technique called <a href="https://martinfowler.com/bliki/BranchByAbstraction.html">Branch by Abstraction</a>, i.e. introduce an abstraction layer and route it to the existing implementation.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/03/branch_by_abstraction1.png" alt="image alt text" /></p>
+
+<p>Let the abstraction layer redirect to newer implementation as an when it is ready.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/03/branch_by_abstraction2.png" alt="image alt text" /></p>
+
+<p>You can visualise Branch by Abstraction with the <a href="https://trunkbaseddevelopment.com/branch-by-abstraction/">following example given by Paul Hammant</a> i.e consider it as changing the wheels of a car with the conditions:</p>
+
+<ul>
+  <li>
+    <p>Mechanics must be able to simultaneously work on the upholstery, engine, etc.</p>
+  </li>
+  <li>
+    <p>The car must be drivable after every change.</p>
+  </li>
+</ul>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2017/03/branch_by_abstraction3.png" alt="image alt text" /></p>
+
+<p>It works in large scale too. <a href="https://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/">This case study</a> talks about two major changes implemented using Branch by Abstraction i.e.:</p>
+
+<ul>
+  <li>
+    <p>Moving from iBatis to Hibernate [famous ORMs in the Java world]</p>
+  </li>
+  <li>
+    <p>Moving from Velocity and JsTemplate to JRuby on Rails</p>
+  </li>
+</ul>
+
+<h2 id="every-commit-should-be-ready-for-deployment">Every commit should be ready for deployment</h2>
+
+<p><a href="http://www.multunus.com/blog/2016/03/merge-hells-feature-toggles-rescue/">Mainline Development and Feature toggles</a> help you to achieve this mantra to a great extend, but the question is how do you handle major refactorings or rewritings? Use Branch by Abstraction.</p>
+
+<p>Yes, it requires the discipline to use abstractions appropriately. But why not, if the same helps for better maintenance.</p>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

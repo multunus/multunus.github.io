@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Merge Hells? Feature Toggles to the rescue!</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2016 blog_2016_03 blog_2016_03_merge-hells-feature-toggles-rescue blog_2016_03_merge-hells-feature-toggles-rescue_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Merge Hells? Feature Toggles to the rescue!</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">March 29, 2016</p>
+      <p><img src="http://images.memes.com/meme/369621" alt="Merge Conflicts" /></p>
+
+<p>“Team X  is nearing  major release. A major one after they got their funding. There is a huge backlog of features the investors are asking for and another set of features their loving customers are eagerly waiting for.</p>
+
+<p>With the funding, they were able to get some really smart people onto the team, so a few features are being developed in parallel. Everyone is very excited about their feature going live, and they’ve been very careful about making sure that they have high test coverage to avoid regression issues and also setup Continuous Integration in place for faster feedback.</p>
+
+<p>And the day for the integration comes and it goes on and on and on and on…</p>
+
+<p>It takes them almost a week to integrate, i.e. just to merge different branches together, and a few more days after that to test and then release. They introduced another manual test phase because they were threatened by the merge conflicts and lost confidence in their automated tests.</p>
+
+<p>The release is delayed, something they never expected. The entire team is disappointed. Better not to ask how the business people felt.</p>
+
+<p>‘What went wrong despite having high test coverage and a Continuous Integration setup?’ everyone wondered.”</p>
+
+<p>Familiar with the above story? Has it ever happened to you? Then read on, these are simple techniques which can help you to prevent your team working on such non-value added tasks such as fixing merge conflicts.</p>
+
+<p>Before jumping on to the solution, let’s first correct some misunderstandings/misconceptions about Continuous Integration.</p>
+
+<h2 id="continuous-integration">Continuous Integration</h2>
+<p>"<a href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration(CI)</a> is the practice, in software engineering, of <strong>merging all developer working copies to a shared mainline several times a day.”</strong></p>
+
+<p>Let's go back to the practices the Team X were following. They had CI setup for each feature branch, which is against the above definition of CI.</p>
+
+<p>Both <strong>Continuous</strong> and <strong>Integration</strong> are important in CI and it means continuously integrating the code in one branch, not in multiple branches. Let us see why this is important.</p>
+
+<h2 id="mainline-development">Mainline Development</h2>
+<p><a href="http://paulhammant.com/2013/04/05/what-is-trunk-based-development/">Mainline Development</a>, also known as Trunk based development, is where everyone in the team commits to a single branch. Continuous Integration on the mainline branch guarantees that the branch is ready for deployment at any given point of time.</p>
+
+<p>If Team X was following the same, the time they spend on merging and fixing conflicts could have been used for creative tasks.</p>
+
+<p>Wondering how will you handle the situations such as following?</p>
+
+<ul>
+  <li>
+    <p>Features under development</p>
+  </li>
+  <li>
+    <p>Features waiting for Acceptance from business stakeholders</p>
+  </li>
+  <li>
+    <p>Pushing quick fixes or patches to production</p>
+  </li>
+</ul>
+
+<p>Read on.</p>
+
+<h2 id="feature-toggles">Feature Toggles</h2>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/03/button-161555_1280.png" alt="Feature Toggles" /></p>
+
+<p>This is where Feature Toggles come to the rescue.</p>
+
+<p>A Feature Toggle -  also known as a Feature Flag, Feature Flip or Feature Switch - is a simple technique where you can turn on or off a certain feature through configuration.</p>
+
+<p>Let’s go back to the Team X. By keeping toggles for the features, the entire team could have continued working on the same branch and the long-living branches could have been completely avoided. This along with<a href="#ci">Continuous Integration as mentioned above</a>, where the code gets merged and tested multiple times a day, merge issues should be very minimal or non-existent.</p>
+
+<p>By keeping the toggle off in the production environments, the worry of end users seeing the incomplete feature can be avoided.</p>
+
+<pre><code>def cart_items
+  if ADD_ANOTHER_COLOR_OF_SAME_PRODUCT
+    return products_with_same_color
+  else
+    return all_products
+  end
+end
+</code></pre>
+
+<p>In the above code snippet,* ADD_ANOTHER_COLOR_OF_SAME_PRODUCT*  is the feature which can be turned on and off depending upon the environment where it is running such as testing, staging, production etc.</p>
+
+<p>Yes, I know what you are thinking. So many “”. Yes, it’s true. It can get complicated. But it’s only for a short period of time. Once the feature is done, the toggle can and should be removed completely.</p>
+
+<p>In case there is a quick fix that needs to be pushed to production, there is no confusion about which branch to fix and rebased with as there is only one branch. The fix can be very confidently pushed to production, with the feature under development being turned off.</p>
+
+<h2 id="experimental-toggles">Experimental Toggles</h2>
+
+<p>The release toggles, the toggles to hide partly built  features, are a very common use of feature toggle.</p>
+
+<p>Another type of toggle is <strong>Experimental Toggles</strong>, where the feature is exposed to a set of users for quick experimentation and feedback. This is commonly done using one of the below techniques.</p>
+
+<ul>
+  <li>
+    <p><a href="https://en.wikipedia.org/wiki/A/B_testing">A/B testing</a> or <a href="https://en.wikipedia.org/wiki/Multivariate_testing">Multivariate testing</a>- to test multiple parallel experiments</p>
+  </li>
+  <li>
+    <p><a href="http://martinfowler.com/bliki/CanaryRelease.html">Canary Release</a> or <a href="http://martinfowler.com/bliki/BlueGreenDeployment.html">Blue Green Deployments</a>-  - to incrementally launch the feature to batches of users</p>
+  </li>
+  <li>
+    <p><a href="https://www.facebook.com/notes/facebook-engineering/hammering-usernames/96390263919/">Dark Launching</a>- Launch the feature to soak test even before releasing it to the users</p>
+  </li>
+</ul>
+
+<h2 id="ops-toggles">Ops Toggles</h2>
+
+<p>A good system should be designed for failures. A failure can due to anything that comes under the “unexpected” category, such as unexpected load on the system or unexpected hardware failure or unexpected network failure.</p>
+
+<p>When you see such surprising behaviors in production, the usual thing to do is to rollback the code. The rolling back of code can be as complicated as merging long-lived branches.</p>
+
+<p>Ops Toggles, another type of Feature Toggle, can be used for degrading a specific feature or for removing a specific feature completely until the situation is brought under control. Using Ops Toggles, you can turn off the feature without rolling back the code.  Ops Toggles can be considered as a way to manage<a href="http://martinfowler.com/bliki/CircuitBreaker.html">Circuit Breakers</a>.</p>
+
+<p>Users might have a degraded experience which is much better than keeping the buggy feature which will continue to embarrass many users.</p>
+
+<p><img src="http://martinfowler.com/articles/feature-toggles/chart-3.png" alt="Types of Feature Toggles" /></p>
+
+<p><a href="http://martinfowler.com/articles/feature-toggles.html">Credit: http://martinfowler.com/articles/feature-toggles.html</a></p>
+
+<p>Keep in mind toggles need to be short lived, except for Ops Toggles. And keep toggles as few as possible.</p>
+
+<h2 id="cathedral-vs-bazaar-model">Cathedral vs Bazaar Model</h2>
+
+<p><a href="https://guides.github.com/introduction/flow/">Github workflow</a>is a model that is commonly used by many. It is a good model for Open Source Projects to bring in some amount of rigor to the <a href="https://en.wikipedia.org/wiki/The_Cathedral_and_the_Bazaar">bazaar</a>. But in a more controlled environment, relying on interdependence within the team for code reviews or pair programming might be better. The value of the code will start coming in only when it reaches the users. Until then it is a Work In Progress or inventory. And our goal should be reduced Work In Progress.</p>
+
+<p>Please read <a href="http://www.multunus.com/blog/2013/06/github-workflow-vs-mainline-development/">my earlier post</a>, which talks about this in detail.</p>
+
+<h2 id="the-dark-side">The Dark Side</h2>
+
+<p>As we discussed above, Feature Toggles introduces, which can add to the Code Complexity. Ideally, the toggles should exist for a short duration until the experiment is done or until the feature reaches to all the users. But ideal, at times, may be far from reality, which can create issues as shown below.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-website/uploads/2016/03/Screen-Shot-2016-03-29-at-3.33.29-PM-1024x589.png" alt="Dark side of Feature Toggles" /></p>
+
+<p>Case in point: Knight Capital Group’s <a href="http://dougseven.com/2014/04/17/knightmare-a-devops-cautionary-tale/">$460 million dollar mistake</a>, where a wrong use of the Feature Flag and Manual deployment caused the company many $$ in just 45 minutes.</p>
+
+<h2 id="tips">Tips</h2>
+
+<p>Every approach has pros and cons.</p>
+
+<p>I would like to relate this to “how to pay off technical debt?”. Different teams might be following different tricks for <a href="http://martinfowler.com/bliki/TechnicalDebtQuadrant.html">paying off the technical debt</a>. But the goal for every team is to reduce it to the minimum so that it doesn’t affect the predictability or sustainability of software delivery. There is no “silver bullet” that really works for every team because the context is different for each team.</p>
+
+<p>The same applies to Feature Toggle too. There is no silver bullet to make sure that the Feature Toggles are short lived. There are quite a few tips and tricks followed by the teams, which can potentially work for many.</p>
+
+<p>At Multunus, what we have seen working is adding the card to the backlog to get rid of the Feature Toggle, along with reviewing the feature toggles once in every few weeks.</p>
+
+<p>Another technique is to define <a href="http://martinfowler.com/articles/feature-toggles.html">“expiry date” for toggles</a>and also logic to break the build or refusing to start the application if toggles exist beyond the. The same article talks about feature toggles in detail and a variety of different ways of reducing code complexity through better design of the code.</p>
+
+<p>Try out different approaches and see what works and what doesn’t. A common thing with any tool is that when people are new to the tool, there is a probability that they don’t use the tool in the way it was supposed to be used.</p>
+
+<p>The solution is not to blame the tool or person who used it wrong. Instead, fix the issue quickly and identify the gap and provide better training mechanisms to avoid similar issues happening again in the future.</p>
+
+<p>This requires a systematic way of conductingpostmortems. This is known as  <a href="https://codeascraft.com/2012/05/22/blameless-postmortems/">Blameless Postmortems</a>, as referred by <a href="https://twitter.com/allspaw">John Allspaw</a>, where the effort is to balance safety and accountability.</p>
+
+<h2 id="further-readings">Further Readings</h2>
+
+<p>Both Mainline Development and Feature Toggles are practices followed by many high performing organizations since their very early days. You can go through the below posts which refer to some of those:</p>
+
+<ul>
+  <li>
+    <p><a href="http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr/47-1_RespectIf_there_is_only">10+ deployments a day @ Flickr</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.infoq.com/news/2014/03/etsy-deploy-50-times-a-day">50+ deployments a day @ Etsy</a></p>
+  </li>
+  <li>
+    <p><a href="http://joshuaseiden.com/blog/2013/12/amazon-deploys-to-production-every-11-6-seconds/">Amazon does deployments every 11.6 seconds</a></p>
+  </li>
+  <li>
+    <p><a href="https://air.mozilla.org/continuous-delivery-at-google/">Google - commit to production is 8 minutes</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.facebook.com/notes/facebook-engineering/hammering-usernames/96390263919/">Dark Launching @ Facebook</a></p>
+  </li>
+  <li>
+    <p><a href="http://techblog.netflix.com/2011/04/lessons-netflix-learned-from-aws-outage.html">Netflix - Lessons learned during AWS Outage</a></p>
+  </li>
+</ul>
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>

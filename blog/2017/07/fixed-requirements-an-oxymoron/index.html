@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Fixed Requirements - An Oxymoron?</title>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+
+  <body class="blog blog_2017 blog_2017_07 blog_2017_07_fixed-requirements-an-oxymoron blog_2017_07_fixed-requirements-an-oxymoron_index">
+    <div class="container navigation-bar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/images/home/home-multunus-logo.svg" alt="Dispute Bills">
+                    </a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/community">Community</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+    </div>
+    <article class="blog-post">
+      <h1 class="post-title">Fixed Requirements - An Oxymoron?</h1>
+            <a href="/blog/tags/cap-leena" class="blog-author">leena</a>
+      <p class="post-description">July 18, 2017</p>
+      <p><img src="https://s3.amazonaws.com/multunus-cdimages/build-cycle.png" alt="" /></p>
+
+<p>One issue with the software industry is the belief <em>we know **exactly **what **needs to **be built</em>. It is wrong to assume that we’ve all these cool technologies with us and anything that we build will be <em>perfect</em>.</p>
+
+<p>I’ve reminded this many times to <em>myself</em>, the team including the non-software/engineering people I interact with: <em>we will never know what the users want</em>. Sometimes we’ve a feel or an intuition for it. And it can be right depending on your proximity to the users. And the way to confirm that is through conversations with the users and keeping a close watch on how they use our software.</p>
+
+<h2 id="a-simple-migration-tool">A simple migration tool</h2>
+
+<p>I was working with a customer to deliver a product to migrate documents from one system to another. Our customer has a workflow management system targeting specific domains. They needed a tool to migrate documents from different document management systems [like Sharepoint, Documentum etc.] to acquire customers who were already using these tools. This would help make their onboarding process to our system much faster.</p>
+
+<p>The tool description is simple, <strong><em>copy documents from one system to another</em></strong>. Yes, the document has metadata such as who created it, how many versions exist, when those versions got created and by whom, a unique ref that each of the tools maintains to identify the document, etc. These metadata needs to be mapped to different fields using a mapping file provided to the tool.</p>
+
+<p>We built a prototype to help the sales team demo the idea to their customers and it worked. Customers got the idea quickly enough.</p>
+
+<p>However, to make the tool ready for deployment, we needed more testing and polish, such as:</p>
+
+<ul>
+  <li>
+    <p>Making sure the tool is intuitive enough to understand which documents had synced successfully  and which ones had  failed - along with the reasons for failures</p>
+  </li>
+  <li>
+    <p>Handling customisations of these document management systems in a smooth manner</p>
+  </li>
+  <li>
+    <p>Handling varying numbers of documents</p>
+  </li>
+  <li>
+    <p>Handling varying document sizes</p>
+  </li>
+  <li>
+    <p>Handling intermittent connections</p>
+  </li>
+</ul>
+
+<p>We didn’t follow a good enough system to convert the prototype to  "useable" software and to convey to the stakeholders why it requires effort. The rest of the post is a retrospective of the same and what could have been done differently.</p>
+
+<h2 id="three-cs">Three Cs</h2>
+
+<p>User stories, as per Extreme Programming, have <a href="http://ronjeffries.com/xprog/articles/expcardconversationconfirmation/">three </a><a href="http://ronjeffries.com/xprog/articles/expcardconversationconfirmation/">critical</a><a href="http://ronjeffries.com/xprog/articles/expcardconversationconfirmation/"> elements</a>, called the three Cs:</p>
+
+<ul>
+  <li>
+    <p><strong>Card</strong> - A 1 or 2 lines line "definition" of what needs to be implemented</p>
+  </li>
+  <li>
+    <p><strong>Conversation</strong> - The conversation among the stakeholders and the team around what needs to be built in a way that both parties share their opinions, thoughts and feelings. The stronger the collaboration and the communication, better the quality of the product.</p>
+  </li>
+  <li>
+    <p><strong>Confirmation</strong> - Arrive at an understanding among the stakeholders and the team about what needs to be built. At this stage, our <em>assumption</em> is that if we build in a certain way, it will be valuable to the users.</p>
+  </li>
+</ul>
+
+<p>We didn’t follow a disciplined way for all the three Cs. Even though we had stories "card", our conversations and confirmation were not good enough and that resulted in a less than optimal quality of the final product.</p>
+
+<p>It happened because of various reasons such as the lack of time from the end users, stakeholders having different processes being followed for building software and our lack of persistence in influencing others.</p>
+
+<h2 id="domain-knowledge">Domain Knowledge</h2>
+
+<p>Related to above, the conversations should help us in arriving at <a href="http://www.multunus.com/blog/2017/01/naming-the-hardest-software/">Ubiquitous</a><a href="http://www.multunus.com/blog/2017/01/naming-the-hardest-software/"> Language</a> and also for gaining domain knowledge because interactions with the expert users help to improve the understanding of the space.</p>
+
+<h2 id="respecting-the-logs">Respecting the logs</h2>
+
+<p>As Dan North mentioned in his talk <a href="https://vimeo.com/209681251">Ops and </a><a href="https://vimeo.com/209681251">Operability</a>, <em>A log is an <strong>append-only, read-only, user interface</strong></em>. It should allow one to answer the below:</p>
+
+<ul>
+  <li>
+    <p>What happened?</p>
+  </li>
+  <li>
+    <p>Who is impacted?</p>
+  </li>
+  <li>
+    <p>How do we fix it?</p>
+  </li>
+</ul>
+
+<p>We learned this the hard way :)</p>
+
+<h2 id="exceptions-need-to-be-exceptions">Exceptions need to be exceptions</h2>
+
+<p>Somewhat related to logging, we need to respect exceptions too and should be handled whenever required by making sure that no information is lost. Many know how much it pains when you’ve a block like this:</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/eating-exceptions.png" alt="" /></p>
+
+<p>We didn’t have the above one. But there were cases which needed to be considered as exceptions but were not. For e.g.: handling non 2XX response code when making API calls.</p>
+
+<h2 id="what-worked-well">What worked well</h2>
+
+<p>In spite of the above issues, certain things we did, worked in our favour.</p>
+
+<h3 id="tdd">TDD</h3>
+
+<p>We had enough coverage for the tool which helped us in multiple ways:</p>
+
+<ul>
+  <li>
+    <p>Better extensibility. We could add integrations with other document management systems without too much difficulty</p>
+  </li>
+  <li>
+    <p>We had to refactor the code multiple times. One time we had to move from one persistence layer to another and we could do that because of good abstraction layer and decent test coverage.</p>
+  </li>
+  <li>
+    <p>Hardly any regression issues. We were confident when the tests passed.</p>
+  </li>
+</ul>
+
+<h3 id="continuous-delivery">Continuous Delivery</h3>
+
+<p>We continuously delivered, never waited for fixed length iterations to deliver what we accomplished. This meant that we were slicing features in small chunks.</p>
+
+<p>The tool was deployed in-house. We were given a test instance, simulating the production setup. Continuously delivering to this environment helped users to test the tool against their document management tools.</p>
+
+<h3 id="communication-with-actual-users">Communication with actual users</h3>
+
+<p><img src="https://s.tmimgcdn.com/blog/wp-content/uploads/2011/09/DevWatchingUsabilityTest.png?x47994" alt="Dev watching usability test" /></p>
+
+<p><em>Image source: <a href="http://blog.templatemonster.com/2011/09/14/usability-testing-basics/">Templatemonster</a></em></p>
+
+<p>Those who have watched how users use the software you built, agree that there is no better learning experience than the same. Others who haven’t experienced it, I highly recommend setting apart time, even though it can be embarrassing.</p>
+
+<p>We have been conversing with the end users and we could see them using the product, struggling with it and watch their emotions. That is when we realised that we need to improve our domain knowledge and need to improve the conversations and bring in confirmations. Ideally, we should have had two levels of communication:</p>
+
+<ul>
+  <li>
+    <p>One during the development to understand and confirm what needs to be built by communicating through quick prototypes for different scenarios</p>
+  </li>
+  <li>
+    <p>Then feedback session with the working software to confirm that what we envisioned with the prototype is "usable" enough</p>
+  </li>
+</ul>
+
+<p>When we realised that we are missing the first point above [because the prototype was already built], we took baby steps to bring in changes and improve the same.</p>
+
+<p>There were constraints which made it difficult for us to implement certain changes. These constraints were imposed due to the contracts and working agreement among different parties. I will be covering those aspects in a separate post.</p>
+
+<h2 id="finally">Finally!!!</h2>
+
+<p>Over a period of time, we brought in some rhythm and discipline to improve the situation. And finally did a decent job of delivering it, which was way beyond expected timelines. But in the end, the users were happy. They saw value in the tool. Even though it took a lot longer for us to reach that stage, we felt good that we delivered something that is useful.</p>
+
+<p>Of course, we could have reached there a lot earlier, if we had the right focus and persistence.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>The fundamental reason for failure was being unclear about the users and to accept that it is really difficult to spec out exactly what needs to be built, as the requirement evolves over a period of time. Rarely we build the exact same software multiple times. There will be similarities in, but it will have differences too.</p>
+
+<p>And this is what differentiates software industry from any other engineering streams like construction. While building a bridge, it is easier to spec out the steps and requirements somewhat closer. But in software things, can change significantly during the development because of its discovery process. I recommend you to watch <a href="https://www.infoq.com/presentations/Deliberate-Discovery">Deliberate</a><a href="https://www.infoq.com/presentations/Deliberate-Discovery"> Discovery</a><a href="https://www.infoq.com/presentations/Deliberate-Discovery"> by Dan North</a> which explains about how to design this discovery process.</p>
+
+<p>And the only way to understand what needs to be built is through constant communication and observation. It is the responsibility of every software professionals to <a href="http://www.multunus.com/blog/2017/03/forgotten-story-whom-are-we-building-it-for/">understand the feelings of our users</a> and everything that we do should be to optimise for delivering value for them. Any time the focus shifts to something else, the quality of the product dips.</p>
+
+<p><img src="https://s3.amazonaws.com/multunus-cdimages/broken-bridge.jpg" alt="Reckless job" /></p>
+
+<p>If we don’t expect a reckless job from other engineering streams [as shown above], why should we be different? Let us be more prudent to our jobs.</p>
+
+
+    </article>
+    <script src="/javascripts/site.min.js"></script>
+  </body>
+</html>
