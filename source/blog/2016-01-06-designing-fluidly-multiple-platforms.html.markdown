@@ -2,7 +2,7 @@
 title: Designing Fluidly for Multiple Platforms
 date: '2016-01-06 18:32:43'
 tags:
-- cap-akshaybhalotia
+- cap-akshayb
 - android
 - app-design
 - design
