@@ -50,5 +50,5 @@ Also maintain a Project Glossary to bring in common and consistent vocabulary ac
 
 >*It's very hard to succeed on a project where the users and developers refer to the same thing by different names or, even worse, refer to different things by the same name.*
 
-My friend Yedhu has written a short and crisp summary about The Pragmatic Programmer. You can read them [here](www.yedhukrishnan.blogspot.com/search/label/Pragmatic).
+My friend Yedhu has written a short and crisp summary about The Pragmatic Programmer. You can read them [here](http://www.yedhukrishnan.com/search/label/Pragmatic%20Programmer).
 
