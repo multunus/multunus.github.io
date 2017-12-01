@@ -1692,7 +1692,7 @@ end
     <link rel="alternate" href="http://www.multunus.com/blog/2017/02/no-estimate/"/>
     <id>http://www.multunus.com/blog/2017/02/no-estimate/</id>
     <published>2017-02-22T09:30:29+05:30</published>
-    <updated>2017-08-30T09:25:05+05:30</updated>
+    <updated>2017-12-01T22:18:43+05:30</updated>
     <content type="html">&lt;p&gt;Estimations are predictions. Unfortunately, they end up being perceived as &lt;em&gt;commitments&lt;/em&gt;. And the team in question starts getting unduly pressured when the estimates go wrong. At Multunus this has happened many times in the past.&lt;/p&gt;
 
 &lt;p&gt;We learnt a lot of things from &lt;a href="http://www.jamesshore.com/Agile-Book/"&gt;Art of Agile Development [by James Shore]&lt;/a&gt;. We found it tremendously useful for learning how to get started with Extreme Programming - and making the "prevention rather than cure" mental shift. This, in turn, resulted in much less waste - and higher efficiency across the team.&lt;/p&gt;
@@ -1732,6 +1732,8 @@ end
 &lt;p&gt;The key to achieving this is to continuously prioritise and deliver what is more valuable to the customer. We use certain techniques to achieve the same.&lt;/p&gt;
 
 &lt;p&gt;The simplest of the technique is drawing the Story Map [as recommended by &lt;a href="https://blog.intercom.com/using-job-stories-design-features-ui-ux/"&gt;Jobs to be done Framework&lt;/a&gt;], which helps us to visualise the user interactions of the system and prioritise what is important and what can come late.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.thisisproductmanagement.com/episodes/jobs-to-be-done/"&gt;Listen to Karen Dillon&lt;/a&gt; - Contributing Editor of Harvard Business Review and co-author of &lt;a href="https://www.amazon.com/Competing-Against-Luck-Innovation-Customer/dp/0062435612"&gt;Competing Against Luck&lt;/a&gt; - talking about Jobs to be done framework and how it can be used for understanding customers and building innovative products.&lt;/p&gt;
 
 &lt;p&gt;Here is a simple Story Map we created for an application where the requirement was to create an application to sync two different kinds of Document Management Systems like Sharepoint, HP Records Manager, Documentum etc. to each other.&lt;/p&gt;
 
@@ -1776,7 +1778,6 @@ end
 &lt;/ul&gt;
 
 &lt;p&gt;This is an updated version of my earlier post - &lt;strong&gt;&lt;em&gt;&lt;a href="http://www.multunus.com/blog/2013/04/estimating-to-timeboxing-our-journey/"&gt;Estimating to Timeboxing - Our Journey&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
 </content>
   </entry>
   <entry>
@@ -2128,6 +2129,47 @@ c =  {:a =&amp;gt; 1, :b =&amp;gt; 2}
 </content>
   </entry>
   <entry>
+    <title>Continuous Delivery for Tablet app</title>
+    <link rel="alternate" href="http://www.multunus.com/blog/2016/12/continuous-delivery-for-tablet-app-media-company/"/>
+    <id>http://www.multunus.com/blog/2016/12/continuous-delivery-for-tablet-app-media-company/</id>
+    <published>2016-12-05T17:24:19+05:30</published>
+    <updated>2017-08-30T09:25:05+05:30</updated>
+    <content type="html">&lt;p&gt;In my &lt;a href="http://www.multunus.com/blog/2016/11/tryst-continuous-delivery/"&gt;earlier post&lt;/a&gt;, I mentioned the product we developed for a Media Company, where we deployed Android Tablets and Linux Media Players as Kiosk Devices in clinics across the US. These devices air informative content relevant to the patients visiting the clinics.&lt;/p&gt;
+
+&lt;p&gt;We deployed the first kiosk mode tablet within 6 weeks. We received excellent feedback from both the patients and the doctors.&lt;/p&gt;
+
+&lt;p&gt;I think the below comment from one of the senior doctors at the clinic summarises it well:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;"A longtime dream come true!  It is exciting to be able to educate patients while they wait in the exam room. They select and view topics of their choice.  The presentations are engaging and free of commercial bias. This &lt;strong&gt;*_is_&lt;/strong&gt;&lt;/em&gt; the future". *&lt;/p&gt;
+
+&lt;p&gt;Below is the stats about the number of devices field in a span of two years.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://s3.amazonaws.com/multunus-website/uploads/2016/11/if-stats.jpg" alt="image alt text" /&gt;&lt;/p&gt;
+
+&lt;p&gt;As mentioned in the above, we automated the setup of the devices using &lt;a href="http://www.androidpolice.com/2010/05/01/custom-roms-for-android-explained-and-why-you-want-them/"&gt;Custom ROM&lt;/a&gt;, which increased the number of installations drastically.&lt;/p&gt;
+
+&lt;p&gt;Further down the line, we also extended similar functionality to Linux Media Players.&lt;/p&gt;
+
+&lt;h2 id="speed-discipline-and-quality---not-a-paradox"&gt;&lt;strong&gt;Speed, Discipline and Quality - Not a paradox&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Without the speed of the Multunus team and the ability to show real live tablets, we would not be in the position. So, thank you and congrats.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The above are the comments we heard from our customer when we kept delivering the product. Delivering on the business cadence wouldn’t have been possible without Continuous Delivery.&lt;/p&gt;
+
+&lt;p&gt;It is not easy to bring in that cadence. There was always pressure to deliver faster with compromises, especially on the code quality.&lt;/p&gt;
+
+&lt;p&gt;It is the business policy to hustle, and that is where the great engineering culture comes into the picture. A culture that balances discipline, quality and speed. Many consider Speed and Discipline don’t go together. But if you practice Continuous Delivery well, you see that it can be done.&lt;/p&gt;
+
+&lt;p&gt;To take one instance, one of the major struggles for us was to &lt;a href="http://www.multunus.com/blog/2014/02/tdd-using-roboelectric/"&gt;Test Drive Android Code&lt;/a&gt;. Because of the way the Android Framework was designed and also because of the device dependency to run the test suite, the unit tests were slower which has affected the pace of development. We moved to &lt;a href="http://robolectric.org/"&gt;Robolectric&lt;/a&gt;, but learning Robolectric while writing the production code was a challenge which we balanced and overcame over a period of time.&lt;/p&gt;
+
+&lt;p&gt;If you are convinced about the value of Continuous Delivery, what are you waiting for? 
+Follow the steps in &lt;a href="/blog/2016/11/tryst-continuous-delivery#get-started"&gt;Getting Started section of the previous post&lt;/a&gt; if you need guidance in getting started.&lt;/p&gt;
+
+&lt;p&gt;Try and let us know your experiences. Feel free to reply if you’ve questions. I will be glad to answer those.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
     <title>Continuous Delivery – Is it for everyone?</title>
     <link rel="alternate" href="http://www.multunus.com/blog/2016/12/continuous-delivery-us/"/>
     <id>http://www.multunus.com/blog/2016/12/continuous-delivery-us/</id>
@@ -2281,47 +2323,6 @@ c =  {:a =&amp;gt; 1, :b =&amp;gt; 2}
 &lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=bAPyI0Js5pE"&gt;DevOps for Telegraph Companies - Western Union&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://www.infoq.com/presentations/CIM-continuous-delivery"&gt;Continuous Delivery @ Comcast Interactive Media&lt;/a&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Continuous Delivery for Tablet app</title>
-    <link rel="alternate" href="http://www.multunus.com/blog/2016/12/continuous-delivery-for-tablet-app-media-company/"/>
-    <id>http://www.multunus.com/blog/2016/12/continuous-delivery-for-tablet-app-media-company/</id>
-    <published>2016-12-05T17:24:19+05:30</published>
-    <updated>2017-08-30T09:25:05+05:30</updated>
-    <content type="html">&lt;p&gt;In my &lt;a href="http://www.multunus.com/blog/2016/11/tryst-continuous-delivery/"&gt;earlier post&lt;/a&gt;, I mentioned the product we developed for a Media Company, where we deployed Android Tablets and Linux Media Players as Kiosk Devices in clinics across the US. These devices air informative content relevant to the patients visiting the clinics.&lt;/p&gt;
-
-&lt;p&gt;We deployed the first kiosk mode tablet within 6 weeks. We received excellent feedback from both the patients and the doctors.&lt;/p&gt;
-
-&lt;p&gt;I think the below comment from one of the senior doctors at the clinic summarises it well:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;"A longtime dream come true!  It is exciting to be able to educate patients while they wait in the exam room. They select and view topics of their choice.  The presentations are engaging and free of commercial bias. This &lt;strong&gt;*_is_&lt;/strong&gt;&lt;/em&gt; the future". *&lt;/p&gt;
-
-&lt;p&gt;Below is the stats about the number of devices field in a span of two years.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://s3.amazonaws.com/multunus-website/uploads/2016/11/if-stats.jpg" alt="image alt text" /&gt;&lt;/p&gt;
-
-&lt;p&gt;As mentioned in the above, we automated the setup of the devices using &lt;a href="http://www.androidpolice.com/2010/05/01/custom-roms-for-android-explained-and-why-you-want-them/"&gt;Custom ROM&lt;/a&gt;, which increased the number of installations drastically.&lt;/p&gt;
-
-&lt;p&gt;Further down the line, we also extended similar functionality to Linux Media Players.&lt;/p&gt;
-
-&lt;h2 id="speed-discipline-and-quality---not-a-paradox"&gt;&lt;strong&gt;Speed, Discipline and Quality - Not a paradox&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Without the speed of the Multunus team and the ability to show real live tablets, we would not be in the position. So, thank you and congrats.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The above are the comments we heard from our customer when we kept delivering the product. Delivering on the business cadence wouldn’t have been possible without Continuous Delivery.&lt;/p&gt;
-
-&lt;p&gt;It is not easy to bring in that cadence. There was always pressure to deliver faster with compromises, especially on the code quality.&lt;/p&gt;
-
-&lt;p&gt;It is the business policy to hustle, and that is where the great engineering culture comes into the picture. A culture that balances discipline, quality and speed. Many consider Speed and Discipline don’t go together. But if you practice Continuous Delivery well, you see that it can be done.&lt;/p&gt;
-
-&lt;p&gt;To take one instance, one of the major struggles for us was to &lt;a href="http://www.multunus.com/blog/2014/02/tdd-using-roboelectric/"&gt;Test Drive Android Code&lt;/a&gt;. Because of the way the Android Framework was designed and also because of the device dependency to run the test suite, the unit tests were slower which has affected the pace of development. We moved to &lt;a href="http://robolectric.org/"&gt;Robolectric&lt;/a&gt;, but learning Robolectric while writing the production code was a challenge which we balanced and overcame over a period of time.&lt;/p&gt;
-
-&lt;p&gt;If you are convinced about the value of Continuous Delivery, what are you waiting for? 
-Follow the steps in &lt;a href="/blog/2016/11/tryst-continuous-delivery#get-started"&gt;Getting Started section of the previous post&lt;/a&gt; if you need guidance in getting started.&lt;/p&gt;
-
-&lt;p&gt;Try and let us know your experiences. Feel free to reply if you’ve questions. I will be glad to answer those.&lt;/p&gt;
-
 </content>
   </entry>
   <entry>
